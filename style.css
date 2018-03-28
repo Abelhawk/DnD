@@ -1,0 +1,13 @@
+html,
+body {
+  background: paleturquoise;
+}
+.title,
+.clericDomain,
+.warlockPatron,
+.sorcererOrigin {
+  display: none;
+}
+select {
+  margin: 5px 0;
+}
