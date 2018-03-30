@@ -290,19 +290,29 @@ function pickFirstName(race, gender) {
         case "human":
             if (gender === true) { return maleHuman[rando(maleHuman.length - 1)] }
             else {return femaleHuman[rando(femaleHuman.length - 1)]}
+        case "dwarf":
+            if (gender === true) { return maleDwarf[rando(maleDwarf.length - 1)] }
+            else {return femaleDwarf[rando(femaleDwarf.length - 1)]}
+        case "aaracokra":
+            return aaracokraNames[rando(aaracokraNames.length - 1)];
+        case "goliath":
+            return goliathNames[rando(goliathNames.length - 1)];
+            //Figure out how to add a nickname too, since it's more important
         default:
-            return "Taylor";
+            return "XX";
     }
 }
 
 function pickLastName(race) {
     switch(race){
         case "human":
-            return humanSurname[rando(humanSurname.length)];
+            return humanSurname[rando(humanSurname.length - 1)];
         case "dwarf":
-            return dwarfClan[rando(dwarfClan.length)];
+            return dwarfClan[rando(dwarfClan.length - 1)];
+        case "goliath":
+            return goliathClan[rando(goliathClan.length - 1)];
         default:
-            return "Taylor";
+            return "YY";
     }
 }
 
