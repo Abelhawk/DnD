@@ -7,13 +7,16 @@
     <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"
             integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ"
             crossorigin="anonymous"></script>
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cinzel:700|Roboto+Condensed" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script src="triggers.js" defer></script>
-    <script src="names.json" defer></script>
+    <script src="names.js" defer></script>
+    <!--<script src="names.json" defer></script>-->
 </head>
 <body>
     <div class="container">
+        <p id="welcome">Choose any of the options below to begin character
+                creation. <br>The unfilled fields will be randomized!</p>
         <div class="choices">
             <div class="field">
                 Name: <input type="text" placeholder="(random)" id="name">
@@ -44,7 +47,7 @@
                 </div>
 
             <div class="field">
-            Class: <select id="class"  onchange="subclassOptions(this)">
+            Class: <select id="class" onchange="subclassOptions(this)">
                 <option value="randomClass">(random)</option>
                 <option value="barbarian">Barbarian</option>
                 <option value="bard">Bard</option>
@@ -99,16 +102,19 @@
             </div>
         </div>
         <div class="title">
-            <h1 contenteditable="true" id="titleName">Character Name</h1>
-            <h2 contenteditable="true" id="titleCharacter">Class</h2>
+            <h1 contenteditable="true" id="titleName">loading...</h1>
+            <h2 contenteditable="true" id="titleCharacter">loading...</h2>
         </div>
-        <button id="next" onclick="proceed()">Next</button>
-
-        <div class="information">
-            <div class="parag">
-
-            </div>
-        </div>
+        <button id="begin" onclick="proceed()">Create My Character!</button>
+        <div class="information" id="genAppearance"></div>
+        <button class="proceed" id="bAppearance">Generate Appearance</button>
+        <div class="information" id="genFamily"></div>
+        <button class="proceed"  id="bFamily">Generate Family</button>
+        <div class="information" id="genChildhood"></div>
+        <button class="proceed"  id="bChildhood">Generate Childhood</button>
+        <div class="information" id="genBackground"></div>
+        <button class="proceed"  id="bBackground">Generate Background</button>
+    </div>
     </div>
 </body>
 </html>

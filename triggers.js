@@ -1,31 +1,49 @@
+
+var docWidth = document.documentElement.offsetWidth;
+
+[].forEach.call(
+    document.querySelectorAll('*'),
+    function(el) {
+        if (el.offsetWidth > docWidth) {
+            console.log(el);
+        }
+    }
+);
+
+
 let yourRace;
 let yourName;
+let yourFamilyName;
 let yourClass;
 let yourSubclass;
-let next = 0;
 let youAreMale = true;
 let subclassFix;
+let charIsCreated = false;
+
 
 function proceed() {
-    next ++;
-    // switch(next){
-    //     case 1:
-            determineRace();
-            determineClass();
-            if ($('#gender').val() === "female") {youAreMale = false;}
-            determineName();
-            $('#titleName').text(capitalize(yourName));
+
+    determineRace();
+    determineClass();
+    if ($('#gender').val() === "female") {youAreMale = false;}
+    determineName();
+    $('#titleName').text(capitalize(yourName + " " + yourFamilyName));
     if (yourSubclass === "the great old one") {
         $('#titleCharacter').text(capitalize(yourRace) + " Warlock of the Great Old One");
     }
     else {
         $('#titleCharacter').text(capitalize(yourRace) + " " + capitalize(yourClass));
     }
-            $(".title").show();
-            $(".choices").hide();
-            // break;
-        // case 2:
-    // }
+    if(charIsCreated === false){
+        $(".title").show();
+        $(".choices").hide();
+        $("#welcome").hide();
+        $(".guide").show();
+        $(".proceed").css("visibility", "visible");
+        $("#begin").html('Randomize');
+        charIsCreated = true;
+        // alert("Success! Feel free now to flesh out your character by clicking on any of the categories below. You can click on generated text to edit it at any time.");
+    }
 
 }
 
@@ -51,7 +69,6 @@ function determineClass() {
     else {
         yourClass = pickClass();
     }
-    console.log("Your primary class is " + yourClass + ".");
     if (yourClass === "cleric" || yourClass === "warlock" || yourClass === "sorcerer") {
         determineSubclass(yourClass);
     }
@@ -93,9 +110,10 @@ function determineClass() {
 function determineName() {
     yourName = $('#name').val();
     if(!yourName) {
-        yourName = pickName(yourRace, youAreMale);
+        yourName = pickFirstName(yourRace, youAreMale);
+        yourFamilyName = pickLastName(yourRace);
     }
-    console.log("> Your name is " + yourName);
+    console.log("> Your name is " + yourName + yourFamilyName);
 }
 
 function subclassOptions(element) {
@@ -130,7 +148,7 @@ function subclassOptions(element) {
 function pickRace() {
     let x = rando(100);
     let output;
-    if (x < 96){
+    if (x <= 93){
         switch(true) {
             case (x <= 40):
                 output = "human";
@@ -156,17 +174,19 @@ function pickRace() {
             case (x <= 90):
                 output = "half-orc";
                 break;
-            case (x <= 95):
+            case (x <= 93):
                 output = "tiefling";
         }
     }
     else {
         switch(true) {
-            case (x <= 97):
+            case (x <= 95):
                 output = "aasimar";
+            case (x <= 97):
+                output = "goliath";
                 break;
             case (x <= 99):
-                output = "goliath";
+                output = "aaracokra";
                 break;
             case (x === 100):
                 output = "genasi";
@@ -222,97 +242,76 @@ function pickClass() {
     return output;
 }
 
+let domainOptions = [
+    "forge",
+    "grave",
+    "knowledge",
+    "life",
+    "light",
+    "nature",
+    "tempest",
+    "trickery",
+    "war"
+];
+
 function pickDomain() {
-    console.log("Hi Aust, I'm in the cleric picker now.");
     let x = rando(9);
-    console.log("Okay, the number is " + x + "...");
-    let output;
-    switch(x){
-        case 1:
-            output = "forge";
-            break;
-        case 2:
-            output = "grave";
-            break;
-        case 3:
-            output = "knowledge";
-            break;
-        case 4:
-            output = "life";
-            break;
-        case 5:
-            output = "light";
-            break;
-        case 6:
-            output = "nature";
-            break;
-        case 7:
-            output = "tempest";
-            break;
-        case 8:
-            output = "trickery";
-            break;
-        case 9:
-            output = "war";
-    }
-    console.log("It turns out the chosen subclass is " + output + ". I'm exiting now...");
-    return output;
+    return domainOptions[x];
 }
+
+let patronOptions = [
+    "fiend",
+    "archfey",
+    "the great old one",
+    "celestial",
+    "hexblade"
+];
 
 function pickPatron() {
     let x = rando(5);
-    let output;
-    switch(x){
-        case 1:
-            output = "fiend";
-            break;
-        case 2:
-            output = "archfey";
-            break;
-        case 3:
-            output = "the great old one";
-            break;
-        case 4:
-            output = "celestial";
-            break;
-        case 5:
-            output = "hexblade";
-    }
-    return output;
+    return patronOptions[x];
 }
+
+let originOptions = [
+    "wild magic",
+    "dragon bloodline",
+    "divine soul",
+    "storm",
+    "shadow",
+];
 
 function pickOrigin() {
     let x = rando(5);
-    let output;
-    switch(x){
-        case 1:
-            output = "wild";
-            break;
-        case 2:
-            output = "dragonblood";
-            break;
-        case 3:
-            output = "divine soul";
-            break;
-        case 4:
-            output = "storm";
-            break;
-        case 5:
-            output = "shadow";
+    return originOptions[x];
+}
+
+function pickFirstName(race, gender) {
+    switch(race){
+        case "human":
+            if (gender === true) { return maleHuman[rando(maleHuman.length - 1)] }
+            else {return femaleHuman[rando(femaleHuman.length - 1)]}
+        default:
+            return "Taylor";
     }
-    return output;
 }
 
-function pickName(race, gender) {
-    return (gender ? "Sir Jeffery" : "Lady Emmeline");
+function pickLastName(race) {
+    switch(race){
+        case "human":
+            return humanSurname[rando(humanSurname.length)];
+        case "dwarf":
+            return dwarfClan[rando(dwarfClan.length)];
+        default:
+            return "Taylor";
+    }
 }
 
-/* vanilla randomizer
+/* weighted randomizer
 function pickX() {
-    let x = rando();
+    let x = rando(100);
     let output;
     switch(x){
-        case 1:
+        case (x < ):
             output = "";
             break;
         case 2:
