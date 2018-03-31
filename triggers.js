@@ -165,6 +165,7 @@ function pickFirstName(race, gender) {
             return aarakocraNames[rando(aarakocraNames.length - 1)];
         case "goliath":
             return nicknameGoliath[rando(nicknameGoliath.length - 1)];
+            //Goliaths go by their nickname, but have a birth name, nickname, and clan name.
         case "elf":
             if (gender === true) { return maleElf[rando(maleElf.length - 1)] }
             else {return femaleElf[rando(femaleElf.length - 1)]}
@@ -251,7 +252,7 @@ function pickLastName(race) {
 
 function determineFullName(first, last, race){
     if (race === "goliath"){
-        let birthname = nicknameGoliath[rando(nicknameGoliath.length - 1)];
+        let birthname = goliathNames[rando(goliathNames.length - 1)];
         return (birthname + " " + first + " " + last);
     }
     else{
