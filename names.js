@@ -59,7 +59,10 @@ let humanSurname = [
     "Browne", "Carpenter", "Chandler", "Connor", "Clarke",
     "Cooper", "Fletcher", "Foreman", "Godfrey", "Gregory",
     "Mannering", "Nash", "Payne", "Rolfe", "Taylor", "Walter",
-    "Ward", "Webb", "Wood"
+    "Ward", "Webb", "Wood", "Baxter", "Carter", "Wright",
+    "Mason", "Hayward", "Draper", "Fisher", "Granger",
+    "Kilner", "Potter", "Lister", "Mercer", "Sawyer",
+    "Shepherd", "Slater"
 ];
 
 //------------Dwarves---------------
@@ -190,11 +193,45 @@ let elfFamily = [
 
 //------------Halflings---------------
 
-let maleHalfling = [];
+let maleHalfling = [
+    "Alton", "Ander", "Bernie", "Bobbin", "Cade",
+    "Callus", "Corrin", "Dannad", "Danniel", "Eddie",
+    "Egart", "Eldon", "Errich", "Fildo", "Finnan",
+    "Franklin", "Garret", "Garth", "Gilbert", "Gob",
+    "Harol", "Igor", "Jasper", "Keith", "Kevin", "Lazam",
+    "Lerry", "Lindal", "Lyle", "Merric", "Mican", "Milo",
+    "Morrin", "Nebin", "Nevil", "Osborn", "Ostran", "Oswalt",
+    "Perrin", "Poppy", "Reed", "Roscoe", "Sam", "Shardon",
+    "Tye", "Ulmo", "Wellby", "Wendel", "Wenner", "Wes"
+];
 
-let femaleHalfling = [];
+let femaleHalfling = [
+    "Alain", "Andry", "Anne", "Bella", "Blossom",
+    "Bree", "Callie", "Chenna", "Cora", "Dee",
+    "Dell", "Eida", "Eran", "Euphemia", "Georgina",
+    "Gynnie", "Harriet", "Jasmine", "Jillian", "Jo",
+    "Kithri", "Lavinia", "Lidda", "Maegan", "Marigold",
+    "Merla", "Myria", "Nedda", "Nikki", "Nora", "Olivia",
+    "Paela", "Pearl", "Pennie", "Philomena", "Portia",
+    "Robbie", "Rose", "Saral", "Seraphina", "Shaena",
+    "Stacee", "Tawna", "Thea", "Trym", "Tyna", "Vani",
+    "Verna", "Wella", "Willow"
+];
 
-let halflingFamily = [];
+let halflingFamily = [
+    "Appleblossom", "Bigheart", "Brightmoon", "Brushgather",
+    "Cherrycheeks", "Copperkettle", "Deephollow", "Elderberry",
+    "Fastfoot", "Fatrabbit", "Glenfellow", "Goldfound", "Goodbarrel",
+    "Goodearth", "Greenbottle", "Greenleaf", "High-hill", "Hilltopple",
+    "Hogcollar", "Honeypot", "Jamjar", "Kettlewhistle", "Leagallow",
+    "Littlefoot", "Nimblefingers", "Porridgepot", "Quickstep",
+    "Reedfellow", "Shadowquick", "Silvereyes", "Smoothhands",
+    "Stonebridge", "Stoutbridge", "Stoutman", "Strongbones", "Sunmeadow",
+    "Swiftwhistle", "Tallfellow", "Tealeaf", "Tennpenny", "Thistletop",
+    "Thorngage", "Tosscobble", "Underbough", "Underfoot",
+    "Warmwater", "Whispermouse", "Wildcloak", "Wildheart", "Wiseacre"
+
+];
 
 //------------Gnomes---------------
 
@@ -238,12 +275,49 @@ let gnomeClan = [
 
 //------------Tieflings---------------
 
-let maleTiefling = [];
+let maleTiefling = [
+    "Abad", "Ahrim", "Akmen", "Amnon", "Andram", "Astar",
+    "Balam", "Barakas", "Bathin", "Caim", "Chem", "Cimer",
+    "Cressel", "Damakos", "Ekemon", "Euron", "Fenriz",
+    "Forcas", "Habor", "Iados", "Kairon", "Leucis", "Mamnen",
+    "Mantus", "Marbas", "Melech", "Merihim", "Modean", "Mordai",
+    "Mormo", "Morthos", "Nicor", "Nirgel", "Oriax", "Paymon",
+    "Pelaios", "Purson", "Qemuel", "Raam", "Rimmon", "Sammal",
+    "Skamos", "Tethren", "Thamuz", "Therai", "Valafar", "Vassago",
+    "Xappan","Zepar", "Zephan"
+];
 
-let femaleTiefling = [];
+let femaleTiefling = [
+    "Akta", "Anakis", "Armara", "Astaro", "Aym", "Azza",
+    "Beleth", "Bryseis", "Bune", "Criella", "Damaia", "Decarabia",
+    "Ea", "Gadreel", "Gomory", "Hecat", "Ishte", "Jezebeth",
+    "Kali", "Kallista", "Kasdeya", "Lerissa", "Lilith", "Makaria",
+    "Manca", "Markosian", "Masterna", "Naamah", "Nemeia", "Nija",
+    "Orianna", "Osah", "Phelaia", "Prosperine", "Purah", "Pyra",
+    "Rieta", "Ronobe", "Ronwe", "Seddit", "Seere", "Sekhmet",
+    "Semyaza", "Shava", "Shax", "Sorath", "Uzza", "Vapula",
+    "Vepar", "Verin"
+];
 
 //------------Half-Orcs---------------
 
-let maleHalforc = [];
+let maleHalforc = [
+    "Argran", "Braak", "Brug", "Cagak", "Dench",
+    "Dorn", "Dren", "Druuk", "Feng", "Gell", "Gnarsh", "Grumbar",
+    "Gubrash", "Hagren", "Henk", "Hogar", "Holg", "Imsh", "Karash",
+    "Karg", "Keth", "Korag", "Krusk", "Lubash", "Megged", "Mhurren",
+    "Mord", "Morg", "Nil", "Nybarg", "Odorr", "Ohr", "Rendar", "Resh",
+    "Ront", "Rrath", "Sark", "Scrag", "Sheggen", "Shump", "Tanglar",
+    "Tarak", "Thar", "Thokk", "Trag", "Ugarth", "Varg", "Vilberg",
+    "Yurk", "Zed"
+];
 
-let femaleHalforc = [];
+let femaleHalforc = [
+    "Arha", "Baggi", "Bendoo", "Bilga", "Brakka", "Creega", "Drenna",
+    "Ekk", "Emen", "Engong", "Fistula", "Gaaki", "Gorga", "Grai",
+    "Greeba", "Grigi", "Gynk", "Hrathy", "Huru", "Ilga", "Kabbarg",
+    "Kansif", "Lagazi", "Lezre", "Murgen", "Murook", "Myev", "Nagrette",
+    "Neega", "Nella", "Nogu", "Oolah", "Ootah", "Ovak", "Ownka", "Puyet",
+    "Reeza", "Shautha", "Silgre", "Sutha", "Tagga", "Tawar", "Tomph",
+    "Ubada", "Vanchu", "Vola", "Volen", "Vorka", "Yevelda", "Zagga"
+];
