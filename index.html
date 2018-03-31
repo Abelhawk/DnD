@@ -106,15 +106,17 @@
             <h1 contenteditable="true" id="titleName">loading...</h1>
             <h2 contenteditable="true" id="titleCharacter">loading...</h2>
         </div>
-        <button id="begin" onclick="proceed()">Create My Character!</button>
-        <div class="information" id="genAppearance"></div>
-        <button class="proceed" id="bAppearance">Generate Appearance</button>
-        <div class="information" id="genFamily"></div>
-        <button class="proceed"  id="bFamily">Generate Family</button>
-        <div class="information" id="genChildhood"></div>
-        <button class="proceed"  id="bChildhood">Generate Childhood</button>
-        <div class="information" id="genBackground"></div>
-        <button class="proceed"  id="bBackground">Generate Background</button>
+        <div class="lowerContent">
+            <button id="begin" onclick="proceed()">Create My Character!</button>
+            <div class="information" id="genAppearance"></div>
+            <button class="proceed" id="bAppearance" onclick="createAppearance()">Generate Appearance</button>
+            <div class="information" id="genFamily"></div>
+            <button class="proceed"  id="bFamily">Generate Family</button>
+            <div class="information" id="genChildhood"></div>
+            <button class="proceed"  id="bChildhood">Generate Childhood</button>
+            <div class="information" id="genBackground"></div>
+            <button class="proceed"  id="bBackground">Generate Background</button>
+        </div>
     </div>
     </div>
 </body>

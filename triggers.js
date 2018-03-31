@@ -7,18 +7,18 @@ function Character(){
     // pClass;
     // fullClass;
 }
+//-----Global Variables
 
 let subclassFix;
 let charIsCreated = false;
 let genasiCommunity;
 let halfelfHeritage;
 
+//------Step 1: Create the character
 
 let your = new Character();
 
 function proceed() {
-    let your = new Character();
-
     your.race = determineRace();
 
     your.pClass = determineClass();
@@ -53,6 +53,17 @@ function proceed() {
         $("#begin").html('Randomize');
         charIsCreated = true;
     }
+}
+
+//-----Step 2: Create appearance
+
+function createAppearance(){
+    $(".guide").hide();
+    $("#begin").hide();
+    $('#titleName').attr("contenteditable", false);
+    $('#titleCharacter').attr("contenteditable", false);
+
+
 
 }
 
@@ -99,21 +110,24 @@ function checkSubclass(baseClass){
         switch (cl) {
             case "cleric":
                 if (subclassFix === "cleric" && cle === "randomDomain") {
-                    subclass = pickDomain();
+                    subclass = (domainOptions[rando(domainOptions.length - 1)]);
+
                 } else {
                     subclass = cle;
                 }
                 break;
             case "warlock":
                 if (subclassFix === "warlock" && war === "randomPatron") {
-                    subclass = pickPatron();
+                    subclass = (patronOptions[rando(patronOptions.length - 1)]);
+
                 } else {
                     subclass = war;
                 }
                 break;
             case "sorcerer":
                 if (subclassFix === "sorcerer" && sor === "randomOrigin") {
-                    subclass = pickOrigin();
+                    subclass = (originOptions[rando(originOptions.length - 1)]);
+
                 } else {
                     subclass = sor;
                 }
@@ -234,6 +248,8 @@ function pickLastName(race) {
             return gnomeClan[rando(gnomeClan.length - 1)];
         case "dragonborn":
             return dragonbornClan[rando(dragonbornClan.length - 1)];
+        case "genasi":
+            return pickLastName(genasiCommunity);
         case "half-elf":
             if (halfelfHeritage === "elf") {return elfFamily[rando(elfFamily.length - 1)]}
             if (halfelfHeritage === "human") {return humanSurname[rando(humanSurname.length - 1)]}
@@ -365,30 +381,15 @@ let domainOptions = [
     "nature", "tempest", "trickery", "war"
 ];
 
-function pickDomain() {
-    let x = rando(9);
-    return domainOptions[x];
-}
-
 let patronOptions = [
     "fiend", "archfey", "the great old one",
     "celestial", "hexblade"
 ];
 
-function pickPatron() {
-    let x = rando(5);
-    return patronOptions[x];
-}
-
 let originOptions = [
     "wild magic", "dragon bloodline", "divine soul",
     "storm", "shadow",
 ];
-
-function pickOrigin() {
-    let x = rando(5);
-    return originOptions[x];
-}
 
 /* weighted randomizer
 function pickX() {

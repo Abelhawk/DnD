@@ -43,11 +43,8 @@ h2{
   margin: 0;
 }
 
-.choices{
-  width: 50%;
-  position: relative;
-  left: 18%;
-  margin: 20px auto;
+.title{
+  top: -10px;
 }
 
 button {
@@ -66,11 +63,25 @@ button {
   }
 }
 
-.title {
+.title, .choices {
+  position: absolute;
+  left: 0;
+  right: 0;
   text-align: center;
-  margin: auto;
-  width: 75%;
+
+  #titleName{
+    width: 700px;
+  }
 }
+
+.choices{
+  top: 60px;
+
+}
+
+.lowerContent{
+    margin-top: 20%;
+  }
 
 .field{
   width: 100%;
