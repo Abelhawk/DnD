@@ -1,5 +1,5 @@
 //------------Aaracokra---------------
-let aaracokraNames = [
+let aarakocraNames = [
   "Aera", "Aial", "Aur", "Deekek", "Errk",
   "Heehk", "Ikki", "Kleeck", "Oorr", "Ouss",
   "Quaf", "Quierk", "Salleek", "Urreek", "Zeed"
@@ -320,4 +320,11 @@ let femaleHalforc = [
     "Neega", "Nella", "Nogu", "Oolah", "Ootah", "Ovak", "Ownka", "Puyet",
     "Reeza", "Shautha", "Silgre", "Sutha", "Tagga", "Tawar", "Tomph",
     "Ubada", "Vanchu", "Vola", "Volen", "Vorka", "Yevelda", "Zagga"
+];
+
+//--------------Genasi chosen names-------------
+
+let genasiNames = [
+    "Flame", "Ember", "Wave", "Onyx", "Gust", "Storm", "Seethe", "Gem",
+    "Zephyr", "Rough", "Malachite", "Amethyst"
 ];
