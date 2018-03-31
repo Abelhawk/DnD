@@ -1,38 +1,43 @@
 
-var docWidth = document.documentElement.offsetWidth;
+function Character(){
+    // race;
+    // name;
+    // surname;
+    // fullname;
+    // pClass;
+    // fullClass;
+}
 
-[].forEach.call(
-    document.querySelectorAll('*'),
-    function(el) {
-        if (el.offsetWidth > docWidth) {
-            console.log(el);
-        }
-    }
-);
-
-
-let yourRace;
-let yourName;
-let yourFamilyName;
-let yourClass;
-let yourSubclass;
-let youAreMale = true;
 let subclassFix;
 let charIsCreated = false;
 
 
-function proceed() {
+let your = new Character();
 
-    determineRace();
-    determineClass();
-    if ($('#gender').val() === "female") {youAreMale = false;}
-    determineName();
-    $('#titleName').text(capitalize(yourName + " " + yourFamilyName));
-    if (yourSubclass === "the great old one") {
-        $('#titleCharacter').text(capitalize(yourRace) + " Warlock of the Great Old One");
+function proceed() {
+    let your = new Character();
+
+    your.race = determineRace();
+    console.log("Your race is " + your.race + ".");
+
+    your.pClass = determineClass();
+    your.fullClass = checkSubclass(your.pClass);
+    console.log("Your class is " + your.fullClass + ".");
+
+    if ($('#gender').val() === "female") {your.genderIsMale = false;}
+
+    your.name = $('#name').val();
+    if(!your.name) {
+        your.name = pickFirstName(your.race, your.genderIsMale);
+        your.surname = pickLastName(your.race);
+        your.fullName = determineFullName(your.name,your.surname,your.race);
+    }
+    $('#titleName').text(capitalize(your.fullName));
+    if (your.fullClass === "the great old one warlock") {
+        $('#titleCharacter').text(capitalize(your.race) + " Warlock of the Great Old One");
     }
     else {
-        $('#titleCharacter').text(capitalize(yourRace) + " " + capitalize(yourClass));
+        $('#titleCharacter').text(capitalize(your.race) + " " + capitalize(your.fullClass));
     }
     if(charIsCreated === false){
         $(".title").show();
@@ -42,80 +47,77 @@ function proceed() {
         $(".proceed").css("visibility", "visible");
         $("#begin").html('Randomize');
         charIsCreated = true;
-        // alert("Success! Feel free now to flesh out your character by clicking on any of the categories below. You can click on generated text to edit it at any time.");
     }
 
 }
 
-//-----Choose
-
+//-------------------------------------------------------------------------------------------
+//----------RACE
 
 function determineRace(){
     let r = $('#race').val();
     if(r !== "randomRace"){
-        yourRace = r;
+        return r;
     }
     else{
-        yourRace = pickRace();
+        return pickRace();
     }
-    console.log("> Your race is " + yourRace + ".");
 }
+
+//-----------CLASS
 
 function determineClass() {
     let c = $('#class').val();
+    let output;
     if (c !== "randomClass") {
-        yourClass = c;
+        output = c;
     }
     else {
-        yourClass = pickClass();
+        output = pickClass();
     }
-    if (yourClass === "cleric" || yourClass === "warlock" || yourClass === "sorcerer") {
-        determineSubclass(yourClass);
-    }
+    return output;
+}
 
+function checkSubclass(baseClass){
+    if (baseClass === "cleric" || baseClass === "warlock" || baseClass === "sorcerer") {
+        return  determineSubclass(baseClass);
+    }
+    else{
+        return baseClass;
+    }
     function determineSubclass(cl) {
         let cle = ($('#domain').val());
         let war = ($('#patron').val());
         let sor = ($('#origin').val());
+        let subclass;
 
         switch (cl) {
             case "cleric":
                 if (subclassFix === "cleric" && cle === "randomDomain") {
-                    yourSubclass = pickDomain();
+                    subclass = pickDomain();
                 } else {
-                    yourSubclass = cle;
+                    subclass = cle;
                 }
                 break;
             case "warlock":
                 if (subclassFix === "warlock" && war === "randomPatron") {
-                    yourSubclass = pickPatron();
+                    subclass = pickPatron();
                 } else {
-                    yourSubclass = war;
+                    subclass = war;
                 }
                 break;
             case "sorcerer":
                 if (subclassFix === "sorcerer" && sor === "randomOrigin") {
-                    yourSubclass = pickOrigin();
+                    subclass = pickOrigin();
                 } else {
-                    yourSubclass = sor;
+                    subclass = sor;
                 }
-
             }
-        yourClass = yourSubclass.concat(" " + yourClass);
+        return (subclass + " " + baseClass);
         }
-    console.log("> You are a " + yourClass + ".");
 }
 
-
-function determineName() {
-    yourName = $('#name').val();
-    if(!yourName) {
-        yourName = pickFirstName(yourRace, youAreMale);
-        yourFamilyName = pickLastName(yourRace);
-    }
-    console.log("> Your name is " + yourName + yourFamilyName);
-}
-
+//---->This might break stuff in the future :(
 function subclassOptions(element) {
     let subChoice = element.options[element.selectedIndex].value;
     hideOthers();
@@ -142,6 +144,48 @@ function subclassOptions(element) {
     }
 }
 
+//----------NAME
+
+function pickFirstName(race, gender) {
+    switch(race){
+        case "human":
+            if (gender === true) { return maleHuman[rando(maleHuman.length - 1)] }
+            else {return femaleHuman[rando(femaleHuman.length - 1)]}
+        case "dwarf":
+            if (gender === true) { return maleDwarf[rando(maleDwarf.length - 1)] }
+            else {return femaleDwarf[rando(femaleDwarf.length - 1)]}
+        case "aaracokra":
+            return aaracokraNames[rando(aaracokraNames.length - 1)];
+        case "goliath":
+            return goliathNames[rando(goliathNames.length - 1)];
+        //Figure out how to add a nickname too, since it's more important
+        default:
+            return "XX";
+    }
+}
+
+function pickLastName(race) {
+    switch(race){
+        case "human":
+            return humanSurname[rando(humanSurname.length - 1)];
+        case "dwarf":
+            return dwarfClan[rando(dwarfClan.length - 1)];
+        case "goliath":
+            return goliathClan[rando(goliathClan.length - 1)];
+        default:
+            return "YY";
+    }
+}
+
+function determineFullName(first, last, race){
+    if (race === "goliath"){
+        let birthname = nicknameGoliath[rando(nicknameGoliath.length - 1)];
+        return (birthname + " " + first + " " + last);
+    }
+    else{
+        return (first + " " + last);
+    }
+}
 
 //------Randomizers
 
@@ -177,11 +221,12 @@ function pickRace() {
             case (x <= 93):
                 output = "tiefling";
         }
-    }
+    } //Rare races
     else {
         switch(true) {
             case (x <= 95):
                 output = "aasimar";
+                break;
             case (x <= 97):
                 output = "goliath";
                 break;
@@ -243,15 +288,8 @@ function pickClass() {
 }
 
 let domainOptions = [
-    "forge",
-    "grave",
-    "knowledge",
-    "life",
-    "light",
-    "nature",
-    "tempest",
-    "trickery",
-    "war"
+    "forge", "grave", "knowledge", "life", "light",
+    "nature", "tempest", "trickery", "war"
 ];
 
 function pickDomain() {
@@ -260,11 +298,8 @@ function pickDomain() {
 }
 
 let patronOptions = [
-    "fiend",
-    "archfey",
-    "the great old one",
-    "celestial",
-    "hexblade"
+    "fiend", "archfey", "the great old one",
+    "celestial", "hexblade"
 ];
 
 function pickPatron() {
@@ -273,47 +308,13 @@ function pickPatron() {
 }
 
 let originOptions = [
-    "wild magic",
-    "dragon bloodline",
-    "divine soul",
-    "storm",
-    "shadow",
+    "wild magic", "dragon bloodline", "divine soul",
+    "storm", "shadow",
 ];
 
 function pickOrigin() {
     let x = rando(5);
     return originOptions[x];
-}
-
-function pickFirstName(race, gender) {
-    switch(race){
-        case "human":
-            if (gender === true) { return maleHuman[rando(maleHuman.length - 1)] }
-            else {return femaleHuman[rando(femaleHuman.length - 1)]}
-        case "dwarf":
-            if (gender === true) { return maleDwarf[rando(maleDwarf.length - 1)] }
-            else {return femaleDwarf[rando(femaleDwarf.length - 1)]}
-        case "aaracokra":
-            return aaracokraNames[rando(aaracokraNames.length - 1)];
-        case "goliath":
-            return goliathNames[rando(goliathNames.length - 1)];
-            //Figure out how to add a nickname too, since it's more important
-        default:
-            return "XX";
-    }
-}
-
-function pickLastName(race) {
-    switch(race){
-        case "human":
-            return humanSurname[rando(humanSurname.length - 1)];
-        case "dwarf":
-            return dwarfClan[rando(dwarfClan.length - 1)];
-        case "goliath":
-            return goliathClan[rando(goliathClan.length - 1)];
-        default:
-            return "YY";
-    }
 }
 
 /* weighted randomizer
