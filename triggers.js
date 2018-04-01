@@ -1,25 +1,24 @@
 
-function Character(){
-    // race;
-    // name;
-    // surname;
-    // fullname;
-    // pClass;
-    // fullClass;
-}
-//-----Global Variables
+//  There are 13 races:
+//      HUMAN   DWARF   ELF     HALFLING    GNOME
+//      DRAGONBORN  TIEFLING    AASIMAR     GENASI
+//      AARAKOCRA   GOLIATH     HALF-ORC    HALF-ELF
 
+
+//-----Global Variables
+function Character(){}
 let subclassFix;
 let charIsCreated = false;
-let genasiCommunity;
-let halfelfHeritage;
+let community;
 
-//------Step 1: Create the character
+//------Step 1: Create the character---------------------------------------------->})][][][]K<-o
 
 let your = new Character();
 
 function proceed() {
     your.race = determineRace();
+    your.heritage = determineCommunity(your.race);
+    // console.log(`You are a ${your.race} and were born in ${aAn(your.heritage)} community.`);
 
     your.pClass = determineClass();
     your.fullClass = checkSubclass(your.pClass);
@@ -28,8 +27,8 @@ function proceed() {
 
     your.name = $('#name').val();
     if(!your.name) {
-        your.name = pickFirstName(your.race, your.genderIsMale);
-        your.surname = pickLastName(your.race);
+        your.name = pickFirstName(your.race, your.genderIsMale, your.heritage);
+        your.surname = pickLastName(your.race, your.heritage);
         if (your.surname === "xxx"){
             your.fullName = your.name;
         }
@@ -55,7 +54,7 @@ function proceed() {
     }
 }
 
-//-----Step 2: Create appearance
+//-----Step 2: Create appearance---------------------------------------------->})][][][]K<-o
 
 function createAppearance(){
     $(".guide").hide();
@@ -63,11 +62,53 @@ function createAppearance(){
     $('#titleName').attr("contenteditable", false);
     $('#titleCharacter').attr("contenteditable", false);
 
+    your.age = determineAge(your.race, your.class);
 
+    $('#genAppearance').text(
+        `You are ${your.fullname}, ${aAn(your.race)} of ${your.age} years old.`
+    );
 
 }
 
-//-------------------------------------------------------------------------------------------
+//---------------------------------------------------------------------------->})][][][]K<-o
+
+
+//---------AGE
+
+function determineAge(race) {
+    let baseAge;
+
+    switch (race){
+        case "human":
+        case "aasimar":
+        case "goliath":
+            baseAge = 15;
+            return (baseAge + roll(1,"d8"));
+        case "dwarf":
+            baseAge = 40;
+            return (baseAge + roll(5,"d6"));
+        case "elf":
+            baseAge = 110;
+            return (baseAge + roll(6,"d6"));
+        case "gnome":
+            baseAge = 40;
+            return (baseAge + roll(6,"d6"));
+        case "half-elf":
+        case "genasi":
+            baseAge = 20;
+            return (baseAge + roll(2,"d6"));
+        case "half-orc":
+            baseAge = 14;
+            return (baseAge + roll(1,"d6"));
+        case "halfling":
+            baseAge = 20;
+            return (baseAge + roll(3,"d6"));
+        case "aarakocra":
+            baseAge = 4;
+            return (baseAge + roll(2,"d4"));
+    }
+}
+
 //----------RACE
 
 function determineRace(){
@@ -77,6 +118,42 @@ function determineRace(){
     }
     else{
         return pickRace();
+    }
+}
+
+function determineCommunity(race) {
+    switch (race) {
+        case "dwarf":
+        case "elf":
+        case "halfling":
+        case "gnome":
+        case "dragonborn":
+        case "goliath":
+        case "aarakocra":
+            return race;
+        case "aasimar":
+        case "human":
+            return "human";
+        case "half-elf":
+            let chance = rando(2);
+            if (chance === 1) {return "elf"}
+            if (chance === 2) {return "human"}
+            break;
+        case "genasi":
+            let gen = "genasi";
+            while (gen === "genasi" || gen === "dragonborn" || gen === "orc" || gen === "aarakocra" || gen === "demon"){
+                gen = determineCommunity(pickRace());
+                console.log(gen);
+            }
+            return gen;
+        case "half-orc":
+            let x = rando(3);
+            if (x === 1) { return "orc"}
+            else { return "human" }
+        case "tiefling":
+            let y = rando(3);
+            if (y === 1) { return "demon"}
+            else { return "human" }
     }
 }
 
@@ -143,17 +220,14 @@ function subclassOptions(element) {
     if ( subChoice === 'cleric'){
         $('.clericDomain').show();
         subclassFix = "cleric";
-        console.log("Switched to cleric mode.");
     }
     else if (subChoice === 'warlock') {
         $('.warlockPatron').show();
         subclassFix = "warlock";
-        console.log("Switched to warlock mode.");
     }
     else if (subChoice === 'sorcerer') {
         $('.sorcererOrigin').show();
         subclassFix = "sorcerer";
-        console.log("Switched to sorcerer mode.");
     }
     function hideOthers() {
         $('.warlockPatron').hide();
@@ -165,8 +239,7 @@ function subclassOptions(element) {
 
 //----------NAME
 
-function pickFirstName(race, gender) {
-    let chance;
+function pickFirstName(race, gender, community) {
     switch(race){
         case "human":
         case "aasimar":
@@ -196,24 +269,19 @@ function pickFirstName(race, gender) {
             if (gender === true) { return maleTiefling[rando(maleTiefling.length - 1)] }
             else {return femaleTiefling[rando(femaleTiefling.length - 1)]}
         case "half-elf": //Half-elves have elf names if they live among humans, and vice-versa
-            chance = rando(2);
             if (gender === true) {
-                switch(chance){
-                    case 1:
-                        halfelfHeritage = "elf";
+                switch(community){
+                    case "elf":
                         return maleHuman[rando(maleHuman.length - 1)];
-                    case 2:
-                        halfelfHeritage = "human";
+                    case "human":
                         return maleElf[rando(maleElf.length - 1)];
                 }
             }
             else {
-                switch(chance){
-                    case 1:
-                        halfelfHeritage = "elf";
+                switch(community){
+                    case "elf":
                         return femaleHuman[rando(femaleHuman.length - 1)];
-                    case 2:
-                        halfelfHeritage = "human";
+                    case "human":
                         return femaleElf[rando(femaleElf.length - 1)];
                 }
             }
@@ -222,18 +290,15 @@ function pickFirstName(race, gender) {
             if (gender === true) { return maleDragonborn[rando(maleDragonborn.length - 1)] }
             else {return femaleDragonborn[rando(femaleDragonborn.length - 1)]}
         case "genasi": //Genasi are named based on the community they grow up with
-            let x = rando(10);
-            if (x > 1){
-                genasiCommunity = pickRace();
-                return pickFirstName(genasiCommunity,gender);
-            }
-                return genasiNames[rando(genasiNames.length - 1)];
+            let x = rando(6);
+            if (x > 1){ return pickFirstName(community,gender, community) }
+            else {return genasiNames[rando(genasiNames.length - 1)] }
         default:
             return "???";
     }
 }
 
-function pickLastName(race) {
+function pickLastName(race, community) {
     switch(race){
         case "human":
         case "aasimar":
@@ -249,17 +314,17 @@ function pickLastName(race) {
         case "dragonborn":
             return dragonbornClan[rando(dragonbornClan.length - 1)];
         case "genasi":
-            return pickLastName(genasiCommunity);
+            return pickLastName(community);
         case "half-elf":
-            if (halfelfHeritage === "elf") {return elfFamily[rando(elfFamily.length - 1)]}
-            if (halfelfHeritage === "human") {return humanSurname[rando(humanSurname.length - 1)]}
+            if (community === "elf") {return elfFamily[rando(elfFamily.length - 1)]}
+            if (community === "human") {return humanSurname[rando(humanSurname.length - 1)]}
             break;
         case "goliath":
             return goliathClan[rando(goliathClan.length - 1)];
         case "half-orc":
         case "tiefling":
-            let x = rando(3);
-            if (x === 1) {return humanSurname[rando(humanSurname.length - 1)]}
+            if (community === "human") {return humanSurname[rando(humanSurname.length - 1)];}
+            //Volo's Guide might have some insights. Otherwise, works for me.
         case "aarakocra":
         default:
             return "xxx";
@@ -270,6 +335,9 @@ function determineFullName(first, last, race){
     if (race === "goliath"){
         let birthname = goliathNames[rando(goliathNames.length - 1)];
         return (birthname + " " + first + " " + last);
+    }
+    else if (race === "dragonborn") {
+        return (last + " " + first);
     }
     else{
         return (first + " " + last);
@@ -327,6 +395,7 @@ function pickRace() {
                 break;
         }
     }
+    community = output;
     return output;
 }
 
@@ -411,12 +480,37 @@ function rando(probability){
     return Math.floor(Math.random() * probability + 1);
 }
 
-function print(text){
-    $(".information").append(text);
-}
-
 function capitalize(str){
     return str.replace(/\w\S*/g, function(txt){
         return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
     });
+}
+
+//-----A function to switch between "a" and "an"
+let vowels = ["a","e","i","o","u"];
+function aAn(str){
+    for (let i = 0; i < vowels.length; i++){
+        if(str[0] === vowels[i]){
+            return ("an " + str)
+        }
+    }
+    return ("a " + str);
+}
+
+function roll(number, dice){
+    console.log("Rolling " + number + dice + "...");
+    switch(dice){
+        case "d4":
+            return (rando(4)* number);
+        case "d6":
+            return (rando(6)* number);
+        case "d8":
+            return (rando(8)* number);
+        case "d10":
+            return (rando(10)* number);
+        case "d12":
+            return (rando(12)* number);
+        case "d100":
+            return (rando(100));
+    }
 }
