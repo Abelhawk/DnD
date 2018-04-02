@@ -8,7 +8,9 @@
             integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ"
             crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
+    <script src="words.js" defer></script>
     <script src="triggers.js" defer></script>
+
 </head>
 <body>
 <h1>Town and Place Generator</h1>
@@ -30,7 +32,7 @@
                 <input type="radio" id="coastal" name="biome" value="coastal"><br>
                 <label for="swamp">Swamp</label>
                 <input type="radio" id="swamp" name="biome" value="swamp"><br>
-                <label for="swamp">Urban</label>
+                <label for="urban">Urban</label>
                 <input type="radio" id="urban" name="biome" value="urban"><br>
             </div>
         </form>
@@ -53,7 +55,7 @@
         </div>
     </form>
 </div>
-<button type="submit" onclick="generate()">Generate!</button>
+<button type="submit" onclick="activate()">Generate!</button>
 <div id="generate"></div>
 
 </body>
