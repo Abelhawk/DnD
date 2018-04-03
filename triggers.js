@@ -14,6 +14,7 @@ let community;
 //------Step 1: Create the character---------------------------------------------->})][][][]K<-o
 
 let your = new Character();
+your.genderIsMale = true;
 
 function proceed() {
     your.race = determineRace();

@@ -1,3 +1,8 @@
+let defaults = [
+    "bold", "blue", "red", "yellow", "white", "brown",
+    "dry"
+];
+
 let scary = [
     "dusk", "shadow", "night", "gloom", "murk", "black",
     "mist", "somber", "misty", "brack", "ink", "shriek",
@@ -7,7 +12,7 @@ let scary = [
     "chill", "dead", "death", "grave", "gray", "sorrow",
     "under", "hollow", "husk", "cold", "ice", "plague",
     "pale", "terror", "curse", "lone", "night", "wither",
-    "barren", "web"
+    "barren", "web", "rot"
 ];
 
 let danger = [
@@ -42,7 +47,8 @@ let natural = [
     "west", "rain", "snow", "raven", "lion", "stag", "blue",
     "salt", "sky", "splinter", "summer", "winter", "autumn",
     "spring", "silt", "mire", "dust", "thistle", "timber",
-    "thunder", "meadow", "antler", "horn", "frost", "earth"
+    "thunder", "meadow", "antler", "horn", "frost", "earth",
+    "wet"
 ];
 
 let grassland = [
@@ -80,7 +86,7 @@ let compound = [
 let coastal = [
     "break", "wave", "wash", "shore", "sand", "shell", "breeze",
     "wind", "brine", "salt", "bank", "tide", "beach", "strand",
-    "cove", "holme", "sedge", "combe"
+    "cove", "holme", "sedge", "combe", "fin"
 ];
 
 let forest = [

@@ -16,6 +16,7 @@ function generate(){
     let second;
     let result;
     //First word (mood)
+    moodArray.push(defaults);
     if (document.getElementById("peaceful").checked) {moodArray.push(peace);}
     if (document.getElementById("dangerous").checked) {moodArray.push(danger);}
     if (document.getElementById("scary").checked) {moodArray.push(scary);}
@@ -27,7 +28,6 @@ function generate(){
     for (let i = 0; i < radios.length; i++) {
         if (radios[i].type === 'radio' && radios[i].checked) {
             biome = radios[i].value;
-            console.log("The biome is " + biome + ", right?");
         }
     }
     switch(true){
@@ -57,7 +57,6 @@ function generate(){
     }
     console.log("The second word should be " + second);
     result = first + second;
-    console.log(result);
     if (document.getElementById("compounds").checked){
         result += (" " + randoArray(compound));
     }
