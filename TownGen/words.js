@@ -8,7 +8,8 @@ let defaults = [
     "fall", "little", "edge", "corner", "loud", "silent",
     "candle", "coin", "far", "near", "new", "old", "odd",
     "open", "over", "plenty", "sober", "sour", "tame",
-    "thick", "thin", "tower", "wax", "quill", "young"
+    "thick", "thin", "tower", "wax", "quill", "young",
+    "barrow", "stale", "flash", "scale", "bronze", "brass"
 ];
 
 let scary = [
@@ -20,7 +21,7 @@ let scary = [
     "chill", "dead", "death", "grave", "gray", "sorrow",
     "under", "hollow", "husk", "cold", "ice", "plague",
     "pale", "terror", "curse", "lone", "night", "wither",
-    "barren", "web", "rot", "vice", "cower"
+    "barren", "web", "rot", "vice", "cower", "frigid"
 ];
 
 let danger = [
@@ -45,7 +46,7 @@ let peace = [
     "bread", "peace", "noble", "crown", "ever", "dawn", "star",
     "haven", "hearth", "honor", "hope", "still", "jewel",
     "temple", "life", "crystal", "day", "home", "calm", "glad",
-    "quiet", "merry", "sweet"
+    "quiet", "merry", "sweet", "dream", "dew", "honey", "butter"
 ];
 
 let natural = [
@@ -57,7 +58,7 @@ let natural = [
     "rain", "snow", "raven", "lion", "stag", "blue",
     "salt", "sky", "splinter", "silt", "mire", "dust", "thistle", "timber",
     "thunder", "meadow", "antler", "horn", "frost", "earth",
-    "wet"
+    "wet", "falcon", "lion"
 ];
 
 //-----------------------------------------------------------------------------------------------
@@ -70,7 +71,7 @@ let grassland = [
     "grounds", "watch", "march", "lake", "water", "wind",
     "spring", "bridge", "crest", "song", "feather", "heart",
     "valley", "glen", "well", "wing", "dale", "light",
-    "song"
+    "song", "smar", "haven", "set", "wall", "ton"
 ];
 
 let hills = [
@@ -80,7 +81,8 @@ let hills = [
     "vein", "mine", "keep", "shadow", "edge", "gate", "fall",
     "spear", "shield", "dale", "cleft", "notch", "forge",
     "tower", "guard", "garde", "burg", "grad", "sbrad", "ville",
-    "sborough", "warren"
+    "sborough", "warren", "canyon", "summit", "smar", "shire", "set",
+    "wall", "ton"
 ];
 
 
@@ -89,7 +91,7 @@ let coastal = [
     "wind", "brine", "salt", "bank", "tide", "beach", "strand",
     "cove", "holme", "sedge", "combe", "fin", "pool", "reef",
     "pebble", "front", "side", "line", "sea", "coast", "drink",
-    "sink", "flow"
+    "sink", "flow", "smar"
 ];
 
 let forest = [
@@ -97,30 +99,36 @@ let forest = [
     "thicket", "timber", "copse", "weald", "wald", "bush", "vale",
     "brush", "briar", "thorn", "pine", "oak", "aspen", "green",
     "cone", "jade", "moss", "web", "meadow", "bark", "branch",
-    "wind", "hill", "stump", "wild", "stump", "root"
+    "wind", "hill", "stump", "wild", "stump", "root", "haven",
+    "wall", "ton"
 ];
 
 let swamp = [
     "mud", "wallow", "slime", "bog", "mire", "moor", "marsh",
     "quag", "holme", "flood", "water", "dark", "shade", "swarm",
     "wood", "vine", "moss", "sink", "drown", "stench", "hive",
-    "murk", "fog", "churn", "burble"
+    "murk", "fog", "churn", "burble", "damp", "shadow", "moss"
 ];
 
 let arctic = [
     "snow", "ice", "winter", "freeze", "wind", "chill", "crystal",
-    "whisper", "frost", "waste", "shatter", "howl", "melt"
+    "whisper", "frost", "waste", "shatter", "howl", "melt", "spike",
+    "glacier", "sleet", "snap", "cut", "shiver", "thaw", "flake"
+
 ];
 
 let desert = [
     "sand", "crag", "wind", "dust", "whisper", "scorch", "blaze",
     "waste", "thirst", "parch", "mirror", "choke", "dry", "barren",
-    "dune", "flat", "swelter"
+    "dune", "flat", "swelter", "glass", "blister", "fire", "flame",
+    "burn", "grit", "chalk", "salt", "cavern", "quartz"
 ];
 
 let urban = [
     "hammer", "anvil", "quarter", "district", "slum", "corner",
-    "plaza", "quill", "tower", "keep", "town"
+    "plaza", "tower", "keep", "town", "square", "palace",
+    "street", "way", "walk"
+
 ];
 
 //-------------------------------------------------------------------------------------------------
@@ -134,5 +142,6 @@ let compound = [
     "strand", "coast", "hill", "keep", "fields", "grotto", "cove",
     "glades", "springs", "hollow", "fort", "acres", "den", "woods",
     "wilds", "wilderness", "swamp", "wastes", "depths", "tower",
-    "reef", "alley"
+    "reef", "alley", "bog", "crossroads", "pits", "courtyard",
+    "estate", "arena", "docks", "pier", "mansion", "wall", "summit"
 ];
