@@ -1,11 +1,7 @@
-let number;
 let textField = $('#generate');
 
 function activate(){
-    number = $('#number').val();
-    // for (let i = 0; i < number; i++) {
         textField.html(`<p>`+ capitalize(generate()) + `</p>`);
-    // }
 }
 
 function generate(){
@@ -13,17 +9,25 @@ function generate(){
     let radios = document.getElementsByTagName('input');
     let biome;
     let moodArray = [];
+    moodArray.push(defaults);
     let second;
     let result;
     //First word (mood)
-    moodArray.push(defaults);
     if (document.getElementById("peaceful").checked) {moodArray.push(peace);}
     if (document.getElementById("dangerous").checked) {moodArray.push(danger);}
     if (document.getElementById("scary").checked) {moodArray.push(scary);}
     if (document.getElementById("natural").checked) {moodArray.push(natural);}
-    first = randoArray(randoArray(moodArray));
-    moodArray = 0;
-    console.log("The first word should be " + first);
+
+    console.log(moodArray);
+    console.log(moodArray[0]);
+    console.log(moodArray[0][0]);
+
+
+    if (moodArray.length > 1){first = randoArray(randoArray(moodArray));}
+    else {
+        let z = rando(moodArray[0].length);
+        first = moodArray[0][z];
+    }
     //Second part of word (biome)
     for (let i = 0; i < radios.length; i++) {
         if (radios[i].type === 'radio' && radios[i].checked) {
@@ -55,7 +59,6 @@ function generate(){
         case (biome === "urban"):
             second = (randoArray(urban));
     }
-    console.log("The second word should be " + second);
     result = first + second;
     if (document.getElementById("compounds").checked){
         result += (" " + randoArray(compound));
@@ -71,7 +74,6 @@ function rando(probability){
 
 function randoArray(array){
     x = rando(array.length - 1);
-    console.log(x);
     return array[x];
 }
 
