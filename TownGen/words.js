@@ -115,7 +115,8 @@ let swamp = [
 let arctic = [
     "snow", "ice", "winter", "freeze", "wind", "chill", "crystal",
     "whisper", "frost", "waste", "shatter", "howl", "melt", "spike",
-    "glacier", "sleet", "snap", "cut", "shiver", "thaw", "flake"
+    "glacier", "sleet", "snap", "cut", "shiver", "thaw", "flake",
+    "tundra"
 
 ];
 
@@ -144,7 +145,7 @@ let compound = [
 let landmarks = [
     "hills", "gulch", "forest", "grove", "woods", "vale", "lake",
     "fen", "valley", "dale", "ridge", "lake", "mountain", "peak",
-    "pinnacle", "canyon", "falls", "highlands", "lowlands", "hill"
+    "pinnacle", "canyon", "falls", "highlands", "lowlands", "hill",
     "wood", "glades", "springs", "acres", "farmstead", "wilderness",
     "wilds", "glen", "summit", "pond", "slopes"
 ];
@@ -163,6 +164,11 @@ let swampMarks = [
 let desertMarks = [
     "wastes", "dunes", "mesa", "ridge", "oasis", "flats", "wasteland",
     "badlands", "barrens", "sands"
+];
+
+let arcticMarks = [
+    "wastes", "mountains", "peak", "summit", "canyon", "ridge", "crag",
+    "cliffs", "forest"
 ];
 
 let townMarks = [

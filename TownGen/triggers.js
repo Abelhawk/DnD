@@ -19,11 +19,6 @@ function generate(){
     if (document.getElementById("scary").checked) {moodArray.push(scary);}
     if (document.getElementById("natural").checked) {moodArray.push(natural);}
 
-    console.log(moodArray);
-    console.log(moodArray[0]);
-    console.log(moodArray[0][0]);
-
-
     if (moodArray.length > 1){first = randoArray(randoArray(moodArray));}
     else {
         let z = rando(moodArray[0].length);
@@ -38,33 +33,51 @@ function generate(){
     switch(true){
         case (biome === "grassland"):
             second = randoArray(grassland);
-            landmarkArray += compound;
-            landmarkArray += landmarks;
+            landmarkArray.push(compound);
+            landmarkArray.push(landmarks);
             break;
         case (biome === "hills"):
-            second = randoArray(hills);
+            second = isDuplicate(first,hills);
+            landmarkArray.push(compound);
+            landmarkArray.push(landmarks);
             break;
         case (biome === "forest"):
-            second = randoArray(forest);
+            second = isDuplicate(first,forest);
+            landmarkArray.push(compound);
+            landmarkArray.push(landmarks);
             break;
         case (biome === "desert"):
-            second = randoArray(desert);
+            second = isDuplicate(first,desert);
+            landmarkArray.push(compound);
+            landmarkArray.push(desertMarks);
             break;
         case (biome === "arctic"):
-            second = randoArray(arctic);
+            second = isDuplicate(first,arctic);
+            landmarkArray.push(compound);
+            landmarkArray.push(arcticMarks);
             break;
         case (biome === "coastal"):
-            second = randoArray(coastal);
+            second = isDuplicate(first,coastal);
+            landmarkArray.push(compound);
+            landmarkArray.push(coastalMarks);
             break;
         case (biome === "swamp"):
-            second = randoArray(swamp);
+            second = isDuplicate(first,swamp);
+            landmarkArray.push(compound);
+            landmarkArray.push(swampMarks);
             break;
         case (biome === "urban"):
-            second = randoArray(hills);
+            second = isDuplicate(first,grassland);
+            landmarkArray.push(townMarks);
+            landmarkArray.push(townMarks);
+
     }
+    console.log("LandmarkArray contains " + landmarkArray);
     result = first + second;
     if (document.getElementById("compounds").checked){
-        result += (" " + randoArray(landmarkArray));
+        let landmark = randoArray(isDuplicate(second,landmarkArray));
+        console.log(landmark);
+        result += (" " + landmark);
     }
     return result;
 }
@@ -86,15 +99,13 @@ function capitalize(str){
     });
 }
 
-function isDuplicate(first,second,biome){
-    console.log("The first value is " + first);
-    console.log("The second value is " + second);
+function isDuplicate(first,biome){
+    let second = randoArray(biome);
+
     if (first !== second){
-        console.log("They're not duplicates, so we're done.");
-        return false;
+        return second;
     }
     else {
-        console.log("They're the same word, which is silly. What is this, Mario?");
-        return true;
+        isDuplicate(first,biome);
     }
 }
