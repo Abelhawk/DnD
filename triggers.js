@@ -19,7 +19,6 @@ your.genderIsMale = true;
 function proceed() {
     your.race = determineRace();
     your.heritage = determineCommunity(your.race);
-    // console.log(`You are a ${your.race} and were born in ${aAn(your.heritage)} community.`);
 
     your.pClass = determineClass();
     your.fullClass = checkSubclass(your.pClass);
@@ -66,7 +65,7 @@ function createAppearance(){
     your.age = determineAge(your.race, your.class);
 
     $('#genAppearance').text(
-        `You are ${your.fullname}, ${aAn(your.race)} of ${your.age} years old.`
+        `You are ${your.fullName}, ${aAn(your.race)} of ${your.age} years old.`
     );
 
 }
@@ -74,7 +73,7 @@ function createAppearance(){
 //---------------------------------------------------------------------------->})][][][]K<-o
 
 
-//---------AGE
+//---------APPEARANCE
 
 function determineAge(race) {
     let baseAge;
@@ -82,6 +81,7 @@ function determineAge(race) {
     switch (race){
         case "human":
         case "aasimar":
+        case "tiefling":
         case "goliath":
             baseAge = 15;
             return (baseAge + roll(1,"d8"));
@@ -107,6 +107,29 @@ function determineAge(race) {
         case "aarakocra":
             baseAge = 4;
             return (baseAge + roll(2,"d4"));
+        case "dragonborn":
+            baseAge = 15;
+            return (baseAge + roll(1,"d6"));
+    }
+}
+
+function determineAppearance(race) {
+    let info = [] //Return skin color, eye color, hair color, height, and weight
+
+    switch(race){
+        case "human":
+        case "aasimar":
+        case "tiefling":
+        case "goliath":
+        case "dwarf":
+        case "elf":
+        case "gnome":
+        case "half-elf":
+        case "genasi":
+        case "half-orc":
+        case "halfling":
+        case "aarakocra":
+        case "dragonborn":
     }
 }
 

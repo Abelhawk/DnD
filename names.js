@@ -1,3 +1,9 @@
+
+//  There are 13 races:
+//      HUMAN   DWARF   ELF     HALFLING    GNOME
+//      DRAGONBORN  TIEFLING    AASIMAR     GENASI
+//      AARAKOCRA   GOLIATH     HALF-ORC    HALF-ELF
+
 //------------Aaracokra---------------
 let aarakocraNames = [
   "Aera", "Aial", "Aur", "Deekek", "Errk",

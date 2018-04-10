@@ -6,6 +6,7 @@ function activate(){
 
 function generate(){
     let first;
+    let landmarkArray = [];
     let radios = document.getElementsByTagName('input');
     let biome;
     let moodArray = [];
@@ -36,32 +37,34 @@ function generate(){
     }
     switch(true){
         case (biome === "grassland"):
-            second = (randoArray(grassland));
+            second = randoArray(grassland);
+            landmarkArray += compound;
+            landmarkArray += landmarks;
             break;
         case (biome === "hills"):
-            second = (randoArray(hills));
+            second = randoArray(hills);
             break;
         case (biome === "forest"):
-            second = (randoArray(forest));
+            second = randoArray(forest);
             break;
         case (biome === "desert"):
-            second = (randoArray(desert));
+            second = randoArray(desert);
             break;
         case (biome === "arctic"):
-            second = (randoArray(arctic));
+            second = randoArray(arctic);
             break;
         case (biome === "coastal"):
-            second = (randoArray(coastal));
+            second = randoArray(coastal);
             break;
         case (biome === "swamp"):
-            second = (randoArray(swamp));
+            second = randoArray(swamp);
             break;
         case (biome === "urban"):
-            second = (randoArray(urban));
+            second = randoArray(hills);
     }
     result = first + second;
     if (document.getElementById("compounds").checked){
-        result += (" " + randoArray(compound));
+        result += (" " + randoArray(landmarkArray));
     }
     return result;
 }
@@ -81,4 +84,17 @@ function capitalize(str){
     return str.replace(/\w\S*/g, function(txt){
         return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
     });
+}
+
+function isDuplicate(first,second,biome){
+    console.log("The first value is " + first);
+    console.log("The second value is " + second);
+    if (first !== second){
+        console.log("They're not duplicates, so we're done.");
+        return false;
+    }
+    else {
+        console.log("They're the same word, which is silly. What is this, Mario?");
+        return true;
+    }
 }

@@ -9,7 +9,8 @@ let defaults = [
     "candle", "coin", "far", "near", "new", "old", "odd",
     "open", "over", "plenty", "sober", "sour", "tame",
     "thick", "thin", "tower", "wax", "quill", "young",
-    "barrow", "stale", "flash", "scale", "bronze", "brass"
+    "barrow", "stale", "flash", "scale", "bronze", "brass",
+    "hammer", "anvil"
 ];
 
 let scary = [
@@ -71,7 +72,7 @@ let grassland = [
     "grounds", "watch", "march", "lake", "water", "wind",
     "spring", "bridge", "crest", "song", "feather", "heart",
     "valley", "glen", "well", "wing", "dale", "light",
-    "song", "smar", "haven", "set", "wall", "ton"
+    "song", "smar", "haven", "set", "wall", "ton", "brink"
 ];
 
 let hills = [
@@ -91,7 +92,7 @@ let coastal = [
     "wind", "brine", "salt", "bank", "tide", "beach", "strand",
     "cove", "holme", "sedge", "combe", "fin", "pool", "reef",
     "pebble", "front", "side", "line", "sea", "coast", "drink",
-    "sink", "flow", "smar"
+    "sink", "flow", "smar", "wake"
 ];
 
 let forest = [
@@ -100,14 +101,15 @@ let forest = [
     "brush", "briar", "thorn", "pine", "oak", "aspen", "green",
     "cone", "jade", "moss", "web", "meadow", "bark", "branch",
     "wind", "hill", "stump", "wild", "stump", "root", "haven",
-    "wall", "ton"
+    "wall", "ton", "willow", "brink"
 ];
 
 let swamp = [
     "mud", "wallow", "slime", "bog", "mire", "moor", "marsh",
     "quag", "holme", "flood", "water", "dark", "shade", "swarm",
     "wood", "vine", "moss", "sink", "drown", "stench", "hive",
-    "murk", "fog", "churn", "burble", "damp", "shadow", "moss"
+    "murk", "fog", "churn", "burble", "damp", "shadow", "moss",
+    "ooze"
 ];
 
 let arctic = [
@@ -124,24 +126,50 @@ let desert = [
     "burn", "grit", "chalk", "salt", "cavern", "quartz"
 ];
 
-let urban = [
-    "hammer", "anvil", "quarter", "district", "slum", "corner",
-    "plaza", "tower", "keep", "town", "square", "palace",
-    "street", "way", "walk"
-
-];
-
 //-------------------------------------------------------------------------------------------------
 
 let compound = [
-    "hold", "gulch", "hills", "reach", "fort", "forest", "grove",
-    "village", "camp", "barrow", "vale", "isle", "grounds", "fen",
-    "marsh", "bay", "mine", "lake", "cave", "ridge", "mountain",
-    "canyon", "falls", "river", "mill", "thicket", "point", "pass",
-    "quarry", "heights", "crossing", "landing", "pinnacle", "peak",
-    "strand", "coast", "hill", "keep", "fields", "grotto", "cove",
-    "glades", "springs", "hollow", "fort", "acres", "den", "woods",
-    "wilds", "wilderness", "swamp", "wastes", "depths", "tower",
-    "reef", "alley", "bog", "crossroads", "pits", "courtyard",
-    "estate", "arena", "docks", "pier", "mansion", "wall", "summit"
+    "hold", "reach", "fort",
+    "village", "camp", "barrow", "grounds",
+    "marsh", "mine", "cave", "ridge",
+    "river", "mill", "thicket", "point", "pass",
+    "quarry", "crossing", "landing",
+    "hill", "keep", "fields", "grotto", "cove",
+    "hollow", "fort", "acres", "den", "woods",
+    "wastes", "depths", "tower",
+    "alley", "bog", "crossroads", "pits",
+    "estate", "dam"
+];
+
+let landmarks = [
+    "hills", "gulch", "forest", "grove", "woods", "vale", "lake",
+    "fen", "valley", "dale", "ridge", "lake", "mountain", "peak",
+    "pinnacle", "canyon", "falls", "highlands", "lowlands", "hill"
+    "wood", "glades", "springs", "acres", "farmstead", "wilderness",
+    "wilds", "glen", "summit", "pond", "slopes"
+];
+
+let coastalMarks = [
+    "island", "shore", "beach", "strand", "bay", "lagoon", "coast",
+    "reef", "docks", "port", "cay", "cliffs", "front", "bank"
+];
+
+let swampMarks = [
+    "bog", "marsh", "swamp", "fen", "pools", "bayou", "wetlands",
+    "morass", "mire", "lowlands", "moors", "glade", "swale",
+    "river"
+];
+
+let desertMarks = [
+    "wastes", "dunes", "mesa", "ridge", "oasis", "flats", "wasteland",
+    "badlands", "barrens", "sands"
+];
+
+let townMarks = [
+    "district", "square", "crossroads", "courtyard", "keep", "estate",
+    "arena", "docks", "mansion", "manor", "plaza", "ward", "slums",
+    "street", "alley", "way", "quarter", "corner", "palace", "market",
+    "tower", "gardens", "park", "harbor", "stables", "cemetary",
+    "sanctuary", "cathedral", "chapel", "keep", "hall", "sanctum", "inn",
+    "library", "gates"
 ];
