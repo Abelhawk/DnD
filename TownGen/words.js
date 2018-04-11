@@ -10,7 +10,7 @@ let defaults = [
     "open", "over", "plenty", "sober", "sour", "tame",
     "thick", "thin", "tower", "wax", "quill", "young",
     "barrow", "stale", "flash", "scale", "bronze", "brass",
-    "hammer", "anvil"
+    "hammer", "anvil", "lime", "spur", "tea", "nether"
 ];
 
 let scary = [
@@ -76,14 +76,14 @@ let grassland = [
 ];
 
 let hills = [
-    "ravine", "burrow", "cave", "den", "mountain", "hills",
+    "burrow", "cave", "den", "mountain", "hills",
     "ridge", "camp", "pass", "gulch", "post", "crag", "cliff",
     "scrub", "brush", "peak", "wind", "rock", "stone", "tooth",
     "vein", "mine", "keep", "shadow", "edge", "gate", "fall",
     "spear", "shield", "dale", "cleft", "notch", "forge",
     "tower", "guard", "garde", "burg", "grad", "sbrad", "ville",
     "sborough", "warren", "canyon", "summit", "smar", "shire", "set",
-    "wall", "ton"
+    "wall", "ton", "bluff"
 ];
 
 
@@ -92,7 +92,7 @@ let coastal = [
     "wind", "brine", "salt", "bank", "tide", "beach", "strand",
     "cove", "holme", "sedge", "combe", "fin", "pool", "reef",
     "pebble", "front", "side", "line", "sea", "coast", "drink",
-    "sink", "flow", "smar", "wake"
+    "sink", "flow", "smar", "wake", "rift"
 ];
 
 let forest = [
@@ -101,7 +101,7 @@ let forest = [
     "brush", "briar", "thorn", "pine", "oak", "aspen", "green",
     "cone", "jade", "moss", "web", "meadow", "bark", "branch",
     "wind", "hill", "stump", "wild", "stump", "root", "haven",
-    "wall", "ton", "willow", "brink"
+    "wall", "ton", "willow", "brink", "taiga", "nettle"
 ];
 
 let swamp = [
@@ -116,7 +116,7 @@ let arctic = [
     "snow", "ice", "winter", "freeze", "wind", "chill", "crystal",
     "whisper", "frost", "waste", "shatter", "howl", "melt", "spike",
     "glacier", "sleet", "snap", "cut", "shiver", "thaw", "flake",
-    "tundra"
+    "tundra", "grasp"
 
 ];
 
@@ -130,16 +130,16 @@ let desert = [
 //-------------------------------------------------------------------------------------------------
 
 let compound = [
-    "hold", "reach", "fort",
+    "hold", "reach", "fort", "shelf",
     "village", "camp", "barrow", "grounds",
-    "marsh", "mine", "cave", "ridge",
+    "marsh", "mine", "cave", "ridge", "channel",
     "river", "mill", "thicket", "point", "pass",
     "quarry", "crossing", "landing",
     "hill", "keep", "fields", "grotto", "cove",
     "hollow", "fort", "acres", "den", "woods",
-    "wastes", "depths", "tower",
-    "alley", "bog", "crossroads", "pits",
-    "estate", "dam"
+    "wastes", "depths", "tower", "tunnels",
+    "alley", "bog", "crossroads", "pits", "arch",
+    "estate", "dam", "canal", "crater", "steppes",
 ];
 
 let landmarks = [
@@ -147,28 +147,33 @@ let landmarks = [
     "fen", "valley", "dale", "ridge", "lake", "mountain", "peak",
     "pinnacle", "canyon", "falls", "highlands", "lowlands", "hill",
     "wood", "glades", "springs", "acres", "farmstead", "wilderness",
-    "wilds", "glen", "summit", "pond", "slopes"
+    "wilds", "glen", "summit", "pond", "slopes", "spire", "fields",
+    "jungle", "prairie", "caldera", "hinterlands", "plains", "vineyards",
+    "basin", "plateau", "gully", "gorge", "bluff", "ravine", "knoll",
+    "trench", "geyser", "foothills"
 ];
 
 let coastalMarks = [
     "island", "shore", "beach", "strand", "bay", "lagoon", "coast",
-    "reef", "docks", "port", "cay", "cliffs", "front", "bank"
+    "reef", "docks", "port", "cay", "cliffs", "front", "bank",
+    "archipelago", "peninsula", "sandbar", "cove", "gulf", "isle",
+    "isthmus", "shoal", "strait", "cape"
 ];
 
 let swampMarks = [
     "bog", "marsh", "swamp", "fen", "pools", "bayou", "wetlands",
     "morass", "mire", "lowlands", "moors", "glade", "swale",
-    "river"
+    "river", "mangrove"
 ];
 
 let desertMarks = [
     "wastes", "dunes", "mesa", "ridge", "oasis", "flats", "wasteland",
-    "badlands", "barrens", "sands"
+    "badlands", "barrens", "sands", "butte", "dike"
 ];
 
 let arcticMarks = [
     "wastes", "mountains", "peak", "summit", "canyon", "ridge", "crag",
-    "cliffs", "forest"
+    "cliffs", "forest", "glacier", "fjord"
 ];
 
 let townMarks = [
@@ -177,5 +182,5 @@ let townMarks = [
     "street", "alley", "way", "quarter", "corner", "palace", "market",
     "tower", "gardens", "park", "harbor", "stables", "cemetary",
     "sanctuary", "cathedral", "chapel", "keep", "hall", "sanctum", "inn",
-    "library", "gates"
+    "library", "gates", "bridge"
 ];
