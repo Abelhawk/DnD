@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="style.css">
     <script src="triggers.js" defer></script>
     <script src="names.js" defer></script>
+    <script src="randomTables.js" defer></script>
     <!--<script src="names.json" defer></script>-->
 </head>
 <body>
@@ -42,7 +43,7 @@
                 <option value="dragonborn">Dragonborn</option>
                 <option value="aasimar">Aasimar</option>
                 <option value="goliath">Goliath</option>
-                <option value="aarakocra">Aarakocra</option>
+                <!--<option value="aarakocra">Aarakocra</option>-->
                 <option value="genasi">Genasi</option>
             </select>
                 </div>
@@ -108,12 +109,10 @@
         </div>
         <div class="lowerContent">
             <button id="begin" onclick="proceed()">Create My Character!</button>
-            <div class="information" id="genAppearance" contenteditable="true"></div>
-            <button class="proceed" id="bAppearance" onclick="createAppearance()">Generate Appearance</button>
-            <div class="information" id="genFamily" contenteditable="true"></div>
-            <button class="proceed"  id="bFamily">Generate Family</button>
+            <!--<div class="information" id="genAppearance" contenteditable="true"></div>-->
+            <!--<button class="proceed" id="bAppearance" onclick="createAppearance()">Generate Appearance</button>-->
             <div class="information" id="genChildhood" contenteditable="true"></div>
-            <button class="proceed"  id="bChildhood">Generate Childhood</button>
+            <button class="proceed"  id="bChildhood" onclick="createFamily()">Generate Childhood and Family</button>
             <div class="information" id="genBackground" contenteditable="true"></div>
             <button class="proceed"  id="bBackground">Generate Background</button>
         </div>

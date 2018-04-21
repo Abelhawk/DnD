@@ -25,6 +25,7 @@ function proceed() {
 
     if ($('#gender').val() === "female") {your.genderIsMale = false;}
 
+    your.age = determineAge(your.race, your.class);
     your.name = $('#name').val();
     if(!your.name) {
         your.name = pickFirstName(your.race, your.genderIsMale, your.heritage);
@@ -56,19 +57,155 @@ function proceed() {
 
 //-----Step 2: Create appearance---------------------------------------------->})][][][]K<-o
 
-function createAppearance(){
+// function createAppearance(){
+//     $(".guide").hide();
+//     $("#begin").hide();
+//     $('#titleName').attr("contenteditable", false);
+//     $('#titleCharacter').attr("contenteditable", false);
+//
+//
+//     $('#genAppearance').text(
+//         `You are ${your.fullName}, ${aAn(your.race)} of ${your.age} years old.`
+//     );
+//
+// }
+
+//------Step 2: Generate Family--------------------------------------------->})][][][]K<-o
+
+function createFamily(){
+    let Father = new Character;
+    let Mother = new Character;
+    let a;
+
+    if (your.race === "half-elf" || your.race === "half-orc" || your.race === "tiefling" || your.race === "aasimar"){
+        let x = rando(8);
+        switch(your.race){
+            case "half-elf":
+                switch(true){
+                    case (x < 6):
+                        a = rando(2);
+                        if (a === 1){
+                            Father.race = "elf";
+                            Mother.race = "human";
+                        }else {
+                            Father.race = "human";
+                            Mother.race = "elf";
+                        }
+                        break;
+                    case (x === 6):
+                        a = rando(2);
+                        if (a === 1){
+                            Father.race = "elf";
+                            Mother.race = "half-elf";
+                        }else {
+                            Father.race = "half-elf";
+                            Mother.race = "elf";
+                        }
+                        break;
+                    case (x === 7):
+                        a = rando(2);
+                        if (a === 1){
+                            Father.race = "human";
+                            Mother.race = "half-elf";
+                        }else {
+                            Father.race = "half-elf";
+                            Mother.race = "human";
+                        }
+                        break;
+                    case (x === 8):
+                        Father.race = "half-elf";
+                        Mother.race = "half-elf";
+                }
+                break;
+            case "half-orc":
+                switch(true){
+                    case (x <= 3):
+                        a = rando(2);
+                        if (a === 1){
+                            Father.race = "orc";
+                            Mother.race = "human";
+                        }else {
+                            Father.race = "human";
+                            Mother.race = "orc";
+                        }
+                        break;
+                    case (x <= 5):
+                        a = rando(2);
+                        if (a === 1){
+                            Father.race = "orc";
+                            Mother.race = "half-orc";
+                        }else {
+                            Father.race = "half-orc";
+                            Mother.race = "orc";
+                        }
+                        break;
+                    case (x === 7):
+                        a = rando(2);
+                        if (a === 1){
+                            Father.race = "human";
+                            Mother.race = "half-orc";
+                        }else {
+                            Father.race = "half-orc";
+                            Mother.race = "human";
+                        }
+                        break;
+                    case (x === 8):
+                        Father.race = "half-orc";
+                        Mother.race = "half-orc";
+                }
+                break;
+            case "tiefling":
+                switch(true){
+                    case (x <= 4):
+                        Father.race = "human";
+                        Mother.race = "human";
+                        break;
+                    case (x <= 6):
+                        a = rando(2);
+                        if (a === 1){
+                            Father.race = "tiefling";
+                            Mother.race = "human";
+                        }else {
+                            Father.race = "human";
+                            Mother.race = "tiefling";
+                        }
+                        break;
+                    case (x === 7):
+                        a = rando(2);
+                        if (a === 1){
+                            Father.race = "tiefling";
+                            Mother.race = "devil";
+                        }else {
+                            Father.race = "devil";
+                            Mother.race = "tiefling";
+                        }
+                        break;
+                    case (x === 8):
+                        Father.race = "devil";
+                        Mother.race = "devil";
+                }
+        }
+    }
+    Father.name = pickFirstName(Father.race,community);
+    Mother.name = pickFirstName(Mother.race,community);
+    Mother.surname = pickLastName(Mother.race,community);
+    let birthplace = setBirthplace(your.race);
+    let family = setFamily(your.race); //[0] is the string, [1] is momGone, [2] is dadGone
+    let home = setHome(birthplace[0],family[0]);
+    let siblings = 0;
     $(".guide").hide();
     $("#begin").hide();
     $('#titleName').attr("contenteditable", false);
     $('#titleCharacter').attr("contenteditable", false);
 
-    your.age = determineAge(your.race, your.class);
+    $('#genChildhood').text(
+        //-----Home
 
-    $('#genAppearance').text(
-        `You are ${your.fullName}, ${aAn(your.race)} of ${your.age} years old.`
+        `You were born ` + birthplace[1] + `. ` + home[0]
     );
-
 }
+
+
 
 //---------------------------------------------------------------------------->})][][][]K<-o
 
@@ -113,25 +250,25 @@ function determineAge(race) {
     }
 }
 
-function determineAppearance(race) {
-    let info = [] //Return skin color, eye color, hair color, height, and weight
-
-    switch(race){
-        case "human":
-        case "aasimar":
-        case "tiefling":
-        case "goliath":
-        case "dwarf":
-        case "elf":
-        case "gnome":
-        case "half-elf":
-        case "genasi":
-        case "half-orc":
-        case "halfling":
-        case "aarakocra":
-        case "dragonborn":
-    }
-}
+// function determineAppearance(race) {
+//     let info = []; //Return skin color, eye color, hair color, height, and weight
+//
+//     switch(race){
+//         case "human":
+//         case "aasimar":
+//         case "tiefling":
+//         case "goliath":
+//         case "dwarf":
+//         case "elf":
+//         case "gnome":
+//         case "half-elf":
+//         case "genasi":
+//         case "half-orc":
+//         case "halfling":
+//         case "aarakocra":
+//         case "dragonborn":
+//     }
+// }
 
 //----------RACE
 
@@ -537,4 +674,33 @@ function roll(number, dice){
         case "d100":
             return (rando(100));
     }
+}
+
+function plural(race){
+    let pluralForm;
+    switch(race){
+        case "dwarf":
+            pluralForm = "dwarves";
+            break;
+        case "elf":
+            pluralForm = "elves";
+            break;
+        case "half-elf":
+            pluralForm = "half-elves";
+            break;
+        case "genasi":
+        case "aarakocra":
+        case "aasimar":
+        case "dragonborn":
+            pluralForm = race;
+            break;
+        case "human":
+        case "halfling":
+        case "half-orc":
+        case "gnome":
+        case "goliath":
+        case "tiefling":
+            pluralForm = (race + "s");
+    }
+    return pluralForm;
 }

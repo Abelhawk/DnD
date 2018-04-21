@@ -10,7 +10,8 @@ let defaults = [
     "open", "over", "plenty", "sober", "sour", "tame",
     "thick", "thin", "tower", "wax", "quill", "young",
     "barrow", "stale", "flash", "scale", "bronze", "brass",
-    "hammer", "anvil", "lime", "spur", "tea", "nether"
+    "hammer", "anvil", "lime", "spur", "tea", "nether",
+    "strong"
 ];
 
 let scary = [
@@ -72,7 +73,8 @@ let grassland = [
     "grounds", "watch", "march", "lake", "water", "wind",
     "spring", "bridge", "crest", "song", "feather", "heart",
     "valley", "glen", "well", "wing", "dale", "light",
-    "song", "smar", "haven", "set", "wall", "ton", "brink"
+    "song", "smar", "haven", "set", "wall", "ton", "brink",
+    "bird"
 ];
 
 let hills = [
@@ -83,7 +85,7 @@ let hills = [
     "spear", "shield", "dale", "cleft", "notch", "forge",
     "tower", "guard", "garde", "burg", "grad", "sbrad", "ville",
     "sborough", "warren", "canyon", "summit", "smar", "shire", "set",
-    "wall", "ton", "bluff"
+    "wall", "ton", "bluff", "horn"
 ];
 
 

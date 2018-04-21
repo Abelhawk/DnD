@@ -63,7 +63,7 @@ button button:hover {
   top: 60px;
 }
 .lowerContent {
-  margin-top: 20%;
+  margin-top: 15%;
 }
 .field {
   width: 100%;
@@ -88,4 +88,5 @@ button button:hover {
 .information {
   width: 50%;
   margin: auto;
+  margin-bottom: 40px;
 }

@@ -4,7 +4,7 @@
 //      DRAGONBORN  TIEFLING    AASIMAR     GENASI
 //      AARAKOCRA   GOLIATH     HALF-ORC    HALF-ELF
 
-//------------Aaracokra---------------
+//------------Aaracokra---------------(discontinued cuz they're too obscure)
 let aarakocraNames = [
   "Aera", "Aial", "Aur", "Deekek", "Errk",
   "Heehk", "Ikki", "Kleeck", "Oorr", "Ouss",
@@ -44,7 +44,8 @@ let maleHuman = [
     "Norman", "Odo", "Percival", "Peter", "Ralf", "Randal",
     "Raymond", "Reynard", "Richard", "Robert", "Roger",
     "Roland", "Rolf", "Simon", "Theobald", "Theodoric",
-    "Thomas", "Timm", "William", "Wymar"
+    "Thomas", "Timm", "William", "Wymar",
+    "Engelhart"
 ];
 
 let femaleHuman = [
