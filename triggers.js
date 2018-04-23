@@ -7,6 +7,8 @@
 
 //-----Global Variables
 function Character(){}
+let Father = new Character;
+let Mother = new Character;
 let subclassFix;
 let charIsCreated = false;
 let community;
@@ -28,7 +30,7 @@ function proceed() {
     your.age = determineAge(your.race, your.class);
     your.name = $('#name').val();
     if(!your.name) {
-        your.name = pickFirstName(your.race, your.genderIsMale, your.heritage);
+        your.name = pickFirstName(your.race, your.genderIsMale);
         your.surname = pickLastName(your.race, your.heritage);
         if (your.surname === "xxx"){
             your.fullName = your.name;
@@ -73,41 +75,38 @@ function proceed() {
 //------Step 2: Generate Family--------------------------------------------->})][][][]K<-o
 
 function createFamily(){
-    let Father = new Character;
-    let Mother = new Character;
     let a;
-
-    if (your.race === "half-elf" || your.race === "half-orc" || your.race === "tiefling" || your.race === "aasimar"){
+    if (your.race === "half-elf" || your.race === "half-orc" || your.race === "tiefling" || your.race === "aasimar") {
         let x = rando(8);
-        switch(your.race){
+        switch (your.race) {
             case "half-elf":
-                switch(true){
+                switch (true) {
                     case (x < 6):
                         a = rando(2);
-                        if (a === 1){
+                        if (a === 1) {
                             Father.race = "elf";
                             Mother.race = "human";
-                        }else {
+                        } else {
                             Father.race = "human";
                             Mother.race = "elf";
                         }
                         break;
                     case (x === 6):
                         a = rando(2);
-                        if (a === 1){
+                        if (a === 1) {
                             Father.race = "elf";
                             Mother.race = "half-elf";
-                        }else {
+                        } else {
                             Father.race = "half-elf";
                             Mother.race = "elf";
                         }
                         break;
                     case (x === 7):
                         a = rando(2);
-                        if (a === 1){
+                        if (a === 1) {
                             Father.race = "human";
                             Mother.race = "half-elf";
-                        }else {
+                        } else {
                             Father.race = "half-elf";
                             Mother.race = "human";
                         }
@@ -118,33 +117,33 @@ function createFamily(){
                 }
                 break;
             case "half-orc":
-                switch(true){
+                switch (true) {
                     case (x <= 3):
                         a = rando(2);
-                        if (a === 1){
+                        if (a === 1) {
                             Father.race = "orc";
                             Mother.race = "human";
-                        }else {
+                        } else {
                             Father.race = "human";
                             Mother.race = "orc";
                         }
                         break;
                     case (x <= 5):
                         a = rando(2);
-                        if (a === 1){
+                        if (a === 1) {
                             Father.race = "orc";
                             Mother.race = "half-orc";
-                        }else {
+                        } else {
                             Father.race = "half-orc";
                             Mother.race = "orc";
                         }
                         break;
                     case (x === 7):
                         a = rando(2);
-                        if (a === 1){
+                        if (a === 1) {
                             Father.race = "human";
                             Mother.race = "half-orc";
-                        }else {
+                        } else {
                             Father.race = "half-orc";
                             Mother.race = "human";
                         }
@@ -155,27 +154,27 @@ function createFamily(){
                 }
                 break;
             case "tiefling":
-                switch(true){
+                switch (true) {
                     case (x <= 4):
                         Father.race = "human";
                         Mother.race = "human";
                         break;
                     case (x <= 6):
                         a = rando(2);
-                        if (a === 1){
+                        if (a === 1) {
                             Father.race = "tiefling";
                             Mother.race = "human";
-                        }else {
+                        } else {
                             Father.race = "human";
                             Mother.race = "tiefling";
                         }
                         break;
                     case (x === 7):
                         a = rando(2);
-                        if (a === 1){
+                        if (a === 1) {
                             Father.race = "tiefling";
                             Mother.race = "devil";
-                        }else {
+                        } else {
                             Father.race = "devil";
                             Mother.race = "tiefling";
                         }
@@ -186,11 +185,15 @@ function createFamily(){
                 }
         }
     }
-    Father.name = pickFirstName(Father.race,community);
-    Mother.name = pickFirstName(Mother.race,community);
+    else{
+        Father.race = your.race;
+        Mother.race = your.race;
+    }
+    Father.name = pickFirstName(Father.race,true);
+    Mother.name = pickFirstName(Mother.race,false);
     Mother.surname = pickLastName(Mother.race,community);
     let birthplace = setBirthplace(your.race);
-    let family = setFamily(your.race); //[0] is the string, [1] is momGone, [2] is dadGone
+    let family = setFamily(); //[0] is the string, [1] is momGone, [2] is dadGone
     let home = setHome(birthplace[0],family[0]);
     let siblings = 0;
     $(".guide").hide();
@@ -198,10 +201,10 @@ function createFamily(){
     $('#titleName').attr("contenteditable", false);
     $('#titleCharacter').attr("contenteditable", false);
 
-    $('#genChildhood').text(
+    $('#genChildhood').html(
         //-----Home
 
-        `You were born ` + birthplace[1] + `. ` + home[0]
+        `You were born ` + birthplace[1] + `. ` + home[0] + family[0] + `<br>` + family[1]
     );
 }
 
@@ -400,7 +403,7 @@ function subclassOptions(element) {
 
 //----------NAME
 
-function pickFirstName(race, gender, community) {
+function pickFirstName(race, gender) {
     switch(race){
         case "human":
         case "aasimar":
@@ -454,6 +457,8 @@ function pickFirstName(race, gender, community) {
             let x = rando(6);
             if (x > 1){ return pickFirstName(community,gender, community) }
             else {return genasiNames[rando(genasiNames.length - 1)] }
+        case "devil":
+            return "Baator";
         default:
             return "???";
     }

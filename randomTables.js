@@ -188,24 +188,25 @@ function setBirthplace(race){
 
 function setHome(){
     let family = rando(100);
+    console.log("You rolled a " + family + ". If the number is less than 35, both of your parents should be gone");
     let fatherGone = false;
     let motherGone = false;
     if (family <= 35){fatherGone = true; motherGone = true}
     switch(true) {
         case (family <= 1):
-            family = "You didn't grow up with any family";
+            family = "You didn't grow up with any family.";
             break;
         case (family === 2):
-            family = "You grew up in an institution";
+            family = "You grew up in an institution.";
             break;
         case (family === 3):
-            family = "You grew up in a temple";
+            family = "You grew up in a temple.";
             break;
         case (family <= 5):
-            family = "You grew up in an orphanage";
+            family = "You grew up in an orphanage.";
             break;
         case (family <= 7):
-            family = "You were raised by " + generateNPC(community,randomSex()) + ", your guardian"
+            family = "You were raised by " + generateNPC(community,randomSex()) + ", your guardian.";
             break;
         case (family <= 25):
             let relative = rando(6);
@@ -215,67 +216,80 @@ function setHome(){
             else {x = "grandmother"; y = "grandfather"}
             switch(relative){
                 case 1: //paternal
-                    family = "You were raised by your " + x + ", " + pickFirstName(Father.race,"female") + " " + your.surname;
+                    family = "You were raised by your " + x + ", " + pickFirstName(Father.race,false) + " " + your.surname + ".";
                     break;
                 case 2:
-                    family = "You were raised by your " + y + ", " + pickFirstName(Father.race,"male") + " " + your.surname;
+                    family = "You were raised by your " + y + ", " + pickFirstName(Father.race,true) + " " + your.surname + ".";
                     break;
                 case 3:
-                    family = "You were raised by your " + x + " and " + y + ", " + pickFirstName(Father.race,"male") + " and " + pickFirstName(Father.race,"female") + " " + your.surname;
+                    family = "You were raised by your " + x + " and " + y + ", " + pickFirstName(Father.race,true) + " and " + pickFirstName(Father.race,false) + " " + your.surname + ".";
                     break;
                 case 4: //maternal
-                    family = "You were raised by your " + x + ", " + pickFirstName(Mother.race,"female") + " " + Mother.surname;
+                    family = "You were raised by your " + x + ", " + pickFirstName(Mother.race,false) + " " + Mother.surname + ".";
                     break;
                 case 5:
-                    family = "You were raised by your " + y + ", " + pickFirstName(Mother.race,"male") + " " + Mother.surname;
+                    family = "You were raised by your " + y + ", " + pickFirstName(Mother.race,true) + " " + Mother.surname + ".";
                     break;
                 case 6:
-                    family = "You were raised by your " + x + " and " + y + ", " + pickFirstName(Mother.race,"male") + " and " + pickFirstName(Mother.race,"female") + " " + Mother.surname;
+                    family = "You were raised by your " + x + " and " + y + ", " + pickFirstName(Mother.race,true) + " and " + pickFirstName(Mother.race,false) + " " + Mother.surname + ".";
             }
             break;
         case (family <= 35):
-            family = "You were raised by an adoptive family of " + plural(community);
+            family = "You were adopted and raised by a family of " + plural(community) + ".";
             break;
         case (family <= 55):
-            family = "You were raised by your father, " + Father.name + " " + your.surname;
+            family = "You were raised by your father, " + Father.name + " " + your.surname + ".";
             motherGone = true;
             break;
         case (family <= 75):
-            family = "You were raised by your mother, " + Mother.name + " " + your.surname;
+            family = "You were raised by your mother, " + Mother.name + " " + your.surname + ".";
             fatherGone = true;
             break;
         case (family <= 100):
-            family = "You were raised by your parents, " + Father.name + " " + Mother.name + " " + your.surname;
+            family = "You were raised by your parents, " + Father.name + " and " + Mother.name + " " + your.surname + ".";
     }
     //What happened to them?
-    let status = whereParentsGo();
-    let plursing;
-    if (motherGone === true && fatherGone === false){
-        plursing = "was";
-        family += " Your mother " + plursing + status;
-    }if (fatherGone === true && motherGone === false){
-        plursing = "was";
-        family += " Your father " + status;
+    if (motherGone === true || fatherGone === true){
+        let both = false;
+        if (motherGone === true && fatherGone === true){both = true}
+        let status = whereParentsGo(both);
+        if (motherGone === true && fatherGone === false){
+            family += " Your mother " + status;
+        }else if (fatherGone === true && motherGone === false){
+            family += " Your father " + status;
+        }
+        else {
+            family += " Your parents " + status;
+        }
     }
     return [family, motherGone, fatherGone];
 }
-/*
-function whereParentsGo(){
+
+function whereParentsGo(both){
+    let status;
+    let plursing = "";
+    if (both === true){plursing = "were"}
+    else {plursing = "was"}
     let a = rando(4);
     switch(a){
         case 1:
-            status = "died. "; //
+            status = "died. "; //Add cause of death function
             break;
         case 2:
-            status = " imprisoned and taken away from you.";
+            status = plursing + " imprisoned and taken away from you.";
             break;
         case 3:
-
+            status = "abandoned you.";
+            break;
+        case 4:
+            status = "disappeared to an unknown fate.";
     }
+    return status;
 }
-*/
-function setFamily(race){
+
+function setFamily(){
     let knewParents = rando(100);
+    let siblingList = "";
     let string = "";
     if (knewParents < 95){
         knewParents = false;
@@ -305,19 +319,73 @@ function setFamily(race){
     }
     if (siblings === 0){ string += " You were an only child." }
     else {
-
+        let allSibs = [];
+        let older = [];
+        let younger = [];
+        let twins = [];
+        for(let i = 0; i < siblings; i++){ //The array goes [Name, Race, Gender, Age]
+            let currentSibling = allSibs[i];
+            currentSibling = generateSibling();
+            switch(true){
+                case (currentSibling[3] === "older"):
+                    older.push(currentSibling);
+                    break;
+                case (currentSibling[3] === "younger"):
+                    younger.push(currentSibling);
+                    break;
+                case (currentSibling[3] === "twin"):
+                    twins.push(currentSibling);
+            }
+        }
+        allSibs = [];
+        allSibs.push(older);
+        allSibs.push(twins);
+        allSibs.push(younger);
+        let position;
+        switch(true){
+            case (older.length === 0 && twins.length === 0):
+                position = "oldest";
+                break;
+            case (younger.length === 0 && twins.length === 0):
+                position = "youngest";
+                break;
+            case (older.length === 1 && twins.length === 0):
+                position = "second-oldest";
+                break;
+            case (younger.length === 1 && twins.length === 0):
+                position = "second-youngest";
+                break;
+            default:
+                position = "middle child";
+            }
+        string += " You are the " + position + " of " + (siblings + 1) + " children: ";
+        console.log("allSibs = " + allSibs);
+        for (let i = 0; i < allSibs.length; i++){
+            let currentSibling = allSibs[i];
+            let relation = "";
+            if (currentSibling[3] === "twin"){
+                relation = "twin ";
+            }
+            if (currentSibling[2] === true){
+                relation += "brother";
+            }else {
+                relation += "sister";
+            }
+            siblingList += "Your " + relation + " " + currentSibling[0[0]] + `<br>`
+        }
     }
-
-    return [knewParents, string]
+    return [string,siblingList];
 }
+
 
 function generateSibling(){
     let x = rando(2);
     let sibRace;
     let sibAge;
+    let sibGender = randomSex();
     if (x === 1){sibRace = Father.race}
     else {sibRace = Mother.race}
-    let sibling = generateNPC(your.race,randomSex());
+    let sibName = pickFirstName(your.race,sibGender, community);
     x = roll(2,"d6");
     switch(true){
         case (x <= 2):
@@ -328,8 +396,8 @@ function generateSibling(){
             break;
         case (x <= 12):
             sibAge = "younger";
-
     }
+    return [sibName,sibRace,sibGender,sibAge];
 }
 
 function generateNPC(race,sex){
@@ -341,12 +409,12 @@ function generateNPC(race,sex){
     return first + " " + last;
 }
 
-function randomSex(){
+function randomSex(){ //Remember that the way I chose to do it (><) is genderIsMale = true/false;
     let x = rando(2);
     if (x === 1){
-        return "female";
+        return false;
     }
     else {
-        return "male";
+        return true;
     }
 }
