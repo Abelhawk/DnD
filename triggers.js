@@ -464,7 +464,7 @@ function pickFirstName(race, gender) {
     }
 }
 
-function pickLastName(race, community) {
+function pickLastName(race) {
     switch(race){
         case "human":
         case "aasimar":
@@ -493,7 +493,7 @@ function pickLastName(race, community) {
             //Volo's Guide might have some insights. Otherwise, works for me.
         case "aarakocra":
         default:
-            return "xxx";
+            return "";
     }
 }
 

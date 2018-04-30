@@ -293,7 +293,7 @@ function setFamily(){
     let string = "";
     if (knewParents < 95){
         knewParents = false;
-        string = "You do not know who your parents were.";
+        // string = "You do not know who your parents were."; //This is stupid and unnecessary.
     }
     else {
         knewParents = true;
@@ -358,7 +358,7 @@ function setFamily(){
             default:
                 position = "middle child";
             }
-        string += " You are the " + position + " of " + (siblings + 1) + " children: ";
+        string += " You are the " + position + " of " + (allSibs.length + 1) + " children: ";
         console.log("allSibs = " + allSibs);
         for (let i = 0; i < allSibs.length; i++){
             let currentSibling = allSibs[i];
@@ -371,7 +371,7 @@ function setFamily(){
             }else {
                 relation += "sister";
             }
-            siblingList += "Your " + relation + " " + currentSibling[0[0]] + `<br>`
+            siblingList += "Your " + relation + " " + currentSibling[0] + `<br>` //Change these to CLASSES
         }
     }
     return [string,siblingList];
@@ -404,7 +404,7 @@ function generateNPC(race,sex){
     let first = pickFirstName(race,sex);
     let last = your.surname;
         while(last === your.surname){
-            last = pickLastName(race,race);
+            last = pickLastName(race);
         }
     return first + " " + last;
 }
@@ -416,5 +416,41 @@ function randomSex(){ //Remember that the way I chose to do it (><) is genderIsM
     }
     else {
         return true;
+    }
+}
+
+function causeOfDeath(){ //So and so...
+    let x = rando(12);
+    switch(x){
+        case 1: return "died of unknown causes.";
+        case 2: return "was murdered.";
+        case 3: return "was killed in battle.";
+        case 4: return "died in a work-related accident.";
+        case 5: return "died in an accident.";
+        case 6:
+        case 7: return "died of natural causes.";
+        case 8: return "committed suicide.";
+        case 9: return "was torn apart by an animal.";
+        case 10: return "was consumed by a monster.";
+        case 11: return "was executed for a crime.";
+        case 12: return "was struck down by an angry god.";
+    }
+}
+
+function status(){ //So and so is...
+    let x = roll(3,"d6");
+    switch(x){
+        case 3: return causeOfDeath();
+        case 4:
+        case 5: return "went missing years ago.";
+        case 6: return "is doing poorly due to financial troubles.";
+        case 7: return "is doing poorly due to an injury.";
+        case 8: return "is doing poorly due to relationship troubles.";
+        case 7: return "died of natural causes.";
+        case 8: return "committed suicide.";
+        case 9:
+        case 10:
+        case 11:
+        case 12: return "is alive and well.";
     }
 }
