@@ -69,7 +69,15 @@ let humanSurname = [
     "Ward", "Webb", "Wood", "Baxter", "Carter", "Wright",
     "Mason", "Hayward", "Draper", "Fisher", "Granger",
     "Kilner", "Potter", "Lister", "Mercer", "Sawyer",
-    "Shepherd", "Slater"
+    "Shepherd", "Slater", "Bowman", "Banister", "Barker",
+    "Becker", "Butcher", "Carver", "Chamberlain", "Coker",
+    "Collier", "Chapman", "Crocker", "Dexter", "Dyer",
+    "Faulkner", "Feldman", "Fiddler", "Forester", "Glover",
+    "Horner", "Jagger", "Keller", "Mailer", "Norris", "Packer",
+    "Miner", "Planter", "Reeve", "Piper", "Sandler", "Skinner",
+    "Shearer", "Sutter", "Steele", "Turner", "Waxman", "Ward", "Winer",
+    "Archer", "Ensign", "Rider", "Runner", "Bishop", "Abbot",
+    "Chaplin", "Deacon", "Parson", "Sexton"
 ];
 
 //------------Dwarves---------------
