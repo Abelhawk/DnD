@@ -46,7 +46,7 @@ let maleHuman = [
     "Roland", "Rolf", "Simon", "Theobald", "Theodoric",
     "Thomas", "Timm", "William", "Wymar", "Felix", "Galleren",
     "Engelhart", "Antoine", "Colin", "Denis", "Ernault",
-    "Giles", "Hugo", "Jack", "Louis", "Martin", "Perrin",
+    "Giles", "Hugo", "Jack", "Louis", "Martin",
     "Philip", "Pierre", "Regnault", "Talbot", "Vincent",
     "Albert", "Alexander", "Balthasar", "Benedick", "Berhart",
     "Casper", "Christian", "Cristoff", "Dietrich", "Erhart",
@@ -92,7 +92,10 @@ let humanSurname = [
     "Miner", "Planter", "Reeve", "Piper", "Sandler", "Skinner",
     "Shearer", "Sutter", "Steele", "Turner", "Waxman", "Ward", "Winer",
     "Archer", "Ensign", "Rider", "Runner", "Bishop", "Abbot",
-    "Chaplin", "Deacon", "Parson", "Sexton", "Booker"
+    "Chaplin", "Deacon", "Parson", "Sexton", "Booker", "Baldrick",
+    "Bowe", "Frost", "Pratchett", "Shackleford", "Threston",
+    "Trollope", "Wannell", "Wilde", "Wylie", "Strange", "Seymour",
+    "Mallow"
 ];
 
 //------------Dwarves---------------
@@ -232,7 +235,7 @@ let maleHalfling = [
     "Lerry", "Lindal", "Lyle", "Merric", "Mican", "Milo",
     "Morrin", "Nebin", "Nevil", "Osborn", "Ostran", "Oswalt",
     "Perrin", "Poppy", "Reed", "Roscoe", "Sam", "Shardon",
-    "Tye", "Ulmo", "Wellby", "Wendel", "Wenner", "Wes"
+    "Tye", "Ulmo", "Wellby", "Wendel", "Wenner", "Wes",
 ];
 
 let femaleHalfling = [
