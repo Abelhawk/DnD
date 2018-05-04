@@ -44,8 +44,16 @@ let maleHuman = [
     "Norman", "Odo", "Percival", "Peter", "Ralf", "Randal",
     "Raymond", "Reynard", "Richard", "Robert", "Roger",
     "Roland", "Rolf", "Simon", "Theobald", "Theodoric",
-    "Thomas", "Timm", "William", "Wymar",
-    "Engelhart"
+    "Thomas", "Timm", "William", "Wymar", "Felix", "Galleren",
+    "Engelhart", "Antoine", "Colin", "Denis", "Ernault",
+    "Giles", "Hugo", "Jack", "Louis", "Martin", "Perrin",
+    "Philip", "Pierre", "Regnault", "Talbot", "Vincent",
+    "Albert", "Alexander", "Balthasar", "Benedick", "Berhart",
+    "Casper", "Christian", "Cristoff", "Dietrich", "Erhart",
+    "Gerhart", "Hans", "Hartmann", "Herman", "Jacob", "Jeremy",
+    "Karl", "Linhart", "Lawrence", "Mark", "Michael", "Oswald",
+    "Sebastian", "Sigmund", "Steffan", "Ulrich", "Wendell",
+    "Wilhelm", "Wolfgang"
 ];
 
 let femaleHuman = [
@@ -58,7 +66,14 @@ let femaleHuman = [
     "Isabella", "Jacoba", "Jane", "Joan", "Juliana",
     "Katherine", "Margery", "Mary", "Matilda", "Maynild",
     "Millicent", "Oriel", "Rohesia", "Rosalind", "Rosamund",
-    "Sarah", "Susannah", "Sybil", "Willamina", "Yvonne"
+    "Sarah", "Susannah", "Sybil", "Willamina", "Yvonne",
+    "Alberea", "Amy", "Blancha", "Cateline", "Claricia",
+    "Collette", "Emily", "Ermentrudis", "Gila", "Johanna",
+    "Juliette", "Margot", "Marguerite", "Marie", "Odelina",
+    "Petronilla", "Stephana", "Sybill", "Barbara", "Brigita",
+    "Clara", "Cristina", "Dorothy", "Fela", "Fronicka",
+    "Geneveve", "Gertrude", "Helena", "Janet", "Lucia", "Otilia",
+    "Ursula"
 ];
 
 let humanSurname = [
@@ -77,7 +92,7 @@ let humanSurname = [
     "Miner", "Planter", "Reeve", "Piper", "Sandler", "Skinner",
     "Shearer", "Sutter", "Steele", "Turner", "Waxman", "Ward", "Winer",
     "Archer", "Ensign", "Rider", "Runner", "Bishop", "Abbot",
-    "Chaplin", "Deacon", "Parson", "Sexton"
+    "Chaplin", "Deacon", "Parson", "Sexton", "Booker"
 ];
 
 //------------Dwarves---------------
