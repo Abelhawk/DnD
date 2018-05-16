@@ -74,7 +74,7 @@ let grassland = [
     "spring", "bridge", "crest", "song", "feather", "heart",
     "valley", "glen", "well", "wing", "dale", "light",
     "song", "smar", "haven", "set", "wall", "ton", "brink",
-    "bird"
+    "bird", "rill"
 ];
 
 let hills = [
@@ -85,7 +85,7 @@ let hills = [
     "spear", "shield", "dale", "cleft", "notch", "forge",
     "tower", "guard", "garde", "burg", "grad", "sbrad", "ville",
     "sborough", "warren", "canyon", "summit", "smar", "shire", "set",
-    "wall", "ton", "bluff", "horn"
+    "wall", "ton", "bluff", "horn", "rill", "creek"
 ];
 
 
@@ -111,7 +111,7 @@ let swamp = [
     "quag", "holme", "flood", "water", "dark", "shade", "swarm",
     "wood", "vine", "moss", "sink", "drown", "stench", "hive",
     "murk", "fog", "churn", "burble", "damp", "shadow", "moss",
-    "ooze"
+    "ooze", "creek"
 ];
 
 let arctic = [
@@ -142,6 +142,7 @@ let compound = [
     "wastes", "depths", "tower", "tunnels",
     "alley", "bog", "crossroads", "pits", "arch",
     "estate", "dam", "canal", "crater", "steppes",
+    "road", "warren"
 ];
 
 let landmarks = [
@@ -152,7 +153,7 @@ let landmarks = [
     "wilds", "glen", "summit", "pond", "slopes", "spire", "fields",
     "jungle", "prairie", "caldera", "hinterlands", "plains", "vineyards",
     "basin", "plateau", "gully", "gorge", "bluff", "ravine", "knoll",
-    "trench", "geyser", "foothills"
+    "trench", "geyser", "foothills", "creek"
 ];
 
 let coastalMarks = [
@@ -165,7 +166,7 @@ let coastalMarks = [
 let swampMarks = [
     "bog", "marsh", "swamp", "fen", "pools", "bayou", "wetlands",
     "morass", "mire", "lowlands", "moors", "glade", "swale",
-    "river", "mangrove"
+    "river", "mangrove", "causeway"
 ];
 
 let desertMarks = [
