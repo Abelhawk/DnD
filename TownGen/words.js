@@ -11,7 +11,7 @@ let defaults = [
     "thick", "thin", "tower", "wax", "quill", "young",
     "barrow", "stale", "flash", "scale", "bronze", "brass",
     "hammer", "anvil", "lime", "spur", "tea", "nether",
-    "strong"
+    "strong", "bridge"
 ];
 
 let scary = [
@@ -23,7 +23,8 @@ let scary = [
     "chill", "dead", "death", "grave", "gray", "sorrow",
     "under", "hollow", "husk", "cold", "ice", "plague",
     "pale", "terror", "curse", "lone", "night", "wither",
-    "barren", "web", "rot", "vice", "cower", "frigid"
+    "barren", "web", "rot", "vice", "cower", "frigid",
+    "strangle"
 ];
 
 let danger = [
@@ -48,7 +49,8 @@ let peace = [
     "bread", "peace", "noble", "crown", "ever", "dawn", "star",
     "haven", "hearth", "honor", "hope", "still", "jewel",
     "temple", "life", "crystal", "day", "home", "calm", "glad",
-    "quiet", "merry", "sweet", "dream", "dew", "honey", "butter"
+    "quiet", "merry", "sweet", "dream", "dew", "honey", "butter",
+    "glint"
 ];
 
 let natural = [
@@ -60,7 +62,7 @@ let natural = [
     "rain", "snow", "raven", "lion", "stag", "blue",
     "salt", "sky", "splinter", "silt", "mire", "dust", "thistle", "timber",
     "thunder", "meadow", "antler", "horn", "frost", "earth",
-    "wet", "falcon", "lion"
+    "wet", "falcon", "lion", "tangle"
 ];
 
 //-----------------------------------------------------------------------------------------------
@@ -74,18 +76,18 @@ let grassland = [
     "spring", "bridge", "crest", "song", "feather", "heart",
     "valley", "glen", "well", "wing", "dale", "light",
     "song", "smar", "haven", "set", "wall", "ton", "brink",
-    "bird", "rill"
+    "bird", "rill", "caster"
 ];
 
 let hills = [
-    "burrow", "cave", "den", "mountain", "hills",
+    "burrow", "cave", "den", "mountain", "hills", "foot", "hill",
     "ridge", "camp", "pass", "gulch", "post", "crag", "cliff",
     "scrub", "brush", "peak", "wind", "rock", "stone", "tooth",
     "vein", "mine", "keep", "shadow", "edge", "gate", "fall",
     "spear", "shield", "dale", "cleft", "notch", "forge",
     "tower", "guard", "garde", "burg", "grad", "sbrad", "ville",
     "sborough", "warren", "canyon", "summit", "smar", "shire", "set",
-    "wall", "ton", "bluff", "horn", "rill", "creek"
+    "wall", "ton", "bluff", "horn", "rill", "creek", "caster"
 ];
 
 
@@ -118,7 +120,7 @@ let arctic = [
     "snow", "ice", "winter", "freeze", "wind", "chill", "crystal",
     "whisper", "frost", "waste", "shatter", "howl", "melt", "spike",
     "glacier", "sleet", "snap", "cut", "shiver", "thaw", "flake",
-    "tundra", "grasp"
+    "tundra", "grasp", "glass"
 
 ];
 

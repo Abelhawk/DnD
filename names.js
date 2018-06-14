@@ -95,7 +95,8 @@ let humanSurname = [
     "Chaplin", "Deacon", "Parson", "Sexton", "Booker", "Baldrick",
     "Bowe", "Frost", "Pratchett", "Shackleford", "Threston",
     "Trollope", "Wannell", "Wilde", "Wylie", "Strange", "Seymour",
-    "Mallow"
+    "Mallow", "Innskeep", "Jeweler", "Furrier", "Kilner", "Bookbinder",
+    "Buckler", "Smith", "Roper", "Cutler", "Roofer", "Thatcher"
 ];
 
 //------------Dwarves---------------
