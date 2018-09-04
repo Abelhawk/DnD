@@ -11,7 +11,7 @@ let defaults = [
     "thick", "thin", "tower", "wax", "quill", "young",
     "barrow", "stale", "flash", "scale", "bronze", "brass",
     "hammer", "anvil", "lime", "spur", "tea", "nether",
-    "strong", "bridge"
+    "strong", "bridge", "flag"
 ];
 
 let scary = [
@@ -24,7 +24,7 @@ let scary = [
     "under", "hollow", "husk", "cold", "ice", "plague",
     "pale", "terror", "curse", "lone", "night", "wither",
     "barren", "web", "rot", "vice", "cower", "frigid",
-    "strangle"
+    "strangle", "cowl", "cloak", "hood"
 ];
 
 let danger = [
@@ -38,7 +38,7 @@ let danger = [
     "scourge", "shatter", "skull", "spear", "steel", "iron",
     "scar", "fury", "chain", "tusk", "talon", "broken",
     "flame", "dragon", "ash", "cinder", "war", "slaughter",
-    "deep", "sunder", "foe", "ill"
+    "deep", "sunder", "foe", "ill", "fire", "danger"
 ];
 
 let peace = [
@@ -50,7 +50,7 @@ let peace = [
     "haven", "hearth", "honor", "hope", "still", "jewel",
     "temple", "life", "crystal", "day", "home", "calm", "glad",
     "quiet", "merry", "sweet", "dream", "dew", "honey", "butter",
-    "glint"
+    "glint", "water"
 ];
 
 let natural = [
@@ -76,7 +76,7 @@ let grassland = [
     "spring", "bridge", "crest", "song", "feather", "heart",
     "valley", "glen", "well", "wing", "dale", "light",
     "song", "smar", "haven", "set", "wall", "ton", "brink",
-    "bird", "rill", "caster"
+    "bird", "rill", "caster", "staff"
 ];
 
 let hills = [
@@ -105,7 +105,8 @@ let forest = [
     "brush", "briar", "thorn", "pine", "oak", "aspen", "green",
     "cone", "jade", "moss", "web", "meadow", "bark", "branch",
     "wind", "hill", "stump", "wild", "stump", "root", "haven",
-    "wall", "ton", "willow", "brink", "taiga", "nettle"
+    "wall", "ton", "willow", "brink", "taiga", "nettle", "frond",
+    "creeper"
 ];
 
 let swamp = [
@@ -113,7 +114,7 @@ let swamp = [
     "quag", "holme", "flood", "water", "dark", "shade", "swarm",
     "wood", "vine", "moss", "sink", "drown", "stench", "hive",
     "murk", "fog", "churn", "burble", "damp", "shadow", "moss",
-    "ooze", "creek"
+    "ooze", "creek", "sludge", "muck"
 ];
 
 let arctic = [
@@ -144,7 +145,7 @@ let compound = [
     "wastes", "depths", "tower", "tunnels",
     "alley", "bog", "crossroads", "pits", "arch",
     "estate", "dam", "canal", "crater", "steppes",
-    "road", "warren"
+    "road", "warren", "tillage"
 ];
 
 let landmarks = [

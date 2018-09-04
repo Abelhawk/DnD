@@ -72,11 +72,9 @@ function generate(){
             landmarkArray.push(townMarks);
 
     }
-    console.log("LandmarkArray contains " + landmarkArray);
     result = first + second;
     if (document.getElementById("compounds").checked){
         let landmark = randoArray(isDuplicate(second,landmarkArray));
-        console.log(landmark);
         result += (" " + landmark);
     }
     return result;
@@ -89,8 +87,7 @@ function rando(probability){
 }
 
 function randoArray(array){
-    x = rando(array.length - 1);
-    return array[x];
+    return array[rando(array.length)];
 }
 
 function capitalize(str){
