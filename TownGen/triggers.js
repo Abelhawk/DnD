@@ -83,7 +83,7 @@ function generate(){
 //---------------------
 
 function rando(probability){
-    return Math.floor(Math.random() * probability + 1);
+    return Math.floor(Math.random() * probability);
 }
 
 function randoArray(array){
