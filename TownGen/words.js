@@ -11,7 +11,7 @@ let defaults = [
     "thick", "thin", "tower", "wax", "quill", "young",
     "barrow", "stale", "flash", "scale", "bronze", "brass",
     "hammer", "anvil", "lime", "spur", "tea", "nether",
-    "strong", "bridge", "flag"
+    "strong", "bridge", "flag", "copper"
 ];
 
 let scary = [
@@ -24,7 +24,8 @@ let scary = [
     "under", "hollow", "husk", "cold", "ice", "plague",
     "pale", "terror", "curse", "lone", "night", "wither",
     "barren", "web", "rot", "vice", "cower", "frigid",
-    "strangle", "cowl", "cloak", "hood"
+    "strangle", "cowl", "cloak", "hood", "grease", "spider",
+    "shroud"
 ];
 
 let danger = [
@@ -38,7 +39,8 @@ let danger = [
     "scourge", "shatter", "skull", "spear", "steel", "iron",
     "scar", "fury", "chain", "tusk", "talon", "broken",
     "flame", "dragon", "ash", "cinder", "war", "slaughter",
-    "deep", "sunder", "foe", "ill", "fire", "danger"
+    "deep", "sunder", "foe", "ill", "fire", "danger", "claw",
+    "molten", "starve", "polar", "lash"
 ];
 
 let peace = [
@@ -50,7 +52,7 @@ let peace = [
     "haven", "hearth", "honor", "hope", "still", "jewel",
     "temple", "life", "crystal", "day", "home", "calm", "glad",
     "quiet", "merry", "sweet", "dream", "dew", "honey", "butter",
-    "glint", "water"
+    "glint", "water", "star", "swan"
 ];
 
 let natural = [
@@ -58,11 +60,12 @@ let natural = [
     "thorn", "stone", "briar", "fern", "rock", "grass",
     "hedge", "leaf", "water", "green", "cavern", "quarry",
     "feather", "ancient", "high", "hills", "jade", "emerald",
-    "long", "low", "lush", "moon", "sun",
+    "long", "low", "lush", "moon", "sun", "fossil", "star",
     "rain", "snow", "raven", "lion", "stag", "blue",
     "salt", "sky", "splinter", "silt", "mire", "dust", "thistle", "timber",
     "thunder", "meadow", "antler", "horn", "frost", "earth",
-    "wet", "falcon", "lion", "tangle"
+    "wet", "falcon", "lion", "tangle", "dank", "wild", "brush",
+    "flower", "puddle", "ram"
 ];
 
 //-----------------------------------------------------------------------------------------------
@@ -76,7 +79,7 @@ let grassland = [
     "spring", "bridge", "crest", "song", "feather", "heart",
     "valley", "glen", "well", "wing", "dale", "light",
     "song", "smar", "haven", "set", "wall", "ton", "brink",
-    "bird", "rill", "caster", "staff"
+    "bird", "rill", "caster", "staff", "flower", "swan"
 ];
 
 let hills = [
@@ -87,7 +90,8 @@ let hills = [
     "spear", "shield", "dale", "cleft", "notch", "forge",
     "tower", "guard", "garde", "burg", "grad", "sbrad", "ville",
     "sborough", "warren", "canyon", "summit", "smar", "shire", "set",
-    "wall", "ton", "bluff", "horn", "rill", "creek", "caster"
+    "wall", "ton", "bluff", "horn", "rill", "creek", "caster",
+    "ditch", "lichen", "valley", "ram"
 ];
 
 
@@ -96,7 +100,8 @@ let coastal = [
     "wind", "brine", "salt", "bank", "tide", "beach", "strand",
     "cove", "holme", "sedge", "combe", "fin", "pool", "reef",
     "pebble", "front", "side", "line", "sea", "coast", "drink",
-    "sink", "flow", "smar", "wake", "rift"
+    "sink", "flow", "smar", "wake", "rift", "whale", "gulf",
+    "anchor", "breach"
 ];
 
 let forest = [
@@ -106,7 +111,7 @@ let forest = [
     "cone", "jade", "moss", "web", "meadow", "bark", "branch",
     "wind", "hill", "stump", "wild", "stump", "root", "haven",
     "wall", "ton", "willow", "brink", "taiga", "nettle", "frond",
-    "creeper"
+    "creeper", "log"
 ];
 
 let swamp = [
@@ -114,22 +119,28 @@ let swamp = [
     "quag", "holme", "flood", "water", "dark", "shade", "swarm",
     "wood", "vine", "moss", "sink", "drown", "stench", "hive",
     "murk", "fog", "churn", "burble", "damp", "shadow", "moss",
-    "ooze", "creek", "sludge", "muck"
+    "ooze", "creek", "sludge", "muck", "pond", "slough", "sweat",
+    "crane", "log", "snake", "puddle", "seep", "sump", "sluice",
+    "pore", "lake", "pit"
 ];
 
 let arctic = [
     "snow", "ice", "winter", "freeze", "wind", "chill", "crystal",
     "whisper", "frost", "waste", "shatter", "howl", "melt", "spike",
     "glacier", "sleet", "snap", "cut", "shiver", "thaw", "flake",
-    "tundra", "grasp", "glass"
-
+    "tundra", "grasp", "glass", "cap", "bear", "cold", "frore",
+    "hoof", "way", "drift", "bone", "shroud", "mist", "fathom",
+    "fork"
 ];
 
 let desert = [
     "sand", "crag", "wind", "dust", "whisper", "scorch", "blaze",
     "waste", "thirst", "parch", "mirror", "choke", "dry", "barren",
     "dune", "flat", "swelter", "glass", "blister", "fire", "flame",
-    "burn", "grit", "chalk", "salt", "cavern", "quartz"
+    "burn", "grit", "chalk", "salt", "cavern", "quartz", "gravel",
+    "powder", "ditch", "rock", "wither", "cactus", "melt", "claw",
+    "drought", "spit", "sweat", "burn", "lurch", "locust", "fossil",
+    "cloud", "swarm", "lichen", "lizard"
 ];
 
 //-------------------------------------------------------------------------------------------------
@@ -149,7 +160,7 @@ let compound = [
 ];
 
 let landmarks = [
-    "hills", "gulch", "forest", "grove", "woods", "vale", "lake",
+    "hills", "gulch", "forest", "grove", "woods", "vale",
     "fen", "valley", "dale", "ridge", "lake", "mountain", "peak",
     "pinnacle", "canyon", "falls", "highlands", "lowlands", "hill",
     "wood", "glades", "springs", "acres", "farmstead", "wilderness",
@@ -169,17 +180,19 @@ let coastalMarks = [
 let swampMarks = [
     "bog", "marsh", "swamp", "fen", "pools", "bayou", "wetlands",
     "morass", "mire", "lowlands", "moors", "glade", "swale",
-    "river", "mangrove", "causeway"
+    "river", "mangrove", "causeway", "muskeg", "jungle", "sinks"
 ];
 
 let desertMarks = [
     "wastes", "dunes", "mesa", "ridge", "oasis", "flats", "wasteland",
-    "badlands", "barrens", "sands", "butte", "dike"
+    "badlands", "barrens", "sands", "butte", "dike", "wilds", "savannah",
+    "buttes"
 ];
 
 let arcticMarks = [
     "wastes", "mountains", "peak", "summit", "canyon", "ridge", "crag",
-    "cliffs", "forest", "glacier", "fjord"
+    "cliffs", "forest", "glacier", "fjord", "shores", "summit", "gulf",
+
 ];
 
 let townMarks = [
