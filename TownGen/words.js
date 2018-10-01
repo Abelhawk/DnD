@@ -65,7 +65,7 @@ let natural = [
     "salt", "sky", "splinter", "silt", "mire", "dust", "thistle", "timber",
     "thunder", "meadow", "antler", "horn", "frost", "earth",
     "wet", "falcon", "lion", "tangle", "dank", "wild", "brush",
-    "flower", "puddle", "ram"
+    "flower", "puddle", "ram", "mist"
 ];
 
 //-----------------------------------------------------------------------------------------------
@@ -101,7 +101,7 @@ let coastal = [
     "cove", "holme", "sedge", "combe", "fin", "pool", "reef",
     "pebble", "front", "side", "line", "sea", "coast", "drink",
     "sink", "flow", "smar", "wake", "rift", "whale", "gulf",
-    "anchor", "breach"
+    "anchor", "breach", "fog", "mist"
 ];
 
 let forest = [
@@ -130,7 +130,7 @@ let arctic = [
     "glacier", "sleet", "snap", "cut", "shiver", "thaw", "flake",
     "tundra", "grasp", "glass", "cap", "bear", "cold", "frore",
     "hoof", "way", "drift", "bone", "shroud", "mist", "fathom",
-    "fork"
+    "fork", "rime"
 ];
 
 let desert = [
