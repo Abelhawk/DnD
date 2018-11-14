@@ -91,7 +91,7 @@ let hills = [
     "tower", "guard", "garde", "burg", "grad", "sbrad", "ville",
     "sborough", "warren", "canyon", "summit", "smar", "shire", "set",
     "wall", "ton", "bluff", "horn", "rill", "creek", "caster",
-    "ditch", "lichen", "valley", "ram"
+    "ditch", "lichen", "valley", "ram", "banner"
 ];
 
 
@@ -200,6 +200,10 @@ let townMarks = [
     "arena", "docks", "mansion", "manor", "plaza", "ward", "slums",
     "street", "alley", "way", "quarter", "corner", "palace", "market",
     "tower", "gardens", "park", "harbor", "stables", "cemetary",
-    "sanctuary", "cathedral", "chapel", "keep", "hall", "sanctum", "inn",
-    "library", "gates", "bridge"
+    "sanctuary", "cathedral", "chapel", "hall", "sanctum", "inn",
+    "library", "gates", "bridge", "promenade", "vineyards", "retreat",
+    "concourse", "menagerie", "commons", "triangle", "court", "outskirts",
+    "overlook", "tavern", "gate", "bank", "guildhall", "road", "shrine",
+    "church", "temple", "chapel", "embassy", "sewers", "canal", "tier",
+    "exchange", "spire"
 ];
