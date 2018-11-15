@@ -11,7 +11,7 @@ let defaults = [
     "thick", "thin", "tower", "wax", "quill", "young",
     "barrow", "stale", "flash", "scale", "bronze", "brass",
     "hammer", "anvil", "lime", "spur", "tea", "nether",
-    "strong", "bridge", "flag", "copper"
+    "strong", "bridge", "flag", "copper", "cross"
 ];
 
 let scary = [
@@ -65,7 +65,8 @@ let natural = [
     "salt", "sky", "splinter", "silt", "mire", "dust", "thistle", "timber",
     "thunder", "meadow", "antler", "horn", "frost", "earth",
     "wet", "falcon", "lion", "tangle", "dank", "wild", "brush",
-    "flower", "puddle", "ram", "mist"
+    "flower", "puddle", "ram", "mist", "heath", "heather", "rowen",
+    "elder", "oaken", "maple", "berry"
 ];
 
 //-----------------------------------------------------------------------------------------------
@@ -79,7 +80,8 @@ let grassland = [
     "spring", "bridge", "crest", "song", "feather", "heart",
     "valley", "glen", "well", "wing", "dale", "light",
     "song", "smar", "haven", "set", "wall", "ton", "brink",
-    "bird", "rill", "caster", "staff", "flower", "swan"
+    "bird", "rill", "caster", "staff", "flower", "swan", "bow",
+    "cross", "berry"
 ];
 
 let hills = [
@@ -91,7 +93,8 @@ let hills = [
     "tower", "guard", "garde", "burg", "grad", "sbrad", "ville",
     "sborough", "warren", "canyon", "summit", "smar", "shire", "set",
     "wall", "ton", "bluff", "horn", "rill", "creek", "caster",
-    "ditch", "lichen", "valley", "ram", "banner"
+    "ditch", "lichen", "valley", "ram", "banner", "bow", "hold",
+    "cross"
 ];
 
 
@@ -111,7 +114,7 @@ let forest = [
     "cone", "jade", "moss", "web", "meadow", "bark", "branch",
     "wind", "hill", "stump", "wild", "stump", "root", "haven",
     "wall", "ton", "willow", "brink", "taiga", "nettle", "frond",
-    "creeper", "log"
+    "creeper", "log", "bow"
 ];
 
 let swamp = [
