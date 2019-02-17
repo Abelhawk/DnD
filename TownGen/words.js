@@ -114,7 +114,7 @@ let forest = [
     "cone", "jade", "moss", "web", "meadow", "bark", "branch",
     "wind", "hill", "stump", "wild", "stump", "root", "haven",
     "wall", "ton", "willow", "brink", "taiga", "nettle", "frond",
-    "creeper", "log", "bow"
+    "creeper", "log", "bow", "mantle"
 ];
 
 let swamp = [

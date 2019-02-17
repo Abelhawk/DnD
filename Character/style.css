@@ -1,0 +1,67 @@
+body {
+    color: #41dff4;
+}
+
+button, a {
+    background-color: #41dff4;
+}
+
+select,
+input {
+    border: 1px black solid;
+    font-size: 10pt;
+}
+
+select {
+    margin: 5px 0;
+}
+
+.character-name {
+    font-size: 40px;
+    font-weight: lighter;
+    font-family: 'Cinzel', serif;
+}
+
+.character-sub-info {
+    font-style: italic;
+    color: #41dff4;
+}
+
+.generate {
+    color: white;
+}
+
+.label {
+    color: #DDB783;
+}
+
+.field {
+    width: 100%;
+}
+
+#domainField,
+#patronField,
+#originField,
+#backstoryButton,
+#familyButton,
+#appearanceButton
+{
+    display: none;
+}
+
+#welcome,
+.guide {
+    text-align: center;
+    font-style: italic;
+    font-size: 11pt;
+    user-select: none;
+}
+
+.proceed {
+    visibility: hidden;
+}
+
+.information {
+    width: 50%;
+    margin: auto auto 40px auto;
+}

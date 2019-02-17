@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Austin's Character Generator</title>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"
+            integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ"
+            crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Cinzel:700|Roboto+Condensed" rel="stylesheet">
+    <link rel="stylesheet" href="../general.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="../favicon.ico">
+    <script src="character-triggers.js" defer></script>
+    <script src="names.js" defer></script>
+    <script src="randomTables.js" defer></script>
+</head>
+<body>
+<div class="container">
+    <p id="welcome">Choose any of the options below to begin character
+        creation. <br>The unfilled fields will be randomized!</p>
+    <div class="choices">
+        <div class="field">
+            Name: <input type="text" placeholder="(random)" id="name">
+        </div>
+        <div class="field">
+            Gender: <select id="gender">
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+        </select>
+        </div>
+        
+        <div class="field">
+            Race: <select id="race">
+            <option value="randomRace">(random)</option>
+            <option value="human">Human</option>
+            <option value="dwarf">Dwarf</option>
+            <option value="elf">Elf</option>
+            <option value="halfling">Halfling</option>
+            <option value="half-elf">Half-elf</option>
+            <option value="gnome">Gnome</option>
+            <option value="tiefling">Tiefling</option>
+            <option value="half-orc">Half-orc</option>
+            <option value="dragonborn">Dragonborn</option>
+            <option value="aasimar">Aasimar</option>
+            <option value="goliath">Goliath</option>
+            <!--<option value="aarakocra">Aarakocra</option>-->
+            <option value="genasi">Genasi</option>
+        </select>
+        </div>
+        
+        <div class="field">
+            Class: <select id="class" onchange="subclassOptions(this)">
+            <option value="randomClass">(random)</option>
+            <option value="barbarian">Barbarian</option>
+            <option value="bard">Bard</option>
+            <option value="cleric">Cleric</option>
+            <option value="druid">Druid</option>
+            <option value="fighter">Fighter</option>
+            <option value="monk">Monk</option>
+            <option value="paladin">Paladin</option>
+            <option value="ranger">Ranger</option>
+            <option value="rogue">Rogue</option>
+            <option value="sorcerer">Sorcerer</option>
+            <option value="warlock">Warlock</option>
+            <option value="wizard">Wizard</option>
+        </select>
+        </div>
+        
+        <div class="field">
+            <div class="clericDomain">
+                Domain: <select id="domain">
+                <option value="randomDomain">(random)</option>
+                <option value="forge">Forge</option>
+                <option value="grave">Grave</option>
+                <option value="knowledge">Knowledge</option>
+                <option value="life">Life</option>
+                <option value="light">Light</option>
+                <option value="nature">Nature</option>
+                <option value="tempest">Tempest</option>
+                <option value="trickery">Trickery</option>
+                <option value="war">War</option>
+            </select>
+            </div>
+            <div class="warlockPatron">
+                Patron: <select id="patron">
+                <option value="randomPatron">(random)</option>
+                <option value="fiend">Fiend</option>
+                <option value="archfey">Archfey</option>
+                <option value="the great old one">Great Old One</option>
+                <option value="celestial">Celestial</option>
+                <option value="hexblade">Hexblade</option>
+            </select>
+            </div>
+            <div class="sorcererOrigin">
+                Origin: <select id="origin">
+                <option value="randomOrigin">(random)</option>
+                <option value="dragon">Dragon Bloodline</option>
+                <option value="wildmagic">Wild Magic</option>
+                <option value="divine">Divine Soul</option>
+                <option value="storm">Storm Magic</option>
+                <option value="shadow">Shadow Magic</option>
+            </select>
+            </div>
+        </div>
+    </div>
+    <div class="title">
+        <h1 contenteditable="true" id="titleName">loading...</h1>
+        <h2 contenteditable="true" id="titleCharacter">loading...</h2>
+    </div>
+    <div class="lowerContent">
+        <button id="begin" onclick="proceed()">Create My Character!</button>
+        <!--<div class="information" id="genAppearance" contenteditable="true"></div>-->
+        <!--<button class="proceed" id="bAppearance" onclick="createAppearance()">Generate Appearance</button>-->
+        <div class="information" id="genChildhood" contenteditable="true"></div>
+        <button class="proceed" id="bChildhood" onclick="createFamily()">Generate Childhood and Family</button>
+        <div class="information" id="genBackground" contenteditable="true"></div>
+        <button class="proceed" id="bBackground">Generate Background</button>
+    </div>
+    <a href="../index.html">Back</a>
+</div>
+</div>
+</body>
+</html>

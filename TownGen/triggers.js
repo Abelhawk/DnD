@@ -1,4 +1,4 @@
-let textField = $('#generate');
+let textField = $('.generate');
 
 function activate() {
     textField.html(`<p>` + capitalize(generate()) + `</p>`);

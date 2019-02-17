@@ -1,51 +1,50 @@
 body {
-  background-color: #4c3f2d;
-  color: white;
-  font-family: sans-serif;
+    color: #89cb27;
 }
 h1 {
-  text-align: center;
-  font-family: serif;
-  font-weight: lighter;
+    text-align: center;
+    font-family: serif;
+    font-weight: lighter;
+    color: white;
 }
 .container {
-  display: flex;
-  width: 50%;
-  margin: 20px auto 0 auto;
-  justify-content: center;
-  color: #89cb27;
+    display: flex;
+    width: 50%;
+    margin: 20px auto 0 auto;
 }
-#generate {
-  border: 1px gray solid;
-  width: 70%;
-  text-align: center;
-  margin: auto;
-  padding: 15px;
-  font-size: 24pt;
-  font-family: serif;
-  color: #89cb27;
+
+button, a {
+    background: #89cb27;
+}
+
+button:hover, a:hover {
+    color: white;
+}
+
+.generate {
+    color: #89cb27;
+    border: 1px gray solid;
+    width: 70%;
+    text-align: center;
+    margin: auto;
+    padding: 15px;
+    font-size: 24pt;
+    font-family: serif;
 }
 .choices {
-  margin-bottom: 20px;
+    margin-bottom: 20px;
 }
 input,
 text {
-  width: 25px;
+    width: 25px;
 }
-.left {
-  margin-right: 10px;
-  text-align: right;
-}
-.right {
-  text-align: right;
-  align-content: center;
-}
+
 button {
-  text-align: center;
-  display: block;
-  margin: 10px auto;
-  font-size: 14pt;
+    text-align: center;
+    display: block;
+    margin: 10px auto;
+    font-size: 14pt;
 }
 label {
-  user-select: none;
+    user-select: none;
 }
