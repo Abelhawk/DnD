@@ -4,8 +4,6 @@
     <list default="true" id="495252ce-6aee-4675-83fc-feddd9e07b22" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/Character/character-creator.html" beforeDir="false" afterPath="$PROJECT_DIR$/Character/character-creator.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Character/character-triggers.js" beforeDir="false" afterPath="$PROJECT_DIR$/Character/character-triggers.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TownGen/town-gen.html" beforeDir="false" afterPath="$PROJECT_DIR$/TownGen/town-gen.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TownGen/triggers.js" beforeDir="false" afterPath="$PROJECT_DIR$/TownGen/town-gen-triggers.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -24,8 +22,8 @@
           <file leaf-file-name="character-creator.html" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/Character/character-creator.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="300">
-                  <caret line="20" column="18" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
+                <state relative-caret-position="314">
+                  <caret line="21" column="39" selection-start-line="21" selection-start-column="39" selection-end-line="21" selection-end-column="39" />
                 </state>
               </provider>
             </entry>
@@ -33,8 +31,8 @@
           <file leaf-file-name="character-triggers.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/Character/character-triggers.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-4245">
-                  <caret line="399" column="25" selection-start-line="399" selection-start-column="15" selection-end-line="399" selection-end-column="25" />
+                <state relative-caret-position="151">
+                  <caret line="550" column="1" lean-forward="true" selection-start-line="550" selection-start-column="1" selection-end-line="550" selection-end-column="1" />
                   <folding>
                     <element signature="n#!!doc" expanded="true" />
                   </folding>
@@ -149,7 +147,6 @@
       <find>rando</find>
       <find>rando(</find>
       <find>charisc</find>
-      <find>title</find>
       <find>half-elf</find>
       <find>pickFirstName</find>
       <find>heritage</find>
@@ -158,6 +155,9 @@
       <find>domainop</find>
       <find>patron</find>
       <find>domainopti</find>
+      <find>of the</find>
+      <find>title</find>
+      <find>$</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -281,12 +281,12 @@
       <workItem from="1542230306836" duration="871000" />
       <workItem from="1542304234001" duration="456000" />
       <workItem from="1543362301208" duration="44000" />
-      <workItem from="1550349995904" duration="13176000" />
+      <workItem from="1550349995904" duration="14848000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15135000" />
+    <option name="totallyTimeSpent" value="16807000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -316,6 +316,11 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/triggers.js">
@@ -593,15 +598,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Character/character-creator.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="18" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
+        <state relative-caret-position="314">
+          <caret line="21" column="39" selection-start-line="21" selection-start-column="39" selection-end-line="21" selection-end-column="39" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Character/character-triggers.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4245">
-          <caret line="399" column="25" selection-start-line="399" selection-start-column="15" selection-end-line="399" selection-end-column="25" />
+        <state relative-caret-position="151">
+          <caret line="550" column="1" lean-forward="true" selection-start-line="550" selection-start-column="1" selection-end-line="550" selection-end-column="1" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>

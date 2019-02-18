@@ -18,10 +18,13 @@ let genders = document.getElementById('gender');
 let charNameDiv = document.getElementById('charName');
 let charClassDiv = document.getElementById('charClass');
 let races = document.getElementById("race");
+let name = document.getElementById("name");
 let classes = document.getElementById("class");
 let domains = document.getElementById("domain");
 let patrons = document.getElementById("patron");
 let origins = document.getElementById("origin");
+
+let characterForm = document.getElementById("characterForm");
 
 //------Dynamic options
 let raceOptions = [
@@ -106,7 +109,14 @@ function proceed() {
     }
 
     your.age = determineAge(your.race, your.class);
-    your.name = $('#name').val();
+    let fullCustomName = name.value.split(" ");
+    your.name = fullCustomName[0];
+    your.surname = "";
+    if (fullCustomName.length > 1)
+    for (let i=1; i < fullCustomName.length; i++){
+        your.surname += fullCustomName[i] + " "
+    }
+    your.fullName = determineFullName(your.name, your.surname, your.race);
     if(!your.name) {
         your.name = pickFirstName(your.race, your.genderIsMale);
         your.surname = pickLastName(your.race);
@@ -276,16 +286,10 @@ function createFamily(){
     let family = setFamily(); //[0] is the string, [1] is momGone, [2] is dadGone
     let home = setHome(birthplace[0],family[0]);
     let siblings = 0;
-    $(".guide").hide();
-    $("#begin").hide();
-    $('#titleName').attr("contenteditable", false);
-    $('#titleCharacter').attr("contenteditable", false);
-
-    $('#genChildhood').html(
+    characterForm.style.display = "none";
         //-----Home
 
         `You were born ` + birthplace[1] + `. ` + home[0] + family[0] + `<br>` + family[1]
-    );
 }
 
 
@@ -347,16 +351,7 @@ function determineRace(){
 
 function determineCommunity(race) {
     switch (race) {
-        case "dwarf":
-        case "elf":
-        case "halfling":
-        case "gnome":
-        case "dragonborn":
-        case "goliath":
-        case "aarakocra":
-            return race;
         case "aasimar":
-        case "human":
             return "human";
         case "half-elf":
             let chance = rando(2);
@@ -367,7 +362,6 @@ function determineCommunity(race) {
             let gen = "genasi";
             while (gen === "genasi" || gen === "dragonborn" || gen === "orc" || gen === "aarakocra" || gen === "demon"){
                 gen = determineCommunity(pickRace());
-                console.log(gen);
             }
             return gen;
         case "half-orc":
@@ -378,6 +372,8 @@ function determineCommunity(race) {
             let y = rando(3);
             if (y === 0) { return "demon"}
             else { return "human" }
+        default:
+            return race;
     }
 }
 
@@ -540,25 +536,28 @@ function pickLastName(race) {
         case "genasi":
             return pickLastName(community);
         case "half-elf":
-            if (community === "elf") {return elfFamily[rando(elfFamily.length)]}
-            if (community === "human") {return humanSurname[rando(humanSurname.length)]}
+            if (community === "elf") return elfFamily[rando(elfFamily.length)];
+            if (community === "human") return humanSurname[rando(humanSurname.length)];
             break;
         case "goliath":
             return goliathClan[rando(goliathClan.length)];
         case "half-orc":
         case "tiefling":
-            if (community === "human") {return humanSurname[rando(humanSurname.length)];}
+            if (community === "human") return humanSurname[rando(humanSurname.length)];
             //Volo's Guide might have some insights. Otherwise, works for me.
-        case "aarakocra":
+            break;
         default:
             return "";
     }
 }
 
 function determineFullName(first, last, race){
+    console.log(first);
+    console.log(last);
+    console.log(race);
     if (race === "goliath"){
-        let birthname = goliathNames[rando(goliathNames.length)];
-        return (birthname + " " + first + " " + last);
+        let birthName = goliathNames[rando(goliathNames.length)];
+        return (birthName + " " + first + " " + last);
     }
     else if (race === "dragonborn") {
         return (last + " " + first);

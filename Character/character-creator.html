@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <title>Austin's Character Generator</title>
-    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"
             integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ"
             crossorigin="anonymous"></script>
@@ -20,9 +19,9 @@
 <div class="container">
     <p id="welcome">Choose any of the options below to begin character
         creation. <br>The unfilled fields will be randomized!</p>
-    <div class="form">
+    <div class="form" id="characterForm">
         <div class="field">
-            <span class="label">Name: </span><input>
+            <span class="label">Name: </span><input id="name">
         </div>
         <div class="field">
             <span class="label">Gender: </span><select id="gender">
