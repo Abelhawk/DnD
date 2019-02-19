@@ -8,7 +8,9 @@
 
 
 //-----Global Variables
-function Character(){}
+function Character() {
+}
+
 let Father = new Character;
 let Mother = new Character;
 let subclassFix;
@@ -54,33 +56,68 @@ let originOptions = [
     "Giant Soul", "Shadow Magic",
     "Storm Sorcery", "Wild Magic"
 ];
+let subRaceOptions = {
+    elf: [
+        "High Elf",
+        "Wood Elf",
+        "Drow",
+        "Sea Elf",
+        "Shadar-kai",
+        "Eladrin"
+    ],
+    dwarf: [
+        "Hill Dwarf",
+        "Mountain Dwarf",
+        "Duergar"
+    ],
+    halfling: [
+        "Lightfoot Halfling",
+        "Stout Halfling"
+    ],
+    gnome: [
+        "Forest Gnome",
+        "Rock Gnome",
+        "Deep Gnome"
+    ],
+    genasi: [
+        "Fire Genasi",
+        "Air Genasi",
+        "Earth Genasi",
+        "Water Genasi"
+    ],
+    aasimar: [
+        "Fallen Aasimar",
+        "Scourge Aasimar",
+        "Protector Aasimar"
+    ]
+};
 
-function loadPage(){
-    for (let i = 0; i < raceOptions.length; i++){
+function loadPage() {
+    for (let i = 0; i < raceOptions.length; i++) {
         let opt = document.createElement("option");
         opt.value = raceOptions[i];
         opt.innerHTML = raceOptions[i];
         races.appendChild(opt)
     }
-    for (let i = 0; i < classOptions.length; i++){
+    for (let i = 0; i < classOptions.length; i++) {
         let opt = document.createElement("option");
         opt.value = classOptions[i];
         opt.innerHTML = classOptions[i];
         classes.appendChild(opt)
     }
-    for (let i = 0; i < domainOptions.length; i++){
+    for (let i = 0; i < domainOptions.length; i++) {
         let opt = document.createElement("option");
         opt.value = domainOptions[i];
         opt.innerHTML = domainOptions[i];
         domains.appendChild(opt)
     }
-    for (let i = 0; i < patronOptions.length; i++){
+    for (let i = 0; i < patronOptions.length; i++) {
         let opt = document.createElement("option");
         opt.value = patronOptions[i].replace(/\s/g, '');
         opt.innerHTML = patronOptions[i];
         patrons.appendChild(opt)
     }
-    for (let i = 0; i < originOptions.length; i++){
+    for (let i = 0; i < originOptions.length; i++) {
         let opt = document.createElement("option");
         opt.value = originOptions[i].replace(/\s/g, '');
         opt.innerHTML = originOptions[i];
@@ -104,7 +141,6 @@ function proceed() {
         your.genderIsMale = false;
     } else if (genders.value === 'randomGender') {
         let random = rando(2);
-        console.log(random);
         if (random === 0) your.genderIsMale = false
     }
 
@@ -113,28 +149,28 @@ function proceed() {
     your.name = fullCustomName[0];
     your.surname = "";
     if (fullCustomName.length > 1)
-    for (let i=1; i < fullCustomName.length; i++){
-        your.surname += fullCustomName[i] + " "
-    }
+        for (let i = 1; i < fullCustomName.length; i++) {
+            your.surname += fullCustomName[i] + " "
+        }
     your.fullName = determineFullName(your.name, your.surname, your.race);
-    if(!your.name) {
+    if (!your.name) {
         your.name = pickFirstName(your.race, your.genderIsMale);
         your.surname = pickLastName(your.race);
-        if (your.surname === "xxx"){
+        if (your.surname === "xxx") {
             your.fullName = your.name;
         }
         else {
             your.fullName = determineFullName(your.name, your.surname, your.race);
         }
     }
-    charNameDiv.innerText =(capitalize(your.fullName));
+    charNameDiv.innerText = (capitalize(your.fullName));
     if (your.fullClass.toLowerCase() === "warlock of the hexblade") {
         charClassDiv.innerText = (capitalize(your.race) + " Hexblade Warlock");
     }
     else {
         charClassDiv.innerText = (capitalize(your.race) + " " + capitalize(your.fullClass));
     }
-    if(charIsCreated === false){
+    if (charIsCreated === false) {
         let button1 = document.getElementById("familyButton");
         let button2 = document.getElementById("backstoryButton");
         let button3 = document.getElementById("appearanceButton");
@@ -164,7 +200,7 @@ function proceed() {
 
 //------Step 2: Generate Family--------------------------------------------->})][][][]K<-o
 
-function createFamily(){
+function createFamily() {
     let a;
     if (your.race === "half-elf" || your.race === "half-orc" || your.race === "tiefling" || your.race === "aasimar") {
         let x = rando(raceOptions.length);
@@ -275,23 +311,29 @@ function createFamily(){
                 }
         }
     }
-    else{
+    else {
         Father.race = your.race;
         Mother.race = your.race;
     }
-    Father.name = pickFirstName(Father.race,true);
-    Mother.name = pickFirstName(Mother.race,false);
+    Father.name = pickFirstName(Father.race, true);
+    Mother.name = pickFirstName(Mother.race, false);
     Mother.surname = pickLastName(Mother.race, community);
     let birthplace = setBirthplace(your.race);
     let family = setFamily(); //[0] is the string, [1] is momGone, [2] is dadGone
-    let home = setHome(birthplace[0],family[0]);
+    let home = setHome(birthplace[0], family[0]);
     let siblings = 0;
     characterForm.style.display = "none";
-        //-----Home
+    document.getElementById("nameGenerate").style.border = "none";
+    document.getElementById("familyGenerate").style.display = "block";
+    document.getElementById("characterButton").style.display = "none";
+    //-----Home
 
-        `You were born ` + birthplace[1] + `. ` + home[0] + family[0] + `<br>` + family[1]
+    let info = document.getElementById("charFam");
+    info.innerHTML = `<p>You were born ${birthplace[1]}.</p>`;
+    info.innerHTML += `<p>${home[0]}</p>`;
+    info.innerHTML += `<p>${family[0]}</p>`;
+    info.innerHTML += `<p>${family[1]}</p>`;
 }
-
 
 
 //---------------------------------------------------------------------------->})][][][]K<-o
@@ -302,49 +344,49 @@ function createFamily(){
 function determineAge(race) {
     let baseAge;
 
-    switch (race){
+    switch (race) {
         case "human":
         case "aasimar":
         case "tiefling":
         case "goliath":
             baseAge = 15;
-            return (baseAge + roll(1,"d8"));
+            return (baseAge + roll(1, "d8"));
         case "dwarf":
             baseAge = 40;
-            return (baseAge + roll(5,"d6"));
+            return (baseAge + roll(5, "d6"));
         case "elf":
             baseAge = 110;
-            return (baseAge + roll(6,"d6"));
+            return (baseAge + roll(6, "d6"));
         case "gnome":
             baseAge = 40;
-            return (baseAge + roll(6,"d6"));
+            return (baseAge + roll(6, "d6"));
         case "half-elf":
         case "genasi":
             baseAge = 20;
-            return (baseAge + roll(2,"d6"));
+            return (baseAge + roll(2, "d6"));
         case "half-orc":
             baseAge = 14;
-            return (baseAge + roll(1,"d6"));
+            return (baseAge + roll(1, "d6"));
         case "halfling":
             baseAge = 20;
-            return (baseAge + roll(3,"d6"));
+            return (baseAge + roll(3, "d6"));
         case "aarakocra":
             baseAge = 4;
-            return (baseAge + roll(2,"d4"));
+            return (baseAge + roll(2, "d4"));
         case "dragonborn":
             baseAge = 15;
-            return (baseAge + roll(1,"d6"));
+            return (baseAge + roll(1, "d6"));
     }
 }
 
 //----------RACE
 
-function determineRace(){
+function determineRace() {
     let r = races.value.toLowerCase();
-    if(r !== "randomrace"){
+    if (r !== "randomrace") {
         return r;
     }
-    else{
+    else {
         return pickRace();
     }
 }
@@ -355,23 +397,35 @@ function determineCommunity(race) {
             return "human";
         case "half-elf":
             let chance = rando(2);
-            if (chance === 0) {return "elf"}
-            if (chance === 1) {return "human"}
+            if (chance === 0) {
+                return "elf"
+            }
+            if (chance === 1) {
+                return "human"
+            }
             break;
         case "genasi":
             let gen = "genasi";
-            while (gen === "genasi" || gen === "dragonborn" || gen === "orc" || gen === "aarakocra" || gen === "demon"){
+            while (gen === "genasi" || gen === "dragonborn" || gen === "orc" || gen === "aarakocra" || gen === "demon") {
                 gen = determineCommunity(pickRace());
             }
             return gen;
         case "half-orc":
             let x = rando(3);
-            if (x === 0) { return "orc"}
-            else { return "human" }
+            if (x === 0) {
+                return "orc"
+            }
+            else {
+                return "human"
+            }
         case "tiefling":
             let y = rando(3);
-            if (y === 0) { return "demon"}
-            else { return "human" }
+            if (y === 0) {
+                return "demon"
+            }
+            else {
+                return "human"
+            }
         default:
             return race;
     }
@@ -391,13 +445,14 @@ function determineClass() {
     return output;
 }
 
-function checkSubclass(baseClass){
+function checkSubclass(baseClass) {
     if (baseClass === "cleric" || baseClass === "warlock" || baseClass === "sorcerer") {
         return determineSubclass(baseClass);
     }
-    else{
+    else {
         return baseClass;
     }
+
     function determineSubclass(cl) {
         let cle = domains.value;
         let war = patrons.value;
@@ -427,19 +482,18 @@ function checkSubclass(baseClass){
                 } else {
                     subclass = sor;
                 }
-            }
         }
+    }
 }
 
 function subclassOptions() {
     let subChoice = classes.value.toLowerCase();
-    console.log(subChoice);
     let domainDiv = document.getElementById('domainField');
     let patronDiv = document.getElementById('patronField');
     let originDiv = document.getElementById('originField');
     hideOthers();
     subclassFix = subChoice;
-    if ( subChoice === 'cleric'){
+    if (subChoice === 'cleric') {
         domainDiv.style.display = "block"
     }
     else if (subChoice === 'warlock') {
@@ -448,6 +502,7 @@ function subclassOptions() {
     else if (subChoice === 'sorcerer') {
         originDiv.style.display = "block"
     }
+
     function hideOthers() {
         domainDiv.style.display = "none";
         patronDiv.style.display = "none";
@@ -458,37 +513,65 @@ function subclassOptions() {
 //----------NAME
 
 function pickFirstName(race, gender) {
-    switch(race.toLowerCase()){
+    switch (race.toLowerCase()) {
         case "human":
         case "aasimar":
-            if (gender === true) { return maleHuman[rando(maleHuman.length)] }
-            else {return femaleHuman[rando(femaleHuman.length)]}
+            if (gender === true) {
+                return maleHuman[rando(maleHuman.length)]
+            }
+            else {
+                return femaleHuman[rando(femaleHuman.length)]
+            }
         case "dwarf":
-            if (gender === true) { return maleDwarf[rando(maleDwarf.length)] }
-            else {return femaleDwarf[rando(femaleDwarf.length)]}
+            if (gender === true) {
+                return maleDwarf[rando(maleDwarf.length)]
+            }
+            else {
+                return femaleDwarf[rando(femaleDwarf.length)]
+            }
         case "aarakocra":
             return aarakocraNames[rando(aarakocraNames.length)];
         case "goliath":
             return nicknameGoliath[rando(nicknameGoliath.length)];
-            //Goliaths go by their nickname, but have a birth name, nickname, and clan name.
+        //Goliaths go by their nickname, but have a birth name, nickname, and clan name.
         case "elf":
-            if (gender === true) { return maleElf[rando(maleElf.length)] }
-            else {return femaleElf[rando(femaleElf.length)]}
+            if (gender === true) {
+                return maleElf[rando(maleElf.length)]
+            }
+            else {
+                return femaleElf[rando(femaleElf.length)]
+            }
         case "halfling":
-            if (gender === true) { return maleHalfling[rando(maleHalfling.length)] }
-            else {return femaleHalfling[rando(femaleHalfling.length)]}
+            if (gender === true) {
+                return maleHalfling[rando(maleHalfling.length)]
+            }
+            else {
+                return femaleHalfling[rando(femaleHalfling.length)]
+            }
         case "gnome":
-            if (gender === true) { return maleGnome[rando(maleGnome.length)] }
-            else {return femaleGnome[rando(femaleGnome.length)]}
+            if (gender === true) {
+                return maleGnome[rando(maleGnome.length)]
+            }
+            else {
+                return femaleGnome[rando(femaleGnome.length)]
+            }
         case "half-orc":
-            if (gender === true) { return maleHalforc[rando(maleHalforc.length)] }
-            else {return femaleHalforc[rando(femaleHalforc.length)]}
+            if (gender === true) {
+                return maleHalforc[rando(maleHalforc.length)]
+            }
+            else {
+                return femaleHalforc[rando(femaleHalforc.length)]
+            }
         case "tiefling":
-            if (gender === true) { return maleTiefling[rando(maleTiefling.length)] }
-            else {return femaleTiefling[rando(femaleTiefling.length)]}
+            if (gender === true) {
+                return maleTiefling[rando(maleTiefling.length)]
+            }
+            else {
+                return femaleTiefling[rando(femaleTiefling.length)]
+            }
         case "half-elf": //Half-elves have elf names if they live among humans, and vice-versa
             if (gender === true) {
-                switch(community){
+                switch (community) {
                     case "elf":
                         return maleHuman[rando(maleHuman.length)];
                     case "human":
@@ -496,7 +579,7 @@ function pickFirstName(race, gender) {
                 }
             }
             else {
-                switch(community){
+                switch (community) {
                     case "elf":
                         return femaleHuman[rando(femaleHuman.length)];
                     case "human":
@@ -505,12 +588,20 @@ function pickFirstName(race, gender) {
             }
             break;
         case "dragonborn":
-            if (gender === true) { return maleDragonborn[rando(maleDragonborn.length)] }
-            else {return femaleDragonborn[rando(femaleDragonborn.length)]}
+            if (gender === true) {
+                return maleDragonborn[rando(maleDragonborn.length)]
+            }
+            else {
+                return femaleDragonborn[rando(femaleDragonborn.length)]
+            }
         case "genasi": //Genasi are named based on the community they grow up with
             let x = rando(6);
-            if (x > 1){ return pickFirstName(community,gender, community) }
-            else {return genasiNames[rando(genasiNames.length)] }
+            if (x > 1) {
+                return pickFirstName(community, gender, community)
+            }
+            else {
+                return genasiNames[rando(genasiNames.length)]
+            }
         case "devil":
             return "Baator";
         default:
@@ -519,7 +610,7 @@ function pickFirstName(race, gender) {
 }
 
 function pickLastName(race) {
-    switch(race){
+    switch (race) {
         case "human":
         case "aasimar":
             return humanSurname[rando(humanSurname.length)];
@@ -551,18 +642,15 @@ function pickLastName(race) {
     }
 }
 
-function determineFullName(first, last, race){
-    console.log(first);
-    console.log(last);
-    console.log(race);
-    if (race === "goliath"){
+function determineFullName(first, last, race) {
+    if (race === "goliath") {
         let birthName = goliathNames[rando(goliathNames.length)];
         return (birthName + " " + first + " " + last);
     }
     else if (race === "dragonborn") {
         return (last + " " + first);
     }
-    else{
+    else {
         return (first + " " + last);
     }
 }
@@ -572,8 +660,8 @@ function determineFullName(first, last, race){
 function pickRace() {
     let x = rando(100);
     let output;
-    if (x <= 93){
-        switch(true) {
+    if (x <= 93) {
+        switch (true) {
             case (x <= 40):
                 output = "human";
                 break;
@@ -603,7 +691,7 @@ function pickRace() {
         }
     } //Rare races
     else {
-        switch(true) {
+        switch (true) {
             case (x <= 95):
                 output = "aasimar";
                 break;
@@ -625,7 +713,7 @@ function pickRace() {
 function pickClass() {
     let x = rando(100);
     let output;
-    switch(true){
+    switch (true) {
         case (x <= 7):
             output = "barbarian";
             break;
@@ -684,48 +772,49 @@ function pickX() {
 
 //-------Utility functions
 
-function rando(probability){
+function rando(probability) {
     return Math.floor(Math.random() * probability);
 }
 
-function capitalize(str){
-    return str.replace(/\w\S*/g, function(txt){
+function capitalize(str) {
+    return str.replace(/\w\S*/g, function (txt) {
         if (txt !== "of" && txt !== "the") txt = txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
-            return txt;
+        return txt;
     });
 }
 
-let vowels = ["a","e","i","o","u"];
-function aAn(str){
+let vowels = ["a", "e", "i", "o", "u"];
+
+function aAn(str) {
     //A function to switch between "a" and "an"
-    for (let i = 0; i < vowels.length; i++){
-        if(str[0] === vowels[i]){
+    for (let i = 0; i < vowels.length; i++) {
+        if (str[0] === vowels[i]) {
             return ("an " + str)
         }
     }
     return ("a " + str);
 }
 
-function roll(number, dice){
-    switch(dice){
+function roll(number, dice) {
+    switch (dice) {
         case "d4":
-            return (rando(4)* number)+1;
+            return (rando(4) * number) + 1;
         case "d6":
-            return (rando(6)* number)+1;
+            return (rando(6) * number) + 1;
         case "d8":
-            return (rando(8)* number)+1;
+            return (rando(8) * number) + 1;
         case "d10":
-            return (rando(10)* number)+1;
+            return (rando(10) * number) + 1;
         case "d12":
-            return (rando(12)* number)+1;
+            return (rando(12) * number) + 1;
         case "d100":
-            return (rando(100))+1;
+            return (rando(100)) + 1;
     }
 }
 
-function plural(race){
+function plural(race) {
     let pluralForm = race;
-    switch(race){
+    switch (race) {
         case "dwarf":
             pluralForm = "dwarves";
             break;
@@ -746,6 +835,6 @@ function plural(race){
     return pluralForm;
 }
 
-function say(x){
+function say(x) {
     alert(x);
 }

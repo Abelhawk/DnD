@@ -44,8 +44,8 @@ select {
 #originField,
 #backstoryButton,
 #familyButton,
-#appearanceButton
-{
+#appearanceButton,
+#familyGenerate {
     display: none;
 }
 

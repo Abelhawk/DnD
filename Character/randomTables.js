@@ -303,9 +303,12 @@ function setFamily(){
     if (your.race === "dwarf" || your.race === "elf" || Mother.race === "elf"){
         siblingR -= 2;
     }
-    let siblings = 0;
+    let siblings;
     switch (true){
-        case (siblingR <= 4):
+        case (siblingR < 4):
+            siblings = 0;
+            break;
+        case (siblingR === 4):
             siblings = roll(1,"d3");
             break;
         case (siblingR <= 6):
@@ -317,15 +320,14 @@ function setFamily(){
         case (siblingR <= 10):
             siblings = (roll(1,"d8") + 3);
     }
-    if (siblings === 0){ string += " You were an only child." }
+    if (siblings === 0) string += " You were an only child.";
     else {
         let allSibs = [];
         let older = [];
         let younger = [];
         let twins = [];
         for(let i = 0; i < siblings; i++){ //The array goes [Name, Race, Gender, Age]
-            let currentSibling = allSibs[i];
-            currentSibling = generateSibling();
+            let currentSibling = generateSibling();
             switch(true){
                 case (currentSibling[3] === "older"):
                     older.push(currentSibling);
@@ -337,10 +339,9 @@ function setFamily(){
                     twins.push(currentSibling);
             }
         }
-        allSibs = [];
-        allSibs.push(older);
-        allSibs.push(twins);
-        allSibs.push(younger);
+        for (let i = 0; i < older.length; i++) allSibs.push(older[i]);
+        for (let i = 0; i < twins.length; i++) allSibs.push(twins[i]);
+        for (let i = 0; i < younger.length; i++) allSibs.push(younger[i]);
         let position;
         switch(true){
             case (older.length === 0 && twins.length === 0):
@@ -358,8 +359,7 @@ function setFamily(){
             default:
                 position = "middle child";
             }
-        string += " You are the " + position + " of " + (allSibs.length + 1) + " children: ";
-        console.log("allSibs = " + allSibs);
+        string += " You are the " + position + " of " + (allSibs.length) + " children: ";
         for (let i = 0; i < allSibs.length; i++){
             let currentSibling = allSibs[i];
             let relation = "";
@@ -371,7 +371,12 @@ function setFamily(){
             }else {
                 relation += "sister";
             }
-            siblingList += "Your " + relation + " " + currentSibling[0] + `<br>` //Change these to CLASSES
+            if (i === 0) siblingList += "Your ";
+            else siblingList += "your ";
+            siblingList += relation + " " + currentSibling[0];
+            if (i < allSibs.length - 1) siblingList += `,<br>`;
+            else if (i === allSibs.length) siblingList += `, and <br>`;
+            else siblingList += `.<br>`; //Change these to CLASSES
         }
     }
     return [string,siblingList];

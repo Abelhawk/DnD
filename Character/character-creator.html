@@ -37,37 +37,45 @@
         </select>
         </div>
         
-        <div class="field">
-            <span class="label">Class: </span> <select id="class" onchange="subclassOptions()">
-            <option value="randomClass">(random)</option>
+        <div class="field" id="subRaceField">
+            <span class="label">Subrace: </span> <select id="subRace">
+            <option value="randomSubRace">(random)</option>
         </select>
+            
+            <div class="field">
+                <span class="label">Class: </span> <select id="class" onchange="subclassOptions()">
+                <option value="randomClass">(random)</option>
+            </select>
+            </div>
+            
+            <div class="field" id="domainField">
+                <span class="label">Domain: </span> <select id="domain">
+                <option value="randomDomain">(random)</option>
+            </select>
+            </div>
+            
+            <div class="field" id="patronField">
+                <span class="label">Patron: </span> <select id="patron">
+                <option value="randomPatron">(random)</option>
+            </select>
+            </div>
+            <div class="field" id="originField">
+                <span class="label">Sorcerous Origin: </span> <select id="origin">
+                <option value="randomOrigin">(random)</option>
+            </select>
+            </div>
         </div>
-        
-        <div class="field" id="domainField">
-            <span class="label">Domain: </span> <select id="domain">
-            <option value="randomDomain">(random)</option>
-        </select>
-        </div>
-        
-        <div class="field" id="patronField">
-            <span class="label">Patron: </span> <select id="patron">
-            <option value="randomPatron">(random)</option>
-        </select>
-        </div>
-        <div class="field" id="originField">
-            <span class="label">Sorcerous Origin: </span> <select id="origin">
-            <option value="randomOrigin">(random)</option>
-        </select>
-        </div>
-        
     </div>
-    <button onclick="proceed()">Generate Character</button>
-    <div class="generate">
+    <button id="characterButton" onclick="proceed()">Generate Character</button>
+    <div class="generate" id="nameGenerate">
         <span class="character-name" id="charName"></span><br>
         <span class="character-sub-info" id="charClass"></span>
     </div>
+    <div class="generate" id="familyGenerate">
+        <span id="charFam">You were quite young when you were born.</span>
+    </div>
     <button id="appearanceButton" onclick="say('Not finished yet!')">Generate Appearance</button>
-    <button id="familyButton" onclick="say('Not finished yet!')">Generate Family</button>
+    <button id="familyButton" onclick="createFamily()">Generate Family</button>
     <button id="backstoryButton" onclick="say('Not finished yet!')">Generate Backstory</button>
 </div>
 <a class="back-button" href="../index.html">Back</a>
