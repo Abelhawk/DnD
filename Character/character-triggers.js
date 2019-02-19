@@ -128,9 +128,9 @@ function loadPage() {
 //------Step 1: Create the character
 
 let your = new Character();
-your.genderIsMale = true;
 
 function proceed() {
+    your.genderIsMale = true;
     your.race = determineRace();
     community = determineCommunity(your.race);
 
