@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Treasure Generator</title>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"
+            integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ"
+            crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../general.css">
+    <link rel="icon" href="favicon2.ico">
+    <script src="treasure-types.js" defer></script>
+    <script src="treasure-triggers.js" defer></script>
+
+</head>
+<body>
+<h1>Treasure Generator</h1>
+<div class="container">
+    <div class="two-columns">
+        <div class="left">
+            <form>
+                <div class="choices">
+                    <label for="individual">Individual Treasure</label>
+                    <input id="individualType" type="radio" id="individual" name="type" value="individual" checked><br>
+                    <label for="hoard">Hoard</label>
+                    <input id="hoardType" type="radio" id="hoard" name="type" value="hoard" disabled><br>
+                </div>
+            </form>
+        </div>
+        <form>
+            <div class="right">
+                Player Level: <input id="playerLevel" type="number" max="20" value="1">
+            </div>
+        </form>
+    </div>
+    <button type="submit" onclick="activate()">Generate!</button>
+</div>
+
+<div id="generate"></div>
+<div class="container"><a class="back-button" href="../index.html">Back</a></div>
+</body>
+</html>

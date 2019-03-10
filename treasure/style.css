@@ -1,0 +1,54 @@
+body {
+    color: #ffd400;
+}
+h1 {
+    text-align: center;
+    font-family: serif;
+    font-weight: lighter;
+    color: white;
+}
+.container {
+    display: flex;
+    width: 50%;
+    margin: 20px auto 0 auto;
+}
+
+button, a {
+    background: #ffd400;
+}
+
+button:hover, a:hover {
+    color: white;
+}
+
+p {
+    margin: 5px 0;
+}
+
+#generate {
+    color: #ffd400;
+    border: 1px gray solid;
+    width: 70%;
+    text-align: center;
+    margin: auto;
+    padding: 15px;
+    font-size: 18pt;
+    font-family: serif;
+}
+.choices {
+    margin-bottom: 20px;
+}
+input,
+text {
+    width: 25px;
+}
+
+button {
+    text-align: center;
+    display: block;
+    margin: 10px auto;
+    font-size: 14pt;
+}
+label {
+    user-select: none;
+}
