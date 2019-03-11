@@ -1,5 +1,5 @@
 body {
-    color: #ffd400;
+    color: #66ffcc;
 }
 h1 {
     text-align: center;
@@ -14,7 +14,7 @@ h1 {
 }
 
 button, a {
-    background: #ffd400;
+    background: #66ffcc;
 }
 
 button:hover, a:hover {
@@ -26,7 +26,7 @@ p {
 }
 
 #generate {
-    color: #ffd400;
+    color: #66ffcc;
     border: 1px gray solid;
     width: 70%;
     text-align: center;
@@ -58,5 +58,5 @@ label {
 }
 
 .value {
-    color: #b39500;
+    color: #00b377;
 }

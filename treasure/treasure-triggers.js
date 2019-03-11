@@ -325,7 +325,7 @@ function getArtObjects(number, value) {//Art objects must be unique
             index++;
             if (index > 99) alert("Infinite loop detected!")
         }
-        console.log("here");
+        arrayIndexes.push(randomNumber);
         artCollection.push(artTable[randomNumber] + `<span class="value">` + " (" + value + " gp)" + `</span>`);
     }
     return artCollection;
