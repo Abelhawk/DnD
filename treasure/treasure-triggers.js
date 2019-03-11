@@ -380,9 +380,9 @@ function getMagicItem(table) {
         magicItem.replace('ammunition', ammunition[rando(ammunition.length)])
     }
     if (magicItem.includes('spell scroll')){
-        magicItem = "spell scroll of " + `<span class='italic'>` + getRandomSpell(magicTable[randomNumber].substr(-1)) + `</span>`;
+        magicItem = "spell scroll of " + getRandomSpell(magicTable[randomNumber].substr(-1));
     }
-    return magicItem;
+    return `<span class='italic'>` + magicItem + `</span>`;
 }
 
 function getRandomSpell(level){
