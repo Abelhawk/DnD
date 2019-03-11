@@ -288,7 +288,7 @@ function getGems(number, value) { //Gems can be added together
     }
     for (let i = 0; i < number; i++) {
         let randomNumber = rando(gemTable.length);
-        bagOGems.push(gemTable[randomNumber] + " (" + value + " gp)");
+        bagOGems.push(gemTable[randomNumber] + `<span class="value">`+ " (" + value + " gp)" + `</span>`);
     }
     let counts = {};
     bagOGems.forEach(function (x) {
