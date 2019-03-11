@@ -32,7 +32,7 @@ p {
     text-align: center;
     margin: auto;
     padding: 15px;
-    font-size: 18pt;
+    font-size: 20px;
     font-family: serif;
 }
 .choices {
@@ -51,4 +51,12 @@ button {
 }
 label {
     user-select: none;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.value {
+    color: #b39500;
 }

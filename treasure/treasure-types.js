@@ -75,6 +75,8 @@ let art7500 = [
     "bejeweled ivory drinking horn with gold filigree"
 ];
 
+//------------MAGIC ITEMS
+
 let magicTableA = [
     "potion of healing", "spell scroll 0", "potion of climbing", "spell scroll 1",
     "spell scroll 2", "potion of greater healing", "bag of holding", "driftglobe"
@@ -145,12 +147,12 @@ let magicTableG = [
     "flame tongue", "gem of seeing", "giant slayer", "glamoured studded leather", "helm of teleportation",
     "horn of blasting", "silver horn of Valhalla", "brass horn of Valhalla", "Canaith mandolin", "Cli lyre",
     "Ioun stone of awareness", "ioun stone of protection", "ioun stone of reserve", "ioun stone of sustenance",
-    "iron bands of Bilarro", "armor +1", "armor of resistance", "mace of disruption", "mace of smiting",
+    "iron bands of Bilarro", "armor +1", "mace of disruption", "mace of smiting",
     "mace of terror", "mantle of spell resistance", "necklace of prayer beads", "periapt of proof against poison",
     "ring of animal influence", "ring of evasion", "ring of feather falling", "ring of free action",
     "ring of protection", "ring of resistance", "ring of spell storing", "ring of the ram", "ring of X-ray vision",
     "robe of eyes", "rod of rulership", "rod of the pact keeper +2", "rope of entanglement", "armor +1",
-    "armor of resistance", "shield +2", "shield of missile attraction", "staff of charming", "staff of healing",
+    "shield +2", "shield of missile attraction", "staff of charming", "staff of healing",
     "staff of swarming insects", "staff of the woodlands", "staff of withering", "stone of controlling earth elementals",
     "sun blade", "sword of life stealing", "sword of wounding", "tentacle rod", "vicious weapon",
     "wand of binding", "wand of enemy detection", "wand of fear", "wand of fireballs", "wand of lightning bolts",
@@ -170,7 +172,7 @@ let magicTableH = [
     "ioun stone of agility", "ioun stone of fortitude", "ioun stone of insight", "ioun stone of intellect",
     "ioun stone of leadership", "ioun stone of strength", "armor +2", "manual of bodily health",
     "manual of gainful exercise", "manual of golems", "manual of quickness of action", "mirror of life trapping",
-    "nine lives stealer", "oathbow", "armor +2", "spellguard shield", "armor of resistance", "tome of clear thought",
+    "nine lives stealer", "oathbow", "armor +2", "spellguard shield", "tome of clear thought",
     "tome of leadership and influence", "tome of understanding"
 ];
 
@@ -188,14 +190,14 @@ let magicTableI = [
     "talisman of the sphere", "talisman of ultimate evil", "tome of the stilled tongue"
 ];
 
-//-------------ITEM TYPES
+//-------------PROPERTIES
 
 let ammunition = [
     "arrow", "crossbow bolt", "sling bullet", "blowgun needle", "dart"
 ];
 
 let armor = [
-    "padded", "leather", "brigandine", "hide", "chain shirt", "scale mail",
+    "padded", "leather", "studded leather", "hide", "chain shirt", "scale mail",
     "breastplate", "half plate", "ring mail", "chain mail", "splint", "plate"
 ];
 
@@ -213,12 +215,12 @@ let weapons = [
     "heavy crossbow", "longbow"
 ];
 
-//-------------SPELLS
-
 let resistances = [
     "acid", "cold", "fire", "force", "lightning", "necrotic", "poison", "psychic",
     "radiant", "thunder"
 ];
+
+//-------------SPELLS
 
 let cantrips = [
     "acid splash", "blade ward", "chill touch", "dancing lights", "druidcraft",

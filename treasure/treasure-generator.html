@@ -24,7 +24,7 @@
                     <label for="individual">Individual Treasure</label>
                     <input id="individualType" type="radio" id="individual" name="type" value="individual" checked><br>
                     <label for="hoard">Hoard</label>
-                    <input id="hoardType" type="radio" id="hoard" name="type" value="hoard" disabled><br>
+                    <input id="hoardType" type="radio" id="hoard" name="type" value="hoard"><br>
                 </div>
             </form>
         </div>
@@ -32,6 +32,7 @@
             <div class="right">
                 Player Level: <input id="playerLevel" type="number" max="20" value="1">
             </div>
+            <div onclick="getGems(3,10)">Test gems</div>
         </form>
     </div>
     <button type="submit" onclick="activate()">Generate!</button>
