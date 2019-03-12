@@ -329,7 +329,7 @@ function generateHoard(lvl) {
         case (lvl <= 16):
             treasure.push(numberWithCommas(roll(4, "d6", 1000) + " gold pieces"));
             treasure.push(numberWithCommas(roll(5, "d6", 100) + " platinum pieces"));
-            switch(true){
+            switch (true) {
                 case (randomNumber <= 3):
                     //You get NOTHING! You LOSE! Good DAY, sir!
                     break;
@@ -573,6 +573,205 @@ function generateHoard(lvl) {
             }
             break;
         case (lvl >= 17):
+            treasure.push(numberWithCommas(roll(12, "d6", 1000) + " gold pieces"));
+            treasure.push(numberWithCommas(roll(8, "d6", 1000) + " platinum pieces"));
+            switch (true) {
+                case (randomNumber <= 2):
+                    //You get NOTHING! You LOSE! Good DAY, sir!
+                    break;
+                case (randomNumber <= 5):
+                    numberOfRewards = roll(3, 'd6');
+                    organize(getGems(numberOfRewards, 1000), treasure);
+                    randMag = roll(1, "d8");
+                    for (let i = 0; i < randMag; i++) {
+                        treasure.push(getMagicItem("table C"));
+                    }
+                    break;
+                case (randomNumber <= 8):
+                    numberOfRewards = roll(1, 'd10');
+                    mergeArray(getArtObjects(numberOfRewards, 2500), treasure);
+                    randMag = roll(1, "d8");
+                    for (let i = 0; i < randMag; i++) {
+                        treasure.push(getMagicItem("table C"));
+                    }
+                    break;
+                case (randomNumber <= 11):
+                    numberOfRewards = roll(1, 'd4');
+                    mergeArray(getArtObjects(numberOfRewards, 7500), treasure);
+                    randMag = roll(1, "d8");
+                    for (let i = 0; i < randMag; i++) {
+                        treasure.push(getMagicItem("table C"));
+                    }
+                    break;
+                case (randomNumber <= 14):
+                    numberOfRewards = roll(1, 'd8');
+                    organize(getGems(numberOfRewards, 5000), treasure);
+                    randMag = roll(1, "d8");
+                    for (let i = 0; i < randMag; i++) {
+                        treasure.push(getMagicItem("table C"));
+                    }
+                    break;
+                case (randomNumber <= 22):
+                    numberOfRewards = roll(3, 'd6');
+                    organize(getGems(numberOfRewards, 1000), treasure);
+                    randMag = roll(1, "d6");
+                    for (let i = 0; i < randMag; i++) {
+                        treasure.push(getMagicItem("table D"));
+                    }
+                    break;
+                case (randomNumber <= 30):
+                    numberOfRewards = roll(1, 'd10');
+                    mergeArray(getArtObjects(numberOfRewards, 2500), treasure);
+                    randMag = roll(1, "d6");
+                    for (let i = 0; i < randMag; i++) {
+                        treasure.push(getMagicItem("table D"));
+                    }
+                    break;
+                case (randomNumber <= 38):
+                    numberOfRewards = roll(1, 'd4');
+                    mergeArray(getArtObjects(numberOfRewards, 7500), treasure);
+                    randMag = roll(1, "d6");
+                    for (let i = 0; i < randMag; i++) {
+                        treasure.push(getMagicItem("table D"));
+                    }
+                    break;
+                case (randomNumber <= 46):
+                    numberOfRewards = roll(1, 'd8');
+                    organize(getGems(numberOfRewards, 5000), treasure);
+                    randMag = roll(1, "d6");
+                    for (let i = 0; i < randMag; i++) {
+                        treasure.push(getMagicItem("table D"));
+                    }
+                    break;
+                case (randomNumber <= 52):
+                    numberOfRewards = roll(3, 'd6');
+                    organize(getGems(numberOfRewards, 1000), treasure);
+                    randMag = roll(1, "d6");
+                    for (let i = 0; i < randMag; i++) {
+                        treasure.push(getMagicItem("table E"));
+                    }
+                    break;
+                case (randomNumber <= 58):
+                    numberOfRewards = roll(1, 'd10');
+                    mergeArray(getArtObjects(numberOfRewards, 2500), treasure);
+                    randMag = roll(1, "d6");
+                    for (let i = 0; i < randMag; i++) {
+                        treasure.push(getMagicItem("table E"));
+                    }
+                    break;
+                case (randomNumber <= 63):
+                    numberOfRewards = roll(1, 'd4');
+                    mergeArray(getArtObjects(numberOfRewards, 7500), treasure);
+                    randMag = roll(1, "d6");
+                    for (let i = 0; i < randMag; i++) {
+                        treasure.push(getMagicItem("table E"));
+                    }
+                    break;
+                case (randomNumber <= 68):
+                    numberOfRewards = roll(1, 'd8');
+                    organize(getGems(numberOfRewards, 5000), treasure);
+                    randMag = roll(1, "d6");
+                    for (let i = 0; i < randMag; i++) {
+                        treasure.push(getMagicItem("table E"));
+                    }
+                    break;
+                case (randomNumber === 69):
+                    numberOfRewards = roll(3, 'd6');
+                    organize(getGems(numberOfRewards, 1000), treasure);
+                    randMag = roll(1, "d4");
+                    for (let i = 0; i < randMag; i++) {
+                        treasure.push(getMagicItem("table G"));
+                    }
+                    break;
+                case (randomNumber === 70):
+                    numberOfRewards = roll(1, 'd10');
+                    mergeArray(getArtObjects(numberOfRewards, 2500), treasure);
+                    randMag = roll(1, "d4");
+                    for (let i = 0; i < randMag; i++) {
+                        treasure.push(getMagicItem("table G"));
+                    }
+                    break;
+                case (randomNumber === 71):
+                    numberOfRewards = roll(1, 'd4');
+                    mergeArray(getArtObjects(numberOfRewards, 7500), treasure);
+                    randMag = roll(1, "d4");
+                    for (let i = 0; i < randMag; i++) {
+                        treasure.push(getMagicItem("table G"));
+                    }
+                    break;
+                case (randomNumber === 72):
+                    numberOfRewards = roll(1, 'd8');
+                    organize(getGems(numberOfRewards, 5000), treasure);
+                    randMag = roll(1, "d4");
+                    for (let i = 0; i < randMag; i++) {
+                        treasure.push(getMagicItem("table G"));
+                    }
+                    break;
+                case (randomNumber <= 74):
+                    numberOfRewards = roll(3, 'd6');
+                    organize(getGems(numberOfRewards, 1000), treasure);
+                    randMag = roll(1, "d4");
+                    for (let i = 0; i < randMag; i++) {
+                        treasure.push(getMagicItem("table H"));
+                    }
+                    break;
+                case (randomNumber <= 76):
+                    numberOfRewards = roll(1, 'd10');
+                    mergeArray(getArtObjects(numberOfRewards, 2500), treasure);
+                    randMag = roll(1, "d4");
+                    for (let i = 0; i < randMag; i++) {
+                        treasure.push(getMagicItem("table H"));
+                    }
+                    break;
+                case (randomNumber <= 78):
+                    numberOfRewards = roll(1, 'd4');
+                    mergeArray(getArtObjects(numberOfRewards, 7500), treasure);
+                    randMag = roll(1, "d4");
+                    for (let i = 0; i < randMag; i++) {
+                        treasure.push(getMagicItem("table H"));
+                    }
+                    break;
+                case (randomNumber <= 80):
+                    numberOfRewards = roll(1, 'd8');
+                    organize(getGems(numberOfRewards, 5000), treasure);
+                    randMag = roll(1, "d4");
+                    for (let i = 0; i < randMag; i++) {
+                        treasure.push(getMagicItem("table H"));
+                    }
+                    break;
+                case (randomNumber <= 85):
+                    numberOfRewards = roll(3, 'd6');
+                    organize(getGems(numberOfRewards, 1000), treasure);
+                    randMag = roll(1, "d4");
+                    for (let i = 0; i < randMag; i++) {
+                        treasure.push(getMagicItem("table I"));
+                    }
+                    break;
+                case (randomNumber <= 90):
+                    numberOfRewards = roll(1, 'd10');
+                    mergeArray(getArtObjects(numberOfRewards, 2500), treasure);
+                    randMag = roll(1, "d4");
+                    for (let i = 0; i < randMag; i++) {
+                        treasure.push(getMagicItem("table I"));
+                    }
+                    break;
+                case (randomNumber <= 95):
+                    numberOfRewards = roll(1, 'd4');
+                    mergeArray(getArtObjects(numberOfRewards, 7500), treasure);
+                    randMag = roll(1, "d4");
+                    for (let i = 0; i < randMag; i++) {
+                        treasure.push(getMagicItem("table I"));
+                    }
+                    break;
+                case (randomNumber <= 100):
+                    numberOfRewards = roll(1, 'd8');
+                    organize(getGems(numberOfRewards, 5000), treasure);
+                    randMag = roll(1, "d4");
+                    for (let i = 0; i < randMag; i++) {
+                        treasure.push(getMagicItem("table I"));
+                    }
+                    break;
+            }
     }
     return treasure;
 }

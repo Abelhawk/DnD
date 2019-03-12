@@ -4,7 +4,6 @@
     <list default="true" id="495252ce-6aee-4675-83fc-feddd9e07b22" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/treasure/hoard.js" beforeDir="false" afterPath="$PROJECT_DIR$/treasure/hoard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/treasure/treasure-generator.html" beforeDir="false" afterPath="$PROJECT_DIR$/treasure/treasure-generator.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -33,11 +32,11 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/treasure/hoard.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="4183">
-                  <caret line="550" column="21" selection-start-line="550" selection-start-column="21" selection-end-line="550" selection-end-column="21" />
+                <state relative-caret-position="324">
+                  <caret line="641" column="41" selection-start-line="641" selection-start-column="41" selection-end-line="641" selection-end-column="41" />
                   <folding>
                     <element signature="e#442#5884#0" />
                   </folding>
@@ -45,11 +44,14 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/treasure/treasure-generator.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="544">
-                  <caret line="38" column="65" lean-forward="true" selection-start-line="38" selection-start-column="65" selection-end-line="38" selection-end-column="65" />
+                <state relative-caret-position="476">
+                  <caret line="28" column="22" lean-forward="true" selection-start-line="28" selection-start-column="22" selection-end-line="28" selection-end-column="22" />
+                  <folding>
+                    <element signature="n#style#0;n#input#0;n#div#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -172,8 +174,8 @@
         <option value="$PROJECT_DIR$/treasure/treasure-types.js" />
         <option value="$PROJECT_DIR$/treasure/style.css" />
         <option value="$PROJECT_DIR$/treasure/treasure-triggers.js" />
-        <option value="$PROJECT_DIR$/treasure/hoard.js" />
         <option value="$PROJECT_DIR$/treasure/treasure-generator.html" />
+        <option value="$PROJECT_DIR$/treasure/hoard.js" />
       </list>
     </option>
   </component>
@@ -231,7 +233,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552343498266" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552403468635" />
     <property name="javascript.nodejs.core.library.configured.version" value="9.5.0" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
@@ -280,15 +282,15 @@
       <workItem from="1542304234001" duration="456000" />
       <workItem from="1543362301208" duration="44000" />
       <workItem from="1550349995904" duration="34633000" />
-      <workItem from="1552325526038" duration="11501000" />
+      <workItem from="1552325526038" duration="12580000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="48093000" />
+    <option name="totallyTimeSpent" value="49172000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="2040" y="-8" width="2064" height="1128" extended-state="7" />
+    <frame x="2040" y="-8" width="2064" height="1128" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Designer" />
@@ -466,6 +468,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/treasure/treasure-generator.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="28" column="22" lean-forward="true" selection-start-line="28" selection-start-column="22" selection-end-line="28" selection-end-column="22" />
+          <folding>
+            <element signature="n#style#0;n#input#0;n#div#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/treasure/treasure-triggers.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="317">
@@ -480,18 +492,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/treasure/hoard.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4183">
-          <caret line="550" column="21" selection-start-line="550" selection-start-column="21" selection-end-line="550" selection-end-column="21" />
+        <state relative-caret-position="324">
+          <caret line="641" column="41" selection-start-line="641" selection-start-column="41" selection-end-line="641" selection-end-column="41" />
           <folding>
             <element signature="e#442#5884#0" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/treasure/treasure-generator.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="38" column="65" lean-forward="true" selection-start-line="38" selection-start-column="65" selection-end-line="38" selection-end-column="65" />
         </state>
       </provider>
     </entry>
