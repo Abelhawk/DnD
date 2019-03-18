@@ -266,10 +266,6 @@ function rando(probability) {
     return Math.floor(Math.random() * probability);
 }
 
-function randoArray(array) {
-    return array[rando(array.length)];
-}
-
 function roll(number, dice, multiplier) {
     let result;
     if (!multiplier) multiplier = 1;
