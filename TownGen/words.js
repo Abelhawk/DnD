@@ -66,7 +66,7 @@ let natural = [
     "thunder", "meadow", "antler", "horn", "frost", "earth",
     "wet", "falcon", "lion", "tangle", "dank", "wild", "brush",
     "flower", "puddle", "ram", "mist", "heath", "heather", "rowen",
-    "elder", "oaken", "maple", "berry", "wolf", "chalk"
+    "elder", "oaken", "maple", "berry", "wolf", "chalk", "bark"
 ];
 
 //-----------------------------------------------------------------------------------------------
