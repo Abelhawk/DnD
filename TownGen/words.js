@@ -11,7 +11,7 @@ let defaults = [
     "thick", "thin", "tower", "wax", "quill", "young",
     "barrow", "stale", "flash", "scale", "bronze", "brass",
     "hammer", "anvil", "lime", "spur", "tea", "nether",
-    "strong", "bridge", "flag", "copper", "cross"
+    "strong", "bridge", "flag", "copper", "cross", "whistle"
 ];
 
 let scary = [
@@ -66,7 +66,7 @@ let natural = [
     "thunder", "meadow", "antler", "horn", "frost", "earth",
     "wet", "falcon", "lion", "tangle", "dank", "wild", "brush",
     "flower", "puddle", "ram", "mist", "heath", "heather", "rowen",
-    "elder", "oaken", "maple", "berry"
+    "elder", "oaken", "maple", "berry", "wolf", "chalk"
 ];
 
 //-----------------------------------------------------------------------------------------------
@@ -81,7 +81,7 @@ let grassland = [
     "valley", "glen", "well", "wing", "dale", "light",
     "song", "smar", "haven", "set", "wall", "ton", "brink",
     "bird", "rill", "caster", "staff", "flower", "swan", "bow",
-    "cross", "berry"
+    "cross", "berry", "scarf"
 ];
 
 let hills = [
@@ -94,7 +94,7 @@ let hills = [
     "sborough", "warren", "canyon", "summit", "smar", "shire", "set",
     "wall", "ton", "bluff", "horn", "rill", "creek", "caster",
     "ditch", "lichen", "valley", "ram", "banner", "bow", "hold",
-    "cross"
+    "cross", "mount", "scalp"
 ];
 
 
@@ -104,7 +104,7 @@ let coastal = [
     "cove", "holme", "sedge", "combe", "fin", "pool", "reef",
     "pebble", "front", "side", "line", "sea", "coast", "drink",
     "sink", "flow", "smar", "wake", "rift", "whale", "gulf",
-    "anchor", "breach", "fog", "mist"
+    "anchor", "breach", "fog", "mist", "scalp"
 ];
 
 let forest = [

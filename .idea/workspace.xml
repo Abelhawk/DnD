@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="495252ce-6aee-4675-83fc-feddd9e07b22" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/treasure/treasure-triggers.js" beforeDir="false" afterPath="$PROJECT_DIR$/treasure/treasure-triggers.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -15,94 +14,37 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.6189349">
-      <split-first>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/treasure/treasure-triggers.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-329">
-                  <caret line="160" column="9" selection-start-line="160" selection-start-column="9" selection-end-line="160" selection-end-column="9" />
-                  <folding>
-                    <element signature="n#!!block;n#generateIndividualTreasure#0" />
-                    <element signature="n#!!block;n#organize#0" />
-                    <element signature="n#!!block;n#roll#0" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/treasure/hoard.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="409">
-                  <caret line="754" column="44" selection-start-line="754" selection-start-column="44" selection-end-line="754" selection-end-column="44" />
-                  <folding>
-                    <element signature="e#442#5884#0" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/treasure/treasure-generator.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="323">
-                  <caret line="25" column="80" selection-start-line="25" selection-start-column="80" selection-end-line="25" selection-end-column="80" />
-                  <folding>
-                    <element signature="n#style#0;n#input#0;n#div#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/treasure/style.css">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="440">
-                  <caret line="60" column="18" selection-start-line="60" selection-start-column="18" selection-end-line="60" selection-end-column="18" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/treasure/treasure-types.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="510">
-                  <caret line="194" column="18" selection-start-line="194" selection-start-column="18" selection-end-line="194" selection-end-column="18" />
-                  <folding>
-                    <element signature="e#36#212#0" />
-                    <element signature="e#228#392#0" />
-                    <element signature="e#409#522#0" />
-                    <element signature="e#539#628#0" />
-                    <element signature="e#646#768#0" />
-                    <element signature="e#786#840#0" />
-                    <element signature="e#881#1236#0" />
-                    <element signature="e#1252#1581#0" />
-                    <element signature="e#1597#2089#0" />
-                    <element signature="e#2106#2532#0" />
-                    <element signature="e#2549#2865#0" />
-                    <element signature="e#2886#3054#0" />
-                    <element signature="e#3075#3996#0" />
-                    <element signature="e#4017#4717#0" />
-                    <element signature="e#4738#5114#0" />
-                    <element signature="e#5135#5303#0" />
-                    <element signature="e#5324#6721#0" />
-                    <element signature="e#6742#9003#0" />
-                    <element signature="e#9024#10518#0" />
-                    <element signature="e#10539#11630#0" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/treasure/treasure-types.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="14" column="14" lean-forward="true" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="14" />
+              <folding>
+                <element signature="e#36#212#0" />
+                <element signature="e#228#392#0" />
+                <element signature="e#539#628#0" />
+                <element signature="e#646#768#0" />
+                <element signature="e#881#1236#0" />
+                <element signature="e#1252#1581#0" />
+                <element signature="e#1597#2089#0" />
+                <element signature="e#2106#2532#0" />
+                <element signature="e#2549#2865#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Character/names.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="154">
+              <caret line="328" column="37" lean-forward="true" selection-start-line="328" selection-start-column="37" selection-end-line="328" selection-end-column="37" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -115,9 +57,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>rando(</find>
-      <find>charisc</find>
-      <find>half-elf</find>
       <find>pickFirstName</find>
       <find>heritage</find>
       <find>picklast</find>
@@ -145,6 +84,9 @@
       <find>spell scroll</find>
       <find>span clas</find>
       <find>mithril</find>
+      <find>human</find>
+      <find>fisher</find>
+      <find>diamond</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -167,15 +109,15 @@
         <option value="$PROJECT_DIR$/treasure/treasure.html" />
         <option value="$PROJECT_DIR$/style.css" />
         <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/Character/names.js" />
         <option value="$PROJECT_DIR$/Character/character-triggers.js" />
         <option value="$PROJECT_DIR$/TownGen/town-gen-triggers.js" />
         <option value="$PROJECT_DIR$/TownGen/town-gen.html" />
         <option value="$PROJECT_DIR$/treasure/treasure-types.js" />
         <option value="$PROJECT_DIR$/treasure/style.css" />
         <option value="$PROJECT_DIR$/treasure/hoard.js" />
-        <option value="$PROJECT_DIR$/treasure/treasure-generator.html" />
         <option value="$PROJECT_DIR$/treasure/treasure-triggers.js" />
+        <option value="$PROJECT_DIR$/treasure/treasure-generator.html" />
+        <option value="$PROJECT_DIR$/Character/names.js" />
       </list>
     </option>
   </component>
@@ -199,6 +141,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -225,20 +168,23 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552511004634" />
     <property name="javascript.nodejs.core.library.configured.version" value="9.5.0" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.prettier" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.prettier" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.prettier" value="" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -283,23 +229,26 @@
       <workItem from="1543362301208" duration="44000" />
       <workItem from="1550349995904" duration="34633000" />
       <workItem from="1552325526038" duration="14389000" />
+      <workItem from="1552925199766" duration="168000" />
+      <workItem from="1559159809200" duration="2151000" />
+      <workItem from="1559254550169" duration="106000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="50981000" />
+    <option name="totallyTimeSpent" value="53406000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="2040" y="-8" width="2064" height="1128" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Designer" />
-      <window_info id="UI Designer" />
-      <window_info id="Capture Tool" />
-      <window_info id="Image Layers" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.105788425" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15419161" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Database Changes" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="Designer" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Capture Tool" order="6" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -311,15 +260,16 @@
       <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.37286434" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="10" />
-      <window_info anchor="right" id="Palette" />
-      <window_info anchor="right" id="Database" />
-      <window_info anchor="right" id="Theme Preview" />
-      <window_info anchor="right" id="Maven" />
-      <window_info anchor="right" id="Capture Analysis" />
-      <window_info anchor="right" id="Palette&#9;" />
+      <window_info anchor="bottom" id="Database Changes" order="11" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Theme Preview" order="4" />
+      <window_info anchor="right" id="Maven" order="5" />
+      <window_info anchor="right" id="Capture Analysis" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Database" order="8" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -356,13 +306,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Character/character-creator.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="891">
-          <caret line="75" column="10" selection-start-line="75" selection-start-column="10" selection-end-line="75" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/TownGen/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -388,13 +331,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
           <caret line="21" column="65" selection-start-line="21" selection-start-column="65" selection-end-line="21" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Character/names.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="93">
-          <caret line="339" column="54" lean-forward="true" selection-start-line="339" selection-start-column="54" selection-end-line="339" selection-end-column="54" />
         </state>
       </provider>
     </entry>
@@ -431,70 +367,73 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/treasure/treasure-types.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="194" column="18" selection-start-line="194" selection-start-column="18" selection-end-line="194" selection-end-column="18" />
-          <folding>
-            <element signature="e#36#212#0" />
-            <element signature="e#228#392#0" />
-            <element signature="e#409#522#0" />
-            <element signature="e#539#628#0" />
-            <element signature="e#646#768#0" />
-            <element signature="e#786#840#0" />
-            <element signature="e#881#1236#0" />
-            <element signature="e#1252#1581#0" />
-            <element signature="e#1597#2089#0" />
-            <element signature="e#2106#2532#0" />
-            <element signature="e#2549#2865#0" />
-            <element signature="e#2886#3054#0" />
-            <element signature="e#3075#3996#0" />
-            <element signature="e#4017#4717#0" />
-            <element signature="e#4738#5114#0" />
-            <element signature="e#5135#5303#0" />
-            <element signature="e#5324#6721#0" />
-            <element signature="e#6742#9003#0" />
-            <element signature="e#9024#10518#0" />
-            <element signature="e#10539#11630#0" />
-          </folding>
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/favicon.ico">
+      <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/treasure/style.css">
+    <entry file="file://$PROJECT_DIR$/treasure/treasure-triggers.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="60" column="18" selection-start-line="60" selection-start-column="18" selection-end-line="60" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/treasure/treasure-generator.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="25" column="80" selection-start-line="25" selection-start-column="80" selection-end-line="25" selection-end-column="80" />
+        <state relative-caret-position="1530">
+          <caret line="160" column="9" selection-start-line="160" selection-start-column="9" selection-end-line="160" selection-end-column="9" />
           <folding>
-            <element signature="n#style#0;n#input#0;n#div#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#!!block;n#generateIndividualTreasure#0" />
+            <element signature="n#!!block;n#organize#0" />
+            <element signature="n#!!block;n#roll#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/treasure/hoard.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="409">
+        <state relative-caret-position="12818">
           <caret line="754" column="44" selection-start-line="754" selection-start-column="44" selection-end-line="754" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Character/character-creator.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" selection-start-line="11" selection-end-line="11" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/treasure/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1020">
+          <caret line="60" column="18" selection-start-line="60" selection-start-column="18" selection-end-line="60" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/treasure/treasure-generator.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="60" selection-start-line="7" selection-start-column="60" selection-end-line="7" selection-end-column="60" />
           <folding>
-            <element signature="e#442#5884#0" />
+            <element signature="n#style#0;n#input#0;n#div#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/treasure/treasure-triggers.js">
+    <entry file="file://$PROJECT_DIR$/Character/names.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-329">
-          <caret line="160" column="9" selection-start-line="160" selection-start-column="9" selection-end-line="160" selection-end-column="9" />
+        <state relative-caret-position="154">
+          <caret line="328" column="37" lean-forward="true" selection-start-line="328" selection-start-column="37" selection-end-line="328" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/treasure/treasure-types.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="14" column="14" lean-forward="true" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="14" />
           <folding>
-            <element signature="n#!!block;n#generateIndividualTreasure#0" />
-            <element signature="n#!!block;n#organize#0" />
-            <element signature="n#!!block;n#roll#0" />
+            <element signature="e#36#212#0" />
+            <element signature="e#228#392#0" />
+            <element signature="e#539#628#0" />
+            <element signature="e#646#768#0" />
+            <element signature="e#881#1236#0" />
+            <element signature="e#1252#1581#0" />
+            <element signature="e#1597#2089#0" />
+            <element signature="e#2106#2532#0" />
+            <element signature="e#2549#2865#0" />
           </folding>
         </state>
       </provider>
