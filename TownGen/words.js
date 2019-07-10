@@ -52,7 +52,7 @@ let peace = [
     "haven", "hearth", "honor", "hope", "still", "jewel",
     "temple", "life", "crystal", "day", "home", "calm", "glad",
     "quiet", "merry", "sweet", "dream", "dew", "honey", "butter",
-    "glint", "water", "star", "swan"
+    "glint", "water", "star", "swan", "lamp"
 ];
 
 let natural = [
@@ -66,7 +66,8 @@ let natural = [
     "thunder", "meadow", "antler", "horn", "frost", "earth",
     "wet", "falcon", "lion", "tangle", "dank", "wild", "brush",
     "flower", "puddle", "ram", "mist", "heath", "heather", "rowen",
-    "elder", "oaken", "maple", "berry", "wolf", "chalk", "bark"
+    "elder", "oaken", "maple", "berry", "wolf", "chalk", "bark",
+    "nest"
 ];
 
 //-----------------------------------------------------------------------------------------------
@@ -81,7 +82,7 @@ let grassland = [
     "valley", "glen", "well", "wing", "dale", "light",
     "song", "smar", "haven", "set", "wall", "ton", "brink",
     "bird", "rill", "caster", "staff", "flower", "swan", "bow",
-    "cross", "berry", "scarf"
+    "cross", "berry", "scarf", "nest"
 ];
 
 let hills = [
@@ -177,7 +178,7 @@ let coastalMarks = [
     "island", "shore", "beach", "strand", "bay", "lagoon", "coast",
     "reef", "docks", "port", "cay", "cliffs", "front", "bank",
     "archipelago", "peninsula", "sandbar", "cove", "gulf", "isle",
-    "isthmus", "shoal", "strait", "cape"
+    "isthmus", "shoal", "strait", "cape", "lighthouse"
 ];
 
 let swampMarks = [
@@ -195,7 +196,7 @@ let desertMarks = [
 let arcticMarks = [
     "wastes", "mountains", "peak", "summit", "canyon", "ridge", "crag",
     "cliffs", "forest", "glacier", "fjord", "shores", "summit", "gulf",
-
+    "alps"
 ];
 
 let townMarks = [

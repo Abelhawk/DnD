@@ -50,9 +50,17 @@
                 <input type="checkbox" id="scary" value="scary"><br>
                 <label for="natural">Natural: </label>
                 <input type="checkbox" id="natural" value="natural"><br><br>
-                <label for="compounds">Landmarks: </label>
-                <input type="checkbox" id="compounds" value="compounds" checked><br>
+                <form>
+                    <label for="vanilla">Location: </label>
+                    <input type="radio" id="vanilla" name="nameType" value="" checked><br>
+                    <label for="compounds">Landmark: </label>
+                    <input type="radio" id="compounds" name="nameType" value="compounds"><br>
+                    <label for="XofX">Descriptive: </label>
+                    <input type="radio" id="XofX" name="nameType" value="XofX">
+                </form>
+
             </div>
+            <span class="note" style="margin-top: 145px">(Kinda janky)</span>
         </form>
     </div>
     <button type="submit" onclick="activate()">Generate!</button>
