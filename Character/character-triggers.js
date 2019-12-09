@@ -33,7 +33,7 @@ let raceOptions = [
     "Human", "Dwarf", "Elf", "Halfling",
     "Half-elf", "Gnome", "Tiefling", "Aasimar",
     "Half-orc", "Dragonborn", "Goliath", "Genasi",
-    // "Aarakocra"
+    "Aarakocra", "Warforged"
 ];
 let classOptions = [
     "Barbarian", "Bard",
@@ -41,7 +41,8 @@ let classOptions = [
     "Fighter", "Monk",
     "Paladin", "Ranger",
     "Rogue", "Sorcerer",
-    "Warlock", "Wizard"
+    "Warlock", "Wizard",
+    "Artificer"
 ];
 let domainOptions = [
     "Arcana", "Death", "Forge", "Grave", "Knowledge", "Life",
@@ -604,6 +605,8 @@ function pickFirstName(race, gender) {
             }
         case "devil":
             return "Baator";
+        case "warforged":
+            return warforgedNames[rando(warforgedNames.length)];
         default:
             return "???";
     }

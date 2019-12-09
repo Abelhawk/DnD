@@ -25,7 +25,7 @@ let scary = [
     "pale", "terror", "curse", "lone", "night", "wither",
     "barren", "web", "rot", "vice", "cower", "frigid",
     "strangle", "cowl", "cloak", "hood", "grease", "spider",
-    "shroud"
+    "shroud", "harrow"
 ];
 
 let danger = [
@@ -105,7 +105,7 @@ let coastal = [
     "cove", "holme", "sedge", "combe", "fin", "pool", "reef",
     "pebble", "front", "side", "line", "sea", "coast", "drink",
     "sink", "flow", "smar", "wake", "rift", "whale", "gulf",
-    "anchor", "breach", "fog", "mist", "scalp"
+    "anchor", "breach", "fog", "mist", "scalp", "cusp"
 ];
 
 let forest = [

@@ -366,3 +366,12 @@ let genasiNames = [
     "Flame", "Ember", "Wave", "Onyx", "Gust", "Storm", "Seethe", "Gem",
     "Zephyr", "Rough", "Malachite", "Amethyst"
 ];
+
+//--------------Warforged-------------
+
+let warforgedNames = [
+    "Anchor", "Banner", "Bastion", "Blade", "Blue", "Bow", "Cart", "Church",
+    "Crunch", "Crystal", "Dagger", "Dent", "Five", "Glaive", "Hammer", "Iron",
+    "Lucky", "Mace", "Oak", "Onyx", "Pants", "Pierce", "Red", "Rod", "Rusty",
+    "Scout", "Seven", "Shield", "Slash", "Smith", "Spike", "Temple", "Vault", "Wall"
+];
