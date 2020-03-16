@@ -22,7 +22,8 @@ let nicknameGoliath = [
     "Bearkiller", "Dawncaller", "Fearless", "Flintfinder",
     "Horncarver", "Keeneye", "Lonehunter", "Longleaper",
     "Rootsmasher", "Skywatcher", "Steadyhand", "Threadtwister",
-    "Twice-Orphaned", "Twistedlimb", "Wordpainter"
+    "Twice-Orphaned", "Twistedlimb", "Wordpainter", "Climber",
+    "Earbender", "Leaper", "Shieldbiter"
 ];
 
 let goliathClan = [
@@ -98,7 +99,9 @@ let humanSurname = [
     "Buckler", "Smith", "Roper", "Cutler", "Roofer", "Thatcher", "Browning",
     "Wood", "Bigley", "Stubbs", "Borrell", "Malbank", "Walsch", "Chanceller",
     "Robbins", "Johns", "Stokes", "Lockton", "Clifford", "Bishopson",
-    "Edgecombe", "Dalingridge", "Wardsworth"
+    "Edgecombe", "Dalingridge", "Wardsworth", "Buckman", "Amblecrown", "Dundragon",
+    "Evenwood", "Greycastle", "Tallstag", "Brightwood", "Helder", "Hornraven",
+    "Lackman", "Stormwind", "Windrivver"
 ];
 
 //------------Dwarves---------------
@@ -113,7 +116,9 @@ let maleDwarf = [
     "Oloric", "Ingyaldur", "Orsik", "Nain", "Rangrim",
     "Reirak", "Rurik", "Taklinn", "Thoradin", "Thorin",
     "Bersi", "Tordek", "Traubon", "Travok", "Ulfgar",
-    "Uraim", "Veit", "Vonbin", "Vondal", "Whurbin"
+    "Uraim", "Veit", "Vonbin", "Vondal", "Whurbin",
+    "Barendd", "Brottor", "Bruenor", "Eberk", "Einkil",
+    "Flint", "Oskar"
 ];
 
 let femaleDwarf = [
@@ -126,7 +131,7 @@ let femaleDwarf = [
     "Nalaed", "Nora", "Nurkura", "Oriff", "Ovina", "Riswynn",
     "Yohilda", "Urtha", "Yngva", "Torbera", "Tordrid",
     "Torgga", "Urshar", "Valida", "Vistra", "Vonana",
-    "Werydd", "Whurdred", "Yurgunn"
+    "Werydd", "Whurdred", "Yurgunn", "Amber", "Sannl"
 ];
 
 let dwarfClan = [
@@ -193,11 +198,12 @@ let maleElf = [
     "Arannis", "Aust", "Azaki", "Beiro", "Berrian", "Caeldrim",
     "Carric", "Dayereth", "Dreali", "Efferil", "Eiravel",
     "Enialis", "Erdan", "Erevan", "Fivin", "Galinndan", "Gennal",
-    "Hadarai", "Halimath", "Heian", "Glythveir", "Immeral", "IIvellios",
+    "Hadarai", "Halimath", "Heian", "Glythveir", "Immeral", "Ivellios",
     "Kavaneim", "Lamlis", "Laucian", "Lucan", "Mindartis", "Jenifaad",
     "Nutae", "Paelias", "Peren", "Quarion", "Riardon", "Rolen",
     "Soveliss", "Sionedir", "Thamior", "Tharivol", "Theren",
-    "Theriatis", "Thervan", "Uthemar", "Vanuath", "Varis"
+    "Theriatis", "Thervan", "Uthemar", "Vanuath", "Varis",
+    "Himo"
 ];
 
 let femaleElf = [
@@ -223,7 +229,7 @@ let elfFamily = [
     "Mellerelel", "Mystarath", "Naïlo", "Netyoive", "Ofandrus",
     "Ostoroth", "Othronus", "Qualanthri", "Raethran", "Rothenel",
     "Selevarun", "Siannodel", "Suithrasas", "Sylvaranth", "Teinithra",
-    "Tiltathana", "Wasanthi", "Withrethin", "Xiloscient", "Xistsrith",
+    "Tiltathana", "Lasanthi", "Lithrethin", "Xiloscient", "Xistsrith",
     "Yaeldrin"
 ];
 
@@ -282,7 +288,7 @@ let maleGnome = [
     "Paggen", "Pallabar", "Pog", "Qualen", "Ribbles", "Rimple",
     "Roondar", "Sapply", "Seebo", "Senteq", "Sindri", "Umpen",
     "Warryn", "Wiggens", "Wobbles", "Wrenn", "Zaffrab", "Zook",
-    "Bingbo", "Razbank"
+    "Bingbo", "Razbank", "Stumbleduck", "Badger", "Fnipper"
 ];
 
 let femaleGnome = [
@@ -295,7 +301,7 @@ let femaleGnome = [
     "Quilla", "Ranala", "Reddlepop", "Roywyn", "Salanop",
     "Shamil", "Siffress", "Symma", "Tana", "Tenana", "Tervaround",
     "Tippletoe", "Ulla", "Unvera", "Veloptima", "Virra",
-    "Waywocket", "Yebe", "Zanna"
+    "Waywocket", "Yebe", "Zanna", "Pock", "Nim"
 ];
 
 let gnomeClan = [
@@ -308,7 +314,8 @@ let gnomeClan = [
     "Offund", "Oomtrowl", "Pilwicken", "Pingun", "Quillsharpener",
     "Raulnor", "Reese", "Rofferton", "Scheppen", "Shadowcloak", "Silverthread",
     "Sympony", "Tarkelby", "Timbers", "Turen", "Umbodoben", "Waggletop",
-    "Welber", "Wildwander"
+    "Welber", "Wildwander", "Ashhearth", "Doublelock", "Filchbatter",
+    "Oneshoe", "Sparklegem"
 ];
 
 //------------Tieflings---------------
@@ -322,7 +329,7 @@ let maleTiefling = [
     "Mormo", "Morthos", "Nicor", "Nirgel", "Oriax", "Paymon",
     "Pelaios", "Purson", "Qemuel", "Raam", "Rimmon", "Sammal",
     "Skamos", "Tethren", "Thamuz", "Therai", "Valafar", "Vassago",
-    "Xappan", "Zepar", "Zephan"
+    "Xappan", "Zepar", "Zephan", "Akmenos"
 ];
 
 let femaleTiefling = [
