@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="495252ce-6aee-4675-83fc-feddd9e07b22" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TownGen/town-gen-triggers.js" beforeDir="false" afterPath="$PROJECT_DIR$/TownGen/town-gen-triggers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TownGen/town-gen.html" beforeDir="false" afterPath="$PROJECT_DIR$/TownGen/town-gen.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,6 +107,8 @@
       <workItem from="1593107571485" duration="603000" />
       <workItem from="1593109197657" duration="593000" />
       <workItem from="1593110696933" duration="112000" />
+      <workItem from="1593114264029" duration="544000" />
+      <workItem from="1594238687748" duration="1748000" />
     </task>
     <servers />
   </component>

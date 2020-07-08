@@ -90,18 +90,26 @@ function generate() {
         } else {
             return (capitalize(first) + " of " + capitalize(plural(second)));
         }
-
     }
     result = first + second;
+    let landmark = randoArray(isDuplicate(second, landmarkArray));
     if (document.getElementById("compounds").checked) {
-        let landmark = randoArray(isDuplicate(second, landmarkArray));
         result += (" " + landmark);
+    }
+    if (document.getElementById("descriptive").checked) {
+        let firstSec = rando(2);
+        if (firstSec === 1) {
+            result = first;
+        } else {
+            result = second;
+        }
+        result += " " + landmark;
     }
     return capitalize(result);
 }
 
 function notALocationDefiner(radio){
-    return (radio.value !== "" && radio.value !== "compounds" && radio.value !== "XofX")
+    return (radio.value !== "" && radio.value !== "compounds" && radio.value !== "descriptive" && radio.value !== "XofX")
 }
 
 //---------------------
