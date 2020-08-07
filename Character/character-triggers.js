@@ -50,12 +50,11 @@ let domainOptions = [
 ];
 let patronOptions = [
     "Archfey", "Celestial", "Fiend",
-    "Great Old One", "Hexblade"
+    "Great Old One", "Hexblade", "Undying"
 ];
 let originOptions = [
     "Divine Soul", "Draconic Bloodline",
-    "Giant Soul", "Shadow Magic",
-    "Storm Sorcery", "Wild Magic"
+    "Shadow Magic", "Storm Sorcery", "Wild Magic"
 ];
 let subRaceOptions = {
     elf: [
@@ -90,6 +89,10 @@ let subRaceOptions = {
         "Fallen Aasimar",
         "Scourge Aasimar",
         "Protector Aasimar"
+    ],
+    dragonborn: [
+        "Red-scale Dragonborn", "Blue-scale Dragonborn", "Black-scale Dragonborn", "White-scale Dragonborn", "Green-scale Dragonborn",
+        "Gold-scale Dragonborn", "Silver-scale Dragonborn", "Brass-scale Dragonborn", "Bronze-scale Dragonborn", "Copper-scale Dragonborn"
     ]
 };
 
@@ -124,6 +127,8 @@ function loadPage() {
         opt.innerHTML = originOptions[i];
         origins.appendChild(opt)
     }
+    document.getElementById('loader').style.display = "none";
+    document.getElementById('characterButton').style.display = "block";
 }
 
 //------Step 1: Create the character
@@ -159,17 +164,24 @@ function proceed() {
         your.surname = pickLastName(your.race);
         if (your.surname === "xxx") {
             your.fullName = your.name;
-        }
-        else {
+        } else {
             your.fullName = determineFullName(your.name, your.surname, your.race);
         }
     }
     charNameDiv.innerText = (capitalize(your.fullName));
-    if (your.fullClass.toLowerCase() === "warlock of the hexblade") {
-        charClassDiv.innerText = (capitalize(your.race) + " Hexblade Warlock");
-    }
-    else {
-        charClassDiv.innerText = (capitalize(your.race) + " " + capitalize(your.fullClass));
+    if (your.fullClass) {
+        your.fullClass = capitalize(your.fullClass);
+        if (your.fullClass.includes('Of The')) {
+            your.fullClass = your.fullClass.replace('Of The', 'of the')
+        }
+        charClassDiv.innerText = your.genderIsMale ? '♂' : '♀';
+        if (your.fullClass.toLowerCase() === "warlock of the hexblade") {
+            charClassDiv.innerText += (capitalize(your.race) + " Hexblade Warlock");
+        } else {
+            charClassDiv.innerText += (capitalize(your.race) + " " + your.fullClass);
+        }
+    } else {
+        alert('No full class?')
     }
     if (charIsCreated === false) {
         let button1 = document.getElementById("familyButton");
@@ -311,8 +323,7 @@ function createFamily() {
                         Mother.race = "devil";
                 }
         }
-    }
-    else {
+    } else {
         Father.race = your.race;
         Mother.race = your.race;
     }
@@ -386,8 +397,7 @@ function determineRace() {
     let r = races.value.toLowerCase();
     if (r !== "randomrace") {
         return r;
-    }
-    else {
+    } else {
         return pickRace();
     }
 }
@@ -415,16 +425,14 @@ function determineCommunity(race) {
             let x = rando(3);
             if (x === 0) {
                 return "orc"
-            }
-            else {
+            } else {
                 return "human"
             }
         case "tiefling":
             let y = rando(3);
             if (y === 0) {
                 return "demon"
-            }
-            else {
+            } else {
                 return "human"
             }
         default:
@@ -439,8 +447,7 @@ function determineClass() {
     let output;
     if (c !== "randomclass") {
         output = c;
-    }
-    else {
+    } else {
         output = pickClass();
     }
     return output;
@@ -449,8 +456,7 @@ function determineClass() {
 function checkSubclass(baseClass) {
     if (baseClass === "cleric" || baseClass === "warlock" || baseClass === "sorcerer") {
         return determineSubclass(baseClass);
-    }
-    else {
+    } else {
         return baseClass;
     }
 
@@ -496,11 +502,9 @@ function subclassOptions() {
     subclassFix = subChoice;
     if (subChoice === 'cleric') {
         domainDiv.style.display = "block"
-    }
-    else if (subChoice === 'warlock') {
+    } else if (subChoice === 'warlock') {
         patronDiv.style.display = "block"
-    }
-    else if (subChoice === 'sorcerer') {
+    } else if (subChoice === 'sorcerer') {
         originDiv.style.display = "block"
     }
 
@@ -519,15 +523,13 @@ function pickFirstName(race, gender) {
         case "aasimar":
             if (gender === true) {
                 return maleHuman[rando(maleHuman.length)]
-            }
-            else {
+            } else {
                 return femaleHuman[rando(femaleHuman.length)]
             }
         case "dwarf":
             if (gender === true) {
                 return maleDwarf[rando(maleDwarf.length)]
-            }
-            else {
+            } else {
                 return femaleDwarf[rando(femaleDwarf.length)]
             }
         case "aarakocra":
@@ -538,36 +540,31 @@ function pickFirstName(race, gender) {
         case "elf":
             if (gender === true) {
                 return maleElf[rando(maleElf.length)]
-            }
-            else {
+            } else {
                 return femaleElf[rando(femaleElf.length)]
             }
         case "halfling":
             if (gender === true) {
                 return maleHalfling[rando(maleHalfling.length)]
-            }
-            else {
+            } else {
                 return femaleHalfling[rando(femaleHalfling.length)]
             }
         case "gnome":
             if (gender === true) {
                 return maleGnome[rando(maleGnome.length)]
-            }
-            else {
+            } else {
                 return femaleGnome[rando(femaleGnome.length)]
             }
         case "half-orc":
             if (gender === true) {
                 return maleHalforc[rando(maleHalforc.length)]
-            }
-            else {
+            } else {
                 return femaleHalforc[rando(femaleHalforc.length)]
             }
         case "tiefling":
             if (gender === true) {
                 return maleTiefling[rando(maleTiefling.length)]
-            }
-            else {
+            } else {
                 return femaleTiefling[rando(femaleTiefling.length)]
             }
         case "half-elf": //Half-elves have elf names if they live among humans, and vice-versa
@@ -578,8 +575,7 @@ function pickFirstName(race, gender) {
                     case "human":
                         return maleElf[rando(maleElf.length)];
                 }
-            }
-            else {
+            } else {
                 switch (community) {
                     case "elf":
                         return femaleHuman[rando(femaleHuman.length)];
@@ -591,16 +587,14 @@ function pickFirstName(race, gender) {
         case "dragonborn":
             if (gender === true) {
                 return maleDragonborn[rando(maleDragonborn.length)]
-            }
-            else {
+            } else {
                 return femaleDragonborn[rando(femaleDragonborn.length)]
             }
         case "genasi": //Genasi are named based on the community they grow up with
             let x = rando(6);
             if (x > 1) {
                 return pickFirstName(community, gender, community)
-            }
-            else {
+            } else {
                 return genasiNames[rando(genasiNames.length)]
             }
         case "devil":
@@ -649,11 +643,9 @@ function determineFullName(first, last, race) {
     if (race === "goliath") {
         let birthName = goliathNames[rando(goliathNames.length)];
         return (birthName + " " + first + " " + last);
-    }
-    else if (race === "dragonborn") {
+    } else if (race === "dragonborn") {
         return (last + " " + first);
-    }
-    else {
+    } else {
         return (first + " " + last);
     }
 }
@@ -662,6 +654,7 @@ function determineFullName(first, last, race) {
 
 function pickRace() {
     let x = rando(100);
+    x++;
     let output;
     if (x <= 93) {
         switch (true) {
@@ -714,7 +707,8 @@ function pickRace() {
 }
 
 function pickClass() {
-    let x = rando(100);
+    let x = roll(1, 'd100');
+    x++;
     let output;
     switch (true) {
         case (x <= 7):
@@ -775,18 +769,12 @@ function pickX() {
 
 //-------Utility functions
 
-function rando(probability) {
-    return Math.floor(Math.random() * probability);
-}
-
 function capitalize(str) {
     return str.replace(/\w\S*/g, function (txt) {
         if (txt !== "of" && txt !== "the") txt = txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
         return txt;
     });
 }
-
-let vowels = ["a", "e", "i", "o", "u"];
 
 function aAn(str) {
     //A function to switch between "a" and "an"
@@ -796,23 +784,6 @@ function aAn(str) {
         }
     }
     return ("a " + str);
-}
-
-function roll(number, dice) {
-    switch (dice) {
-        case "d4":
-            return (rando(4) * number) + 1;
-        case "d6":
-            return (rando(6) * number) + 1;
-        case "d8":
-            return (rando(8) * number) + 1;
-        case "d10":
-            return (rando(10) * number) + 1;
-        case "d12":
-            return (rando(12) * number) + 1;
-        case "d100":
-            return (rando(100)) + 1;
-    }
 }
 
 function plural(race) {

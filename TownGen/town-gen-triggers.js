@@ -114,19 +114,11 @@ function notALocationDefiner(radio){
 
 //---------------------
 
-function rando(probability) {
-    return Math.floor(Math.random() * probability);
-}
-
 function randoArray(array) {
     return array[rando(array.length)];
 }
 
-function capitalize(str) {
-    return str.replace(/\w\S*/g, function (txt) {
-        return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
-    });
-}
+
 
 function plural(str) {
     let secondToLast = str.slice(-2);

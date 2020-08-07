@@ -39,6 +39,7 @@ select {
     width: 100%;
 }
 
+#subRaceField,
 #domainField,
 #patronField,
 #originField,
@@ -64,4 +65,19 @@ select {
 .information {
     width: 50%;
     margin: auto auto 40px auto;
+}
+
+#loader {
+    border-bottom: 11px solid #41dff4;
+    border-top: 11px solid #f3f3f3;
+    border-radius: 50%;
+    width: 45px;
+    height: 50px;
+    animation: spin .6s linear infinite;
+    margin: auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }

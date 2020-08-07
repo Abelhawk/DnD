@@ -13,6 +13,7 @@
     <script src="character-triggers.js" defer></script>
     <script src="names.js" defer></script>
     <script src="randomTables.js" defer></script>
+    <script src="../shared.js" defer></script>
 </head>
 <body onload="loadPage()">
 <h1>Character Creator</h1>
@@ -32,41 +33,42 @@
         </div>
         
         <div class="field">
-            <span class="label">Race: </span><select id="race">
+            <label for="race" class="label">Race: </label><select id="race">
             <option value="randomRace">(random)</option>
         </select>
         </div>
         
         <div class="field" id="subRaceField">
-            <span class="label">Subrace: </span> <select id="subRace">
+            <label for="subRace" class="label">Subrace: </label> <select id="subRace">
             <option value="randomSubRace">(random)</option>
         </select>
             
             <div class="field">
-                <span class="label">Class: </span> <select id="class" onchange="subclassOptions()">
+                <label for="class" class="label">Class: </label> <select id="class" onchange="subclassOptions()">
                 <option value="randomClass">(random)</option>
             </select>
             </div>
             
             <div class="field" id="domainField">
-                <span class="label">Domain: </span> <select id="domain">
+                <label for="domain" class="label">Domain: </label> <select id="domain">
                 <option value="randomDomain">(random)</option>
             </select>
             </div>
             
             <div class="field" id="patronField">
-                <span class="label">Patron: </span> <select id="patron">
+                <label for="patron" class="label">Patron: </label> <select id="patron">
                 <option value="randomPatron">(random)</option>
             </select>
             </div>
             <div class="field" id="originField">
-                <span class="label">Sorcerous Origin: </span> <select id="origin">
+                <label for="origin" class="label">Sorcerous Origin: </label> <select id="origin">
                 <option value="randomOrigin">(random)</option>
             </select>
             </div>
         </div>
     </div>
-    <button id="characterButton" onclick="proceed()">Generate Character</button>
+    <div id="loader"></div>
+    <button id="characterButton" style="display:none" onclick="proceed()">Generate Character</button>
     <div class="generate" id="nameGenerate">
         <span class="character-name" id="charName"></span><br>
         <span class="character-sub-info" id="charClass"></span>

@@ -13,6 +13,8 @@
     <script src="treasure-types.js" defer></script>
     <script src="treasure-triggers.js" defer></script>
     <script src="hoard.js" defer></script>
+    <script src="filler.js" defer></script>
+    <script src="../shared.js" defer></script>
 
 </head>
 <body>
@@ -24,8 +26,10 @@
                 <div class="choices">
                     <label for="individualType">Individual Treasure</label>
                     <input id="individualType" type="radio" name="type" value="individual" checked><br>
-                    <label>Hoard</label>
-                    <input type="radio" name="type" value="hoard"><br>
+                    <label for="hoardType">Hoard</label>
+                    <input id="hoardType" type="radio" name="type" value="hoard"><br>
+                    <label for="fillerType" class="value">Filler Treasure</label>
+                    <input id="fillerType" type="radio" name="type" value="filler" disabled><br>
                 </div>
             </form>
         </div>

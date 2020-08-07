@@ -11,81 +11,87 @@ function activate() {
 
 function generate() {
     let individ = document.getElementById("individualType");
+    let hoard = document.getElementById("hoardType");
+    let filler = document.getElementById("fillerType");
     let level = document.getElementById("playerLevel").value;
     if (individ.checked) {
         return generateIndividualTreasure(level);
-    } else {
+    }
+    if (hoard.checked) {
         return generateHoard(level);
+    }
+    if (filler.checked) {
+        return generateFiller();
     }
 }
 
 function generateIndividualTreasure(lvl) {
-    let randomNumber = roll(1,'d100');
+    let randomNumber = rollTreasure(1, 'd100');
     let treasure = [];
     switch (true) {
         case (lvl <= 4):
             switch (true) {
                 case (randomNumber <= 30):
-                    treasure.push(roll(5, "d6") + " copper pieces");
+                    treasure.push(rollTreasure(5, "d6") + " copper pieces");
                     break;
                 case (randomNumber <= 60):
-                    treasure.push(roll(4, "d6") + " silver pieces");
+                    treasure.push(rollTreasure(4, "d6") + " silver pieces");
                     break;
                 case (randomNumber <= 95):
-                    treasure.push(roll(3, "d6") + " gold pieces");
+                    treasure.push(rollTreasure(3, "d6") + " gold pieces");
                     break;
                 case (randomNumber <= 100):
-                    treasure.push(roll(1, "d6") + " platinum pieces");
+                    treasure.push(rollTreasure(1, "d6") + " platinum pieces");
             }
             break;
         case (lvl <= 10):
             switch (true) {
                 case (randomNumber <= 30):
-                    treasure.push((roll(4, "d6", 100)) + " copper pieces");
-                    treasure.push((roll(1, "d6", 5)) + " gold pieces");
+                    treasure.push((rollTreasure(4, "d6", 100)) + " copper pieces");
+                    treasure.push((rollTreasure(1, "d6", 5)) + " gold pieces");
                     break;
                 case (randomNumber <= 60):
-                    treasure.push((roll(6, "d6", 10)) + " silver pieces");
-                    treasure.push((roll(2, "d6", 10)) + " gold pieces");
+                    treasure.push((rollTreasure(6, "d6", 10)) + " silver pieces");
+                    treasure.push((rollTreasure(2, "d6", 10)) + " gold pieces");
                     break;
                 case (randomNumber <= 95):
-                    treasure.push((roll(4, "d6", 10)) + " gold pieces");
+                    treasure.push((rollTreasure(4, "d6", 10)) + " gold pieces");
                     break;
                 case (randomNumber <= 100):
                     console.log("Jackpot!");
-                    treasure.push((roll(2, "d6", 10)) + " gold pieces");
-                    treasure.push(roll(3, "d6") + " platinum pieces");
+                    treasure.push((rollTreasure(2, "d6", 10)) + " gold pieces");
+                    treasure.push(rollTreasure(3, "d6") + " platinum pieces");
             }
             break;
         case (lvl <= 16):
             switch (true) {
                 case (randomNumber <= 20):
-                    treasure.push((roll(4, "d6", 100)) + " silver pieces");
-                    treasure.push((roll(1, "d6", 100)) + " gold pieces");
+                    treasure.push((rollTreasure(4, "d6", 100)) + " silver pieces");
+                    treasure.push((rollTreasure(1, "d6", 100)) + " gold pieces");
                     break;
                 case (randomNumber <= 75):
-                    treasure.push((roll(2, "d6", 100)) + " gold pieces");
-                    treasure.push((roll(1, "d6", 10)) + " platinum pieces");
+                    treasure.push((rollTreasure(2, "d6", 100)) + " gold pieces");
+                    treasure.push((rollTreasure(1, "d6", 10)) + " platinum pieces");
                     break;
                 case (randomNumber <= 100):
                     console.log("Jackpot!");
-                    treasure.push((roll(2, "d6", 100)) + " gold pieces");
-                    treasure.push((roll(2, "d6", 10)) + " platinum pieces");
+                    treasure.push((rollTreasure(2, "d6", 100)) + " gold pieces");
+                    treasure.push((rollTreasure(2, "d6", 10)) + " platinum pieces");
             }
             break;
         case (lvl >= 17):
             switch (true) {
                 case (randomNumber <= 15):
-                    treasure.push((roll(9, "d6", 100)) + " gold pieces");
+                    treasure.push((rollTreasure(9, "d6", 100)) + " gold pieces");
                     break;
                 case (randomNumber <= 55):
-                    treasure.push((roll(1, "d6", 1000)) + " gold pieces");
-                    treasure.push((roll(1, "d6", 100)) + " platinum pieces");
+                    treasure.push((rollTreasure(1, "d6", 1000)) + " gold pieces");
+                    treasure.push((rollTreasure(1, "d6", 100)) + " platinum pieces");
                     break;
                 case (randomNumber <= 100):
                     console.log("Jackpot!");
-                    treasure.push((roll(1, "d6", 1000)) + " gold pieces");
-                    treasure.push((roll(2, "d6", 100)) + " platinum pieces");
+                    treasure.push((rollTreasure(1, "d6", 1000)) + " gold pieces");
+                    treasure.push((rollTreasure(2, "d6", 100)) + " platinum pieces");
             }
     }
     return treasure;
@@ -115,7 +121,7 @@ function getGems(number, value) { //Gems can be added together
     }
     for (let i = 0; i < number; i++) {
         let randomNumber = rando(gemTable.length);
-        bagOGems.push(gemTable[randomNumber] + `<span class="value">`+ " (" + value + " gp)" + `</span>`);
+        bagOGems.push(gemTable[randomNumber] + `<span class="value">` + " (" + value + " gp)" + `</span>`);
     }
     let counts = {};
     bagOGems.forEach(function (x) {
@@ -147,7 +153,7 @@ function getArtObjects(number, value) {//Art objects must be unique
     for (let i = 0; i < number; i++) {
         let randomNumber = rando(artTable.length);
         let index = 0;
-        while (arrayIndexes.includes(randomNumber)){
+        while (arrayIndexes.includes(randomNumber)) {
             randomNumber = rando(artTable.length);
             index++;
             if (index > 99) alert("Infinite loop detected!")
@@ -160,7 +166,7 @@ function getArtObjects(number, value) {//Art objects must be unique
 
 function getMagicItem(table) {
     let magicTable;
-    switch (table){
+    switch (table) {
         case "table A":
             magicTable = magicTableA;
             break;
@@ -189,32 +195,35 @@ function getMagicItem(table) {
             magicTable = magicTableI;
     }
     let randomNumber = rando(magicTable.length);
+    console.log(randomNumber);
     let magicItem = magicTable[randomNumber];
+    console.log(magicItem);
     if (magicItem.includes('armor')) {
-        if (magicItem.includes('mithril') || magicItem.includes('adamantine')){
-            magicItem = metalArmor[rando(metalArmor.length)] + " " + magicItem;
+        if (magicItem.includes('mithril') || magicItem.includes('adamantine')) {
+            magicItem = magicItem.replace('armor', metalArmor[rando(metalArmor.length)]);
         } else {
-            magicItem = armor[rando(armor.length)] + " " + magicItem;
+            magicItem = magicItem.replace('armor', armor[rando(armor.length)]);
         }
     }
-    if (magicItem.includes('resistance')) {
-        magicItem.replace('resistance', resistances[rando(resistance.length)] + 'resistance');
+    if (magicItem.includes('resistance') && !magicItem.includes('cloak')) {
+        alert('**RESISTANCE**');
+        magicItem = magicItem.replace('resistance', resistances[rando(resistances.length)] + ' resistance');
     }
     if (magicItem.includes('weapon')) {
-        magicItem.replace('weapon', weapons[rando(weapons.length)])
+        magicItem = magicItem.replace('weapon', weapons[rando(weapons.length)])
     }
     if (magicItem.includes('ammunition')) {
-        magicItem.replace('ammunition', ammunition[rando(ammunition.length)])
+        magicItem = magicItem.replace('ammunition', ammunition[rando(ammunition.length)])
     }
-    if (magicItem.includes('spell scroll')){
+    if (magicItem.includes('spell scroll')) {
         magicItem = "spell scroll of " + getRandomSpell(magicTable[randomNumber].substr(-1));
     }
     return `<span class='italic'>` + magicItem + `</span>`;
 }
 
-function getRandomSpell(level){
+function getRandomSpell(level) {
     let spellTable;
-    switch(level){
+    switch (level) {
         case "0":
             spellTable = cantrips;
             break;
@@ -256,17 +265,13 @@ function organize(object, array) {
     }
 }
 
-function mergeArray(returnedArray,array){
-    for (let i = 0; i < returnedArray.length; i++){
+function mergeArray(returnedArray, array) {
+    for (let i = 0; i < returnedArray.length; i++) {
         array.push(returnedArray[i])
     }
 }
 
-function rando(probability) {
-    return Math.floor(Math.random() * probability);
-}
-
-function roll(number, dice, multiplier) {
+function rollTreasure(number, dice, multiplier) {
     let result;
     if (!multiplier) multiplier = 1;
     switch (dice) {

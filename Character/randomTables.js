@@ -270,7 +270,7 @@ function whereParentsGo(both){
     let plursing = "";
     if (both === true){plursing = "were"}
     else {plursing = "was"}
-    let a = rando(4);
+    let a = roll(1, 'd4');
     switch(a){
         case 1:
             status = "died. "; //Add cause of death function
