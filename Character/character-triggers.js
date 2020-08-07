@@ -141,7 +141,13 @@ function proceed() {
     community = determineCommunity(your.race);
 
     your.pClass = determineClass();
+    if (!your.pClass) {
+        alert('error determining class.')
+    }
     your.fullClass = checkSubclass(your.pClass);
+    if (!your.fullClass) {
+        alert('error determining full class.')
+    }
 
     if (genders.value === 'female') {
         your.genderIsMale = false;
@@ -180,9 +186,8 @@ function proceed() {
         } else {
             charClassDiv.innerText += (capitalize(your.race) + " " + your.fullClass);
         }
-    } else {
-        alert('No full class?')
     }
+    //todo: shouldn't need this check
     if (charIsCreated === false) {
         let button1 = document.getElementById("familyButton");
         let button2 = document.getElementById("backstoryButton");
@@ -465,7 +470,6 @@ function checkSubclass(baseClass) {
         let war = patrons.value;
         let sor = origins.value;
         let subclass;
-
         switch (cl) {
             case "cleric":
                 if (subclassFix === "cleric" && cle === "randomDomain") {
@@ -478,7 +482,6 @@ function checkSubclass(baseClass) {
             case "warlock":
                 if (subclassFix === "warlock" && war === "randomPatron") {
                     subclass = (patronOptions[rando(patronOptions.length)]);
-
                 } else {
                     subclass = war;
                 }
@@ -488,6 +491,11 @@ function checkSubclass(baseClass) {
                     subclass = (originOptions[rando(originOptions.length)]);
                 } else {
                     subclass = sor;
+                }
+                if (subclass === "Storm Sorcery") {
+                    return "Storm Sorcerer";
+                } else {
+                    return subclass + " Sorcerer"
                 }
         }
     }
@@ -708,20 +716,22 @@ function pickRace() {
 
 function pickClass() {
     let x = roll(1, 'd100');
-    x++;
     let output;
     switch (true) {
-        case (x <= 7):
+        case (x <= 2):
+            output = "artificer";
+            break;
+        case (x <= 9):
             output = "barbarian";
             break;
-        case (x <= 14):
+        case (x <= 16):
             output = "bard";
             break;
-        case (x <= 29):
+        case (x <= 31):
             output = "cleric";
             subclassFix = "cleric";
             break;
-        case (x <= 36):
+        case (x <= 35):
             output = "druid";
             break;
         case (x <= 52):
@@ -752,20 +762,6 @@ function pickClass() {
     }
     return output;
 }
-
-/* weighted randomizer
-function pickX() {
-    let x = rando(100);
-    let output;
-    switch(x){
-        case (x < ):
-            output = "";
-            break;
-        case 2:
-    }
-    return output;
-}
- */
 
 //-------Utility functions
 
@@ -807,8 +803,4 @@ function plural(race) {
             pluralForm = (race + "s");
     }
     return pluralForm;
-}
-
-function say(x) {
-    alert(x);
 }

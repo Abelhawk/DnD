@@ -2,19 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="495252ce-6aee-4675-83fc-feddd9e07b22" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/shared.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/treasure/filler.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Character/character-creator.html" beforeDir="false" afterPath="$PROJECT_DIR$/Character/character-creator.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Character/character-triggers.js" beforeDir="false" afterPath="$PROJECT_DIR$/Character/character-triggers.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Character/randomTables.js" beforeDir="false" afterPath="$PROJECT_DIR$/Character/randomTables.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Character/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/Character/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TownGen/town-gen-triggers.js" beforeDir="false" afterPath="$PROJECT_DIR$/TownGen/town-gen-triggers.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TownGen/town-gen.html" beforeDir="false" afterPath="$PROJECT_DIR$/TownGen/town-gen.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/treasure/treasure-generator.html" beforeDir="false" afterPath="$PROJECT_DIR$/treasure/treasure-generator.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/treasure/treasure-triggers.js" beforeDir="false" afterPath="$PROJECT_DIR$/treasure/treasure-triggers.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/triggers.js" beforeDir="false" afterPath="$PROJECT_DIR$/triggers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TownGen/words.js" beforeDir="false" afterPath="$PROJECT_DIR$/TownGen/words.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -119,7 +110,7 @@
       <workItem from="1593110696933" duration="112000" />
       <workItem from="1593114264029" duration="544000" />
       <workItem from="1594238687748" duration="3088000" />
-      <workItem from="1596811481124" duration="12772000" />
+      <workItem from="1596811481124" duration="14259000" />
     </task>
     <servers />
   </component>
@@ -140,10 +131,10 @@
     </option>
   </component>
   <component name="WindowStateProjectService">
-    <state x="718" y="288" width="611" height="536" key="find.popup" timestamp="1596821905429">
+    <state x="718" y="288" width="611" height="536" key="find.popup" timestamp="1596825124413">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state x="718" y="288" width="611" height="536" key="find.popup/2560.10.1536.844/0.0.2048.1112@0.0.2048.1112" timestamp="1596821905429" />
+    <state x="718" y="288" width="611" height="536" key="find.popup/2560.10.1536.844/0.0.2048.1112@0.0.2048.1112" timestamp="1596825124413" />
     <state x="681" y="259" key="run.anything.popup" timestamp="1596817423162">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>

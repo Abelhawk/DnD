@@ -22,49 +22,57 @@
         creation. <br>The unfilled fields will be randomized!</p>
     <div class="form" id="characterForm">
         <div class="field">
-            <span class="label">Name: </span><input id="name">
+            <span class="label">Name: </span>
+            <input id="name">
         </div>
         <div class="field">
-            <span class="label">Gender: </span><select id="gender">
-            <option value="randomGender">(random)</option>
-            <option value="male">Male</option>
-            <option value="female">Female</option>
-        </select>
+            <span class="label">Gender: </span>
+            <select id="gender">
+                <option value="randomGender">(random)</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select>
         </div>
-        
+
         <div class="field">
-            <label for="race" class="label">Race: </label><select id="race">
-            <option value="randomRace">(random)</option>
-        </select>
+            <label for="race" class="label">Race: </label>
+            <select id="race">
+                <option value="randomRace">(random)</option>
+            </select>
         </div>
-        
+
         <div class="field" id="subRaceField">
-            <label for="subRace" class="label">Subrace: </label> <select id="subRace">
-            <option value="randomSubRace">(random)</option>
-        </select>
-            
-            <div class="field">
-                <label for="class" class="label">Class: </label> <select id="class" onchange="subclassOptions()">
+            <label for="subRace" class="label">Subrace: </label>
+            <select id="subRace"> <!-- HIDDEN -->
+                <option value="randomSubRace">(random)</option>
+            </select>
+        </div>
+
+        <div class="field">
+            <label for="class" class="label">Class: </label>
+            <select id="class" onchange="subclassOptions()">
                 <option value="randomClass">(random)</option>
             </select>
-            </div>
-            
-            <div class="field" id="domainField">
-                <label for="domain" class="label">Domain: </label> <select id="domain">
+        </div>
+
+        <div class="field" id="domainField">
+            <label for="domain" class="label">Domain: </label>
+            <select id="domain"> <!-- HIDDEN -->
                 <option value="randomDomain">(random)</option>
             </select>
-            </div>
-            
-            <div class="field" id="patronField">
-                <label for="patron" class="label">Patron: </label> <select id="patron">
+        </div>
+
+        <div class="field" id="patronField">
+            <label for="patron" class="label">Patron: </label>
+            <select id="patron"> <!-- HIDDEN -->
                 <option value="randomPatron">(random)</option>
             </select>
-            </div>
-            <div class="field" id="originField">
-                <label for="origin" class="label">Sorcerous Origin: </label> <select id="origin">
+        </div>
+        <div class="field" id="originField">
+            <label for="origin" class="label">Sorcerous Origin: </label>
+            <select id="origin"> <!-- HIDDEN -->
                 <option value="randomOrigin">(random)</option>
             </select>
-            </div>
         </div>
     </div>
     <div id="loader"></div>
@@ -76,9 +84,9 @@
     <div class="generate" id="familyGenerate">
         <span id="charFam">You were quite young when you were born.</span>
     </div>
-    <button id="appearanceButton" onclick="say('Not finished yet!')">Generate Appearance</button>
+    <button id="appearanceButton" onclick="alert('Not finished yet!')">Generate Appearance</button>
     <button id="familyButton" onclick="createFamily()">Generate Family</button>
-    <button id="backstoryButton" onclick="say('Not finished yet!')">Generate Backstory</button>
+    <button id="backstoryButton" onclick="alert('Not finished yet!')">Generate Backstory</button>
 </div>
 <a class="back-button" href="../index.html">Back</a>
 </div>

@@ -11,7 +11,8 @@ let defaults = [
     "thick", "thin", "tower", "wax", "quill", "young",
     "barrow", "stale", "flash", "scale", "bronze", "brass",
     "hammer", "anvil", "lime", "spur", "tea", "nether",
-    "strong", "bridge", "flag", "copper", "cross", "whistle"
+    "strong", "bridge", "flag", "copper", "cross", "whistle",
+    "arch"
 ];
 
 let scary = [
@@ -52,7 +53,8 @@ let peace = [
     "haven", "hearth", "honor", "hope", "still", "jewel",
     "temple", "life", "crystal", "day", "home", "calm", "glad",
     "quiet", "merry", "sweet", "dream", "dew", "honey", "butter",
-    "glint", "water", "star", "swan", "lamp"
+    "glint", "water", "star", "swan", "lamp", "apple", "wool",
+    "cheese"
 ];
 
 let natural = [
