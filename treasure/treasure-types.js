@@ -230,7 +230,7 @@ let cantrips = [
     "thaumaturgy", "true strike", "vicious mockery", "booming blade", "control flames",
     "create bonfire", "friends", "frostbite", "gust", "infestation", "lightning lure",
     "magic stone", "mold earth", "primal savagery", "produce flame", "sword burst",
-    "thorn whip", "thunderclap", "toll the dead", "word of radiance"
+    "thorn whip", "thunderclap", "toll the dead", "word of radiance", "sapping sting"
 ];
 
 let spells1st = [
@@ -246,7 +246,7 @@ let spells1st = [
     "protection from evil and good", "purify food and drink", "ray of sickness", "sanctuary", "shield",
     "searing smite", "shield of faith", "silent image", "sleep", "snare", "speak with animals",
     "Tasha's hideous laughter", "Tenser's floating disc", "thunderous smite", "thunderwave",
-    "unseen servant", "witch bolt", "wrathful smite", "zephyr strike"
+    "unseen servant", "witch bolt", "wrathful smite", "zephyr strike", "gift of alacrity", "magnify gravity"
 ];
 let spells2nd = [
     "Aganazzar's scorcher", "aid", "alter self", "animal messenger", "arcane lock", "augury", "barkskin",
@@ -261,7 +261,7 @@ let spells2nd = [
     "phantasmal force", "prayer of healing", "protection from poison", "pyrotechnics", "ray of enfeeblement",
     "rope trick", "scorching ray", "see invisibility", "shadow blade", "shatter", "silence", "skywrite",
     "Snilloc's snowball swarm", "spider climb", "spike growth", "spiritual weapon", "suggestion", "warding bond",
-    "warding wind", "web", "zone of truth"
+    "warding wind", "web", "zone of truth", "fortune's favor", "immovable object", "wristpocket"
 ];
 let spells3rd = [
     "animate dead", "aura of vitality", "beacon of hope", "bestow curse", "blinding smite", "blink",
@@ -273,7 +273,8 @@ let spells3rd = [
     "meld into stone", "Melf's minute meteors", "nondetection", "phantom steed", "plant growth", "protection from energy",
     "remove curse", "revivify", "sending", "sleet storm", "slow", "speak with dead", "speak with plants",
     "spirit guardians", "stinking cloud", "summon lesser demons", "thunder step", "tidal wave", "tiny servant",
-    "tongues", "vampiric touch", "wall of sand", "wall of water", "water breathing", "water walk", "wind wall"
+    "tongues", "vampiric touch", "wall of sand", "wall of water", "water breathing", "water walk", "wind wall",
+    "pulse wave"
 ];
 let spells4th = [
     "arcane eye", "aura of life", "aura of purity", "banishment", "blight", "charm monster", "compulsion",
@@ -283,7 +284,8 @@ let spells4th = [
     "guardian of faith", "guardian of nature", "hallucinatory terrain", "ice storm", "Leomund's secret chest",
     "locate creature", "Mordenkainen's faithful hound", "Mordenkainen's private sanctum", "Otiluke's resilient sphere",
     "phantasmal killer", "polymorph", "shadow of Moil", "sickening radiance", "staggering smite", "stone shape",
-    "stoneskin", "storm sphere", "summon greater demon", "vitriolic sphere", "wall of fire", "watery sphere"
+    "stoneskin", "storm sphere", "summon greater demon", "vitriolic sphere", "wall of fire", "watery sphere",
+    "gravity sinkhole"
 ];
 let spells5th = [
     "animate objects", "antilife shell", "awaken", "banishing smite", "Bigby's hand", "circle of power", "cloudkill",
@@ -294,7 +296,8 @@ let spells5th = [
     "maelstrom", "mass cure wounds", "mislead", "modify memory", "negative energy flood", "passwall",
     "planar binding", "raise dead", "rary's telepathic bond", "reincarnate", "scrying", "seeming", "skill empowerment",
     "steel wind strike", "swift quiver", "synaptic static", "telekinesis", "teleportation circle",
-    "transmute rock", "tree stride", "wall of force", "wall of light", "wall of stone", "wrath of nature"
+    "transmute rock", "tree stride", "wall of force", "wall of light", "wall of stone", "wrath of nature",
+    "temporal shunt"
 ];
 let spells6th = [
     "arcane gate", "blade barrier", "bones of the earth", "chain lightning", "circle of death", "conjure fey",
@@ -304,22 +307,23 @@ let spells6th = [
     "investiture of wind", "magic jar", "mass suggestion", "mental prison", "move earth", "Otiluke's freezing sphere",
     "Otto's irresistable dance", "planar ally", "primordial ward", "programmed illusion", "scatter", "soul cage",
     "sunbeam", "Tenser's transformation", "transport via plants", "true seeing", "wall of ice", "wall of thorns",
-    "wind walk", "word of recall"
+    "wind walk", "word of recall", "gravity fissure"
 ];
 let spells7th = [
     "conjure celestial", "crown of stars", "delayed blast fireball", "divine word", "etherealness", "finger of death",
     "fire storm", "forcecage", "mirage arcane", "Mordenkainen's magnificent mansion", "Mordenkainen's sword", "plane shift",
     "power word pain", "prismatic spray", "project image", "regenerate", "resurrection", "reverse gravity",
-    "sequester", "simulacrum", "symbol", "teleport", "temple of the gods", "whirlwind"
+    "sequester", "simulacrum", "symbol", "teleport", "temple of the gods", "whirlwind", "tether essence"
 ];
 let spells8th = [
     "Abi-Dalzim's horrid wilting", "animal shapes", "antimagic field", "antipathy/sympathy", "clone", "control weather",
     "demiplane", "dominate monster", "earthquake", "feeblemind", "glibness", "holy aura", "illusory dragon",
     "incendiary cloud", "maddening darkness", "maze", "mighty fortress", "mind blank", "power word stun",
-    "sunburst", "telepathy", "tsunami"
+    "sunburst", "telepathy", "tsunami", "dark star", "reality break"
 ];
 let spells9th = [
     "astral projection", "foresight", "gate", "imprisonment", "invulnerability", "mass heal", "mass polymorph",
     "meteor swarm", "power word heal", "power word kill", "prismatic wall", "psychic scream", "shapechange",
-    "storm of vengeance", "time stop", "true polymorph", "true resurrection", "weird", "wish"
+    "storm of vengeance", "time stop", "true polymorph", "true resurrection", "weird", "wish", "ravenous void",
+    "time ravage"
 ];

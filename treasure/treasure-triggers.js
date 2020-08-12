@@ -1,5 +1,10 @@
 let textField = document.getElementById("generate");
 
+function loadPage() {
+    document.getElementById('loader').style.display = "none";
+    document.getElementById('yesButton').style.display = "block";
+}
+
 function activate() {
     let result = generate();
     let output = ``;
@@ -21,7 +26,7 @@ function generate() {
         return generateHoard(level);
     }
     if (filler.checked) {
-        return generateFiller();
+        return generateFiller(level);
     }
 }
 
@@ -222,7 +227,7 @@ function getMagicItem(table) {
 }
 
 function getRandomSpell(level) {
-    let spellTable;
+    let spellTable = spells1st;
     switch (level) {
         case "0":
             spellTable = cantrips;
@@ -254,7 +259,7 @@ function getRandomSpell(level) {
         case "9":
             spellTable = spells9th;
     }
-    return spellTable[rando(spellTable.length)]
+    return randoArray(spellTable);
 }
 
 function organize(object, array) {

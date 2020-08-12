@@ -15,9 +15,10 @@
     <script src="hoard.js" defer></script>
     <script src="filler.js" defer></script>
     <script src="../shared.js" defer></script>
-
+    <script src="../Character/names.js" defer></script>
+    <script src="../TownGen/words.js" defer></script>
 </head>
-<body>
+<body onload="loadPage()">
 <h1>Treasure Generator</h1>
 <div class="container">
     <div class="two-columns">
@@ -28,8 +29,12 @@
                     <input id="individualType" type="radio" name="type" value="individual" checked><br>
                     <label for="hoardType">Hoard</label>
                     <input id="hoardType" type="radio" name="type" value="hoard"><br>
-                    <label for="fillerType" class="value">Filler Treasure</label>
-                    <input id="fillerType" type="radio" name="type" value="filler" disabled><br>
+<!--                    <label for="fillerType" class="value">Filler Treasure</label>-->
+<!--                    <input id="fillerType" type="radio" name="type" value="filler" disabled><br>-->
+                    <label for="fillerType">Filler Treasure</label>
+                    <input id="fillerType" type="radio" name="type" value="filler"><br>
+                    <label for="uniqueType" class="value">Unique Magic Item</label>
+                    <input id="uniqueType" type="radio" name="type" value="unique" disabled><br>
                 </div>
             </form>
         </div>
@@ -40,7 +45,8 @@
             </div>
         </form>
     </div>
-    <button type="submit" onclick="activate()">Generate!</button>
+    <div id="loader" title="Loading..."></div>
+    <button id="yesButton" type="submit" onclick="activate()" style="display:none">Generate!</button>
 </div>
 
 <div id="generate"></div>

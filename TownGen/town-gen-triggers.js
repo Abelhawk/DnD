@@ -29,9 +29,8 @@ function generate() {
 
     if (moodArray.length > 1) {
         first = randoArray(randoArray(moodArray));
-    }
-    else {
-        while (first === undefined){
+    } else {
+        while (first === undefined) {
             let z = rando(moodArray[0].length);
             first = moodArray[0][z];
         }
@@ -97,28 +96,30 @@ function generate() {
         result += (" " + landmark);
     }
     if (document.getElementById("descriptive").checked) {
-        let firstSec = rando(2);
-        if (firstSec === 1) {
-            result = first;
+        let type = rando(6);
+        if (type >= 2) {
+            let firstSec = rando(2);
+            if (firstSec === 1) {
+                result = first;
+            } else {
+                result = second;
+            }
+            result += " " + landmark;
         } else {
-            result = second;
+            if (landmark.slice(-1) !== 's') {
+                landmark = plural(landmark);
+            }
+            result = randoArray(numbers) + " " + landmark
         }
-        result += " " + landmark;
     }
     return capitalize(result);
 }
 
-function notALocationDefiner(radio){
+function notALocationDefiner(radio) {
     return (radio.value !== "" && radio.value !== "compounds" && radio.value !== "descriptive" && radio.value !== "XofX")
 }
 
 //---------------------
-
-function randoArray(array) {
-    return array[rando(array.length)];
-}
-
-
 
 function plural(str) {
     let secondToLast = str.slice(-2);
@@ -146,7 +147,7 @@ function plural(str) {
             }
         case "e":
             if (secondToLast === "f") {
-                    return str.substring(0, str.length - 1) + "ves";
+                return str.substring(0, str.length - 1) + "ves";
             }
         default:
             return str + "s";
@@ -160,8 +161,7 @@ function isDuplicate(first, biome) {
     }
     if (first === second || second === undefined) {
         isDuplicate(first, biome)
-    }
-    else {
+    } else {
         return second;
     }
 }

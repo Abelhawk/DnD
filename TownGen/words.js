@@ -54,7 +54,7 @@ let peace = [
     "temple", "life", "crystal", "day", "home", "calm", "glad",
     "quiet", "merry", "sweet", "dream", "dew", "honey", "butter",
     "glint", "water", "star", "swan", "lamp", "apple", "wool",
-    "cheese"
+    "cheese", "milk", "heather"
 ];
 
 let natural = [
@@ -84,7 +84,7 @@ let grassland = [
     "valley", "glen", "well", "wing", "dale", "light",
     "song", "smar", "haven", "set", "wall", "ton", "brink",
     "bird", "rill", "caster", "staff", "flower", "swan", "bow",
-    "cross", "berry", "scarf", "nest"
+    "cross", "berry", "scarf", "nest", "road", "heather"
 ];
 
 let hills = [
@@ -146,7 +146,7 @@ let desert = [
     "burn", "grit", "chalk", "salt", "cavern", "quartz", "gravel",
     "powder", "ditch", "rock", "wither", "cactus", "melt", "claw",
     "drought", "spit", "sweat", "burn", "lurch", "locust", "fossil",
-    "cloud", "swarm", "lichen", "lizard"
+    "cloud", "swarm", "lichen", "lizard", "spice"
 ];
 
 //-------------------------------------------------------------------------------------------------
@@ -192,7 +192,7 @@ let swampMarks = [
 let desertMarks = [
     "wastes", "dunes", "mesa", "ridge", "oasis", "flats", "wasteland",
     "badlands", "barrens", "sands", "butte", "dike", "wilds", "savannah",
-    "buttes"
+    "buttes", "citadel"
 ];
 
 let arcticMarks = [
@@ -212,4 +212,8 @@ let townMarks = [
     "overlook", "tavern", "gate", "bank", "guildhall", "road", "shrine",
     "church", "temple", "chapel", "embassy", "sewers", "canal", "tier",
     "exchange", "spire"
+];
+
+let numbers = [
+    "two", "twain", "twin", "three", "four", "five", "six", "seven", "ten", "hundred", "thousand"
 ];

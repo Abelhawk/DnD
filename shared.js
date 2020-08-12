@@ -3,6 +3,14 @@ function rando(probability) {
     return Math.floor(Math.random() * probability);
 }
 
+function randoArray(array) {
+    if (!array) {
+        console.log('An array was undefined.');
+        return;
+    }
+    return array[rando(array.length)];
+}
+
 function capitalize(str) {
     return str.replace(/\w\S*/g, function (txt) {
         return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
@@ -36,4 +44,4 @@ function roll(number, dice) {
         case "d100":
             return ((rando(100) + 1));
     }
-};
+}
