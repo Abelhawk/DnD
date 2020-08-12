@@ -28,6 +28,9 @@ function generate() {
     if (filler.checked) {
         return generateFiller(level);
     }
+    if (document.getElementById("uniqueType").checked) {
+        return generateUnique(level);
+    }
 }
 
 function generateIndividualTreasure(lvl) {
@@ -200,9 +203,13 @@ function getMagicItem(table) {
             magicTable = magicTableI;
     }
     let randomNumber = rando(magicTable.length);
-    console.log(randomNumber);
     let magicItem = magicTable[randomNumber];
-    console.log(magicItem);
+    magicItem = processMagicItem(magicTable, magicItem);
+    return `<span class='italic'>` + magicItem + `</span>`;
+}
+
+function processMagicItem(magicTable, magicItem) {
+    let randomNumber = rando(magicTable.length);
     if (magicItem.includes('armor')) {
         if (magicItem.includes('mithril') || magicItem.includes('adamantine')) {
             magicItem = magicItem.replace('armor', metalArmor[rando(metalArmor.length)]);
@@ -223,7 +230,7 @@ function getMagicItem(table) {
     if (magicItem.includes('spell scroll')) {
         magicItem = "spell scroll of " + getRandomSpell(magicTable[randomNumber].substr(-1));
     }
-    return `<span class='italic'>` + magicItem + `</span>`;
+    return magicItem;
 }
 
 function getRandomSpell(level) {

@@ -213,8 +213,8 @@ function generateFiller(lvl) {
                 let randNumb = rando(coinflipped.length);
                 let desc2 = coinflipped === modifiers ? modifierDescriptions[randNumb] : magicalModifierDescriptions[randNumb];
                 let item = 'potion';
-                while (item.includes('potion') || item.includes('scroll')) {
-                    item = randoArray(magicTableBasedOnLevel);
+                while (isConsumable(item)) {
+                    item = processMagicItem(magicTableBasedOnLevel, randoArray(magicTableBasedOnLevel));
                 }
                 treasure.push(coinflipped[randNumb] + ' ' + `<span class="italic">` + item + `</span>` + " - " + `<span class="value">` + desc2 + `</span>`);
                 break;
@@ -223,6 +223,26 @@ function generateFiller(lvl) {
     if (treasure.includes('undefined')) {
         alert('Something went undefined');
     }
+    return treasure;
+}
+
+function generateUnique(level) {
+    determineMagicItems(level);
+    let treasure = [];
+    let coinflipped;
+    let what = coinFlip(1, 2);
+    if (what === 1) {
+        coinflipped = modifiers;
+    } else {
+        coinflipped = magicalModifiers;
+    }
+    let randNumb = rando(coinflipped.length);
+    let desc2 = coinflipped === modifiers ? modifierDescriptions[randNumb] : magicalModifierDescriptions[randNumb];
+    let item = 'potion';
+    while (isConsumable(item)) {
+        item = processMagicItem(magicTableBasedOnLevel, randoArray(magicTableBasedOnLevel));
+    }
+    treasure.push(coinflipped[randNumb] + ' ' + `<span class="italic">` + item + `</span>` + " - " + `<span class="value">` + desc2 + `</span>`);
     return treasure;
 }
 
@@ -398,6 +418,18 @@ let magicalModifierDescriptions = [
     'You feel lethargic and have to sleep more while attuned.'
 ];
 
+function isConsumable(item) {
+    let consumables = ['potion', 'scroll', 'beans', 'dust', 'philter', 'bead', 'manual',
+        'solvent', 'sovereign', 'tome', 'oil'
+    ];
+    for (let i = 0; i < consumables.length; i++) {
+        if (item.includes(consumables[i])) {
+            return true
+        }
+    }
+    return false;
+}
+
 let trinkets = [
     'mummified goblin hand', 'piece of crystal that glows faintly in the moonlight', 'gold coin minted in an unknown land', 'untarnished brass ring',
     'old chess piece made from glass', 'pair of knucklebone dice', 'mummified elf fingers on a rope necklace', '1-ounce block of unknown material',
@@ -472,8 +504,7 @@ function determineMagicItems(lvl) {
             case 9:
                 magicTableBasedOnLevel = magicTableG;
         }
-    }
-    else if (lvl <= 16) {
+    } else if (lvl <= 16) {
         let randomLevel = rando(10);
         switch (randomLevel) {
             case 0:
@@ -503,8 +534,7 @@ function determineMagicItems(lvl) {
             case 9:
                 magicTableBasedOnLevel = magicTableH;
         }
-    }
-    else if (lvl <= 10) {
+    } else if (lvl <= 10) {
         let randomLevel = rando(10);
         switch (randomLevel) {
             case 0:
@@ -530,8 +560,7 @@ function determineMagicItems(lvl) {
             case 9:
                 magicTableBasedOnLevel = magicTableH;
         }
-    }
-    else if (lvl >= 17) {
+    } else if (lvl >= 17) {
         let randomLevel = rando(10);
         switch (randomLevel) {
             case 0:
@@ -557,5 +586,4 @@ function determineMagicItems(lvl) {
                 magicTableBasedOnLevel = magicTableI;
         }
     }
-    console.log(magicTableBasedOnLevel);
 }
