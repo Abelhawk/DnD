@@ -309,7 +309,6 @@ function processMagicItem(magicTable, magicItem) {
         }
     }
     if (magicItem.includes('resistance') && !magicItem.includes('cloak')) {
-        alert('**RESISTANCE**');
         magicItem = magicItem.replace('resistance', resistances[rando(resistances.length)] + ' resistance');
     }
     if (magicItem.includes('weapon')) {
