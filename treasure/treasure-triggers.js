@@ -31,6 +31,17 @@ function generate() {
     if (document.getElementById("uniqueType").checked) {
         return generateUnique(level);
     }
+    if (document.getElementById("auctionHouse").checked) {
+        return generateWares(level);
+    }
+}
+
+function checkResult() {
+    if (document.getElementById("auctionHouse").checked) {
+        document.getElementById("lebel").textContent = 'Persuasion Check Result:';
+    } else {
+        document.getElementById("lebel").textContent = 'Challenge Level:';
+    }
 }
 
 function generateIndividualTreasure(lvl) {
@@ -206,6 +217,86 @@ function getMagicItem(table) {
     let magicItem = magicTable[randomNumber];
     magicItem = processMagicItem(magicTable, magicItem);
     return `<span class='italic'>` + magicItem + `</span>`;
+}
+
+function generateWares(check) {
+    let treasure = [];
+    let rollTimes = roll(1, 'd4');
+    if (check <= 5) {
+        rollTimes = roll(1, 'd6');
+        for (let i = 0; i < rollTimes; i++) {
+            let costA = (roll(1, 'd6') + 1) * 10;
+            let treasureA = getMagicItem("table A");
+            if (isConsumable(treasureA)) costA /= 2;
+            costA = numberWithCommas(costA);
+            treasure.push(treasureA + ' - ' + costA + " gp");
+        }
+    } else if (check <= 10) {
+        for (let i = 0; i < rollTimes; i++) {
+            let costB = roll(1, 'd6') * 100;
+            let treasureB = getMagicItem('table B');
+            if (isConsumable(treasureB)) costB /= 2;
+            costB = numberWithCommas(costB);
+            treasure.push(treasureB + ' - ' + costB + " gp");
+        }
+    } else if (check <= 15) {
+        for (let i = 0; i < rollTimes; i++) {
+            let costC = roll(1, 'd6') * 100;
+            let treasureC = getMagicItem('table C');
+            if (isConsumable(treasureC)) costC /= 2;
+            costC = numberWithCommas(costC);
+            treasure.push(treasureC + ' - ' + costC + " gp");
+        }
+    } else if (check <= 20) {
+        for (let i = 0; i < rollTimes; i++) {
+            let costD = roll(1, 'd10') * 500;
+            let treasureD = getMagicItem('table D');
+            if (isConsumable(treasureD)) costD /= 2;
+            costD = numberWithCommas(costD);
+            treasure.push(treasureD + ' - ' + costD + " gp");
+        }
+    } else if (check <= 25) {
+        for (let i = 0; i < rollTimes; i++) {
+            let costE = roll(1, 'd6') * 25000;
+            let treasureE = getMagicItem('table E');
+            if (isConsumable(treasureE)) costE /= 2;
+            costE = numberWithCommas(costE);
+            treasure.push(treasureE + ' - ' + costE + " gp");
+        }
+    } else if (check <= 30) {
+        for (let i = 0; i < rollTimes; i++) {
+            let costF = roll(1, 'd6') * 100;
+            let treasureF = getMagicItem('table F');
+            if (isConsumable(treasureF)) costF /= 2;
+            costF = numberWithCommas(costF);
+            treasure.push(treasureF + ' - ' + costF + " gp");
+        }
+    } else if (check <= 35) {
+        for (let i = 0; i < rollTimes; i++) {
+            let costG = roll(1, 'd10') * 500;
+            let treasureG = getMagicItem('table G');
+            if (isConsumable(treasureG)) costG /= 2;
+            costG = numberWithCommas(costG);
+            treasure.push(treasureG + ' - ' + costG + " gp");
+        }
+    } else if (check <= 40) {
+        for (let i = 0; i < rollTimes; i++) {
+            let costH = roll(1, 'd10') * 5000;
+            let treasureH = getMagicItem('table H');
+            if (isConsumable(treasureH)) costH /= 2;
+            costH = numberWithCommas(costH);
+            treasure.push(treasureH + ' - ' + costH + " gp");
+        }
+    } else if (check >= 41) {
+        for (let i = 0; i < rollTimes; i++) {
+            let costI = roll(1, 'd10') * 25000;
+            let treasureI = getMagicItem('table I');
+            if (isConsumable(treasureI)) costI /= 2;
+            costI = numberWithCommas(costI);
+            treasure.push(treasureI + ' - ' + costI + " gp");
+        }
+    }
+    return treasure;
 }
 
 function processMagicItem(magicTable, magicItem) {

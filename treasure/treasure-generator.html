@@ -25,23 +25,24 @@
         <div class="left">
             <form>
                 <div class="choices">
-                    <label for="individualType">Individual Treasure</label>
-                    <input id="individualType" type="radio" name="type" value="individual" checked><br>
-                    <label for="hoardType">Hoard</label>
-                    <input id="hoardType" type="radio" name="type" value="hoard"><br>
-<!--                    <label for="fillerType" class="value">Filler Treasure</label>-->
-<!--                    <input id="fillerType" type="radio" name="type" value="filler" disabled><br>-->
-                    <label for="fillerType">Filler Treasure</label>
-                    <input id="fillerType" type="radio" name="type" value="filler"><br>
-                    <label for="uniqueType">Unique Magic Item</label>
-                    <input id="uniqueType" type="radio" name="type" value="unique"><br>
+                    <label onchange="checkResult()" for="individualType">Individual Treasure</label>
+                    <input onchange="checkResult()" id="individualType" type="radio" name="type" value="individual" checked><br>
+                    <label onchange="checkResult()" for="hoardType">Hoard</label>
+                    <input onchange="checkResult()" id="hoardType" type="radio" name="type" value="hoard"><br>
+                    <label onchange="checkResult()" for="fillerType">Pickings</label>
+                    <input onchange="checkResult()" id="fillerType" type="radio" name="type" value="filler"><br>
+                    <label onchange="checkResult()"for="uniqueType">Unique Magic Item</label>
+                    <input onchange="checkResult()" id="uniqueType" type="radio" name="type" value="unique"><br>
+                    <label onchange="checkResult()" for="auctionHouse">Up for Purchase</label>
+                    <input onchange="checkResult()" id="auctionHouse" type="radio" name="type" value="auction"><br>
                 </div>
             </form>
         </div>
         <form>
             <div class="right">
-                <label for="playerLevel">Challenge Level:</label>
-                <input id="playerLevel" type="number" max="20" style="width: 30px" value="1">
+                <label id="lebel" for="playerLevel">Challenge Level:</label>
+                <input id="playerLevel" type="number" style="width: 30px" value="1">
+                <input id="waresValue" type="number" style="width: 30px; display: none" value="1">
             </div>
         </form>
     </div>

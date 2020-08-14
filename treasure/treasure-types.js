@@ -110,7 +110,7 @@ let magicTableD = [
     "potion of supreme healing", "potion of invisibility", "potion of speed", "spell scroll 6",
     "spell scroll 7", "ammunition +3", "oil of sharpness", "potion of flying", "potion of cloud giant strength",
     "potion of longevity", "potion of vitality", "spell scroll 8", "horseshoes of a zephyr",
-    "Nolzur's marvelous pigments", "bag of devouring", "portable hole"
+    "Nolzur's marvelous pigments", "bag of holding (devouring)", "portable hole"
 ];
 
 let magicTableE = [
