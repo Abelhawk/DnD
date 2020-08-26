@@ -54,7 +54,7 @@ let peace = [
     "temple", "life", "crystal", "day", "home", "calm", "glad",
     "quiet", "merry", "sweet", "dream", "dew", "honey", "butter",
     "glint", "water", "star", "swan", "lamp", "apple", "wool",
-    "cheese", "milk", "heather"
+    "cheese", "milk", "heather", "cotton"
 ];
 
 let natural = [
@@ -69,7 +69,7 @@ let natural = [
     "wet", "falcon", "lion", "tangle", "dank", "wild", "brush",
     "flower", "puddle", "ram", "mist", "heath", "heather", "rowen",
     "elder", "oaken", "maple", "berry", "wolf", "chalk", "bark",
-    "nest"
+    "nest", "knot"
 ];
 
 //-----------------------------------------------------------------------------------------------
@@ -97,7 +97,7 @@ let hills = [
     "sborough", "warren", "canyon", "summit", "smar", "shire", "set",
     "wall", "ton", "bluff", "horn", "rill", "creek", "caster",
     "ditch", "lichen", "valley", "ram", "banner", "bow", "hold",
-    "cross", "mount", "scalp"
+    "cross", "mount", "scalp", "hole"
 ];
 
 
