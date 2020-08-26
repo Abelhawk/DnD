@@ -55,14 +55,15 @@ let maleHuman = [
     "Sebastian", "Sigmund", "Steffan", "Ulrich", "Wendell",
     "Wilhelm", "Wolfgang", "Aglovale", "Agravaine", "Bedevere",
     "Bors", "Bruin", "Cerdic", "Cedric", "Constantine", "Claudin",
-    "Clodeon", "Elyan", "Fisher", "Galahad", "Gawain", "Gareth",
+    "Clodeon", "Elyan", "Galahad", "Gawain", "Gareth",
     "Gorlois", "Hector", "Joseph", "Kay", "Lionel", "Lucius",
     "Madoc", "Oberon", "Owain", "Tor", "Tom", "Tristan",
     "Urien", "Uther", "Arthur", "Rainward", "Corwen", "Cohan",
     "Thurston", "Jordan", "Alfwin", "Ingram", "Edric", "Orrin",
     "Ingham", "Loynis", "Rion", "Alfred", "Theodore", "Coronius",
     "Solmyr", "Clavius", "Gunner", "Alamar", "Bron", "Gerwulf", "Wystan",
-    "Derek", "Elmore", "Virgil", "Wulfric", "Davis", "Paulus"
+    "Derek", "Elmore", "Virgil", "Wulfric", "Davis", "Paulus",
+    "Jonathan"
 ];
 
 let femaleHuman = [
@@ -117,7 +118,14 @@ let humanSurname = [
     "Robbins", "Johns", "Stokes", "Lockton", "Clifford", "Bishopson",
     "Edgecombe", "Dalingridge", "Wardsworth", "Buckman", "Amblecrown", "Dundragon",
     "Evenwood", "Greycastle", "Tallstag", "Brightwood", "Helder", "Hornraven",
-    "Lackman", "Stormwind", "Windrivver"
+    "Lackman", "Stormwind", "Windrivver", "Arkwright", "Bauer", "Bell", "Brewster",
+    "Dempster", "Gardner", "Harper", "Inman", "Jenner", "Kemp", "Packard",
+    "Page", "Palmer", "Saylor", "Scrivens", "Sommer", "Spinner", "Swift",
+    "Steele", "Stoddard", "Toller", "Wainwright", "Bigg", "Bonner", "Bullard",
+    "Chance", "Devine", "Grant", "Hardy", "Hawk", "Hendman", "Keen", "Mannering",
+    "Pratt", "Moody", "Mundy", "Pruitt", "Puttock", "Quick", "Rose", "Russ",
+    "Selly", "Sharp", "Stern", "Swann", "Sweet", "Terrell", "Truman", "Wallace",
+    "Wilde", "Sullivan", randoArray(maleHuman) + "son"
 ];
 
 //------------Dwarves---------------
@@ -280,7 +288,8 @@ let maleHalfling = [
     "Oliver", "George", "Barry", "Bowie", "Bradan",
     "Callen", "Corey", "Desmond", "Donovan", "Finnegan",
     "Galvin", "Farrell", "Grady", "Kellan", "Finn",
-    "Cody", "Noland", "Quinn", "Rory", "Seamus", "Ryan"
+    "Cody", "Noland", "Quinn", "Rory", "Seamus", "Ryan",
+    "Curtis", "Wallace"
 ];
 
 let femaleHalfling = [

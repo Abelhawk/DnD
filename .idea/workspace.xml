@@ -4,7 +4,6 @@
     <list default="true" id="495252ce-6aee-4675-83fc-feddd9e07b22" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Character/names.js" beforeDir="false" afterPath="$PROJECT_DIR$/Character/names.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TownGen/words.js" beforeDir="false" afterPath="$PROJECT_DIR$/TownGen/words.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,7 +114,8 @@
       <workItem from="1597336532780" duration="626000" />
       <workItem from="1597352977706" duration="4284000" />
       <workItem from="1597372030501" duration="4203000" />
-      <workItem from="1598462910347" duration="3971000" />
+      <workItem from="1598462910347" duration="4048000" />
+      <workItem from="1598470293316" duration="1152000" />
     </task>
     <servers />
   </component>
