@@ -125,7 +125,7 @@ let humanSurname = [
     "Chance", "Devine", "Grant", "Hardy", "Hawk", "Hendman", "Keen", "Mannering",
     "Pratt", "Moody", "Mundy", "Pruitt", "Puttock", "Quick", "Rose", "Russ",
     "Selly", "Sharp", "Stern", "Swann", "Sweet", "Terrell", "Truman", "Wallace",
-    "Wilde", "Sullivan", randoArray(maleHuman) + "son"
+    "Wilde", "Sullivan"
 ];
 
 //------------Dwarves---------------
