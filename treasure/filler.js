@@ -9,7 +9,7 @@ function generateFiller(lvl) {
     determineMagicItems(lvl);
     let treasure = [];
     for (let i = 0; i < 3; i++) {
-        let randomFillerGroup = rando(18);
+        let randomFillerGroup = rando(19);
         // BOOKS AND SCROLLS
         switch (randomFillerGroup) {
             case 0:
@@ -218,6 +218,10 @@ function generateFiller(lvl) {
                 }
                 treasure.push(coinflipped[randNumb] + ' ' + `<span class="italic">` + item + `</span>` + " - " + `<span class="value">` + desc2 + `</span>`);
                 break;
+            case 18:
+                let ranDub = rando(components.length);
+                treasure.push(components[ranDub] + ' - ' + `<span class="value">` + componentDescriptions[ranDub] + `</span>`);
+                break;
         }
     }
     if (treasure.includes('undefined')) {
@@ -321,6 +325,16 @@ function randomCreatureType() {
     return randoArray(creatures);
 }
 
+function randomPlaneOfExistence() {
+    let planes = ['the Feywild', 'the Shadowfell', 'the Ethereal Plane', 'the Astral Plane', 'the Plane of Air', 'the Plane of Earth', 'the Plane of Fire',
+        'the Plane of Water', 'the Seven Heavens of Mount Celestia', 'the Twin Paradises of Bytopia', 'the Blessed Fields of Elysium', 'the Wilderness of the Beastlands',
+        'the Olympian Glades of Arborea', 'the Heroic Domains of Ysgard', 'the Ever-Changing Chaos of Limbo', 'the Windswept Depths of Pandemonium',
+        'the Infinite Layers of the Abyss', 'the Tarterian Depths of Carceri', 'the Gray Waste of Hades', 'the Bleak Eternity of Gehenna', 'the Nine Hells',
+        'the Infinite Battlefield of Acheron', 'the Clockwork Nirvana of Mechanus', 'the Peaceable Kingdoms of Arcadia'
+    ];
+    return randoArray(planes);
+}
+
 let commonLanguages = ['Common', 'Common', 'Common', 'Common', 'Common', 'Dwarvish', 'Elvish', 'Gnomish', 'Halfling'];
 
 let foreignLanguage = ['Dwarvish', 'Elvish', 'Gnomish', 'Halfling', 'Infernal', 'Abyssal', 'Aquan', 'Terran', 'Giant', 'Ignan',
@@ -358,7 +372,7 @@ let supplies = [
     '10-foot chain', 'costume', 'grappling hook', 'hammer', 'sledgehammer', 'flask of holy water', 'hunting trap', '10-foot ladder', 'lamp', 'bullseye lantern',
     'hooded lantern', 'padlock', 'lockbox', 'cracked magnifying glass', 'set of manacles', 'flask of oil', roll(1, 'd4') + 1 + ' sheets of parchment', "miner's pick", 'piton',
     '10-foot pole', 'empty quiver', roll(1, 'd6') + 1 + " days' worth of rations", (roll(1, 'd4') + 1) * 10 + ' feet of hempen rope', 'shovel', roll(1, 'd8') + 1 + ' iron spikes',
-    'cracked spyglass', 'two-person tent', 'tinderbox', 'torch', roll(1, "d4") + 1 + 'torches', 'arcane crystal', 'holy amulet symbol of ' + randomGod(), 'arcane orb',
+    'cracked spyglass', 'two-person tent', 'tinderbox', 'torch', roll(1, "d4") + 1 + ' torches', 'arcane crystal', 'holy amulet symbol of ' + randomGod(), 'arcane orb',
     'arcane rod', 'wooden staff', 'metal staff', 'wand', 'sprig of mistletoe', 'totem', 'yew wand', 'holy emblem of ' + randomGod(), 'reliquary of ' + randomGod(),
     'key', 'saddle', 'griffin saddle', 'pegasus saddle', 'dire wolf saddle', 'gold bar', 'silver bar', 'copper bar'
 ];
@@ -429,6 +443,21 @@ function isConsumable(item) {
     }
     return false;
 }
+
+let components = [
+    'pouch of charcoal and incense', 'arcane ink', 'pouch of gold dust', 'ruby dust', 'jade dust', 'two platinum rings', 'powdered diamond',
+    'tiny chest', 'rare incense', 'rare oils and unguents', 'rare chalk', 'black onyx gem', 'silver rod', 'gem-encrusted bowl', 'expensive ointment',
+    'ivory portal', 'silver spoon', 'polished marble', 'miniature sword', 'forked metal rod', 'replica of a person', 'gem powder', 'vial of gem alloy',
+    'reliquary', 'ornate silver bar', 'jade circlet',
+];
+
+let componentDescriptions = [
+    'worth 10 gp. Useful for summoning familiars.', '20 gp worth.', '25 gp worth.', '50 gp worth.', '10 gp worth.', 'each worth 50 gp.', '200 gp worth',
+    '(50 gp)', '(1000 gp)', '(1000 gp)', '(50 gp)', '(150 gp)', '(10 gp)', 'exquisitely crafted—worth 1,000 gp.',
+    '(25 gp)', '(5 gp)', '(5 gp)', '(5 gp)', 'made of platinum, copper, and zinc. Worth 250 gp.', 'worth 250 gp. Attuned to ' + randomPlaneOfExistence(),
+    '(5 gp)', 'worth 5,000 gp. Composed of powdered diamond, emerald, ruby, and sapphire.', 'worth 1,000 gp. Composed of mercury, phosphorus, and powdered diamond and opal.',
+    '(1,000 gp)', '(100 gp)', '(1,500 gp)'
+];
 
 let trinkets = [
     'mummified goblin hand', 'piece of crystal that glows faintly in the moonlight', 'gold coin minted in an unknown land', 'untarnished brass ring',
