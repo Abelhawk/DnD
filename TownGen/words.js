@@ -69,7 +69,7 @@ let natural = [
     "wet", "falcon", "lion", "tangle", "dank", "wild", "brush",
     "flower", "puddle", "ram", "mist", "heath", "heather", "rowen",
     "elder", "oaken", "maple", "berry", "wolf", "chalk", "bark",
-    "nest", "knot"
+    "nest", "knot", "cliff"
 ];
 
 //-----------------------------------------------------------------------------------------------
@@ -84,7 +84,8 @@ let grassland = [
     "valley", "glen", "well", "wing", "dale", "light",
     "song", "smar", "haven", "set", "wall", "ton", "brink",
     "bird", "rill", "caster", "staff", "flower", "swan", "bow",
-    "cross", "berry", "scarf", "nest", "road", "heather"
+    "cross", "berry", "scarf", "nest", "road", "heather", "wick",
+    "point"
 ];
 
 let hills = [
@@ -97,7 +98,7 @@ let hills = [
     "sborough", "warren", "canyon", "summit", "smar", "shire", "set",
     "wall", "ton", "bluff", "horn", "rill", "creek", "caster",
     "ditch", "lichen", "valley", "ram", "banner", "bow", "hold",
-    "cross", "mount", "scalp", "hole"
+    "cross", "mount", "scalp", "hole", "wick", "castle"
 ];
 
 
@@ -152,17 +153,17 @@ let desert = [
 //-------------------------------------------------------------------------------------------------
 
 let compound = [
-    "hold", "reach", "fort", "shelf",
+    "hold", "reach", "fort", "shelf", "castle",
     "village", "camp", "barrow", "grounds",
     "marsh", "mine", "cave", "ridge", "channel",
     "river", "mill", "thicket", "point", "pass",
-    "quarry", "crossing", "landing",
+    "quarry", "crossing", "landing", "monastery",
     "hill", "keep", "fields", "grotto", "cove",
     "hollow", "fort", "acres", "den", "woods",
     "wastes", "depths", "tower", "tunnels",
     "alley", "bog", "crossroads", "pits", "arch",
     "estate", "dam", "canal", "crater", "steppes",
-    "road", "warren", "tillage"
+    "road", "warren", "tillage", "greenway", "way"
 ];
 
 let landmarks = [
@@ -173,7 +174,8 @@ let landmarks = [
     "wilds", "glen", "summit", "pond", "slopes", "spire", "fields",
     "jungle", "prairie", "caldera", "hinterlands", "plains", "vineyards",
     "basin", "plateau", "gully", "gorge", "bluff", "ravine", "knoll",
-    "trench", "geyser", "foothills", "creek"
+    "trench", "geyser", "foothills", "creek", "trail", "tree", "oak", "orchards",
+    "stables", "meadows", "vineyards"
 ];
 
 let coastalMarks = [
@@ -211,7 +213,8 @@ let townMarks = [
     "concourse", "menagerie", "commons", "triangle", "court", "outskirts",
     "overlook", "tavern", "gate", "bank", "guildhall", "road", "shrine",
     "church", "temple", "chapel", "embassy", "sewers", "canal", "tier",
-    "exchange", "spire"
+    "exchange", "spire", "castle", "bake house", "well", "almshouse",
+    "orchard"
 ];
 
 let numbers = [
