@@ -227,7 +227,10 @@ function generateWares(check) {
         for (let i = 0; i < rollTimes; i++) {
             let costA = (roll(1, 'd6') + 1) * 10;
             let treasureA = getMagicItem("table A");
-            if (isConsumable(treasureA)) costA /= 2;
+            if (isConsumable(treasureA)) {
+                i--;
+                continue;
+            }
             costA = numberWithCommas(costA);
             treasure.push(treasureA + ' - ' + costA + " gp");
         }
@@ -235,7 +238,10 @@ function generateWares(check) {
         for (let i = 0; i < rollTimes; i++) {
             let costB = roll(1, 'd6') * 100;
             let treasureB = getMagicItem('table B');
-            if (isConsumable(treasureB)) costB /= 2;
+            if (isConsumable(treasureB)) {
+                i--;
+                continue;
+            }
             costB = numberWithCommas(costB);
             treasure.push(treasureB + ' - ' + costB + " gp");
         }
@@ -243,7 +249,10 @@ function generateWares(check) {
         for (let i = 0; i < rollTimes; i++) {
             let costC = roll(1, 'd6') * 100;
             let treasureC = getMagicItem('table C');
-            if (isConsumable(treasureC)) costC /= 2;
+            if (isConsumable(treasureC)) {
+                i--;
+                continue;
+            }
             costC = numberWithCommas(costC);
             treasure.push(treasureC + ' - ' + costC + " gp");
         }
@@ -251,7 +260,10 @@ function generateWares(check) {
         for (let i = 0; i < rollTimes; i++) {
             let costD = roll(1, 'd10') * 500;
             let treasureD = getMagicItem('table D');
-            if (isConsumable(treasureD)) costD /= 2;
+            if (isConsumable(treasureD)) {
+                i--;
+                continue;
+            }
             costD = numberWithCommas(costD);
             treasure.push(treasureD + ' - ' + costD + " gp");
         }
@@ -259,7 +271,10 @@ function generateWares(check) {
         for (let i = 0; i < rollTimes; i++) {
             let costE = roll(1, 'd6') * 25000;
             let treasureE = getMagicItem('table E');
-            if (isConsumable(treasureE)) costE /= 2;
+            if (isConsumable(treasureE)) {
+                i--;
+                continue;
+            }
             costE = numberWithCommas(costE);
             treasure.push(treasureE + ' - ' + costE + " gp");
         }
@@ -267,7 +282,10 @@ function generateWares(check) {
         for (let i = 0; i < rollTimes; i++) {
             let costF = roll(1, 'd6') * 100;
             let treasureF = getMagicItem('table F');
-            if (isConsumable(treasureF)) costF /= 2;
+            if (isConsumable(treasureF)) {
+                i--;
+                continue;
+            }
             costF = numberWithCommas(costF);
             treasure.push(treasureF + ' - ' + costF + " gp");
         }
@@ -275,7 +293,10 @@ function generateWares(check) {
         for (let i = 0; i < rollTimes; i++) {
             let costG = roll(1, 'd10') * 500;
             let treasureG = getMagicItem('table G');
-            if (isConsumable(treasureG)) costG /= 2;
+            if (isConsumable(treasureG)) {
+                i--;
+                continue;
+            }
             costG = numberWithCommas(costG);
             treasure.push(treasureG + ' - ' + costG + " gp");
         }
@@ -283,7 +304,10 @@ function generateWares(check) {
         for (let i = 0; i < rollTimes; i++) {
             let costH = roll(1, 'd10') * 5000;
             let treasureH = getMagicItem('table H');
-            if (isConsumable(treasureH)) costH /= 2;
+            if (isConsumable(treasureH)) {
+                i--;
+                continue;
+            }
             costH = numberWithCommas(costH);
             treasure.push(treasureH + ' - ' + costH + " gp");
         }
@@ -291,7 +315,10 @@ function generateWares(check) {
         for (let i = 0; i < rollTimes; i++) {
             let costI = roll(1, 'd10') * 25000;
             let treasureI = getMagicItem('table I');
-            if (isConsumable(treasureI)) costI /= 2;
+            if (isConsumable(treasureI)) {
+                i--;
+                continue;
+            }
             costI = numberWithCommas(costI);
             treasure.push(treasureI + ' - ' + costI + " gp");
         }

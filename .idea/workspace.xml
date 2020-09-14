@@ -4,6 +4,8 @@
     <list default="true" id="495252ce-6aee-4675-83fc-feddd9e07b22" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TownGen/words.js" beforeDir="false" afterPath="$PROJECT_DIR$/TownGen/words.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/treasure/treasure-triggers.js" beforeDir="false" afterPath="$PROJECT_DIR$/treasure/treasure-triggers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/treasure/treasure-types.js" beforeDir="false" afterPath="$PROJECT_DIR$/treasure/treasure-types.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -119,7 +121,8 @@
       <workItem from="1598581372414" duration="670000" />
       <workItem from="1598902436795" duration="659000" />
       <workItem from="1598974452730" duration="3478000" />
-      <workItem from="1599077751400" duration="564000" />
+      <workItem from="1599077751400" duration="2713000" />
+      <workItem from="1600116249697" duration="1233000" />
     </task>
     <servers />
   </component>

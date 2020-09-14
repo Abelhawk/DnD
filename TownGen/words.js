@@ -182,7 +182,7 @@ let coastalMarks = [
     "island", "shore", "beach", "strand", "bay", "lagoon", "coast",
     "reef", "docks", "port", "cay", "cliffs", "front", "bank",
     "archipelago", "peninsula", "sandbar", "cove", "gulf", "isle",
-    "isthmus", "shoal", "strait", "cape", "lighthouse"
+    "isthmus", "shoal", "strait", "cape", "lighthouse", "waterfront"
 ];
 
 let swampMarks = [
@@ -213,7 +213,7 @@ let townMarks = [
     "concourse", "menagerie", "commons", "triangle", "court", "outskirts",
     "overlook", "tavern", "gate", "bank", "guildhall", "road", "shrine",
     "church", "temple", "chapel", "embassy", "sewers", "canal", "tier",
-    "exchange", "spire", "castle", "bake house", "well", "almshouse",
+    "exchange", "spire", "castle", "bakehouse", "well", "almshouse",
     "orchard"
 ];
 

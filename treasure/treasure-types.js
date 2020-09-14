@@ -193,7 +193,7 @@ let magicTableI = [
 //-------------PROPERTIES
 
 let ammunition = [
-    "arrow", "crossbow bolt", "sling bullet", "blowgun needle", "dart"
+    "quiver of arrows", "case of crossbow bolts", "sling bullet", "pouch of blowgun needles", "pouch of darts"
 ];
 
 let armor = [
