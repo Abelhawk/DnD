@@ -3,6 +3,7 @@
 //      HUMAN   DWARF   ELF     HALFLING    GNOME
 //      DRAGONBORN  TIEFLING    AASIMAR     GENASI
 //      AARAKOCRA   GOLIATH     HALF-ORC    HALF-ELF
+// New! -> DEVILS
 
 
 //-----Global Variables
@@ -458,7 +459,7 @@ function pickFirstName(race, gender) {
             if (x > 1){ return pickFirstName(community,gender, community) }
             else {return genasiNames[rando(genasiNames.length - 1)] }
         case "devil":
-            return "Baator";
+            return devilPref[rando(devilPref.length - 1)] + devilSuff[rando(devilSuff.length - 1)];
         default:
             return "???";
     }

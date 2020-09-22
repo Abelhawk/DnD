@@ -33,7 +33,7 @@ let raceOptions = [
     "Human", "Dwarf", "Elf", "Halfling",
     "Half-elf", "Gnome", "Tiefling", "Aasimar",
     "Half-orc", "Dragonborn", "Goliath", "Genasi",
-    "Aarakocra", "Warforged"
+    "Aarakocra", "Warforged", "Devil"
 ];
 let classOptions = [
     "Barbarian", "Bard",
@@ -606,7 +606,7 @@ function pickFirstName(race, gender) {
                 return genasiNames[rando(genasiNames.length)]
             }
         case "devil":
-            return "Baator";
+            return devilPref[rando(devilPref.length - 1)] + devilSuff[rando(devilSuff.length - 1)];
         case "warforged":
             return warforgedNames[rando(warforgedNames.length)];
         default:

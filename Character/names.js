@@ -443,3 +443,13 @@ let warforgedNames = [
     "Lucky", "Mace", "Oak", "Onyx", "Pants", "Pierce", "Red", "Rod", "Rusty",
     "Scout", "Seven", "Shield", "Slash", "Smith", "Spike", "Temple", "Vault", "Wall"
 ];
+
+let devilPref = [
+    "Zam", "Uz", "Hraal", "Bal", "Maa't", "Nilv", "Azt", "Raark", "Toz", "Bel", "Kol",
+    "Kel", "Mul", "Zuu't", "Taa'z", "Nul", "Xith", "Zok", "Zaa't", "Xaal"
+];
+
+let devilSuff = [
+    "azad", "ich", "aaz", "azel", "uzaat", "ayaz", "uzoor", "akzaar", "iz", "och", "ath",
+    "al", "il", "ul", "ax", "ak", "or", "ir", "ub", "ix"
+];
