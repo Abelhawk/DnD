@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Treasure Generator</title>
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"
@@ -22,16 +22,17 @@
 <h1>Treasure Generator</h1>
 <div class="container">
     <div class="two-columns">
-        <div class="left">
+        <div class="left2">
             <form>
                 <div class="choices">
                     <label onchange="checkResult()" for="individualType">Individual Treasure</label>
-                    <input onchange="checkResult()" id="individualType" type="radio" name="type" value="individual" checked><br>
+                    <input onchange="checkResult()" id="individualType" type="radio" name="type" value="individual"
+                           checked><br>
                     <label onchange="checkResult()" for="hoardType">Hoard</label>
                     <input onchange="checkResult()" id="hoardType" type="radio" name="type" value="hoard"><br>
                     <label onchange="checkResult()" for="fillerType">Pickings</label>
                     <input onchange="checkResult()" id="fillerType" type="radio" name="type" value="filler"><br>
-                    <label onchange="checkResult()"for="uniqueType">Unique Magic Item</label>
+                    <label onchange="checkResult()" for="uniqueType">Unique Magic Item</label>
                     <input onchange="checkResult()" id="uniqueType" type="radio" name="type" value="unique"><br>
                     <label onchange="checkResult()" for="auctionHouse">Up for Purchase</label>
                     <input onchange="checkResult()" id="auctionHouse" type="radio" name="type" value="auction"><br>
@@ -39,10 +40,13 @@
             </form>
         </div>
         <form>
-            <div class="right">
+            <div class="right2">
                 <label id="lebel" for="playerLevel">Challenge Level:</label>
-                <input id="playerLevel" type="number" style="width: 30px" value="1">
-                <input id="waresValue" type="number" style="width: 30px; display: none" value="1">
+                <br>
+                <div>
+                    <input id="playerLevel" type="number" style="width: 30px" value="1">
+                    <input id="waresValue" type="number" style="width: 30px; display: none" value="1">
+                </div>
             </div>
         </form>
     </div>

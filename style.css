@@ -13,3 +13,14 @@ button:hover, a:hover {
 input, text {
     width: 25px;
 }
+
+/* Mobile */
+@media only screen and (max-width: 700px) {
+    .container {
+        width: 85%;
+    }
+    button {
+        font-size: 14px;
+        width: 60%;
+    }
+}

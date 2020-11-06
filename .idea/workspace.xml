@@ -3,8 +3,15 @@
   <component name="ChangeListManager">
     <list default="true" id="495252ce-6aee-4675-83fc-feddd9e07b22" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Character/names.js" beforeDir="false" afterPath="$PROJECT_DIR$/Character/names.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/triggers.js" beforeDir="false" afterPath="$PROJECT_DIR$/triggers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Character/character-creator.html" beforeDir="false" afterPath="$PROJECT_DIR$/Character/character-creator.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Character/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/Character/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TownGen/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/TownGen/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TownGen/town-gen.html" beforeDir="false" afterPath="$PROJECT_DIR$/TownGen/town-gen.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/general.css" beforeDir="false" afterPath="$PROJECT_DIR$/general.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/treasure/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/treasure/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/treasure/treasure-generator.html" beforeDir="false" afterPath="$PROJECT_DIR$/treasure/treasure-generator.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,7 +47,6 @@
   <component name="ProjectViewState">
     <option name="autoscrollToSource" value="true" />
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
@@ -49,7 +55,8 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552511004634" />
-    <property name="javascript.nodejs.core.library.configured.version" value="10.17.0" />
+    <property name="javascript.nodejs.core.library.configured.version" value="12.19.0" />
+    <property name="javascript.nodejs.core.library.typings.version" value="12.19.0" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
@@ -74,6 +81,7 @@
       <recent name="$PROJECT_DIR$/Character" />
     </key>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -122,25 +130,27 @@
       <workItem from="1598974452730" duration="3478000" />
       <workItem from="1599077751400" duration="2713000" />
       <workItem from="1600116249697" duration="1304000" />
-      <workItem from="1600795060021" duration="349000" />
+      <workItem from="1600795060021" duration="1084000" />
+      <workItem from="1600802407560" duration="297000" />
+      <workItem from="1600804259711" duration="5000" />
+      <workItem from="1604699326895" duration="2561000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2766" y="287" width="764" height="676" key="find.popup" timestamp="1600795479588">

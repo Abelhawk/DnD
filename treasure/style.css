@@ -71,7 +71,33 @@ label {
     margin: auto;
 }
 
+.left2 {
+    margin-right: 2%;
+    text-align: right;
+}
+.right #playerLevel #waresValue {
+    text-align: center;
+    align-content: center;
+}
+
 @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
+}
+
+@media only screen and (max-width: 700px) {
+    .two-columns {
+        font-size: 12px;
+    }
+    .left2 {
+        margin-right: 0;
+    }
+    .right2 {
+        text-align: center;
+    }
+    #generate {
+        padding: 0;
+        width: 100%;
+        font-size: 16px;
+    }
 }

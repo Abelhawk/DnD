@@ -55,3 +55,14 @@ button:hover, a:hover {
 .back-button {
     margin-top: 50px;
 }
+
+/* Mobile */
+@media only screen and (max-width: 700px) {
+    .container {
+        width: 85%;
+    }
+    button {
+        font-size: 14px;
+        width: 60%;
+    }
+}
