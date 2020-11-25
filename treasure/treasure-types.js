@@ -79,7 +79,17 @@ let art7500 = [
 
 let magicTableA = [
     "potion of healing", "spell scroll 0", "potion of climbing", "spell scroll 1",
-    "spell scroll 2", "potion of greater healing", "bag of holding", "driftglobe"
+    "spell scroll 2", "potion of greater healing", "bag of holding", "driftglobe", "armor of gleaming",
+    "bead of nourishment", "bead of refreshment", "boots of false tracks", "candle of the deep",
+    "cast-off armor", "charlatan's die", "cloak of billowing", "cloak of many fashions", "clockwork amulet",
+    "clothes of mending", "dark shard amulet", "dread helm", "ear horn of hearing", "enduring spellbook",
+    "ersatz eye", "hat of vermin", "hat of wizardry", "Heward's handy spice pouch", "horn of silent alarm",
+    "instrument of illusions", "instrument of scribing", "lock of trickery", "moon-touched sword",
+    "mystery key", "orb of direction", "orb of time", "perfume of bewitching", "pipe of smoke monsters",
+    "pole of angling", "pole of collapsing", "pot of awakening", "rope of mending", "ruby of the war mage",
+    "shield of expression", "smoldering armor", "staff of adornment", "staff of birdcalls", "staff of flowers",
+    "talking doll", "tankard of sobriety", "unbreakable arrow", "veteran's cane", "walloping ammunition",
+    "wand of conducting", "wand of pyrotechnics", "wand of scowls", "wand of smiles"
 ];
 
 let magicTableB = [

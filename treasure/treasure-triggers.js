@@ -216,11 +216,20 @@ function getMagicItem(table) {
     let randomNumber = rando(magicTable.length);
     let magicItem = magicTable[randomNumber];
     magicItem = processMagicItem(magicTable, magicItem);
+    if (magicItem === 'robe of useful items') {
+        let patches = generatePatches();
+        let patchList = ``;
+        for (let i = 0; i < patches.length; i++) {
+            patchList += patches[i] + `<br>`
+        }
+        return `<div class='italic robe-of-useful-items'>` + magicItem + `<span class="robe-patches">` + patchList + `</span></div>`
+    }
     return `<span class='italic'>` + magicItem + `</span>`;
 }
 
 function generateWares(check) {
     let treasure = [];
+    let duplicates = [];
     let rollTimes = roll(1, 'd4');
     if (check <= 5) {
         rollTimes = roll(1, 'd6');
@@ -232,199 +241,238 @@ function generateWares(check) {
                 continue;
             }
             costA = numberWithCommas(costA);
-            treasure.push(treasureA + ' - ' + costA + " gp");
-        }
-    } else if (check <= 10) {
-        for (let i = 0; i < rollTimes; i++) {
-            let costB = roll(1, 'd6') * 100;
-            let treasureB = getMagicItem('table B');
-            if (isConsumable(treasureB)) {
-                i--;
-                continue;
+            if (!duplicates.includes(treasureA)) {
+                duplicates.push(treasureA);
+                treasure.push(treasureA + ' - ' + costA + " gp");
             }
-            costB = numberWithCommas(costB);
-            treasure.push(treasureB + ' - ' + costB + " gp");
-        }
-    } else if (check <= 15) {
-        for (let i = 0; i < rollTimes; i++) {
-            let costC = roll(1, 'd6') * 100;
-            let treasureC = getMagicItem('table C');
-            if (isConsumable(treasureC)) {
-                i--;
-                continue;
-            }
-            costC = numberWithCommas(costC);
-            treasure.push(treasureC + ' - ' + costC + " gp");
-        }
-    } else if (check <= 20) {
-        for (let i = 0; i < rollTimes; i++) {
-            let costD = roll(1, 'd10') * 500;
-            let treasureD = getMagicItem('table D');
-            if (isConsumable(treasureD)) {
-                i--;
-                continue;
-            }
-            costD = numberWithCommas(costD);
-            treasure.push(treasureD + ' - ' + costD + " gp");
-        }
-    } else if (check <= 25) {
-        for (let i = 0; i < rollTimes; i++) {
-            let costE = roll(1, 'd6') * 25000;
-            let treasureE = getMagicItem('table E');
-            if (isConsumable(treasureE)) {
-                i--;
-                continue;
-            }
-            costE = numberWithCommas(costE);
-            treasure.push(treasureE + ' - ' + costE + " gp");
-        }
-    } else if (check <= 30) {
-        for (let i = 0; i < rollTimes; i++) {
-            let costF = roll(1, 'd6') * 100;
-            let treasureF = getMagicItem('table F');
-            if (isConsumable(treasureF)) {
-                i--;
-                continue;
-            }
-            costF = numberWithCommas(costF);
-            treasure.push(treasureF + ' - ' + costF + " gp");
-        }
-    } else if (check <= 35) {
-        for (let i = 0; i < rollTimes; i++) {
-            let costG = roll(1, 'd10') * 500;
-            let treasureG = getMagicItem('table G');
-            if (isConsumable(treasureG)) {
-                i--;
-                continue;
-            }
-            costG = numberWithCommas(costG);
-            treasure.push(treasureG + ' - ' + costG + " gp");
-        }
-    } else if (check <= 40) {
-        for (let i = 0; i < rollTimes; i++) {
-            let costH = roll(1, 'd10') * 5000;
-            let treasureH = getMagicItem('table H');
-            if (isConsumable(treasureH)) {
-                i--;
-                continue;
-            }
-            costH = numberWithCommas(costH);
-            treasure.push(treasureH + ' - ' + costH + " gp");
-        }
-    } else if (check >= 41) {
-        for (let i = 0; i < rollTimes; i++) {
-            let costI = roll(1, 'd10') * 25000;
-            let treasureI = getMagicItem('table I');
-            if (isConsumable(treasureI)) {
-                i--;
-                continue;
-            }
-            costI = numberWithCommas(costI);
-            treasure.push(treasureI + ' - ' + costI + " gp");
         }
     }
-    return treasure;
-}
+    else
+        if (check <= 10) {
+            for (let i = 0; i < rollTimes; i++) {
+                let costB = roll(1, 'd6') * 100;
+                let treasureB = getMagicItem('table B');
+                if (isConsumable(treasureB)) {
+                    i--;
+                    continue;
+                }
+                costB = numberWithCommas(costB);
+                treasure.push(treasureB + ' - ' + costB + " gp");
+            }
+        } else if (check <= 15) {
+            for (let i = 0; i < rollTimes; i++) {
+                let costC = roll(1, 'd6') * 100;
+                let treasureC = getMagicItem('table C');
+                if (isConsumable(treasureC)) {
+                    i--;
+                    continue;
+                }
+                costC = numberWithCommas(costC);
+                treasure.push(treasureC + ' - ' + costC + " gp");
+            }
+        } else if (check <= 20) {
+            for (let i = 0; i < rollTimes; i++) {
+                let costD = roll(1, 'd10') * 500;
+                let treasureD = getMagicItem('table D');
+                if (isConsumable(treasureD)) {
+                    i--;
+                    continue;
+                }
+                costD = numberWithCommas(costD);
+                treasure.push(treasureD + ' - ' + costD + " gp");
+            }
+        } else if (check <= 25) {
+            for (let i = 0; i < rollTimes; i++) {
+                let costE = roll(1, 'd6') * 25000;
+                let treasureE = getMagicItem('table E');
+                if (isConsumable(treasureE)) {
+                    i--;
+                    continue;
+                }
+                costE = numberWithCommas(costE);
+                treasure.push(treasureE + ' - ' + costE + " gp");
+            }
+        } else if (check <= 30) {
+            for (let i = 0; i < rollTimes; i++) {
+                let costF = roll(1, 'd6') * 100;
+                let treasureF = getMagicItem('table F');
+                if (isConsumable(treasureF)) {
+                    i--;
+                    continue;
+                }
+                costF = numberWithCommas(costF);
+                treasure.push(treasureF + ' - ' + costF + " gp");
+            }
+        } else if (check <= 35) {
+            for (let i = 0; i < rollTimes; i++) {
+                let costG = roll(1, 'd10') * 500;
+                let treasureG = getMagicItem('table G');
+                if (isConsumable(treasureG)) {
+                    i--;
+                    continue;
+                }
+                costG = numberWithCommas(costG);
+                treasure.push(treasureG + ' - ' + costG + " gp");
+            }
+        } else if (check <= 40) {
+            for (let i = 0; i < rollTimes; i++) {
+                let costH = roll(1, 'd10') * 5000;
+                let treasureH = getMagicItem('table H');
+                if (isConsumable(treasureH)) {
+                    i--;
+                    continue;
+                }
+                costH = numberWithCommas(costH);
+                treasure.push(treasureH + ' - ' + costH + " gp");
+            }
+        } else if (check >= 41) {
+            for (let i = 0; i < rollTimes; i++) {
+                let costI = roll(1, 'd10') * 25000;
+                let treasureI = getMagicItem('table I');
+                if (isConsumable(treasureI)) {
+                    i--;
+                    continue;
+                }
+                costI = numberWithCommas(costI);
+                treasure.push(treasureI + ' - ' + costI + " gp");
+            }
+        }
+        return treasure;
+    }
 
-function processMagicItem(magicTable, magicItem) {
-    let randomNumber = rando(magicTable.length);
-    if (magicItem.includes('armor')) {
-        if (magicItem.includes('mithril') || magicItem.includes('adamantine')) {
-            magicItem = magicItem.replace('armor', metalArmor[rando(metalArmor.length)]);
-        } else {
-            magicItem = magicItem.replace('armor', armor[rando(armor.length)]);
+    function processMagicItem(magicTable, magicItem) {
+        let randomNumber = rando(magicTable.length);
+        if (magicItem.includes('armor')) {
+            if (magicItem.includes('mithril') || magicItem.includes('adamantine')) {
+                magicItem = magicItem.replace('armor', metalArmor[rando(metalArmor.length)]);
+            } else {
+                magicItem = magicItem.replace('armor', armor[rando(armor.length)]);
+            }
+        }
+        if (magicItem.includes('resistance') && !magicItem.includes('cloak')) {
+            magicItem = magicItem.replace('resistance', resistances[rando(resistances.length)] + ' resistance');
+        }
+        if (magicItem.includes('weapon')) {
+            magicItem = magicItem.replace('weapon', weapons[rando(weapons.length)])
+        }
+        if (magicItem.includes('ammunition')) {
+            magicItem = magicItem.replace('ammunition', ammunition[rando(ammunition.length)])
+        }
+        if (magicItem.includes('spell scroll')) {
+            magicItem = "spell scroll of " + getRandomSpell(magicTable[randomNumber].substr(-1));
+        }
+        return magicItem;
+    }
+
+    function generatePatches() {
+        let numberOfPatches = roll(4, 'd4')
+        let patches = ['2x daggers', '2x bullseye lanterns (filled and lit)', '2x steel mirrors', '2x 10-foot poles',
+            '2x 50-foot coils of hempen rope', '2x sacks'
+        ];
+        for (let i = 0; i < numberOfPatches; i++) {
+            let randomRoll = roll(1, 'd100');
+            if (randomRoll <= 8) patches.push('bag of 100 gp')
+            else if (randomRoll <= 15) patches.push('silver coffer (500 gp)')
+            else if (randomRoll <= 22) patches.push('iron door (up to 10x10 feet)')
+            else if (randomRoll <= 30) patches.push('bag of 10 gems worth 100 gp each')
+            else if (randomRoll <= 44) patches.push('24-foot wooden ladder')
+            else if (randomRoll <= 51) patches.push('riding horse with saddlebags')
+            else if (randomRoll <= 59) patches.push('pit (10x10 feet)')
+            else if (randomRoll <= 68) patches.push('4-pack of potions of healing')
+            else if (randomRoll <= 75) patches.push('rowboat')
+            else if (randomRoll <= 83) {
+                let randomNumber = rando(3) + 1;
+                patches.push(`spell scroll of ` + `<span class="italic">` + getRandomSpell(randomNumber) + `</span>`);
+            } else if (randomRoll <= 90) addToPatches('pair of mastiffs')
+            else if (randomRoll <= 96) addToPatches('window (2x4x2 feet)')
+            else if (randomRoll <= 100) addToPatches('portable ram')
+        }
+        // Count duplicates
+        // Screw it
+        return patches;
+    }
+
+    function getRandomSpell(level) {
+        let spellTable = spells1st;
+        switch (level) {
+            case "0":
+                spellTable = cantrips;
+                break;
+            case "1":
+                spellTable = spells1st;
+                break;
+            case "2":
+                spellTable = spells2nd;
+                break;
+            case "3":
+                spellTable = spells3rd;
+                break;
+            case "4":
+                spellTable = spells4th;
+                break;
+            case "5":
+                spellTable = spells5th;
+                break;
+            case "6":
+                spellTable = spells6th;
+                break;
+            case "7":
+                spellTable = spells7th;
+                break;
+            case "8":
+                spellTable = spells8th;
+                break;
+            case "9":
+                spellTable = spells9th;
+        }
+        return randoArray(spellTable);
+    }
+
+    function organize(object, array) {
+        for (let item in object) {
+            if (object.hasOwnProperty(item)) {
+                array.push(object[item] + " " + item)
+            }
         }
     }
-    if (magicItem.includes('resistance') && !magicItem.includes('cloak')) {
-        magicItem = magicItem.replace('resistance', resistances[rando(resistances.length)] + ' resistance');
-    }
-    if (magicItem.includes('weapon')) {
-        magicItem = magicItem.replace('weapon', weapons[rando(weapons.length)])
-    }
-    if (magicItem.includes('ammunition')) {
-        magicItem = magicItem.replace('ammunition', ammunition[rando(ammunition.length)])
-    }
-    if (magicItem.includes('spell scroll')) {
-        magicItem = "spell scroll of " + getRandomSpell(magicTable[randomNumber].substr(-1));
-    }
-    return magicItem;
-}
 
-function getRandomSpell(level) {
-    let spellTable = spells1st;
-    switch (level) {
-        case "0":
-            spellTable = cantrips;
-            break;
-        case "1":
-            spellTable = spells1st;
-            break;
-        case "2":
-            spellTable = spells2nd;
-            break;
-        case "3":
-            spellTable = spells3rd;
-            break;
-        case "4":
-            spellTable = spells4th;
-            break;
-        case "5":
-            spellTable = spells5th;
-            break;
-        case "6":
-            spellTable = spells6th;
-            break;
-        case "7":
-            spellTable = spells7th;
-            break;
-        case "8":
-            spellTable = spells8th;
-            break;
-        case "9":
-            spellTable = spells9th;
-    }
-    return randoArray(spellTable);
-}
-
-function organize(object, array) {
-    for (let item in object) {
-        if (object.hasOwnProperty(item)) {
-            array.push(object[item] + " " + item)
+    function mergeArray(returnedArray, array) {
+        for (let i = 0; i < returnedArray.length; i++) {
+            array.push(returnedArray[i])
         }
     }
-}
 
-function mergeArray(returnedArray, array) {
-    for (let i = 0; i < returnedArray.length; i++) {
-        array.push(returnedArray[i])
+    function rollTreasure(number, dice, multiplier) {
+        let result;
+        if (!multiplier) multiplier = 1;
+        switch (dice) {
+            case "d4":
+                result = (rando(4) * number) + 1;
+                break;
+            case "d6":
+                result = (rando(6) * number) + 1;
+                break;
+            case "d8":
+                result = (rando(8) * number) + 1;
+                break;
+            case "d10":
+                result = (rando(10) * number) + 1;
+                break;
+            case "d12":
+                result = (rando(12) * number) + 1;
+                break;
+            case "d100":
+                result = (rando(100)) + 1;
+        }
+        return numberWithCommas(result * multiplier)
     }
-}
 
-function rollTreasure(number, dice, multiplier) {
-    let result;
-    if (!multiplier) multiplier = 1;
-    switch (dice) {
-        case "d4":
-            result = (rando(4) * number) + 1;
-            break;
-        case "d6":
-            result = (rando(6) * number) + 1;
-            break;
-        case "d8":
-            result = (rando(8) * number) + 1;
-            break;
-        case "d10":
-            result = (rando(10) * number) + 1;
-            break;
-        case "d12":
-            result = (rando(12) * number) + 1;
-            break;
-        case "d100":
-            result = (rando(100)) + 1;
+    function numberWithCommas(x) {
+        return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
     }
-    return numberWithCommas(result * multiplier)
-}
 
-function numberWithCommas(x) {
-    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-}
+    function arrayRemove(arr, value) {
+        return arr.filter(function (ele) {
+            return ele !== value;
+        });
+    }

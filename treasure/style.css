@@ -80,6 +80,19 @@ label {
     align-content: center;
 }
 
+.robe-of-useful-items {
+    border-bottom: 1px dotted white;
+
+    width: 120px;
+    top: 100%;
+    left: 50%;
+    margin-left: -60px;
+}
+
+.robe-patches {
+
+}
+
 @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
