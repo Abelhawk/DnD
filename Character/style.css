@@ -67,6 +67,11 @@ select {
     margin: auto auto 40px auto;
 }
 
+#loading {
+    width: 200px;
+    margin: auto;
+}
+
 #loader {
     border-bottom: 11px solid #41dff4;
     border-top: 11px solid #f3f3f3;

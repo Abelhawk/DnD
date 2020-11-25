@@ -1,7 +1,6 @@
 /*
 * TO-DO LIST:
 *
-* - Add subraces & dragonborn colors
 * - Get started on families and backstories
 *
 */
@@ -127,7 +126,8 @@ function loadPage() {
         opt.innerHTML = originOptions[i];
         origins.appendChild(opt)
     }
-    document.getElementById('loader').style.display = "none";
+    // document.getElementById('loader').style.display = "none";
+    document.getElementById('loading').style.display = "none";
     document.getElementById('characterButton').style.display = "block";
 }
 

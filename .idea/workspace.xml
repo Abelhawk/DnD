@@ -3,9 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="495252ce-6aee-4675-83fc-feddd9e07b22" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Character/character-creator.html" beforeDir="false" afterPath="$PROJECT_DIR$/Character/character-creator.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Character/character-triggers.js" beforeDir="false" afterPath="$PROJECT_DIR$/Character/character-triggers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Character/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/Character/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TownGen/town-gen.html" beforeDir="false" afterPath="$PROJECT_DIR$/TownGen/town-gen.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/treasure/filler.js" beforeDir="false" afterPath="$PROJECT_DIR$/treasure/filler.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/treasure/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/treasure/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/treasure/treasure-generator.html" beforeDir="false" afterPath="$PROJECT_DIR$/treasure/treasure-generator.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/treasure/treasure-triggers.js" beforeDir="false" afterPath="$PROJECT_DIR$/treasure/treasure-triggers.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/treasure/treasure-types.js" beforeDir="false" afterPath="$PROJECT_DIR$/treasure/treasure-types.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,6 +80,19 @@
       <recent name="$PROJECT_DIR$/Character" />
     </key>
   </component>
+  <component name="RunManager">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
@@ -133,7 +151,7 @@
       <workItem from="1604960907156" duration="607000" />
       <workItem from="1605116024043" duration="3078000" />
       <workItem from="1605131608297" duration="280000" />
-      <workItem from="1606322455900" duration="1249000" />
+      <workItem from="1606322455900" duration="7685000" />
     </task>
     <servers />
   </component>
@@ -153,19 +171,10 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="574" y="228" width="611" height="536" key="find.popup" timestamp="1605117285808">
+    <state x="506" y="192" width="611" height="536" key="find.popup" timestamp="1606325973321">
       <screen x="0" y="0" width="1638" height="882" />
     </state>
-    <state x="574" y="228" width="611" height="536" key="find.popup/0.0.1638.882/2048.0.2048.1112@0.0.1638.882" timestamp="1605117285808" />
+    <state x="506" y="192" width="611" height="536" key="find.popup/0.0.1638.882/2048.0.2048.1112@0.0.1638.882" timestamp="1606325973321" />
     <state x="2766" y="287" width="764" height="676" key="find.popup/0.0.1638.882/2048.0.2048.1112@2048.0.2048.1112" timestamp="1600795479588" />
-    <state x="718" y="288" width="611" height="536" key="find.popup/2560.10.1536.844/0.0.2048.1112@0.0.2048.1112" timestamp="1597375093083" />
-    <state x="681" y="259" key="run.anything.popup" timestamp="1596817423162">
-      <screen x="0" y="0" width="2048" height="1112" />
-    </state>
-    <state x="681" y="259" key="run.anything.popup/2560.10.1536.844/0.0.2048.1112@0.0.2048.1112" timestamp="1596817423162" />
-    <state x="681" y="210" width="672" height="676" key="search.everywhere.popup" timestamp="1597254097428">
-      <screen x="0" y="0" width="2048" height="1112" />
-    </state>
-    <state x="681" y="210" width="672" height="676" key="search.everywhere.popup/2560.10.1536.844/0.0.2048.1112@0.0.2048.1112" timestamp="1597254097428" />
   </component>
 </project>

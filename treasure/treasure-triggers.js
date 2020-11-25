@@ -1,7 +1,8 @@
 let textField = document.getElementById("generate");
 
 function loadPage() {
-    document.getElementById('loader').style.display = "none";
+    // document.getElementById('loader').style.display = "none";
+    document.getElementById('loading').style.display = "none";
     document.getElementById('yesButton').style.display = "block";
 }
 
@@ -215,16 +216,21 @@ function getMagicItem(table) {
     }
     let randomNumber = rando(magicTable.length);
     let magicItem = magicTable[randomNumber];
-    magicItem = processMagicItem(magicTable, magicItem);
     if (magicItem === 'robe of useful items') {
+        alert('Robe of useful items!') //todo
         let patches = generatePatches();
         let patchList = ``;
         for (let i = 0; i < patches.length; i++) {
-            patchList += patches[i] + `<br>`
+            patchList += patches[i];
+            if (i < patches.length) patchList += `<br>`
         }
-        return `<div class='italic robe-of-useful-items'>` + magicItem + `<span class="robe-patches">` + patchList + `</span></div>`
+        console.log(patchList) //todo
+        return `<span class='italic robe-of-useful-items'>robe of useful items</span><span class="robe-patches">${patchList}</span>`
+    } else {
+        magicItem = processMagicItem(magicTable, magicItem);
+        return `<span class='italic'>` + magicItem + `</span>`;
     }
-    return `<span class='italic'>` + magicItem + `</span>`;
+
 }
 
 function generateWares(check) {
@@ -341,6 +347,7 @@ function generateWares(check) {
     }
 
     function processMagicItem(magicTable, magicItem) {
+    // Assigns a specific type of weapon, armor, ammunition, resistance, or spell
         let randomNumber = rando(magicTable.length);
         if (magicItem.includes('armor')) {
             if (magicItem.includes('mithril') || magicItem.includes('adamantine')) {
@@ -366,8 +373,8 @@ function generateWares(check) {
 
     function generatePatches() {
         let numberOfPatches = roll(4, 'd4')
-        let patches = ['2x daggers', '2x bullseye lanterns (filled and lit)', '2x steel mirrors', '2x 10-foot poles',
-            '2x 50-foot coils of hempen rope', '2x sacks'
+        let patches = ['2 x daggers', '2 x bullseye lanterns (filled and lit)', '2 x steel mirrors', '2 x 10-foot poles',
+            '2 x 50-foot coils of hempen rope', '2 x sacks'
         ];
         for (let i = 0; i < numberOfPatches; i++) {
             let randomRoll = roll(1, 'd100');
@@ -383,9 +390,9 @@ function generateWares(check) {
             else if (randomRoll <= 83) {
                 let randomNumber = rando(3) + 1;
                 patches.push(`spell scroll of ` + `<span class="italic">` + getRandomSpell(randomNumber) + `</span>`);
-            } else if (randomRoll <= 90) addToPatches('pair of mastiffs')
-            else if (randomRoll <= 96) addToPatches('window (2x4x2 feet)')
-            else if (randomRoll <= 100) addToPatches('portable ram')
+            } else if (randomRoll <= 90) patches.push('pair of mastiffs')
+            else if (randomRoll <= 96) patches.push('window (2x4x2 feet)')
+            else if (randomRoll <= 100) patches.push('portable ram')
         }
         // Count duplicates
         // Screw it

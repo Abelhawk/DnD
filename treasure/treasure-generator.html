@@ -44,13 +44,14 @@
                 <label id="lebel" for="playerLevel">Challenge Level:</label>
                 <br>
                 <div>
-                    <input id="playerLevel" type="number" style="width: 30px" value="1">
-                    <input id="waresValue" type="number" style="width: 30px; display: none" value="1">
+                    <input id="playerLevel" type="number" style="width: 30px" value="1" min="1">
+                    <input id="waresValue" type="number" style="width: 30px; display: none" value="1" min="1">
                 </div>
             </div>
         </form>
     </div>
-    <div id="loader" title="Loading..."></div>
+<!--    <div id="loader" title="Loading..."></div>-->
+    <img id="loading" src="../DistractingGoblin.gif" title="Loading...">
     <button id="yesButton" type="submit" onclick="activate()" style="display:none">Generate!</button>
 </div>
 

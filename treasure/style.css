@@ -61,6 +61,11 @@ label {
     color: #00b377;
 }
 
+#loading {
+    width: 200px;
+    margin: auto;
+}
+
 #loader {
     border-bottom: 11px solid #00b377;
     border-top: 11px solid #f3f3f3;
@@ -82,15 +87,39 @@ label {
 
 .robe-of-useful-items {
     border-bottom: 1px dotted white;
-
-    width: 120px;
-    top: 100%;
-    left: 50%;
-    margin-left: -60px;
+    color: #99ffdd;
+    cursor: pointer;
+    position: relative;
 }
 
 .robe-patches {
+    visibility: hidden;
+    text-align: left;
+    position: absolute;
+    transform: translateY(-50%);
+    margin-left: 15px;
+    width: 200px;
+    padding: 10px;
+    border-radius: 10px;
+    background: #000;
+    font-style: normal;
+    font-size: 10pt;
+    color: white;
+}
 
+.robe-patches:after {
+    content: " ";
+    position: absolute;
+    top: 50%;
+    right: 100%; /* To the left of the tooltip */
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent black transparent transparent;
+}
+
+.robe-of-useful-items:hover + .robe-patches {
+    visibility: visible;
 }
 
 @keyframes spin {

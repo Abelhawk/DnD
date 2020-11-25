@@ -433,6 +433,7 @@ let magicalModifierDescriptions = [
 ];
 
 function isConsumable(item) {
+    if (item.includes('robe of useful items')) return false;
     let consumables = ['potion', 'scroll', 'beans', 'dust', 'philter', 'bead', 'manual',
         'solvent', 'sovereign', 'tome', 'oil', 'elixir'
     ];
