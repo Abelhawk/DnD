@@ -69,7 +69,7 @@ let natural = [
     "wet", "falcon", "lion", "tangle", "dank", "wild", "brush",
     "flower", "puddle", "ram", "mist", "heath", "heather", "rowen",
     "elder", "oaken", "maple", "berry", "wolf", "chalk", "bark",
-    "nest", "knot", "cliff"
+    "nest", "knot", "cliff", "flint"
 ];
 
 //-----------------------------------------------------------------------------------------------
@@ -220,3 +220,7 @@ let townMarks = [
 let numbers = [
     "two", "twain", "twin", "three", "four", "five", "six", "seven", "ten", "hundred", "thousand"
 ];
+
+let possessives = [
+    "old man's", "dead man's",
+]

@@ -32,7 +32,8 @@ let raceOptions = [
     "Human", "Dwarf", "Elf", "Halfling",
     "Half-elf", "Gnome", "Tiefling", "Aasimar",
     "Half-orc", "Dragonborn", "Goliath", "Genasi",
-    "Aarakocra", "Warforged", "Devil"
+    "Devil", "Aarakocra", "Warforged", "Triton",
+    "Leonin", "Tortle", "Yuan-ti", "Lizardfolk"
 ];
 let classOptions = [
     "Barbarian", "Bard",
@@ -606,9 +607,32 @@ function pickFirstName(race, gender) {
                 return genasiNames[rando(genasiNames.length)]
             }
         case "devil":
-            return devilPref[rando(devilPref.length - 1)] + devilSuff[rando(devilSuff.length - 1)];
+            let y = rando(3);
+            let devilName = devilPref[rando(devilPref.length - 1)] + devilSuff[rando(devilSuff.length - 1)];
+            if (y === 0) {
+                devilName += ' ' + honorifics[rando(devilPref.length - 1)]
+            }
+            return
         case "warforged":
             return warforgedNames[rando(warforgedNames.length)];
+        case "triton":
+            if (gender === true) {
+                return maleTriton[rando(maleTriton.length)]
+            } else {
+                return femaleTriton[rando(femaleTriton.length)]
+            }
+        case "leonin":
+            if (gender === true) {
+                return maleLeonin[rando(maleLeonin.length)]
+            } else {
+                return femaleLeonin[rando(femaleLeonin.length)]
+            }
+        case "tortle":
+            return tortleNames[rando(tortleNames.length)]
+        case "Yuan-ti":
+            return yuanTiNames[rando(yuanTiNames.length)]
+        case "Lizardfolk":
+            return lizardfolkNames[rando(lizardfolkNames.length)]
         default:
             return "???";
     }
@@ -642,6 +666,14 @@ function pickLastName(race) {
             if (community === "human") return humanSurname[rando(humanSurname.length)];
             //Volo's Guide might have some insights. Otherwise, works for me.
             break;
+        case "triton":
+            let w = rando(3);
+            if (w === 3) {
+                return tritonSurnames[rando(tritonSurnames.length)];
+            }
+            return ""
+        case "leonin":
+            return "of the " + leoninPride[rando(leoninPride.length)];
         default:
             return "";
     }
@@ -767,7 +799,9 @@ function pickClass() {
 
 function capitalize(str) {
     return str.replace(/\w\S*/g, function (txt) {
-        if (txt !== "of" && txt !== "the") txt = txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+        if (!txt.includes("of") && !txt.includes("the")) {
+            txt = txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+        }
         return txt;
     });
 }

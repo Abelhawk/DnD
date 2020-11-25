@@ -3,14 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="495252ce-6aee-4675-83fc-feddd9e07b22" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Character/character-creator.html" beforeDir="false" afterPath="$PROJECT_DIR$/Character/character-creator.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Character/character-triggers.js" beforeDir="false" afterPath="$PROJECT_DIR$/Character/character-triggers.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Character/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/Character/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TownGen/town-gen.html" beforeDir="false" afterPath="$PROJECT_DIR$/TownGen/town-gen.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/treasure/filler.js" beforeDir="false" afterPath="$PROJECT_DIR$/treasure/filler.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/treasure/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/treasure/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/treasure/treasure-generator.html" beforeDir="false" afterPath="$PROJECT_DIR$/treasure/treasure-generator.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/treasure/treasure-triggers.js" beforeDir="false" afterPath="$PROJECT_DIR$/treasure/treasure-triggers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Character/names.js" beforeDir="false" afterPath="$PROJECT_DIR$/Character/names.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TownGen/words.js" beforeDir="false" afterPath="$PROJECT_DIR$/TownGen/words.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -151,7 +146,7 @@
       <workItem from="1604960907156" duration="607000" />
       <workItem from="1605116024043" duration="3078000" />
       <workItem from="1605131608297" duration="280000" />
-      <workItem from="1606322455900" duration="7685000" />
+      <workItem from="1606322455900" duration="12769000" />
     </task>
     <servers />
   </component>

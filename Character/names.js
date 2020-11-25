@@ -63,7 +63,7 @@ let maleHuman = [
     "Ingham", "Loynis", "Rion", "Alfred", "Theodore", "Coronius",
     "Solmyr", "Clavius", "Gunner", "Alamar", "Bron", "Gerwulf", "Wystan",
     "Derek", "Elmore", "Virgil", "Wulfric", "Davis", "Paulus",
-    "Jonathan"
+    "Jonathan", "Ike"
 ];
 
 let femaleHuman = [
@@ -444,6 +444,9 @@ let warforgedNames = [
     "Scout", "Seven", "Shield", "Slash", "Smith", "Spike", "Temple", "Vault", "Wall"
 ];
 
+
+//---------------Devils----------------
+
 let devilPref = [
     "Zam", "Uz", "Hraal", "Bal", "Maa't", "Nilv", "Azt", "Raark", "Toz", "Bel", "Kol",
     "Kel", "Mul", "Zuu't", "Taa'z", "Nul", "Xith", "Zok", "Zaa't", "Xaal"
@@ -452,4 +455,92 @@ let devilPref = [
 let devilSuff = [
     "azad", "ich", "aaz", "azel", "uzaat", "ayaz", "uzoor", "akzaar", "iz", "och", "ath",
     "al", "il", "ul", "ax", "ak", "or", "ir", "ub", "ix"
+];
+
+let honorifics = [
+    "the Perceiver", "Veteran of Avernus", "the Insightful", "Collector of Debts", "the Summoner",
+    "Speaker of Profit", "Chainer of Demons", "the Conqueror", "Glory Seeker", "the Victorious",
+    "the Infiltrator", "the Voluminous", "the Stoic", "the Shatterer", "the Keeper", "the Faithful",
+    "the Clever", "the Chanter", "the Indomitable", "the Vicious"
+];
+
+//--------------Triton-------------
+
+let maleTriton = [
+    "Corus", "Delnis", "Jhimas", "Keros", "Molos", "Nalos", "Vodos", "Zunis", "Bysseus", "Thrasios",
+    "Cetos", "Galaukus", "Galiton", "Kenessos", "Odexes", "Palamon", "Pontreus", "Rheteus"
+];
+
+let femaleTriton = [
+    "Amathe", "Gnorcys", "Leurybia", "Margomestra", "Nereones", "Oleia", "Samathe", "Saphiro",
+    "Tethene", "Theaneia", "Thectra", "Aryn", "Belthyn", "Duthyn", "Feloren", "Otanyn",
+    "Shalryn", "Vlaryn", "Wolyn"
+];
+
+let tritonSurnames = [
+    "Ahlorsath", "Pumanath", "Vuuvaxath"
+];
+
+//--------------Leonin------------- "of the"
+
+let maleLeonin = [
+    "Apto", "Athoz", "Baragon", "Bryguz", "Eremoz", "Gorioz", "Grexes", "Oriz", "Pyxathor",
+    "Teoz", "Xemnon", "Xior", "Adonis", "Adrastos", "Aeson", "Aias", "Aineias", "Aiolos",
+    "Alekto", "Alkeides", "Argos", "Brontes", "Damazo", "Dardanos", "Deimos", "Diomedes",
+    "Endymion", "Epimetheus", "Erebos", "Euandros", "Ganymedes", "Glaukos", "Hektor", "Heros",
+    "Hippolytos", "Iacchus", "Iason", "Kadmos", "Kastor", "Kephalos", "Kepheus", "Koios", "Kreios",
+    "Laios", "Leandros", "Linos", "Lykos", "Melanthios", "Menelaus", "Mentor", "Neoptolemus",
+    "Okeanos", "Orestes", "Pallas", "Patroklos", "Philandros", "Phoibos", "Phrixus", "Priamos",
+    "Pyrrhos", "Xanthos", "Zephyros"
+];
+
+let femaleLeonin = [
+    "Aletha", "Atagone", "Demne", "Doxia", "Ecate", "Eriz", "Gragonde", "Iadma", "Koila",
+    "Oramne", "Seza", "Ziore", "Acantha", "Aella", "Alektos", "Alkippe", "Andromeda", "Antigone",
+    "Ariadne", "Astraea", "Chloros", "Chryseos", "Daphne", "Despoina", "Dione", "Eileithyia",
+    "Elektra", "Euadne", "Eudora", "Eunomia", "Hekabe", "Helene", "Hermoione", "Hippolyte",
+    "Ianthe", "Iokaste", "Iole", "Iphigenia", "Ismene", "Kalliope", "Kallisto", "Kalypso",
+    "Karme", "Kassandra", "Kassiopeia", "Kirke", "Kleio", "Klotho", "Klytië", "Kynthia",
+    "Leto", "Magaera", "Melaina", "Melpomene", "Nausikaa", "Niobe", "Ourania", "Phaenna",
+    "Polymnia", "Semele", "Theia"
+];
+
+let leoninPride = [
+    "Embereye", "Flintclaw", "Goldenfield", "Ironmane", "Starfeller", "Sunguides"
+];
+
+//--------------Tortle-------------
+
+let tortleNames = [
+    "Baka", "Damu", "Gar", "Gura", "Ini", "Jappa", "Kinlek", "Krull", "Lim", "Lop", "Nortle",
+    "Nulka", "Olo", "Ploqwat", "Quee", "Queg", "Quott", "Sunny", "Tibor", "Ubo", "Uhok",
+    "Wabu", "Xelbuk", "Xopa", "Yog"
+];
+
+//--------------Yuan-ti-------------
+
+let yuanTiNames = [
+    "Asutali", "Eztli", "Hessatal", "Hitotee", "Issahu", "Itstli", "Manuya", "Meztli", "Nesalli",
+    "Otleh", "Shalkashlah", "Sisava", "Sitlali", "Soakosh", "Ssimalli", "Suisatal", "Talash",
+    "Teoshi", "Yaotal", "Zihu", "Ahuiliztli", "Atl", "Centehua", "Chalchiuitl", "Chipahua", "Cihuaton",
+    "Citlali", "Citlalmina", "Coszcatl", "Cozamalotl", "Cuicatl", "Eleuia", "Eloxochitl", "Ichtaca",
+    "Icnoyotl", "Ihuicatl", "Ilhuitl", "Itotia", "Iuitl", "Ixcatzin", "Izel", "Malinalxochitl",
+    "Mecatl", "Miyaoaxochitl", "Mizquixaual", "Moyolehuani", "Nahuatl", "Necahual", "Nenetl",
+    "Nochtli", "Noxochicoztli", "Ohtli", "Papan", "Patli", "Quetzalxochitl", "Sacnite", "Teicui",
+    "Tepin", "Teuicui", "Teyacapan", "Tlaco", "Tlacoehua", "Tlacotl", "Tlalli", "Tlanextli",
+    "Xihuitl", "Xiuhcoatl", "Xiuhtonal", "Achcauhtli", "Amoxtli", "Chicahua", "Chimalli", "Cipactli",
+    "Coaxoch", "Coyotl", "Cualli", "Cuauhtémoc", "Cuetlachtilo", "Cuetzpalli", "Cuixtli", "Ehecatl",
+    "Etalpalli", "Huemac", "Huitzilihuitl", "Iccauhtli", "Ilhicamina", "Itztli", "Ixtli", "Mahuizoh",
+    "Manauia", "Matlal", "Matlalihuitl", "Mazatl", "Mictlantecuhtli", "Milintica", "Momoztli",
+    "Namacuix", "Necalli", "Necuametl", "Nezahualcoyotl", "Nexahualpilli", "Nochehuatl", "Nopaltzin",
+    "Ollin", "Quahtli", "Tenoch", "Teoxihuitl", "Tepiltzin", "Tezcacoatl", "Tlacaelel", "Tlacelel",
+    "Tlaloc", "Tlanextic", "Tlazohtlaloni", "Tlazopillo", "Uetzcayotl", "Xipilli", "Yaotl"
+];
+
+//--------------Lizardfolk-------------
+
+let lizardfolkNames = [
+    "Achuak", "Aryte", "Baeshra", "Darastrix", "Garurt", "Irhtos", "Jhank", "Kepesk", "Kethend", "Korth",
+    "Kosj", "Kothar", "Litrix", "Mirik", "Othokent", "Sauriv", "Throden", "Thurkear", "Usk", "Valignat",
+    "Vargach", "Verthica", "Vutha", "Vyth"
 ];
