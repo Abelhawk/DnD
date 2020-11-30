@@ -94,7 +94,7 @@ let femaleHuman = [
 ];
 
 let humanSurname = [
-    "Ashdown", "Baker", "Bennett", "Brickenden", "Brooker",
+    "FAMILIALNAME", "Ashdown", "Baker", "Bennett", "Brickenden", "Brooker",
     "Browne", "Carpenter", "Chandler", "Connor", "Clarke",
     "Cooper", "Fletcher", "Foreman", "Godfrey", "Gregory",
     "Mannering", "Nash", "Payne", "Rolfe", "Taylor", "Walter",
@@ -115,7 +115,7 @@ let humanSurname = [
     "Mallow", "Innskeep", "Jeweler", "Furrier", "Kilner", "Bookbinder",
     "Buckler", "Smith", "Roper", "Cutler", "Roofer", "Thatcher", "Browning",
     "Wood", "Bigley", "Stubbs", "Borrell", "Malbank", "Walsch", "Chanceller",
-    "Robbins", "Johns", "Stokes", "Lockton", "Clifford", "Bishopson",
+    "Robbins", "Johns", "Stokes", "Lockton", "Clifford",
     "Edgecombe", "Dalingridge", "Wardsworth", "Buckman", "Amblecrown", "Dundragon",
     "Evenwood", "Greycastle", "Tallstag", "Brightwood", "Helder", "Hornraven",
     "Lackman", "Stormwind", "Windrivver", "Arkwright", "Bauer", "Bell", "Brewster",

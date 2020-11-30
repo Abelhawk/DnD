@@ -1,5 +1,10 @@
 let textField = $('.generate');
 
+function refreshPage() {
+    document.getElementById('loading').style.display = "none";
+    document.getElementById('buttonbutton').style.display = "block";
+}
+
 function activate() {
     textField.html(`<p>` + generate() + `</p>`);
 }
@@ -111,6 +116,20 @@ function generate() {
             }
             result = randoArray(numbers) + " " + landmark
         }
+    }
+    if (document.getElementById("possess").checked) {
+        let random = rando(6);
+        if (random === 1) {
+            result = randoArray(possessives);
+        } else {
+            let random2 = rando(2);
+            if (random2 === 1) {
+                result = pickFirstName('human', null) + "'s";
+            } else {
+                result = pickLastName('human') + "'s";
+            }
+        }
+        result += " " + landmark;
     }
     return capitalize(result);
 }

@@ -13,9 +13,11 @@
     <script src="words.js" defer></script>
     <script src="town-gen-triggers.js" defer></script>
     <script src="../shared.js" defer></script>
+    <script src="../Character/names.js" defer></script>
+    <script src="../Character/character-triggers.js" defer></script>
 
 </head>
-<body>
+<body onload="refreshPage()">
 <h1>Town and Place Generator</h1>
 <div class="container">
     <div class="two-columns">
@@ -59,16 +61,15 @@
                     <label for="descriptive">Descriptive: </label>
                     <input type="radio" id="descriptive" name="nameType" value="descriptive"><br>
                     <label for="XofX">Mystical: </label>
-                    <input type="radio" id="XofX" name="nameType" value="XofX">
+                    <input type="radio" id="XofX" name="nameType" value="XofX"><br>
+                    <label for="XofX">Possessive: </label>
+                    <input type="radio" id="possess" name="nameType" value="XofX">
                 </form>
-
             </div>
-            <span class="happy-note" style="margin-top: 140px">NEW!</span><br>
-            <span class="note" style="margin: 157px 0 0 -32px">(Kinda janky)</span>
         </form>
     </div>
-<!--    <img id="loading" src="../DistractingGoblin.gif" title="Loading...">-->
-    <button type="submit" onclick="activate()">Generate!</button>
+    <img id="loading" src="../DistractingGoblin.gif" title="Loading...">
+    <button id="buttonbutton" type="submit" style="display:none" onclick="activate()">Generate!</button>
 </div>
 
 <div class="generate"></div>

@@ -175,7 +175,7 @@ function proceed() {
             your.fullName = determineFullName(your.name, your.surname, your.race);
         }
     }
-    charNameDiv.innerText = (capitalize(your.fullName));
+    charNameDiv.innerText = (your.fullName);
     if (your.fullClass) {
         your.fullClass = capitalize(your.fullClass);
         if (your.fullClass.includes('Of The')) {
@@ -527,6 +527,10 @@ function subclassOptions() {
 //----------NAME
 
 function pickFirstName(race, gender) {
+    if (gender === null) {
+        let random = rando(2);
+        gender = (random === 1);
+    }
     switch (race.toLowerCase()) {
         case "human":
         case "aasimar":
@@ -642,7 +646,12 @@ function pickLastName(race) {
     switch (race) {
         case "human":
         case "aasimar":
-            return humanSurname[rando(humanSurname.length)];
+            let last = humanSurname[rando(humanSurname.length)];
+            if (last === 'FAMILIALNAME') {
+                alert('Familial name!');
+                return maleHuman[rando(maleHuman.length)] + 'son';
+            }
+            return last;
         case "elf":
             return elfFamily[rando(elfFamily.length)];
         case "dwarf":
