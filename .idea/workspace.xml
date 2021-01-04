@@ -2,13 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="495252ce-6aee-4675-83fc-feddd9e07b22" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/Calc/calc-triggers.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Calc/calc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Calc/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Calc/swords.ico" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Character/character-triggers.js" beforeDir="false" afterPath="$PROJECT_DIR$/Character/character-triggers.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Character/names.js" beforeDir="false" afterPath="$PROJECT_DIR$/Character/names.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TownGen/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/TownGen/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TownGen/town-gen-triggers.js" beforeDir="false" afterPath="$PROJECT_DIR$/TownGen/town-gen-triggers.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TownGen/town-gen.html" beforeDir="false" afterPath="$PROJECT_DIR$/TownGen/town-gen.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TownGen/words.js" beforeDir="false" afterPath="$PROJECT_DIR$/TownGen/words.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -137,7 +138,8 @@
       <workItem from="1605116024043" duration="3078000" />
       <workItem from="1605131608297" duration="280000" />
       <workItem from="1606322455900" duration="14641000" />
-      <workItem from="1606751294268" duration="2639000" />
+      <workItem from="1606751294268" duration="5178000" />
+      <workItem from="1609777752108" duration="1223000" />
     </task>
     <servers />
   </component>

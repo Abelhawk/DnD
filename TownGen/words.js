@@ -222,5 +222,5 @@ let numbers = [
 ];
 
 let possessives = [
-    "old man's", "dead man's", "lover's"
+    "old man's", "dead man's", "lover's",
 ]

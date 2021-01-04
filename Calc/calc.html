@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Austin's Character Generator</title>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"
+            integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ"
+            crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Cinzel:700|Roboto+Condensed" rel="stylesheet">
+    <link rel="stylesheet" href="../general.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="swords.ico">
+    <script src="calc-triggers.js" defer></script>
+    <script src="../shared.js" defer></script>
+</head>
+<body onload="loadPage()">
+<h1>Combat Calculator</h1>
+<div class="container">
+    <div>
+        <form>
+            <label for="mob">Mob Attacks: </label>
+            <input onchange="checkResult()" type="radio" name="choice" id="mob" value="mobAttacks" checked><br>
+            <label for="savingThrow">Mob Saving Throw: </label>
+            <input onchange="checkResult()" type="radio" name="choice" id="savingThrow" value="mobSavingThrow"><br>
+        </form>
+    </div>
+    <div class="box">
+        <p class="sentence" id="1">There are <input min=2 type="number" class="field wider" id="numberOfCreatures" value="2">
+            creatures.</p>
+        <p class="sentence" id="2"></p>
+        <p class="sentence" id="3">Their average damage is <input min=1 type="number" class="field unnecessary"
+                                                                   id="damage">.</p>
+        <p class="sentence" id="4"></p>
+    </div>
+    <div id="endSentence"></div>
+    <img id="loading" src="../DistractingGoblin.gif" title="Loading...">
+    <button id="characterButton" style="display:none" onclick="calculate()">Calculate</button>
+</div>
+<a class="back-button" href="../index.html">Back</a>
+</div>
+</body>
+</html>

@@ -63,7 +63,7 @@ let maleHuman = [
     "Ingham", "Loynis", "Rion", "Alfred", "Theodore", "Coronius",
     "Solmyr", "Clavius", "Gunner", "Alamar", "Bron", "Gerwulf", "Wystan",
     "Derek", "Elmore", "Virgil", "Wulfric", "Davis", "Paulus",
-    "Jonathan", "Ike"
+    "Jonathan", "Ike", "Dante"
 ];
 
 let femaleHuman = [
