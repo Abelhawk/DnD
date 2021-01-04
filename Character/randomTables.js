@@ -291,18 +291,13 @@ function setFamily(){
     let knewParents = rando(100);
     let siblingList = "";
     let string = "";
-    if (knewParents < 95){
-        knewParents = false;
-        // string = "You do not know who your parents were."; //This is stupid and unnecessary.
-    }
-    else {
-        knewParents = true;
-    }
+    knewParents = (knewParents < 95);
     //Siblings
     let siblingR = rando(10);
     if (your.race === "dwarf" || your.race === "elf" || Mother.race === "elf"){
         siblingR -= 2;
     }
+    console.log('SiblingR = ' + siblingR)
     let siblings;
     switch (true){
         case (siblingR < 4):

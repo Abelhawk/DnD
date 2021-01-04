@@ -612,11 +612,11 @@ function pickFirstName(race, gender) {
             }
         case "devil":
             let y = rando(3);
-            let devilName = devilPref[rando(devilPref.length - 1)] + devilSuff[rando(devilSuff.length - 1)];
+            let devilName = devilPref[rando(devilPref.length)] + devilSuff[rando(devilSuff.length)];
             if (y === 0) {
                 devilName += ' ' + honorifics[rando(devilPref.length - 1)]
             }
-            return
+            return devilName;
         case "warforged":
             return warforgedNames[rando(warforgedNames.length)];
         case "triton":

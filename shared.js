@@ -31,6 +31,8 @@ function aAn(str) {
 
 function roll(number, dice) {
     switch (dice) {
+        case "d3":
+            return ((rando(3) + 1) * number);
         case "d4":
             return ((rando(4) + 1) * number);
         case "d6":
