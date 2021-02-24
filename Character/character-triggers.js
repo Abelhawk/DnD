@@ -437,7 +437,7 @@ function determineCommunity(race) {
         case "tiefling":
             let y = rando(3);
             if (y === 0) {
-                return "demon"
+                return "devil"
             } else {
                 return "human"
             }
@@ -666,15 +666,20 @@ function pickLastName(race) {
             return pickLastName(community);
         case "half-elf":
             if (community === "elf") return elfFamily[rando(elfFamily.length)];
-            if (community === "human") return humanSurname[rando(humanSurname.length)];
-            break;
+            return humanSurname[rando(humanSurname.length)];
         case "goliath":
             return goliathClan[rando(goliathClan.length)];
         case "half-orc":
         case "tiefling":
-            if (community === "human") return humanSurname[rando(humanSurname.length)];
-            //Volo's Guide might have some insights. Otherwise, works for me.
-            break;
+            if (community === "human") {
+                let last2 = humanSurname[rando(humanSurname.length)];
+                if (last2 === 'FAMILIALNAME') {
+                    alert('Familial name!');
+                    return maleHuman[rando(maleHuman.length)] + 'son';
+                }
+                return last2;
+            }
+            return '';
         case "triton":
             let w = rando(3);
             if (w === 3) {
@@ -682,7 +687,7 @@ function pickLastName(race) {
             }
             return ""
         case "leonin":
-            return "of the " + leoninPride[rando(leoninPride.length)];
+            return "of the " + leoninPride1[rando(leoninPride1.length)]+ leoninPride2[rando(leoninPride2.length)];
         default:
             return "";
     }

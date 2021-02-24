@@ -505,8 +505,13 @@ let femaleLeonin = [
     "Polymnia", "Semele", "Theia"
 ];
 
-let leoninPride = [
-    "Embereye", "Flintclaw", "Goldenfield", "Ironmane", "Starfeller", "Sunguides"
+let leoninPride1 = [
+    "Ember", "Flint", "Golden", "Iron", "Ebony", "Lightning", "Stone", "Moon", "Sun",
+    "Star", "Amber", "Day", "Summer", "Ruby", "Silver", "Noble", "Bronze", "Swift"
+];
+
+let leoninPride2 = [
+    "eye", "claw", "field", "mane", "tooth", "paw", "grass", "heart"
 ];
 
 //--------------Tortle-------------
