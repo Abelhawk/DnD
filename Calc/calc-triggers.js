@@ -1,3 +1,5 @@
+let advantageBonus = 0;
+
 function loadPage() {
     document.getElementById('loading').style.display = "none";
     document.getElementById('characterButton').style.display = "block";
@@ -18,24 +20,29 @@ function checkResult() {
 }
 
 function calculate() {
+    let creatureType = document.getElementById("creatureType").value;
+    console.log(creatureType)
     let numberOfMobs = document.getElementById("numberOfCreatures").value;
     let bonus = document.getElementById("bonus").value;
+    bonus = parseInt(bonus) + advantageBonus;
+    console.log(bonus)
     let diffClass = document.getElementById("DC").value;
     let result = document.getElementById("endSentence");
-
     let damage = document.getElementById("damage").value;
     let attackers = percentageThatHit(diffClass - bonus);
     console.log(attackers)
     let endResult = Math.floor(attackers * numberOfMobs);
+    if (endResult === 0) {
+        endResult = 1;
+    }
     let text1 = endResult;
-    if (endResult == numberOfMobs) {
+    if (endResult == numberOfMobs) { // leave it. Type coercion is good
         text1 = 'All'
     }
-
     if ((document.getElementById("mob").checked)) {
-        let text = ' of the creatures hit'
+        let text = ' of the ' + creatureType + ' hit'
         if (endResult === 1) {
-            text = " creature hits";
+            text = ' of the ' + creatureType + ' hits';
         }
         if (damage !== null && damage !== 0 && damage !== '') {
             let totalDamage = damage * endResult;
@@ -47,11 +54,32 @@ function calculate() {
         result.innerText = text1 + text;
         return;
     }
-    let text = ' of the creatures succeed on the saving throw.'
+    let text = ' of the ' + creatureType + ' succeed on the saving throw.'
     if (endResult === 1) {
-        text = " creature succeeds on the saving throw.";
+        text = ' of the ' + creatureType + ' succeeds on the saving throw.'
     }
     result.innerText = endResult + text;
+}
+
+function checkAdvantage(which) {
+    if (which === 'a') {
+        if (document.getElementById("advCheck").checked) {
+            advantageBonus = 5;
+            document.getElementById("disadvCheck").checked = false;
+        }
+        else {
+            advantageBonus = 0;
+        }
+    }
+    if (which === 'd') {
+        if (document.getElementById("disadvCheck").checked) {
+            advantageBonus = -5;
+            document.getElementById("advCheck").checked = false;
+        }
+        else {
+            advantageBonus = 0;
+        }
+    }
 }
 
 function percentageThatHit(diff) {

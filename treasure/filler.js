@@ -399,7 +399,7 @@ let goods = [
 let modifiers = [
     'dwarf-sized', 'halfling-sized', 'gnome-sized', 'half-orc sized', 'elf-sized', 'damaged', 'pristine', 'old', 'silvered', 'celestial-craft', 'draconic',
     'drow-crafted', 'dwarf-crafted', 'elemental-air', 'elemental-earth', 'elemental-fire', 'elemental-water', 'light', 'heavy', 'fey-craft', 'fiend-crafted',
-    'giant-crafted', 'gnome-crafted', 'undead-crafted', 'ornamental'
+    'giant-crafted', 'gnome-crafted', 'undead-crafted', 'ornamental', 'cursed'
 ];
 
 let magicalModifiers = [
@@ -417,7 +417,8 @@ let modifierDescriptions = [
     'Half the normal weight and hollow-feeling.', 'Crafted with stone and studded with polished rock.', 'Warm to the touch, black iron with sigils of flames.',
     'Fish scales instead of cloth or leather, worked with seashells and coral.', 'Half the normal weight.', 'Twice the normal weight.', 'Exquisitely crafted, glows pale in moonlight.',
     'Black iron or horn, inscribed with runes, and fiend hide. Warm to the touch and scary-looking.', 'Larger than usual, crafted for giant servants.', 'Depicted with a gear motif.',
-    'Depicted with death imagery and made with bone and parts of corpses; cold to the touch', 'Worth full price, but very fragile if actually used.'
+    'Depicted with death imagery and made with bone and parts of corpses; cold to the touch', 'Worth full price, but very fragile if actually used.',
+    'Cursed with some kind of hidden downside.'
 ];
 
 let magicalModifierDescriptions = [

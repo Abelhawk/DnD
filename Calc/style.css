@@ -73,6 +73,19 @@ p {
     100% { transform: rotate(360deg); }
 }
 
+#advantage {
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+    background: limegreen;
+}
+#disadvantage {
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+    background: red;
+}
+
 /* Mobile */
 @media only screen and (max-width: 700px) {
     #welcome {

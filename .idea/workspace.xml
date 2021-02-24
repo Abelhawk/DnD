@@ -3,6 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="495252ce-6aee-4675-83fc-feddd9e07b22" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Calc/calc-triggers.js" beforeDir="false" afterPath="$PROJECT_DIR$/Calc/calc-triggers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Calc/calc.html" beforeDir="false" afterPath="$PROJECT_DIR$/Calc/calc.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Calc/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/Calc/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TownGen/town-gen.html" beforeDir="false" afterPath="$PROJECT_DIR$/TownGen/town-gen.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/treasure/filler.js" beforeDir="false" afterPath="$PROJECT_DIR$/treasure/filler.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,6 +78,19 @@
       <recent name="$PROJECT_DIR$/Character" />
     </key>
   </component>
+  <component name="RunManager">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
@@ -134,6 +153,8 @@
       <workItem from="1606751294268" duration="5178000" />
       <workItem from="1609777752108" duration="2222000" />
       <workItem from="1609792403535" duration="2679000" />
+      <workItem from="1610212420229" duration="633000" />
+      <workItem from="1614190390811" duration="6385000" />
     </task>
     <servers />
   </component>
@@ -153,10 +174,9 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="506" y="192" width="611" height="536" key="find.popup" timestamp="1606325973321">
+    <state x="506" y="192" width="611" height="536" key="find.popup" timestamp="1614192525493">
       <screen x="0" y="0" width="1638" height="882" />
     </state>
-    <state x="506" y="192" width="611" height="536" key="find.popup/0.0.1638.882/2048.0.2048.1112@0.0.1638.882" timestamp="1606325973321" />
-    <state x="2766" y="287" width="764" height="676" key="find.popup/0.0.1638.882/2048.0.2048.1112@2048.0.2048.1112" timestamp="1600795479588" />
+    <state x="506" y="192" width="611" height="536" key="find.popup/0.0.1638.882/2048.0.2048.1112@0.0.1638.882" timestamp="1614192525493" />
   </component>
 </project>

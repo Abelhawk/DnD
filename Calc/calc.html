@@ -2,14 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Austin's Character Generator</title>
+    <title>D&D Combat Calculator</title>
     <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"
             integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ"
             crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css?family=Cinzel:700|Roboto+Condensed" rel="stylesheet">
     <link rel="stylesheet" href="../general.css">
     <link rel="stylesheet" href="style.css">
-    <<link rel="icon" href="../goblin.ico">
+    <link rel="icon" href="../goblin.ico">
     <script src="calc-triggers.js" defer></script>
     <script src="../shared.js" defer></script>
 </head>
@@ -22,11 +22,15 @@
             <input onchange="checkResult()" type="radio" name="choice" id="mob" value="mobAttacks" checked><br>
             <label for="savingThrow">Mob Saving Throw: </label>
             <input onchange="checkResult()" type="radio" name="choice" id="savingThrow" value="mobSavingThrow"><br>
+            <label for="advCheck" id="advantage">A</label>
+            <input onchange="checkAdvantage('a')" type="checkbox" name="advantage" id="advCheck">
+            <label for="disadvCheck" id="disadvantage">D</label>
+            <input onchange="checkAdvantage('d')" type="checkbox" name="disadvantage" id="disadvCheck"><br>
         </form>
     </div>
     <div class="box">
-        <p class="sentence" id="1">There are <input min=2 type="number" class="field wider" id="numberOfCreatures" value="2">
-            creatures.</p>
+        <p class="sentence" id="1">There are <input min=2 type="number" class="field wider" id="numberOfCreatures" value="6">
+            <span><input id="creatureType" class="sentence" style="color: black; width: 20%" type="text" value="creatures"></span></p>
         <p class="sentence" id="2"></p>
         <p class="sentence" id="3">Their average damage is <input min=1 type="number" class="field unnecessary"
                                                                    id="damage">.</p>
