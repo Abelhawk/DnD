@@ -89,7 +89,8 @@ let magicTableA = [
     "pole of angling", "pole of collapsing", "pot of awakening", "rope of mending", "ruby of the war mage",
     "shield of expression", "smoldering armor", "staff of adornment", "staff of birdcalls", "staff of flowers",
     "talking doll", "tankard of sobriety", "unbreakable arrow", "veteran's cane", "walloping ammunition",
-    "wand of conducting", "wand of pyrotechnics", "wand of scowls", "wand of smiles"
+    "wand of conducting", "wand of pyrotechnics", "wand of scowls", "wand of smiles", "spellwrought tattoo 0",
+    "spellwrought tattoo 1", "illuminator's tattoo", "masquerade tattoo"
 ];
 
 let magicTableB = [
@@ -142,7 +143,10 @@ let magicTableF = [
     "helm of telepathy", "Doss lute", "Fochlucan bandore", "Mac-Fuimidh cittern", "medallion of thoughts",
     "necklace of adaptation", "periapt of wound closure", "pipes of haunting", "pipes of the sewers",
     "ring of jumping", "ring of mind shielding", "ring of warmth", "ring of water walking", "quiver of Ehlonna",
-    "stone of good luck", "wind fan", "winged boots"
+    "stone of good luck", "wind fan", "winged boots", "arcane grimoire +1", "living gloves", "amulet of the devout +1",
+    "brooch of living essence", "barrier tattoo (light)", "eldritch claw tattoo", "spellwrought tattoo 2",
+    "spellwrought tattoo 3", "moon sickle +1", "all-purpose tool +1", "bloodwell vial +1", "feywild shard",
+    "goggles of object reading", "guardian emblem"
 ];
 
 let magicTableG = [
@@ -166,7 +170,14 @@ let magicTableG = [
     "staff of swarming insects", "staff of the woodlands", "staff of withering", "stone of controlling earth elementals",
     "sun blade", "sword of life stealing", "sword of wounding", "tentacle rod", "vicious weapon",
     "wand of binding", "wand of enemy detection", "wand of fear", "wand of fireballs", "wand of lightning bolts",
-    "wand of paralysis", "wand of the war mage +2", "wand of wonder", "wings of flying"
+    "wand of paralysis", "wand of the war mage +2", "wand of wonder", "wings of flying", "alchemical compendium",
+    "arcane grimoire +2", "astromancy archive", "duplicitous manuscript", "libram of souls and flesh",
+    "planecaller's codex", "protective verses", "potion of aqueous form", "lyre of building", "reveler's concertina",
+    "rhythm-maker's drum", "siren song lyre", "amulet of the devout +2", "charm of plant command", "ring of temporal salvation",
+    "staff of the ivory claw", "barrier tattoo (medium)", "shadowfell brand tattoo", "spellwrought tattoo 4",
+    "spellwrought tattoo 5", "all-purpose tool +2", "astral shard", "atlas of endless horizons", "bell branch",
+    "devotee's censer", "elemental essence shard", "far realm shard", "needle of mending", "outer essence shard",
+    "shadowfell shard"
 ];
 
 let magicTableH = [
@@ -183,7 +194,11 @@ let magicTableH = [
     "ioun stone of leadership", "ioun stone of strength", "armor +2", "manual of bodily health",
     "manual of gainful exercise", "manual of golems", "manual of quickness of action", "mirror of life trapping",
     "nine lives stealer", "oathbow", "armor +2", "spellguard shield", "tome of clear thought",
-    "tome of leadership and influence", "tome of understanding"
+    "tome of leadership and influence", "tome of understanding", "last stand armor", "living armor",
+    "arcane grimoire +3", "crystalline chronicle", "dispelling stone", "reincarnation dust", "sling bullets of Althemone",
+    "rhythm-maker's drum +3", "amulet of the devout +3", "absorbing tattoo of resistance", "barrier tattoo (heavy)",
+    "ghost step tattoo", "lifewell tattoo", "arcane cannon", "moon sickle +3", "all-purpose tool +3",
+    "bloodwell vial +3", "cauldron of rebirth", "orb of the veil"
 ];
 
 let magicTableI = [
@@ -197,7 +212,8 @@ let magicTableI = [
     "ioun stone of mastery", "ioun stone of regeneration", "plate armor of etherealness",
     "ring of air elemental command", "ring of fire elemental command", "ring of earth elemental command",
     "ring of water elemental command", "ring of three wishes", "sphere of annihilation", "talisman of pure good",
-    "talisman of the sphere", "talisman of ultimate evil", "tome of the stilled tongue"
+    "talisman of the sphere", "talisman of ultimate evil", "tome of the stilled tongue",
+    "obsidian flint dragon plate", "blood fury tattoo", "nightfall pearl", "pyxis of pandemonium"
 ];
 
 //-------------PROPERTIES

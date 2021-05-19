@@ -368,6 +368,9 @@ function generateWares(check) {
         if (magicItem.includes('spell scroll')) {
             magicItem = "spell scroll of " + getRandomSpell(magicTable[randomNumber].substr(-1));
         }
+        if (magicItem.includes('spellwrought tattoo')) {
+            magicItem = "spellwrought tattoo (" + getRandomSpell(magicTable[randomNumber].substr(-1)) + ")";
+        }
         return magicItem;
     }
 

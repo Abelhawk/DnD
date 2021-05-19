@@ -3,11 +3,16 @@
   <component name="ChangeListManager">
     <list default="true" id="495252ce-6aee-4675-83fc-feddd9e07b22" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/treasure/treasure-triggers.js" beforeDir="false" afterPath="$PROJECT_DIR$/treasure/treasure-triggers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/treasure/treasure-types.js" beforeDir="false" afterPath="$PROJECT_DIR$/treasure/treasure-types.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
   </component>
   <component name="DefaultGradleProjectSettings">
     <option name="testRunner" value="GRADLE" />
@@ -138,6 +143,7 @@
       <workItem from="1614190390811" duration="7657000" />
       <workItem from="1618863908123" duration="634000" />
       <workItem from="1618865984113" duration="786000" />
+      <workItem from="1621440937580" duration="2156000" />
     </task>
     <servers />
   </component>
