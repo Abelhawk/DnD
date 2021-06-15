@@ -479,7 +479,7 @@ let trinkets = [
     'fan with image of a sleeping cat on it', 'set of bone pipes', 'four-leaf clover pressed inside an etiquette manual', 'complex mechanical contraption blueprint',
     'ornate scabbard', 'old invitation to a noble party', "bronze pentacle with rat's head engraving in center", 'purple handkerchief monogrammed with name of powerful archmage',
     'half of a floorplan for a keep', 'folded-up cloth cap', 'bank receipt from a faraway town', 'diary with all the pages ripped out', 'empty silver snuffbox',
-    'iron holy symbol of an unknown god', "book about a hero's rise and fall, the last chapter missing", 'vial of dragonblood', 'ancient elven arrow', 'needle that never bends',
+    'iron holy symbol of an unknown god', "book about a hero's rise and fall, the last chapter missing", 'vial of dragon blood', 'ancient elven arrow', 'needle that never bends',
     'ornate brooch of dwarven design', 'empty wine bottle with label "The Wizard of Wines Winery, Red Dragon Crush, 331422-W"', 'mosaic tile with a multicolored, glazed surface',
     'petrified mouse', 'black pirate flag adorned with dragon skull and crossbones', 'tiny mechanical crab', 'metal urn containing ashes'
 ];

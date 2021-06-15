@@ -77,12 +77,15 @@ p {
     color: white;
     font-weight: bold;
     border-radius: 10px;
+    padding: 1px 4px;
     background: limegreen;
 }
+
 #disadvantage {
     color: white;
     font-weight: bold;
     border-radius: 10px;
+    padding: 1px 4px;
     background: red;
 }
 

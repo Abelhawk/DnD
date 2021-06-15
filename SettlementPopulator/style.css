@@ -1,0 +1,66 @@
+body {
+    color: #ffd11a;
+}
+
+button, a {
+    background-color: #ffd11a;
+}
+
+.generate {
+    color: white;
+}
+
+.sentence {
+    color: black;
+    font-size: 18px;
+}
+
+#settlement-type {
+    font-family: sans-serif;
+    color: black;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.field {
+    width: 45px;
+    height: 30px;
+    font-size: 24px;
+    text-align: center;
+}
+
+.wider {
+    width: 150px;
+}
+
+.box {
+    border: 1px gray solid;
+    margin-top: 10px;
+    display: none;
+    background: #cccccc;
+    color: black;
+}
+
+#loading {
+    width: 200px;
+    margin: auto;
+}
+
+p {
+    margin: 10px auto;
+}
+
+/* Mobile */
+@media only screen and (max-width: 700px) {
+    #welcome {
+        display: none;
+    }
+    .character-name {
+        font-size: 25px;
+    }
+    .character-sub-info {
+        font-size: 13px;
+    }
+}

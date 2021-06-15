@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D&D Settlement Populator</title>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"
+            integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ"
+            crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Cinzel:700|Roboto+Condensed" rel="stylesheet">
+    <link rel="stylesheet" href="../general.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="../goblin.ico">
+    <script src="settlement-triggers.js" defer></script>
+    <script src="../shared.js" defer></script>
+</head>
+<h1>Settlement Populator</h1>
+<div class="container">
+    <div>
+        How many people live in the settlement?
+        <input id="population" type="number" min="0" class="field wider" value="0">
+        <button id="characterButton" onclick="calculate()">Calculate</button>
+    </div>
+    <div class="box" id="thebox">
+        <h1 id="settlement-type">Ghost Town</h1>
+        <p class="sentence" id="pop">Regardless of its origins, no one lives here and there is no commerce to be
+            had.</p>
+        <p class="sentence" id="government"></p>
+        <p class="sentence" id="defense"></p>
+        <p class="sentence" id="religion"></p>
+        <p class="sentence" id="lifestyle"></p>
+        <p class="sentence" id="commerce"></p>
+        <p class="sentence" id="districts"></p>
+        <p class="sentence" id="structures"></p>
+    </div>
+
+</div>
+<a class="back-button" href="../index.html">Back</a>
+</div>
+</body>
+</html>
