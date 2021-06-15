@@ -8,8 +8,7 @@ function calculate() {
     getReligion(population)
     getCommerce(population)
     getStructures(population);
-    console.log(districts);
-    if (districts > 0) {
+    if (districts !== 0) {
         document.getElementById('districts').innerText = `You can find ${districts} districts here.`
     } else {
         document.getElementById('districts').innerText = ``;
