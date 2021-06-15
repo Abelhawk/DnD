@@ -41,6 +41,8 @@ button, a {
     display: none;
     background: #cccccc;
     color: black;
+    padding: 0 50px 50px 50px;
+    text-align: left;
 }
 
 #loading {
