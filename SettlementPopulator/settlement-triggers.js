@@ -44,7 +44,6 @@ function getTownType(number) {
 function getPopulation(number) {
     let box = document.getElementById('pop');
     let numberOfPeople = wordify(number);
-    console.log(numberOfPeople)
     switch (true) {
         case (number === 0):
             box.innerText = 'Regardless of its origins, no one lives here and there is no commerce to be had.'
@@ -62,7 +61,7 @@ function getPopulation(number) {
             box.innerText = 'This small settlement houses ' + number + ' people.'
             break;
         case (number >= 601):
-            box.innerText = 'A population of ' + number + ' people live here.'
+            box.innerText = 'A population of ' + comma(number) + ' people live here.'
     }
 }
 
@@ -103,13 +102,13 @@ function getGovernment(number, districts) {
 
 function getDefense(number) {
     let box = document.getElementById('defense');
-    let militia = Math.round(number / 20);
-    let guards = Math.round(number / 100);
+    let militia = comma(Math.round(number / 20));
+    let guards = comma(Math.round(number / 100));
     let mages = rando(4)-1;
     if (mages === 0) { mages = ''}
     if (mages === 1) { mages = `One ${npc('mage')} is also available to help defend.`}
     if (mages === 1) { mages = `A group of ${mages} ${npc('mages')} is also available to help defend.`}
-    let moreMages = Math.round(number / 500);
+    let moreMages = comma(Math.round(number / 500));
     let archmagi = Math.round(number / 5000);
     switch (true) {
         case (number <= 100): //Encampment
@@ -216,4 +215,8 @@ function wordify(number) {
         default:
             return number
     }
+}
+
+function comma(x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }

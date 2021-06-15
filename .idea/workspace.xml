@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="495252ce-6aee-4675-83fc-feddd9e07b22" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/SettlementPopulator/settlement-triggers.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SettlementPopulator/settlement.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SettlementPopulator/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Calc/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/Calc/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/treasure/filler.js" beforeDir="false" afterPath="$PROJECT_DIR$/treasure/filler.js" afterDir="false" />
-    </list>
+    <list default="true" id="495252ce-6aee-4675-83fc-feddd9e07b22" name="Default" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -165,7 +157,7 @@
       <workItem from="1621611569107" duration="36000" />
       <workItem from="1623431352805" duration="17000" />
       <workItem from="1623435431344" duration="610000" />
-      <workItem from="1623773575304" duration="7091000" />
+      <workItem from="1623773575304" duration="7828000" />
     </task>
     <servers />
   </component>
