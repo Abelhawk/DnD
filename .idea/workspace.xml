@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="495252ce-6aee-4675-83fc-feddd9e07b22" name="Default" comment="" />
+    <list default="true" id="495252ce-6aee-4675-83fc-feddd9e07b22" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Character/character-triggers.js" beforeDir="false" afterPath="$PROJECT_DIR$/Character/character-triggers.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -145,7 +148,7 @@
       <workItem from="1623431352805" duration="17000" />
       <workItem from="1623435431344" duration="610000" />
       <workItem from="1623773575304" duration="8053000" />
-      <workItem from="1623786120869" duration="5057000" />
+      <workItem from="1623786120869" duration="6401000" />
     </task>
     <servers />
   </component>

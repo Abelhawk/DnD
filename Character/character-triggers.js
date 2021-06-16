@@ -46,15 +46,18 @@ let classOptions = [
 ];
 let domainOptions = [
     "Arcana", "Death", "Forge", "Grave", "Knowledge", "Life",
-    "Light", "Nature", "Order", "Tempest", "Trickery", "War"
+    "Light", "Nature", "Order", "Tempest", "Trickery", "War",
+    "Peace", "Twilight"
 ];
 let patronOptions = [
     "Archfey", "Celestial", "Fiend",
-    "Great Old One", "Hexblade", "Undying"
+    "Great Old One", "Hexblade", "Undying",
+    "Undead", "Genie", "Fathomless"
 ];
 let originOptions = [
     "Divine Soul", "Draconic Bloodline",
-    "Shadow Magic", "Storm Sorcery", "Wild Magic"
+    "Shadow Magic", "Storm Sorcery", "Wild Magic",
+    "Aberrant Mind", "Clockwork Soul"
 ];
 let subRaceOptions = {
     elf: [
