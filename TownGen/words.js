@@ -12,7 +12,7 @@ let defaults = [
     "barrow", "stale", "flash", "scale", "bronze", "brass",
     "hammer", "anvil", "lime", "spur", "tea", "nether",
     "strong", "bridge", "flag", "copper", "cross", "whistle",
-    "arch"
+    "arch", "maus"
 ];
 
 let scary = [
@@ -41,7 +41,7 @@ let danger = [
     "scar", "fury", "chain", "tusk", "talon", "broken",
     "flame", "dragon", "ash", "cinder", "war", "slaughter",
     "deep", "sunder", "foe", "ill", "fire", "danger", "claw",
-    "molten", "starve", "polar", "lash"
+    "molten", "starve", "polar", "lash", "coal", "steed"
 ];
 
 let peace = [
@@ -54,7 +54,7 @@ let peace = [
     "temple", "life", "crystal", "day", "home", "calm", "glad",
     "quiet", "merry", "sweet", "dream", "dew", "honey", "butter",
     "glint", "water", "star", "swan", "lamp", "apple", "wool",
-    "cheese", "milk", "heather", "cotton"
+    "cheese", "milk", "heather", "cotton", "crop", "sheaf"
 ];
 
 let natural = [
@@ -69,7 +69,8 @@ let natural = [
     "wet", "falcon", "lion", "tangle", "dank", "wild", "brush",
     "flower", "puddle", "ram", "mist", "heath", "heather", "rowen",
     "elder", "oaken", "maple", "berry", "wolf", "chalk", "bark",
-    "nest", "knot", "cliff", "flint"
+    "nest", "knot", "cliff", "flint", "beech", "branch", "badger",
+    "hart", "otter"
 ];
 
 //-----------------------------------------------------------------------------------------------

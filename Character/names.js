@@ -35,19 +35,19 @@ let goliathClan = [
 //------------Humans---------------
 
 let maleHuman = [
-    "Adam", "Adelard", "Aldous", "Anselm", "Arnold",
-    "Bernard", "Bertram", "Charles", "Clerebold", "Conrad",
-    "Diggory", "Drogo", "Everard", "Frederick", "Geoffrey",
-    "Gerald", "Gilbert", "Godfrey", "Gunter", "Guy",
-    "Henry", "Heward", "Hubert", "Hugh", "Jocelyn",
-    "John", "Lance", "Manfred", "Miles", "Nicholas",
-    "Norman", "Odo", "Percival", "Peter", "Ralf", "Randal",
-    "Raymond", "Reynard", "Richard", "Robert", "Roger",
-    "Roland", "Rolf", "Simon", "Theobald", "Theodoric",
+    "Adam", "Adelard", "Aldous", "Anselm", "Arnold", "Archibald", "August",
+    "Bernard", "Bertram", "Charles", "Clerebold", "Conrad", "Alaric",
+    "Diggory", "Drogo", "Everard", "Frederick", "Geoffrey", "Alban",
+    "Gerald", "Gilbert", "Godfrey", "Gunter", "Guy", "Baldwin",
+    "Henry", "Heward", "Hubert", "Hugh", "Jocelyn", "Barnaby",
+    "John", "Lance", "Manfred", "Miles", "Nicholas", "Bartholomew",
+    "Norman", "Odo", "Percival", "Peter", "Ralf", "Randal", "Godric",
+    "Raymond", "Reynard", "Richard", "Robert", "Roger", "Cassian",
+    "Roland", "Rolf", "Simon", "Theobald", "Theodoric", "Crispin",
     "Thomas", "Timm", "William", "Wymar", "Felix", "Galleren",
-    "Engelhart", "Antoine", "Colin", "Denis", "Ernault",
-    "Giles", "Hugo", "Jack", "Louis", "Martin",
-    "Philip", "Pierre", "Regnault", "Talbot", "Vincent",
+    "Engelhart", "Antoine", "Colin", "Denis", "Ernault", "Dunstan",
+    "Giles", "Hugo", "Jack", "Louis", "Martin", "Cyprian", "Lucian",
+    "Philip", "Pierre", "Regnault", "Talbot", "Vincent", "Leopold",
     "Albert", "Alexander", "Balthasar", "Benedick", "Berhart",
     "Casper", "Christian", "Cristoff", "Dietrich", "Erhart",
     "Gerhart", "Hans", "Hartmann", "Herman", "Jacob", "Jeremy",
@@ -55,23 +55,24 @@ let maleHuman = [
     "Sebastian", "Sigmund", "Steffan", "Ulrich", "Wendell",
     "Wilhelm", "Wolfgang", "Aglovale", "Agravaine", "Bedevere",
     "Bors", "Bruin", "Cerdic", "Cedric", "Constantine", "Claudin",
-    "Clodeon", "Elyan", "Galahad", "Gawain", "Gareth",
+    "Clodeon", "Elyan", "Galahad", "Gawain", "Gareth", "Peregrine",
     "Gorlois", "Hector", "Joseph", "Kay", "Lionel", "Lucius",
-    "Madoc", "Oberon", "Owain", "Tor", "Tom", "Tristan",
+    "Madoc", "Oberon", "Owain", "Tor", "Tom", "Tristan", "Clement",
     "Urien", "Uther", "Arthur", "Rainward", "Corwen", "Cohan",
     "Thurston", "Jordan", "Alfwin", "Ingram", "Edric", "Orrin",
     "Ingham", "Loynis", "Rion", "Alfred", "Theodore", "Coronius",
     "Solmyr", "Clavius", "Gunner", "Alamar", "Bron", "Gerwulf", "Wystan",
     "Derek", "Elmore", "Virgil", "Wulfric", "Davis", "Paulus",
-    "Jonathan", "Ike", "Dante"
+    "Jonathan", "Ike", "Dante", "Gabriel", "Ferdinand", "Florian",
+    "Gavin",
 ];
 
 let femaleHuman = [
-    "Adelaide", "Agatha", "Agnes", "Alice", "Aline",
-    "Anne", "Avelina", "Avice", "Beatrice", "Cecily",
+    "Adelaide", "Agatha", "Agnes", "Alice", "Aline", "Alba",
+    "Anne", "Avelina", "Avice", "Beatrice", "Cecily", "Amabel",
     "Egelina", "Eleanor", "Elizabeth", "Ella", "Eloise",
     "Elysande", "Emeny", "Emma", "Emmeline", "Ermina",
-    "Eva", "Galiena", "Geva", "Giselle", "Griselda",
+    "Eva", "Galiena", "Geva", "Giselle", "Griselda", "Celestina",
     "Hadwisa", "Helen", "Herleva", "Hugolina", "Ida",
     "Isabella", "Jacoba", "Jane", "Joan", "Juliana",
     "Katherine", "Margery", "Mary", "Matilda", "Maynild",
@@ -82,7 +83,7 @@ let femaleHuman = [
     "Juliette", "Margot", "Marguerite", "Marie", "Odelina",
     "Petronilla", "Stephana", "Sybill", "Barbara", "Brigita",
     "Clara", "Cristina", "Dorothy", "Fela", "Fronicka",
-    "Geneveve", "Gertrude", "Helena", "Janet", "Lucia", "Otilia",
+    "Genevieve", "Gertrude", "Helena", "Janet", "Lucia", "Otilia",
     "Ursula", "Winifred", "Alexis", "Catherine", "Irene",
     "Adeline", "Avalon", "Anna", "Caelia", "Elaine", "Evaine",
     "Helaine", "Guinevere", "Igraine", "Isolde", "Laudine",
@@ -90,12 +91,13 @@ let femaleHuman = [
     "Sylvia", "Valeska", "Sorsha", "Tyris", "Adela", "Caitlin",
     "Sanya", "Josephine", "Iona", "Adrienne", "Mirlanda", "Broghild",
     "Andra", "Anabelle", "Alita", "Andrea", "Erica", "Julia",
-    "Thera", "Tamara", "Leslie", "Maureen"
+    "Thera", "Tamara", "Leslie", "Maureen", "Gabriella", "Ambrose",
+    "Gwenllian", "Honora", "Idalia"
 ];
 
 let humanSurname = [
     "FAMILIALNAME", "Ashdown", "Baker", "Bennett", "Brickenden", "Brooker",
-    "Browne", "Carpenter", "Chandler", "Connor", "Clarke",
+    "Browne", "Carpenter", "Chandler", "Connor", "Clarke", "Castellan",
     "Cooper", "Fletcher", "Foreman", "Godfrey", "Gregory",
     "Mannering", "Nash", "Payne", "Rolfe", "Taylor", "Walter",
     "Ward", "Webb", "Wood", "Baxter", "Carter", "Wright",
@@ -164,7 +166,8 @@ let femaleDwarf = [
     "Werydd", "Whurdred", "Yurgunn", "Amber", "Sannl",
     "Daremyth", "Tamika", "Redwara", "Yorunn", "Birna",
     "Byarma", "Bergni", "Halda", "Fyola", "Roa", "Svelldis",
-    "Bera", "Arndis", "Duruta", "Maryun", "Thera", "Thora"
+    "Bera", "Arndis", "Duruta", "Maryun", "Thera", "Thora",
+    "Sigrid"
 ];
 
 let dwarfClan = [
@@ -231,7 +234,7 @@ let dragonbornClan = [
 let maleElf = [
     "Adran", "Aelar", "Aerdeth", "Ahvain", "Aramil",
     "Arannis", "Aust", "Azaki", "Beiro", "Berrian", "Caeldrim",
-    "Carric", "Dayereth", "Dreali", "Efferil", "Eiravel",
+    "Carric", "Dayereth", "Dreali", "Efferil", "Eiravel", "Ivar",
     "Enialis", "Erdan", "Erevan", "Fivin", "Galinndan", "Gennal",
     "Hadarai", "Halimath", "Heian", "Glythveir", "Immeral", "Ivellios",
     "Kavaneim", "Lamlis", "Laucian", "Lucan", "Mindartis", "Jenifaad",
@@ -244,8 +247,8 @@ let maleElf = [
 ];
 
 let femaleElf = [
-    "Adrie", "Ahinar", "Althaea", "Anastrianna", "Andraste",
-    "Antinua", "Arara", "Baelitae", "Bethrynna", "Suhnae",
+    "Adrie", "Ahinar", "Althaea", "Anastrianna", "Andraste", "Aquila",
+    "Antinua", "Arara", "Baelitae", "Bethrynna", "Suhnae", "Argenta",
     "Caelynn", "Chaedi", "Claira", "Dara", "Drusilia", "Elama",
     "Enna", "Faral", "Felosial", "Hatae", "Ielenia", "Ilanis",
     "Clionay", "Jarsali", "Jelenneth", "Keyleth", "Leshanna", "Lia",
@@ -254,7 +257,8 @@ let femaleElf = [
     "Shanairla", "Shava", "Silaqui", "Talare", "Theirastra",
     "Thiala", "Domnalliel", "Traulam", "Vadania", "Valanthe",
     "Valna", "Xanaphia", "Jenova", "Mephala", "Melodia", "Aine",
-    "Synca", "Sephinroth", "Labetha", "Casmetra", "Astra"
+    "Synca", "Sephinroth", "Labetha", "Casmetra", "Astra", "Lavinia",
+    "Melora"
 ];
 
 let elfFamily = [
@@ -280,21 +284,21 @@ let maleHalfling = [
     "Franklin", "Garret", "Garth", "Gilbert", "Gob",
     "Harol", "Igor", "Jasper", "Keith", "Kevin", "Lazam",
     "Lerry", "Lindal", "Lyle", "Merric", "Mican", "Milo",
-    "Morrin", "Nebin", "Nevil", "Osborn", "Ostran", "Oswalt",
+    "Morrin", "Nebin", "Neville", "Osborn", "Ostran", "Oswalt",
     "Perrin", "Poppy", "Reed", "Roscoe", "Sam", "Shardon",
     "Tye", "Ulmo", "Wellby", "Wendel", "Wenner", "Wes",
     "Herman", "Ragnald", "Tursten", "Marius", "Redmund",
-    "Nate", "Nathaniel", "Rex", "Brian", "Gurvilin",
+    "Nate", "Nathaniel", "Rex", "Brian", "Gurvilin", "Edmund",
     "Oliver", "George", "Barry", "Bowie", "Bradan",
     "Callen", "Corey", "Desmond", "Donovan", "Finnegan",
     "Galvin", "Farrell", "Grady", "Kellan", "Finn",
     "Cody", "Noland", "Quinn", "Rory", "Seamus", "Ryan",
-    "Curtis", "Wallace"
+    "Curtis", "Wallace", "Otto", "Quentin"
 ];
 
 let femaleHalfling = [
     "Alain", "Andry", "Anne", "Bella", "Blossom",
-    "Bree", "Callie", "Chenna", "Cora", "Dee",
+    "Bree", "Callie", "Chenna", "Cora", "Dee", "Damiana",
     "Dell", "Eida", "Eran", "Euphemia", "Georgina",
     "Gynnie", "Harriet", "Jasmine", "Jillian", "Jo",
     "Kithri", "Lavinia", "Lidda", "Maegan", "Marigold",
@@ -307,7 +311,8 @@ let femaleHalfling = [
     "Luna", "Cassie", "Miriam", "Regina", "Tina", "Aideen",
     "Briley", "Caitlyn", "Corentine", "Bridgit", "Dierdre",
     "Faylinn", "Kathleen", "Keitha", "Kelsey", "Mab",
-    "Morrigan", "Kiley", "Muriel", "Riona", "Una"
+    "Morrigan", "Kiley", "Muriel", "Riona", "Una", "Gisela",
+    "Mirabel", "Petra", "Savia"
 ];
 
 let halflingFamily = [
@@ -383,7 +388,7 @@ let maleTiefling = [
     "Skamos", "Tethren", "Thamuz", "Therai", "Valafar", "Vassago",
     "Xappan", "Zepar", "Zephan", "Akmenos", "Calh", "Ignatius",
     "Rashka", "Xeron", "Axsis", "Ayden", "Calid", "Olema", "Xyron",
-    "Xarfax", "Zydar", "Ajit"
+    "Xarfax", "Zydar", "Ajit", "Severin"
 ];
 
 let femaleTiefling = [

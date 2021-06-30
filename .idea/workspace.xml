@@ -3,7 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="495252ce-6aee-4675-83fc-feddd9e07b22" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Character/character-triggers.js" beforeDir="false" afterPath="$PROJECT_DIR$/Character/character-triggers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Character/names.js" beforeDir="false" afterPath="$PROJECT_DIR$/Character/names.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TownGen/words.js" beforeDir="false" afterPath="$PROJECT_DIR$/TownGen/words.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -148,7 +149,8 @@
       <workItem from="1623431352805" duration="17000" />
       <workItem from="1623435431344" duration="610000" />
       <workItem from="1623773575304" duration="8053000" />
-      <workItem from="1623786120869" duration="6401000" />
+      <workItem from="1623786120869" duration="7091000" />
+      <workItem from="1625082961771" duration="1469000" />
     </task>
     <servers />
   </component>
@@ -172,5 +174,9 @@
       <screen x="0" y="0" width="1707" height="920" />
     </state>
     <state x="458" y="71" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1707.920/2560.0.2048.1112@0.0.1707.920" timestamp="1623777820619" />
+    <state x="567" y="200" width="587" height="534" key="find.popup" timestamp="1623858157872">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state x="567" y="200" width="587" height="534" key="find.popup/0.0.1707.920/2560.0.2048.1112@0.0.1707.920" timestamp="1623858157872" />
   </component>
 </project>
