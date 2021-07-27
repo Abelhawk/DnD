@@ -7,6 +7,7 @@ function loadPage() {
 }
 
 function checkResult() {
+    document.getElementById("endSentence").innerText = '';
     if (document.getElementById("mob").checked) {
         document.getElementById("2").innerHTML = `Their attack bonus is +<input min=0 type="number" class="field" id="bonus" value="0">.`;
         document.getElementById("3").hidden = false;
@@ -36,8 +37,11 @@ function calculate() {
         endResult = 1;
     }
     let text1 = endResult;
-    if (endResult == numberOfMobs) { // leave it. Type coercion is good
+    let text2 = 0;
+    if (text1 == numberOfMobs) { // leave it. Type coercion is good
         text1 = 'All'
+    } else {
+        text2 = numberOfMobs - text1;
     }
     if ((document.getElementById("mob").checked)) {
         let text = ' of the ' + creatureType + ' hit'
@@ -46,7 +50,6 @@ function calculate() {
         }
         if (damage !== null && damage !== 0 && damage !== '') {
             let totalDamage = damage * endResult;
-            console.log(totalDamage)
             text += ', for a total of ' + totalDamage + ' damage.'
         } else {
             text += '.';
@@ -58,7 +61,16 @@ function calculate() {
     if (endResult === 1) {
         text = ' of the ' + creatureType + ' succeeds on the saving throw.'
     }
-    result.innerText = endResult + text;
+    let textB = '';
+    if (text2 === 1) {
+        textB = ' One fails.'
+    } else {
+        textB = ' ' + text2 + ' fail.'
+    }
+    if (text2 === 0) {
+        textB = ''
+    }
+    result.innerText = text1 + text + textB;
 }
 
 function checkAdvantage(which) {
@@ -87,21 +99,6 @@ function percentageThatHit(diff) {
         diff = 20;
     }
     return (21 - diff) / 20
-    // if (diff <= 5) {
-    //     return 1;
-    // } else if (diff <= 12) {
-    //     return 2
-    // } else if (diff <= 14) {
-    //     return 3;
-    // } else if (diff <= 16) {
-    //     return 4;
-    // } else if (diff <= 18) {
-    //     return 5;
-    // } else if (diff === 19) {
-    //     return 10;
-    // } else if (diff >= 20) {
-    //     return 20;
-    // }
 }
 
 function numberOfHits(mobs, attacksNeeded) {
