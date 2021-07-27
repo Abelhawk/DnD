@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Treasure Generator</title>
+    <title>Loot Generator</title>
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"
             integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ"
@@ -19,7 +19,7 @@
     <script src="../TownGen/words.js" defer></script>
 </head>
 <body onload="loadPage()">
-<h1>Treasure Generator</h1>
+<h1>Loot Generator</h1>
 <div class="container">
     <div class="two-columns">
         <div class="left2">
@@ -28,7 +28,7 @@
                     <label onchange="checkResult()" for="individualType">Individual Treasure</label>
                     <input onchange="checkResult()" id="individualType" type="radio" name="type" value="individual"
                            checked><br>
-                    <label onchange="checkResult()" for="hoardType">Hoard</label>
+                    <label onchange="checkResult()" for="hoardType">Treasure Hoard</label>
                     <input onchange="checkResult()" id="hoardType" type="radio" name="type" value="hoard"><br>
                     <label onchange="checkResult()" for="fillerType">Pickings</label>
                     <input onchange="checkResult()" id="fillerType" type="radio" name="type" value="filler"><br>
