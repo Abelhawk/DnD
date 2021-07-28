@@ -2,10 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="495252ce-6aee-4675-83fc-feddd9e07b22" name="Default" comment="Fixed some wording and made it clear how many creatures fail their saving throw.">
+      <change afterPath="$PROJECT_DIR$/Mishaps/lingering-injury-tables.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Mishaps/misfortune-tables.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Mishaps/misfortune-triggers.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Mishaps/misfortune.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Mishaps/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/treasure/treasure-generator.html" beforeDir="false" afterPath="$PROJECT_DIR$/treasure/treasure-generator.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,6 +77,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\sg0311929\IdeaProjects\DnD" />
       <recent name="C:\Users\i25286\IdeaProjects\DnD" />
       <recent name="$PROJECT_DIR$/Character" />
     </key>
@@ -82,6 +86,17 @@
     </key>
   </component>
   <component name="RunManager">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="C:/Users/sg0311929/IdeaProjects/DnD" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -181,7 +196,7 @@
       <workItem from="1623786120869" duration="7091000" />
       <workItem from="1625082961771" duration="1469000" />
       <workItem from="1627396914561" duration="2166000" />
-      <workItem from="1627399111106" duration="484000" />
+      <workItem from="1627399111106" duration="18039000" />
     </task>
     <task id="LOCAL-00001" summary="Fixed some wording and made it clear how many creatures fail their saving throw.">
       <created>1627398829756</created>

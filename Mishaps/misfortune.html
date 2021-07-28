@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Misfortune Manager</title>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"
+            integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ"
+            crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Cinzel:700|Roboto+Condensed" rel="stylesheet">
+    <link rel="stylesheet" href="../general.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="../goblin.ico">
+    <script src="misfortune-triggers.js" defer></script>
+    <script src="misfortune-tables.js" defer></script>
+    <script src="lingering-injury-tables.js" defer></script>
+    <script src="../shared.js" defer></script>
+</head>
+<body onload="loadPage()">
+<h1>Misfortune Manager</h1>
+<div class="container">
+    <p id="welcome">Click any of the following mishaps to determine what happens to a character!</p>
+    <img id="loading" src="../DistractingGoblin.gif" title="Loading...">
+
+    <div class="field">
+        <span class="label">Misfortune Type: </span>
+        <select onchange="checkMode()" id="mishapList">
+            <option value="random">(random)</option>
+            <option value="wildSurge">Wild Magic Surge</option>
+            <option value="spellMishap">Spell Mishap</option>
+            <option value="potionMishap">Potion Mishap</option>
+            <option value="lingerInjury">Lingering Injury</option>
+            <option value="madnessMishap">Madness</option>
+            <option value="curseMishap">Curse</option>
+            <option value="trapMishap">Trap Damage</option>
+        </select>
+    </div>
+
+    <div class="field hidden" id="spellLevelField">
+        <span class="label">Spell Level: </span>
+        <input id="spellLevel" type="number" min="1" max="9" value="1">
+    </div>
+
+    <div class="field hidden" id="damageType">
+        <span class="label">Damage Type: </span>
+        <select id="damageTypeInput">
+            <option value="dmgAcid">Acid</option>
+            <option value="dmgBludgeon">Bludgeoning</option>
+            <option value="dmgCold">Cold</option>
+            <option value="dmgFire">Fire</option>
+            <option value="dmgForce">Force</option>
+            <option value="dmgLightning">Lightning</option>
+            <option value="dmgNecrotic">Necrotic</option>
+            <option value="dmgPierce">Piercing</option>
+            <option value="dmgPoison">Poison</option>
+            <option value="dmgRadiant">Radiant</option>
+            <option value="dmgSlash">Slashing</option>
+            <option value="dmgThunder">Thunder</option>
+        </select>
+    </div>
+
+    <div class="field hidden" id="madnessType">
+        <span class="label">Madness Intensity: </span>
+        <select id="madnessTypeInput">
+            <option value="madShort">Short-term</option>
+            <option value="madLong">Long-term</option>
+            <option value="MAAAAD">Indefinite</option>
+        </select>
+    </div>
+
+    <div class="field hidden" id="trapLevel">
+        <span class="label">Player Level: </span>
+        <input id="playerLevel" type="number" min="1" max="20" value="1"><br>
+        <span class="label"> Danger Level: </span>
+        <select id="dangerLevel">
+            <option value="setback">Setback</option>
+            <option value="dangerous">Dangerous</option>
+            <option value="deadly">Deadly</option>
+        </select>
+    </div>
+
+    <div class="generate" id="fateGenerate">
+        <span class="character-name" id="charName"></span><br>
+        <span class="character-sub-info" id="charClass"></span>
+    </div>
+    <button id="randoButton" onclick="randomFate()">🌩️ Random Misfortune</button>
+    <button class="hidden" id="wildSurgeButton" onclick="wildMagic()">✨ Wild Magic Surge</button>
+    <button class="hidden" id="spellButton" onclick="oopsSpell()">⚡ Spell Mishap</button>
+    <button class="hidden" id="potionButton" onclick="oopsPotion()">🧪 Potion Mishap</button>
+    <button class="hidden" id="injuryButton" onclick="lingeringInjury()">🩸 Lingering Injury</button>
+    <button class="hidden" id="madnessButton" onclick="madness()">💫 Madness</button>
+    <button class="hidden" id="curseButton" onclick="oopsCursed()">☠️ Curse</button>
+    <button class="hidden" id="trapButton" onclick="trapDamage()">🏹 Trap Damage</button>
+</div>
+<a class="back-button" href="../index.html">Back</a>
+</div>
+</body>
+</html>
