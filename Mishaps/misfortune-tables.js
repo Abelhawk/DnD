@@ -106,7 +106,7 @@ let spellMishaps = [
     "The spell affects a different target than you intended.",
     "The spell affects a random location within the spell's range.",
     "The spell is contrary to the intended effect, but neither harmful nor beneficial.",
-    "You suffer a minor but bizarre effect related to the spell. If the spell was instantaneous, the effect lasts XX1 minutes.",
+    "You suffer a minor but bizarre effect related to the spell. If the spell was instantaneous, the effect lasts XX1.",
     "The spell will activate in XX2 hours. If you were not the intended target, the spell goes off in the general direction of the target."
 ]
 
@@ -123,17 +123,94 @@ let potionMishaps = [
 
 let madnessForms = {
     short: [
-        "You retreat into your mind and become paralyzed. The effect ends if you take any damage.",
+        "You retreat into your mind and become paralyzed for XXX. The effect ends if you take any damage.",
+        "You become incapacitated and spend XXX screaming, laughing, or weeping",
+        "For XXX, you become frightened and must use your action and movement each round to flee from the source of the fear.",
+        "You begin babbling and are incapable of normal speech or spellcasting for XXX.",
+        "For XXX, you must use your action each round to attack the nearest creature.",
+        "You experience vivid hallucinations and have disadvantage on ability checks for XXX",
+        "For the next XXX, you do whatever anyone tells you to do that isn't obviously self-destructive.",
+        "For XXX, you experience an overpowering urge to eat something strange such as dirt, slime, or offal.",
+        "You become stunned for XXX.",
+        "You fall unconscious for XXX."
     ],
-    long: [],
-    indefinite: [],
+    long: [
+        "For the next YYY, you feel compelled to repeat a specific activity over and over, such as washing hands, touching things, praying, or counting coins.",
+        "You experience vivid hallucinations and has disadvantage on ability checks for YYY.",
+        "You suffer extreme paranoia for YYY. You have disadvantage on Wisdom and Charisma checks",
+        `You regard regard something with intense revulsion, as if affected by the antipathy effect of the <span class="italic">antipathy/sympathy</span> spell. This lasts YYY.`,
+        "You experience a powerful delusion and believe you are under the effects of a YY2.",
+        'For YYY, you become attached to a lucky charm attached to a "lucky charm," such as a person or an object, and has disadvantage on attack rolls, ability checks, and saving throws while more than 30 feet from it.',
+        "You become YY3 for YYY.",
+        "You experience uncontrollable tremors or tics for YYY, which impose disadvantage on attack rolls, ability checks, and saving throws that involve Strength or Dexterity.",
+        "For YYY, you suffer from partial amnesia. You know who ou are and retain racial traits and class features, but don't recognize other people or remember anything that happened before the madness took effect.",
+        `For the next YYY, whenever you take damage, you must succeed on a DC 15 Wisdom saving throw or be affected by the <span class="italic">confusion</span> spell. The confusion effect lasts for 1 minute.`,
+        "You lose the ability to speak for YYY.",
+        "You fall unconscious for YYY. No amount of jostling or damage can wake you."
+    ],
+    indefinite: [
+        "Being drunk keeps me sane.",
+        "I keep whatever I find.",
+        "I try to become more like someone else I know--adopting his or her style of dress, mannerisms, and name.",
+        "I must bend the truth, exaggerate, or outright lie to be interesting to other people.",
+        "Achieving my goal is the only thing of interest to me, and I'll ignore everything else to pursue it.",
+        "I find it hard to care about anything that goes on around me.",
+        "I don't like the way people judge me all the time.",
+        "I am the smartest, wisest, strongest, fastest, and most beautiful person I know.",
+        "I am convinced that powerful enemies are hunting me, and their agents are everywhere I go. I am sure they're watching me all the time.",
+        "There's only one person I can trust. And only I can see this special friend.",
+        "I can't take anything seriously. The more serious the situation, the funnier I find it.",
+        "I've discovered that I really like killing people.",
+        "My anger consumes me. I can’t be reasoned with when my rage has been stoked.",
+        "I degenerate into beastly behavior, seeming more like a wild animal than a thinking being.",
+        "The world is my hunting ground. Others are my prey.",
+        "Hate comes easily to me and explodes into rage.",
+        "I see those who oppose me not as people, but as beasts meant to be preyed upon.",
+        "Someone is plotting to kill me. I need to strike first to stop them!",
+        "There is only one solution to my problems: kill them all!",
+        "There is more than one mind inside my head.",
+        "If you don’t agree with me, I’ll beat you into submission to get my way.",
+        "I can’t allow anyone to touch anything that belongs to me. They might try to take it away from me!",
+        "I never let anyone know the truth about my actions or intentions, even if doing so would be beneficial to me.",
+        "I have intermittent hallucinations and fits of catatonia.",
+        "My mind wanders as I have elaborate fantasies that have no bearing on reality. When I return my focus to the world, I have a hard time remembering that it was just a daydream.",
+        "I convince myself that things are true, even in the face of overwhelming evidence to the contrary.",
+        "My perception of reality doesn’t match anyone else’s. It makes me prone to violent delusions that make no sense to anyone else.",
+        "Nothing is more important to me than admiring my own reflection. Anyone who doesn’t appreciate my beauty is a fool.",
+        "Sex is a great solution to all of life’s problems. Why doesn’t anyone else get this?",
+        "My appetite for delicious, pleasurable substances knows no bounds. I’ll do anything to get more.",
+        "Rumors spread easily, and I know many of them. Who cares if they’re true?",
+        "To properly honor my dark, beautiful lord, I must prepare intricate, debauched rituals.",
+        "Anyone who doesn’t do exactly what I say deserves no happiness.",
+        "I must consume everything I can!",
+        "I refuse to part with any of my possessions.",
+        "I’ll do everything I can to get others to eat and drink beyond their normal limits.",
+        "I must possess as many material goods as I can.",
+        "My personality is irrelevant. I am defined by what I consume.",
+        "I often become withdrawn and moody, dwelling on the insufferable state of life.",
+        "I am compelled to make the weak suffer.",
+        "I have no compunction against tampering with the dead in my search to better understand death.",
+        "I want to achieve the everlasting existence of undeath.",
+        "I am awash in the awareness of life’s futility.",
+        "I get caught up in the flow of anger, and try to stoke others around me into forming an angry mob.",
+        "The flesh of other intelligent creatures is delicious.",
+        "I rail against the laws and customs of civilization, attempting to return to a more primitive time.",
+        "I hunger for the deaths of others, and am constantly starting fights in the hope of seeing bloodshed.",
+        "I keep trophies from the bodies I have slain, turning them into adornments.",
+        "I see visions in the world around me that others do not.",
+        "I periodically slip into a catatonic state, staring off into the distance for long stretches at a time.",
+        "I see an altered version of reality, with my mind convincing itself that things are true even in the face of overwhelming evidence to the contrary.",
+        "My mind is slipping away, and my intelligence seems to wax and wane.",
+        "I am constantly scratching at unseen fungal infections."
+
+    ],
 }
 
 let curses = [
     "Whenever you miss with a weapon, it hits you instead.",
     "You gain a random form of long-term madness that doesn't end until you end your attunement to the magic item. The form of madness changes randomly daily at dawn.",
     `A <span class="bold">swarm of insects</span> is attracted to you. The swarm is friendly unless attacked, but buzzes noisily, causing you to automatically fail on Dexterity (Stealth) checks related to being silent. If you kill the swarm, a new one slowly reforms over the course of 1d4 hours.`,
-    "You gain vulnerability to XXX damage.",
+    "You gain vulnerability to XX0 damage.",
     "Whenever you roll a 1 on an ability check, attack roll, or saving throw, you gain a form of short-term madness.",
     "You grow devilish horns and your eyes glow red. You have disadvantage on Charisma (Persuasion) checks made with good- and neutral-aligned characters and advantage made with evil-aligned characters.",
     "You are blinded when you are more than 10 feet away from the source of the curse.",
@@ -151,13 +228,13 @@ let curses = [
     "You suffer from chills and hot flashes. You automatically fail checks and saving throws related to extreme weather.",
     "You lose any darkvision you have and your ability to distinguish color.",
     "You become greedy. In order to buy something, you must succeed on a Wisdom saving throw with a DC equal to the number of total gp you are attempting to spend.",
-    "Your alignment changes to XXX.",
+    "Your alignment changes to XX1.",
     `A <span class="bold">ghost</span> appears and attempts to possess you. If it fails, it attacks instead.`,
     "You take 4d10 psychic damage when you attune to or break attunement with a magic item.",
-    "Your XXX score is reduced by 2 as long as the curse lasts.",
-    `You age XXX years. After the curse is lifted, a <span class="italic">greater restoration</span> spell can restore your youth.`,
+    "Your XX2 score is reduced by 2 as long as the curse lasts.",
+    `You age XX3 years. After the curse is lifted, a <span class="italic">greater restoration</span> spell can restore your youth.`,
     "You shrink one size category and all damage dice that you deal with weapons is reduced by one step.",
-    "You have disadvantage on all XXX checks.",
+    "You have disadvantage on all XX4 checks.",
     "Whenever you take damage, you take an additional 1d8 necrotic damage.",
     "You restore half as many hit points when healed magically.",
     "You cannot regain hit points through magical means.",
@@ -174,16 +251,49 @@ let curses = [
     "You have pleasant but distracting daydreams all the time. You have disadvantage on Wisdom checks.",
     `An <span class="bold">imp</span> becomes your annoying, unhelpful, disruptive, unwelcome familiar. No one else can see the imp.`,
     "Your proficiency bonus becomes +0.",
-    "Magic detects you as if your creature type was a XXX.",
+    "Magic detects you as if your creature type was a XX5.",
     `Whenever you roll a 1 on an attack roll, you become banished as if by the <span class="italic">banishment</span> spell until the start of your next turn.`,
     "You become haphephobic. Any creature who wants to cast a beneficial spell on you with a range of Touch must succeed on a melee spell attack against your AC or lose the spell.",
     `When you roll a 1 on a saving throw, an aura of silence as per the <span class="italic">silence</span> spell appears in a 15-foot cube centered on the magic item and lasts for 1 minute.`,
     "Potions have no effect on you.",
     "If you can cast spells, you only regain 1 spell slot (your choice of what level) per long rest.",
-    "Two wild magic surges occur: XXX",
+    "Two wild magic surges occur: XX6",
 
 ]
 
-let poisons = [
+let fleshWarps = [
 
+]
+
+//-------------------------------------------------
+
+let resistances = [
+    "acid", "cold", "fire", "force", "lightning", "necrotic", "psychic", "poison", "radiant", "thunder"
+]
+
+let alignments = [
+    "lawful good", "lawful neutral", "lawful evil", "neutral good", "true neutral", "neutral evil", "chaotic good",
+    "chaotic neutral", "chaotic evil"
+]
+
+let abilityScores = [
+    "Strength", "Dexterity", "Constitution", "Intelligence", "Wisdom", "Charisma"
+]
+
+let skills = [
+    "Acrobatics", "Athletics", "Animal Handling", "Arcana", "Deception", "History", "Insight", "Intimidation",
+    "Investigation", "Medicine", "Nature", "Perception", "Performance", "Persuasion", "Religion", "Sleight of Hand",
+    "Stealth", "Survival", "tool"
+]
+
+let creatureTypes = [
+    "fiend", "aberration", "fey", "undead"
+]
+
+let potionTypes = [
+    "potion of giant strength", "philter of love", "potion of flying", "potion of invisibility", "potion of speed",
+    "potion of vitality", "oil of slipperiness", "potion of animal friendship", "potion of fire breath", "potion of growth",
+    "potion of resistance", "potion of water breathing", "oil of etherealness", "potion of aqueous form",
+    "potion of clairvoyance", "potion of diminution", "potion of gaseous form", "potion of mind reading",
+    "potion of climbing"
 ]

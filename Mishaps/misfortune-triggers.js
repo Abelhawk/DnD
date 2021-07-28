@@ -10,6 +10,7 @@ function hideAll() {
     document.getElementById('injuryButton').style.display = "none";
     document.getElementById('madnessButton').style.display = "none";
     document.getElementById('curseButton').style.display = "none";
+    document.getElementById('fleshButton').style.display = "none";
     document.getElementById('trapButton').style.display = "none";
 
     document.getElementById('spellLevelField').style.display = "none";
@@ -46,6 +47,9 @@ function checkMode() {
         case 'curseMishap':
             document.getElementById('curseButton').style.display = "block";
             break;
+        case 'flesh':
+            document.getElementById('fleshButton').style.display = "block";
+            break;
         case 'trapMishap':
             document.getElementById('trapButton').style.display = "block";
             document.getElementById('trapLevel').style.display = "block";
@@ -57,30 +61,30 @@ function randomFate() {
     let num = rando(7)
     switch (num) {
         case 0:
-            wildMagic();
+            postText(wildMagic());
             break;
         case 1:
-            oopsSpell(rando(9));
+            postText(oopsSpell());
             break;
         case 2:
-            oopsPotion();
+            postText(oopsPotion());
             break;
         case 3:
-            lingeringInjury();
+            postText(lingeringInjury());
             break;
         case 4:
-            madness();
+            postText(madness());
             break;
         case 5:
-            oopsCursed();
+            postText(oopsCursed());
             break;
         case 6:
-            trapDamage(rando(10), 'dangerous');
+            postText(trapDamage());
     }
 }
 
+//Done
 function wildMagic() {
-    let field = document.getElementById('fateGenerate');
     let text = randoArray(wildMagicTable);
     //Conditionals
     let height = randomProperty('height');
@@ -99,54 +103,86 @@ function wildMagic() {
     text = text.replace('XX9', roll(1, "d8"));
     text = text.replace('X10', roll(1, "d4"));
     text = text.replace('XX3', weight);
-
     //
-    field.innerHTML = text;
+    return text;
 }
 
-function oopsSpell(spellLevel) {
-    let field = document.getElementById('fateGenerate');
-    spellLevel = document.getElementById('spellLevel').value;
+//Done
+function oopsSpell() {
+    let spellLevel = document.getElementById('spellLevel').value || rando(9);
     let text = randoArray(spellMishaps);
     // Damage types
-    text.replace('XX0', roll(spellLevel, 'd4'))
-    field.innerText = text;
+    text = text.replace('XX0', roll(spellLevel, 'd4'))
+    let time = roll(1, 'd10');
+    text = text.replace('XX1', time + " minute" + plur(time))
+    //
+    return text;
 }
 
+//Done
 function oopsPotion() {
-    let field = document.getElementById('fateGenerate');
     let text = randoArray(potionMishaps);
     //Damage amounts, poison
-    text.replace('XX0', roll(6, 'd10'))
-    text.replace('YY0', roll(1, 'd10'))
-    text.replace('XX1', randomPoison())
-    field.innerText = text;
+    text = text.replace('XX0', roll(6, 'd10'))
+    text = text.replace('YY0', roll(1, 'd10'))
+    text = text.replace('XX1', randomPoison())
+    //
+    return text;
 }
 
 function lingeringInjury() {
-    let field = document.getElementById('fateGenerate');
     let text = randoArray();
     //Damage amounts, poison
-    field.innerText = text;
+    return text;
 }
 
+//Done
 function madness(intensity) {
-    let field = document.getElementById('fateGenerate');
-    intensity = document.getElementById('madnessTypeInput').value;
-    let text = randoArray();
-    //Damage amounts, poison
-    field.innerText = text;
+    intensity = document.getElementById('madnessTypeInput').value || 'madLong';
+    let text = "ERROR"
+    switch (intensity) {
+        case 'madShort':
+            text = randoArray(madnessForms.short);
+            let time = roll(1, 'd10');
+            text = text.replace('XXX', time + " minute" + plur(time))
+            break;
+        case 'madLong':
+            text = randoArray(madnessForms.long);
+            let time2 = roll(1, 'd10') * 10;
+            text = text.replace('YYY', time2 + " hour" + plur(time2))
+            text = text.replace('YY2', `<span class="italic">${randoArray(potionTypes)}</span>`)
+            let rand = rando(100);
+            let condition = 'deafened'
+            if (rand >= 24) {
+                condition = 'blinded';
+            }
+            text = text.replace('YY3', condition);
+            break;
+        case 'MAAAAD':
+            text = 'You have a new flaw: "' + randoArray(madnessForms.indefinite) + '"'
+    }
+    return text;
 }
 
+//Done
 function oopsCursed() {
-    let field = document.getElementById('fateGenerate');
-    field.innerText = randoArray(curses);
+    let text = randoArray(curses)
+    //Other stuff
+    text = text.replace('XX0', randoArray(resistances));
+    text = text.replace('XX1', randoArray(alignments));
+    text = text.replace('XX2', randoArray(abilityScores));
+    text = text.replace('XX3', roll(3, "d10"));
+    text = text.replace('XX4', randoArray(skills));
+    text = text.replace('XX5', randoArray(creatureTypes));
+    text = text.replace('XX6', `<br>1. ${wildMagic()}<br>2. ${wildMagic()}`);
+    //
+    return text;
 }
 
-function trapDamage(level, danger) {
-    let field = document.getElementById('fateGenerate');
-    level = document.getElementById('playerLevel').value;
-    danger = document.getElementById('dangerLevel').value;
+//Done
+function trapDamage() {
+    let level = document.getElementById('playerLevel').value || rando(10);
+    let danger = document.getElementById('dangerLevel').value || 'dangerous';
     let text = 'Make a DC ';
     let levelOfDamage = 0;
     switch (true) {
@@ -166,7 +202,6 @@ function trapDamage(level, danger) {
     let dcnum = rando(2);
     let dctrap = 10;
     let damage = 2;
-    console.log(danger)
     if (danger === 'setback') {
         dctrap = 10;
         switch (levelOfDamage) {
@@ -221,9 +256,10 @@ function trapDamage(level, danger) {
         }
     }
     text += (dcnum + dctrap) + " saving throw. You take " + damage + " damage on a failed save, or half on a success."
-    field.innerText = text;
+    return text;
 }
 
+//Done
 function randomPoison() {
     let num = rando(15);
     switch (num) {
@@ -270,6 +306,17 @@ function randomPoison() {
     }
 }
 
+function fleshWarp() {
+
+}
+
+function postText(html) {
+    let field = document.getElementById('fateGenerate');
+    field.innerHTML = html;
+}
+
+//-------------------------
+
 function randomProperty(which) {
     let num = roll(1, 'd10');
     if (which === 'height') {
@@ -301,4 +348,11 @@ function randomProperty(which) {
 
 function isOdd(num) {
     return num % 2;
+}
+
+function plur(number) {
+    if (number === 1) {
+        return ''
+    }
+    return 's'
 }

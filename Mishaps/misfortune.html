@@ -28,9 +28,10 @@
             <option value="wildSurge">Wild Magic Surge</option>
             <option value="spellMishap">Spell Mishap</option>
             <option value="potionMishap">Potion Mishap</option>
-            <option value="lingerInjury">Lingering Injury</option>
+            <option value="lingerInjury" disabled>Lingering Injury</option>
             <option value="madnessMishap">Madness</option>
             <option value="curseMishap">Curse</option>
+            <option value="flesh" disabled>Flesh Warping</option>
             <option value="trapMishap">Trap Damage</option>
         </select>
     </div>
@@ -83,13 +84,14 @@
         <span class="character-sub-info" id="charClass"></span>
     </div>
     <button id="randoButton" onclick="randomFate()">🌩️ Random Misfortune</button>
-    <button class="hidden" id="wildSurgeButton" onclick="wildMagic()">✨ Wild Magic Surge</button>
-    <button class="hidden" id="spellButton" onclick="oopsSpell()">⚡ Spell Mishap</button>
-    <button class="hidden" id="potionButton" onclick="oopsPotion()">🧪 Potion Mishap</button>
-    <button class="hidden" id="injuryButton" onclick="lingeringInjury()">🩸 Lingering Injury</button>
-    <button class="hidden" id="madnessButton" onclick="madness()">💫 Madness</button>
-    <button class="hidden" id="curseButton" onclick="oopsCursed()">☠️ Curse</button>
-    <button class="hidden" id="trapButton" onclick="trapDamage()">🏹 Trap Damage</button>
+    <button class="hidden" id="wildSurgeButton" onclick="postText(wildMagic())">✨ Wild Magic Surge</button>
+    <button class="hidden" id="spellButton" onclick="postText(oopsSpell())">⚡ Spell Mishap</button>
+    <button class="hidden" id="potionButton" onclick="postText(oopsPotion())">🧪 Potion Mishap</button>
+    <button class="hidden" id="injuryButton" onclick="postText(lingeringInjury())">🩸 Lingering Injury</button>
+    <button class="hidden" id="madnessButton" onclick="postText(madness())">💫 Madness</button>
+    <button class="hidden" id="curseButton" onclick="postText(oopsCursed())">☠️ Curse</button>
+    <button class="hidden" id="fleshButton" onclick="postText(fleshWarp())">🐌️ Flesh Warping</button>
+    <button class="hidden" id="trapButton" onclick="postText(trapDamage())">🏹 Trap Damage</button>
 </div>
 <a class="back-button" href="../index.html">Back</a>
 </div>
