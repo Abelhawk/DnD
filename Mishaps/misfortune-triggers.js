@@ -58,7 +58,7 @@ function checkMode() {
 }
 
 function randomFate() {
-    let num = rando(7)
+    let num = rando(8)
     switch (num) {
         case 0:
             postText(wildMagic());
@@ -70,8 +70,8 @@ function randomFate() {
             postText(oopsPotion());
             break;
         case 3:
-            postText(lingeringInjury());
-            break;
+            // postText(lingeringInjury());
+            // break;
         case 4:
             postText(madness());
             break;
@@ -79,7 +79,11 @@ function randomFate() {
             postText(oopsCursed());
             break;
         case 6:
+            // postText(fleshWarp());
+            // break;
+        case 7:
             postText(trapDamage());
+
     }
 }
 
