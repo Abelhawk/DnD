@@ -3,8 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="495252ce-6aee-4675-83fc-feddd9e07b22" name="Default" comment="Fixed some wording and made it clear how many creatures fail their saving throw.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mishaps/lingering-injury-tables.js" beforeDir="false" afterPath="$PROJECT_DIR$/Mishaps/lingering-injury-tables.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Mishaps/misfortune-tables.js" beforeDir="false" afterPath="$PROJECT_DIR$/Mishaps/misfortune-tables.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Mishaps/misfortune-triggers.js" beforeDir="false" afterPath="$PROJECT_DIR$/Mishaps/misfortune-triggers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mishaps/misfortune.html" beforeDir="false" afterPath="$PROJECT_DIR$/Mishaps/misfortune.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shared.js" beforeDir="false" afterPath="$PROJECT_DIR$/shared.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -182,7 +185,9 @@
       <workItem from="1625082961771" duration="1469000" />
       <workItem from="1627396914561" duration="2166000" />
       <workItem from="1627399111106" duration="24295000" />
-      <workItem from="1627572786650" duration="1112000" />
+      <workItem from="1627572786650" duration="5644000" />
+      <workItem from="1627578744636" duration="7203000" />
+      <workItem from="1627591874793" duration="1957000" />
     </task>
     <task id="LOCAL-00001" summary="Fixed some wording and made it clear how many creatures fail their saving throw.">
       <created>1627398829756</created>

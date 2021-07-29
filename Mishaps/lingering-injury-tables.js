@@ -254,8 +254,8 @@ let LIForce = [
     {
         i: [6, 7, 8],
         name: "Brain Injury",
-        desc: "Your brain has been addled by magic. XX0 Also, you have vulnerability to psychic damage.",
-        cure: "Six levels of magical healing."
+        desc: "Your brain has been addled by magic. XX0",
+        cure: `A <span class="italic">greater restoration</span> spell.`
     },
     {
         i: [9, 10, 11],
@@ -295,8 +295,8 @@ let LILightning = [
     {
         i: [1],
         name: "Brain Injury",
-        desc: "XX0 Also, you have vulnerability to psychic damage.",
-        cure: "Six levels of magical healing."
+        desc: "XX0",
+        cure: `A <span class="italic">greater restoration</span> spell.`
     },
     {
         i: [2],
@@ -523,8 +523,8 @@ let LIPsychic = [
     {
         i: [1],
         name: "Brain Injury",
-        desc: "XX0 Also, you have vulnerability to psychic damage.\",",
-        cure: "",
+        desc: "XX0",
+        cure: `A <span class="italic">greater restoration</span> spell.`
     },
     {
         i: [2, 3],
@@ -688,8 +688,8 @@ let LIThunder = [
     {
         i: [1],
         name: "Brain Injury",
-        desc: "XX0 Also, you have vulnerability to psychic damage.",
-        cure: "Six levels of magical healing."
+        desc: "XX0",
+        cure: `A <span class="italic">greater restoration</span> spell.`
     },
     {
         i: [2],

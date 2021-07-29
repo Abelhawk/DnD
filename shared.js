@@ -43,6 +43,8 @@ function roll(number, dice) {
             return ((rando(10) + 1) * number);
         case "d12":
             return ((rando(12) + 1) * number);
+        case "d20":
+            return ((rando(20) + 1) * number);
         case "d100":
             return ((rando(100) + 1));
     }

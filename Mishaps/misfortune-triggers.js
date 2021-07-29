@@ -95,7 +95,7 @@ function wildMagic() {
     let weight = randomProperty('weight');
     let age = randomProperty('age');
     text = text.replace('XX0', height);
-    text = text.replace('XX1', roll(1, "d10") + " minutes: " + madness("madShort"));
+    text = text.replace('XX1', madness("madShort"));
     text = text.replace('XX2', roll(1, "d3"));
     text = text.replace('XX3', age);
     text = text.replace('XX4', roll(1, "d6"));
@@ -134,15 +134,128 @@ function oopsPotion() {
     return text;
 }
 
-function lingeringInjury() {
-    let text = randoArray();
-    //Damage amounts, poison
-    return text;
+function lingeringInjury(dmg) {
+    let damageType = dmg || document.getElementById('damageTypeInput').value || randoArray(resistances);
+    let injuryTitle;
+    let injuryDescr;
+    let injuryCure;
+    let num = roll(1, 'd20');
+    let injury = num;
+    console.log(num)
+    console.log(injury)
+    switch (damageType) {
+        case 'acid':
+            injury = findObject(num, LIAcid);
+            injuryTitle = injury.name;
+            injuryDescr = injury.desc;
+            injuryCure = injury.cure;
+            break;
+        case 'bludgeoning':
+            injury = findObject(num, LIBludge);
+            injuryTitle = injury.name;
+            injuryDescr = injury.desc;
+            injuryCure = injury.cure;
+            if (injuryDescr === '*PSYCHIC*') {
+                num = rando(20);
+                let psyInjury = findObject(num, LIPsychic);
+                injuryTitle += " (" + psyInjury.name + ")";
+                injuryDescr = psyInjury.desc;
+                injuryCure = psyInjury.cure;
+            }
+            break;
+        case 'cold':
+            injury = findObject(num, LICold);
+            injuryTitle = injury.name;
+            injuryDescr = injury.desc;
+            injuryCure = injury.cure;
+            break;
+        case 'fire':
+            injury = findObject(num, LIFire);
+            injuryTitle = injury.name;
+            injuryDescr = injury.desc;
+            injuryCure = injury.cure;
+            break;
+        case 'force':
+            injury = findObject(num, LIForce);
+            injuryTitle = injury.name;
+            injuryDescr = injury.desc;
+            injuryCure = injury.cure;
+            let res = '1';
+            let vul = '1';
+            while (res === vul) {
+                res = randoArray(resistances);
+                vul = randoArray(resistances);
+            }
+            injuryDescr = injuryDescr.replace('XX1', res);
+            injuryDescr = injuryDescr.replace('XX2', vul);
+            injuryDescr = injuryDescr.replace('XX3', randoArray(diseases));
+            break;
+        case 'lightning':
+            injury = findObject(num, LILightning);
+            injuryTitle = injury.name;
+            injuryDescr = injury.desc;
+            injuryCure = injury.cure;
+            if (injuryDescr === '*FIRE*') {
+                num = rando(20);
+                let fiInjury = findObject(num, LIFire);
+                injuryTitle += " (" + fiInjury.name + ")";
+                injuryDescr = fiInjury.desc;
+                injuryCure = fiInjury.cure;
+            }
+            break;
+        case 'necrotic':
+            injury = findObject(num, LINecrotic);
+            injuryTitle = injury.name;
+            injuryDescr = injury.desc;
+            injuryCure = injury.cure;
+            break;
+        case 'piercing':
+            injury = findObject(num, LIPiercing);
+            injuryTitle = injury.name;
+            injuryDescr = injury.desc;
+            injuryCure = injury.cure;
+            break;
+        case 'poison':
+            injury = findObject(num, LIPoison);
+            injuryTitle = injury.name;
+            injuryDescr = injury.desc;
+            injuryCure = injury.cure;
+            break;
+        case 'psychic':
+            injury = findObject(num, LIPsychic);
+            injuryTitle = injury.name;
+            injuryDescr = injury.desc;
+            injuryCure = injury.cure;
+            break;
+        case 'radiant':
+            injury = findObject(num, LIRadiant);
+            injuryTitle = injury.name;
+            injuryDescr = injury.desc;
+            injuryCure = injury.cure;
+            break;
+        case 'slashing':
+            injury = findObject(num, LISlashing);
+            injuryTitle = injury.name;
+            injuryDescr = injury.desc;
+            injuryCure = injury.cure;
+            break;
+        case 'thunder':
+            injury = findObject(num, LIThunder);
+            injuryTitle = injury.name;
+            injuryDescr = injury.desc;
+            injuryCure = injury.cure;
+    }
+    injuryDescr = injuryDescr.replace('XX0', madness('madLong') + " Also, you have vulnerability to psychic damage.");
+    injuryDescr = injuryDescr.replace('XX4', madness('MAAAAD'))
+    injuryTitle = `<p class="bold italic">${injuryTitle}</p>`;
+    injuryDescr = `<span style="text-align: left">${injuryDescr}</span>`;
+    injuryCure = `<p><span class="bold">Cure: </span>${injuryCure}</p>`;
+    return injuryTitle + injuryDescr + injuryCure;
 }
 
 //Done
-function madness(intensity) {
-    intensity = document.getElementById('madnessTypeInput').value || 'madLong';
+function madness(intens) {
+    let intensity = intens || document.getElementById('madnessTypeInput').value || 'madLong';
     let text = "ERROR"
     switch (intensity) {
         case 'madShort':
@@ -310,6 +423,7 @@ function randomPoison() {
     }
 }
 
+//Done
 function fleshWarp() {
     return randoArray(fleshWarps)
 }
@@ -359,4 +473,15 @@ function plur(number) {
         return ''
     }
     return 's'
+}
+
+function findObject(number, array) {
+    let object;
+    for (let i = 0; i < array.length; i++) {
+        if (array[i].i.includes(number)) {
+            object = array[i];
+            break;
+        }
+    }
+    return object;
 }

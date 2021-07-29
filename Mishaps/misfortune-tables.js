@@ -24,7 +24,7 @@ let wildMagicTable = [
     `Your skin turns a vibrant shade of blue. A <span class="italic">remove curse</span> spell can end this effect.`,
     "If you take acid, cold, fire, lightning, or thunder damage within the next minute, you gain resistance to that type of damage for 1 hour.",
     "An eye appears on your forehead for the next minute. During that time, you have advantage on Wisdom (Perception) checks that rely on sight.",
-    "You gain a form of madness for the next XX1",
+    "XX1",
     "For the next minute, all your spells with a casting time of 1 action have a casting time of 1 bonus action.",
     "You break your attunement with XX2 of your magic items to which you are attuned.",
     "You teleport up to 60 feet to an unoccupied space of your choice that you can see.",
@@ -315,4 +315,9 @@ let potionTypes = [
     "potion of resistance", "potion of water breathing", "oil of etherealness", "potion of aqueous form",
     "potion of clairvoyance", "potion of diminution", "potion of gaseous form", "potion of mind reading",
     "potion of climbing"
+]
+
+let diseases = [
+    "sewer plague", "sight rot", "cackle fever", "slimy doom", "blinding sickness", "filth fever", "flesh rot",
+    "mindfire", "seizure"
 ]
