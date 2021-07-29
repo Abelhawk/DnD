@@ -262,7 +262,26 @@ let curses = [
 ]
 
 let fleshWarps = [
-
+    "The color of your hair, eyes, and skin becomes blue, red, yellow, or patterned.",
+    "Your eyes push out of your head at the end of stalks.",
+    "Your hands grow claws, which can be used as daggers.",
+    "One of your legs grows longer than the other, reducing your walking speed by 10 feet.",
+    "Your eyes become beacons, filling a 15-foot cone with dim light when they are open.",
+    "A pair of wings, either feathered or leathery, sprout from your back, granting you a flying speed of 30 feet.",
+    "Your ears tear free from your head and scurry away; you are deafened.",
+    "Two of your teeth turn into tusks.",
+    "Your skin becomes scabby, granting you a +1 bonus to AC but reducing your Charisma by 2 (to a minimum of 1).",
+    "Your arms and legs switch places, preventing you from moving unless you crawl.",
+    "Your arms become tentacles with fingers on the ends, increasing your reach by 5 feet.",
+    "Your legs grow incredibly long and springy, increasing your walking speed by 10 feet.",
+    "You grow a whiplike tail, which you can use as a whip.",
+    "Your eyes turn black, and you gain darkvision out to a range of 120 feet.",
+    "You swell, tripling your weight.",
+    "You become thin and skeletal, halving your weight.",
+    "Your head doubles in size.",
+    "Your ears become wings, giving you a flying speed of 5 feet.",
+    "Your body becomes unusually brittle, causing you to have vulnerability to bludgeoning, piercing, and slashing damage.",
+    "You grow another head, causing you to have advantage on saving throws against being charmed, frightened, or stunned."
 ]
 
 //-------------------------------------------------

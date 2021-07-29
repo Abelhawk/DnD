@@ -79,8 +79,8 @@ function randomFate() {
             postText(oopsCursed());
             break;
         case 6:
-            // postText(fleshWarp());
-            // break;
+            postText(fleshWarp());
+            break;
         case 7:
             postText(trapDamage());
 
@@ -311,7 +311,7 @@ function randomPoison() {
 }
 
 function fleshWarp() {
-
+    return randoArray(fleshWarps)
 }
 
 function postText(html) {
