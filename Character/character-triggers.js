@@ -180,15 +180,15 @@ function proceed() {
     }
     charNameDiv.innerText = (your.fullName);
     if (your.fullClass) {
-        your.fullClass = capitalize(your.fullClass);
+        your.fullClass = capitalize2(your.fullClass);
         if (your.fullClass.includes('Of The')) {
             your.fullClass = your.fullClass.replace('Of The', 'of the')
         }
         charClassDiv.innerText = your.genderIsMale ? '♂' : '♀';
         if (your.fullClass.toLowerCase() === "warlock of the hexblade") {
-            charClassDiv.innerText += (capitalize(your.race) + " Hexblade Warlock");
+            charClassDiv.innerText += (capitalize2(your.race) + " Hexblade Warlock");
         } else {
-            charClassDiv.innerText += (capitalize(your.race) + " " + your.fullClass);
+            charClassDiv.innerText += (capitalize2(your.race) + " " + your.fullClass);
         }
     }
     //todo: shouldn't need this check
@@ -814,7 +814,7 @@ function pickClass() {
 
 //-------Utility functions
 
-function capitalize(str) {
+function capitalize2(str) {
     return str.replace(/\w\S*/g, function (txt) {
         if (!txt.includes("of") && !txt.includes("the")) {
             txt = txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
