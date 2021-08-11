@@ -43,6 +43,12 @@ This tool can quickly generate the basic demographic and ecological information 
 * Gives information on the settlement's government, defense, religion, and economics.
 * Provides example locations and a proposed number of districts the settlement might have.
 
+### Misfortune Manager
+This tool can quickly generate random occurrences (most of them unfortunate) for characters when they use a cursed item, touch a trap, or mess with a sibriex.
+* Can generate Wild Magic surges, spell and potion mishaps, lingering injuries, madness, curses, trap damage, and flesh warping.
+* Lingering injuries are customizable by damage type
+* Or you can just generate a completely random misfortune!
+
 ## Known Bugs
 * Character Creator doesn't really work at all beyond generating a name, and even then the interface is clunky
 
