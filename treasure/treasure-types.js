@@ -77,7 +77,7 @@ let art7500 = [
 
 //------------MAGIC ITEMS
 
-let magicTableA = [
+let magicTableA = [ //Common Items
     "potion of healing", "spell scroll 0", "potion of climbing", "spell scroll 1",
     "spell scroll 2", "potion of greater healing", "bag of holding", "driftglobe", "armor of gleaming",
     "bead of nourishment", "bead of refreshment", "boots of false tracks", "candle of the deep",
@@ -93,7 +93,7 @@ let magicTableA = [
     "spellwrought tattoo 1", "illuminator's tattoo", "masquerade tattoo"
 ];
 
-let magicTableB = [
+let magicTableB = [ //Uncommon Consumables
     "potion of greater healing", "potion of fire breath", "potion of resistance",
     "ammunition +1", "potion of animal friendship", "potion of hill giant strength",
     "potion of growth", "potion of water breathing", "spell scroll 2", "spell scroll 3",
@@ -106,7 +106,7 @@ let magicTableB = [
     "rope of climbing", "saddle of the cavalier", "wand of magic detection", "wand of secrets"
 ];
 
-let magicTableC = [
+let magicTableC = [ //Rare potions and Uncommon Items
     "potion of superior healing", "spell scroll 4", "ammunition +2", "potion of clairvoyance",
     "potion of diminution", "potion of gaseous form", "potion of frost giant strength",
     "potion of stone giant strength", "potion of heroism", "potion of invulnerability",
@@ -114,22 +114,23 @@ let magicTableC = [
     "potion of fire giant strength", "Quaal's feather token", "scroll of protection",
     "bag of beans", "bead of force", "chime of opening", "decanter of endless water",
     "eyes of minute seeing", "folding boat", "Heward's handy haversack", "horseshoes of speed",
-    "necklace of fireballs", "periapt of health", "sending stones"
+    "necklace of fireballs", "periapt of health", "sending stones", "potion of aqueous form"
 ];
 
-let magicTableD = [
+let magicTableD = [ //Very Rare consumables
     "potion of supreme healing", "potion of invisibility", "potion of speed", "spell scroll 6",
     "spell scroll 7", "ammunition +3", "oil of sharpness", "potion of flying", "potion of cloud giant strength",
     "potion of longevity", "potion of vitality", "spell scroll 8", "horseshoes of a zephyr",
-    "Nolzur's marvelous pigments", "bag of holding (devouring)", "portable hole"
+    "Nolzur's marvelous pigments", "bag of holding (devouring)", "portable hole",
+    "reincarnation dust", roll(1, 'd20') + '"sling bullets of Althemone",
 ];
 
-let magicTableE = [
+let magicTableE = [ //Very Rare and Legendary potions
     "spell scroll 8", "potion of storm giant strength", "potion of supreme healing", "spell scroll 9",
     "universal solvent", "arrow of slaying", "sovereign glue"
 ];
 
-let magicTableF = [
+let magicTableF = [ //Uncommon Permanent Items
     "weapon +1", "shield +1", "sentinel shield", "amulet of proof against detection and location",
     "boots of elvenkind", "boots of striding and springing", "bracers of archery", "brooch of shielding",
     "broom of flying", "cloak of elvenkind", "cloak of protection", "gauntlets of ogre power",
@@ -149,7 +150,7 @@ let magicTableF = [
     "goggles of object reading", "guardian emblem"
 ];
 
-let magicTableG = [
+let magicTableG = [ //Rare Permanent Items
     "weapon +2", "bronze griffin of wondrous power", "ebony fly of wondrous power", "golden lions of wondrous power",
     "ivory goats of wondrous power", "marble elephant of wondrous power", "onyx dog of wondrous power",
     "serpentine owl of wondrous power", "adamantine armor", "amulet of health", "armor of vulnerability",
@@ -172,15 +173,15 @@ let magicTableG = [
     "wand of binding", "wand of enemy detection", "wand of fear", "wand of fireballs", "wand of lightning bolts",
     "wand of paralysis", "wand of the war mage +2", "wand of wonder", "wings of flying", "alchemical compendium",
     "arcane grimoire +2", "astromancy archive", "duplicitous manuscript", "libram of souls and flesh",
-    "planecaller's codex", "protective verses", "potion of aqueous form", "lyre of building", "reveler's concertina",
+    "planecaller's codex", "protective verses", "lyre of building", "reveler's concertina",
     "rhythm-maker's drum", "siren song lyre", "amulet of the devout +2", "charm of plant command", "ring of temporal salvation",
     "staff of the ivory claw", "barrier tattoo (medium)", "shadowfell brand tattoo", "spellwrought tattoo 4",
     "spellwrought tattoo 5", "all-purpose tool +2", "astral shard", "atlas of endless horizons", "bell branch",
     "devotee's censer", "elemental essence shard", "far realm shard", "needle of mending", "outer essence shard",
-    "shadowfell shard"
+    "shadowfell shard", "helm of the gods", "molten bronze skin", "two-birds sling"
 ];
 
-let magicTableH = [
+let magicTableH = [ //Very Rare Permanent Items
     "weapon +3", "amulet of the planes", "carpet of flying", "crystal ball of scrying", "ring of regeneration",
     "ring of shooting stars", "ring of telekinesis", "robe of scintillating colors", "robe of stars",
     "rod of absorption", "rod of alertness", "rod of security", "rod of the pact keeper +3", "scimitar of speed",
@@ -195,13 +196,13 @@ let magicTableH = [
     "manual of gainful exercise", "manual of golems", "manual of quickness of action", "mirror of life trapping",
     "nine lives stealer", "oathbow", "armor +2", "spellguard shield", "tome of clear thought",
     "tome of leadership and influence", "tome of understanding", "last stand armor", "living armor",
-    "arcane grimoire +3", "crystalline chronicle", "dispelling stone", "reincarnation dust", "sling bullets of Althemone",
+    "arcane grimoire +3", "crystalline chronicle", "dispelling stone",
     "rhythm-maker's drum +3", "amulet of the devout +3", "absorbing tattoo of resistance", "barrier tattoo (heavy)",
     "ghost step tattoo", "lifewell tattoo", "arcane cannon", "moon sickle +3", "all-purpose tool +3",
     "bloodwell vial +3", "cauldron of rebirth", "orb of the veil"
 ];
 
-let magicTableI = [
+let magicTableI = [ //Legendary Items
     "defender", "hammer of thunderbolts", "luck blade", "sword of answering", "holy avenger",
     "ring of djinni summoning", "ring of invisibility", "ring of spell turning", "rod of lordly might",
     "staff of the magi", "vorpal sword", "belt of cloud giant strength", "armor +2", "armor +3",
