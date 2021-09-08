@@ -122,7 +122,7 @@ let magicTableD = [ //Very Rare consumables
     "spell scroll 7", "ammunition +3", "oil of sharpness", "potion of flying", "potion of cloud giant strength",
     "potion of longevity", "potion of vitality", "spell scroll 8", "horseshoes of a zephyr",
     "Nolzur's marvelous pigments", "bag of holding (devouring)", "portable hole",
-    "reincarnation dust", roll(1, 'd20') + '"sling bullets of Althemone",
+    "reincarnation dust", roll(1, 'd20') + "sling bullets of Althemone",
 ];
 
 let magicTableE = [ //Very Rare and Legendary potions
@@ -357,3 +357,29 @@ let spells9th = [
     "storm of vengeance", "time stop", "true polymorph", "true resurrection", "weird", "wish", "ravenous void",
     "time ravage", "blade of disaster"
 ];
+
+//-------------I know it's duplicated but TOO BAD!------------
+
+function roll(number, dice) {
+    switch (dice) {
+        case "d4":
+            return ((rando(4) + 1) * number);
+        case "d6":
+            return ((rando(6) + 1) * number);
+        case "d8":
+            return ((rando(8) + 1) * number);
+        case "d10":
+            return ((rando(10) + 1) * number);
+        case "d12":
+            return ((rando(12) + 1) * number);
+        case "d20":
+            return ((rando(20) + 1) * number);
+        case "d100":
+            return ((rando(100) + 1));
+    }
+}
+
+function rando(probability) {
+    //If you want a binary one, do rando(2), which returns a 0 or a 1.
+    return Math.floor(Math.random() * probability);
+}
