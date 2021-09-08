@@ -217,14 +217,12 @@ function getMagicItem(table) {
     let randomNumber = rando(magicTable.length);
     let magicItem = magicTable[randomNumber];
     if (magicItem === 'robe of useful items') {
-        alert('Robe of useful items!') //todo
         let patches = generatePatches();
         let patchList = ``;
         for (let i = 0; i < patches.length; i++) {
             patchList += patches[i];
             if (i < patches.length) patchList += `<br>`
         }
-        console.log(patchList) //todo
         return `<span class='italic robe-of-useful-items'>robe of useful items</span><span class="robe-patches">${patchList}</span>`
     } else {
         magicItem = processMagicItem(magicTable, magicItem);
@@ -351,9 +349,9 @@ function generateWares(check) {
         let randomNumber = rando(magicTable.length);
         if (magicItem.includes('armor')) {
             if (magicItem.includes('mithril') || magicItem.includes('adamantine')) {
-                magicItem = magicItem.replace('armor', metalArmor[rando(metalArmor.length)]);
+                magicItem = magicItem.replace('armor', metalArmor[rando(metalArmor.length)] + ' armor');
             } else {
-                magicItem = magicItem.replace('armor', armor[rando(armor.length)]);
+                magicItem = magicItem.replace('armor', armor[rando(armor.length) + ' armor']);
             }
         }
         if (magicItem.includes('resistance') && !magicItem.includes('cloak')) {
