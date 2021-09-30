@@ -258,6 +258,13 @@ let curses = [
     "Potions have no effect on you.",
     "If you can cast spells, you only regain 1 spell slot (your choice of what level) per long rest.",
     "Two wild magic surges occur: XX6",
+    "Your ears are replaced with fuzzy donkey ears, and you sometimes bray when intending to speak.",
+    "You gain 1d3 levels of exhaustion that cannot be removed until the curse is.",
+    "Moonlight burns your flesh. You take 1d10 radiant damage when you start your turn in moonlight.",
+    "When you try to pick up gold, it slips through your fingers.",
+    "After you tell a lie, you are unable to speak again for 1d8 hours.",
+    "You become an animated doll version of yourself. Your stats are the same except you are a Small Construct that is vulnerable to fire damage and does not require air, food, or drink."
+
 
 ]
 

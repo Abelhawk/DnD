@@ -1,0 +1,78 @@
+body {
+    color: #89cb27;
+}
+h1 {
+    text-align: center;
+    font-family: serif;
+    font-weight: lighter;
+    color: white;
+}
+.container {
+    display: flex;
+    width: 50%;
+    margin: 20px auto 0 auto;
+}
+
+button, a {
+    background: #89cb27;
+}
+
+button:hover, a:hover {
+    color: white;
+}
+
+.generate {
+    color: #89cb27;
+    border: 1px gray solid;
+    width: 70%;
+    text-align: center;
+    margin: auto;
+    padding: 15px;
+    font-size: 24pt;
+    font-family: serif;
+}
+.choices {
+    margin-bottom: 20px;
+}
+input,
+text {
+    width: 25px;
+}
+
+button {
+    text-align: center;
+    display: block;
+    margin: 10px auto;
+    font-size: 14pt;
+}
+label {
+    user-select: none;
+}
+
+.note {
+    color: #b8a161;
+    font-size: 10px;
+    font-style: italic;
+}
+
+.happy-note {
+    color: deepskyblue;
+    font-size: 12px;
+    font-style: italic;
+}
+
+@media only screen and (max-width: 700px) {
+    .two-columns {
+        font-size: 12px;
+    }
+    .generate {
+        padding: 0;
+        width: 100%;
+        /*font-size: 20px;*/
+    }
+}
+
+#loading {
+    width: 200px;
+    margin: auto;
+}
