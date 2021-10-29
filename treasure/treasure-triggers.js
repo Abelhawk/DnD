@@ -1,7 +1,7 @@
 let textField = document.getElementById("generate");
 
 function loadPage() {
-    // document.getElementById('loader').style.display = "none";
+    document.getElementById("disclaimer").style.display = 'none';
     document.getElementById('loading').style.display = "none";
     document.getElementById('yesButton').style.display = "block";
 }
@@ -40,8 +40,10 @@ function generate() {
 function checkResult() {
     if (document.getElementById("auctionHouse").checked) {
         document.getElementById("lebel").textContent = 'Persuasion Check Result:';
+        document.getElementById("disclaimer").style.display = 'block';
     } else {
         document.getElementById("lebel").textContent = 'Challenge Level:';
+        document.getElementById("disclaimer").style.display = 'none';
     }
 }
 
@@ -348,10 +350,16 @@ function generateWares(check) {
     // Assigns a specific type of weapon, armor, ammunition, resistance, or spell
         let randomNumber = rando(magicTable.length);
         if (magicItem.includes('armor')) {
-            if (magicItem.includes('mithril') || magicItem.includes('adamantine')) {
-                magicItem = magicItem.replace('armor', metalArmor[rando(metalArmor.length)] + ' armor');
+                        if (magicItem.includes('mithril') || magicItem.includes('adamantine')) {
+                magicItem = magicItem.replace('armor', metalArmor[rando(metalArmor.length)]);
             } else {
-                magicItem = magicItem.replace('armor', armor[rando(armor.length) + ' armor']);
+                if (magicItem.includes('+')) {
+                    alert(magicItem)
+                    magicItem = magicItem.replace('armor', highArmors[rando(metalArmor.length)]);
+                }
+                else {
+                    magicItem = magicItem.replace('armor', armor[rando(armor.length)]);
+                }
             }
         }
         if (magicItem.includes('resistance') && !magicItem.includes('cloak')) {

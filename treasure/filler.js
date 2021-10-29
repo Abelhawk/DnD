@@ -8,7 +8,7 @@ let magicTableBasedOnLevel = magicTableA;
 function generateFiller(lvl) {
   determineMagicItems(lvl);
   let treasure = [];
-  for (let i = 0; i < 3; i++) {
+  for (let i = 0; i < 6; i++) {
     let randomFillerGroup = rando(19);
     // BOOKS AND SCROLLS
     switch (randomFillerGroup) {

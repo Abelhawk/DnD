@@ -122,7 +122,7 @@ let magicTableD = [ //Very Rare consumables
     "spell scroll 7", "ammunition +3", "oil of sharpness", "potion of flying", "potion of cloud giant strength",
     "potion of longevity", "potion of vitality", "spell scroll 8", "horseshoes of a zephyr",
     "Nolzur's marvelous pigments", "bag of holding (devouring)", "portable hole",
-    "reincarnation dust", roll(1, 'd20') + "sling bullets of Althemone",
+    "reincarnation dust", roll(1, 'd20') + " sling bullets of Althemone",
 ];
 
 let magicTableE = [ //Very Rare and Legendary potions
@@ -229,14 +229,18 @@ let ammunition = [
 ];
 
 let armor = [
-    "padded", "leather", "studded leather", "hide", "chain shirt", "scale mail",
-    "breastplate", "half plate", "ring mail", "chain mail", "splint", "plate"
+    "padded armor", "leather armor", "studded leather armor", "hide armor", "chain shirt", "scale mail",
+    "breastplate", "half plate armor", "ring mail", "chain mail", "splint armor", "plate armor"
 ];
 
 let metalArmor = [
-    "chain shirt", "scale mail", "breastplate", "half plate",
-    "ring mail", "chain mail", "splint", "plate"
+    "chain shirt", "scale mail", "breastplate", "half plate armor",
+    "ring mail", "chain mail", "splint armor", "plate armor"
 ];
+
+let highArmors = [
+    "studded leather armor", "half plate armor", "plate armor"
+]
 
 let weapons = [
     "club", "dagger", "greatclub", "handaxe", "javelin", "light hammer", "mace",

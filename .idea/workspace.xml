@@ -5,7 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="495252ce-6aee-4675-83fc-feddd9e07b22" name="Default" comment="Fixed some wording and made it clear how many creatures fail their saving throw.">
-      <change beforePath="$PROJECT_DIR$/treasure/hoard.js" beforeDir="false" afterPath="$PROJECT_DIR$/treasure/hoard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/treasure/filler.js" beforeDir="false" afterPath="$PROJECT_DIR$/treasure/filler.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/treasure/treasure-generator.html" beforeDir="false" afterPath="$PROJECT_DIR$/treasure/treasure-generator.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/treasure/treasure-triggers.js" beforeDir="false" afterPath="$PROJECT_DIR$/treasure/treasure-triggers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/treasure/treasure-types.js" beforeDir="false" afterPath="$PROJECT_DIR$/treasure/treasure-types.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -200,7 +204,7 @@
       <workItem from="1632936259478" duration="2234000" />
       <workItem from="1633017846715" duration="721000" />
       <workItem from="1633034265151" duration="706000" />
-      <workItem from="1635446738049" duration="3564000" />
+      <workItem from="1635446738049" duration="5700000" />
     </task>
     <task id="LOCAL-00001" summary="Fixed some wording and made it clear how many creatures fail their saving throw.">
       <created>1627398829756</created>
