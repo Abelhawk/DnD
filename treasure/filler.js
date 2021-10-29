@@ -390,8 +390,9 @@ function randomGod() {
 }
 
 function randomPainting() {
-  let paintings = ['sunset', 'nobleman', 'noblewoman', 'farm fields',
-    'church building', 'mountain landscape', 'castle',
+  let paintings = ['sunset', 'nobleman', 'noblewoman', 'farm field',
+    'church building', 'mountain landscape', 'castle', 'ship at sea', 'village',
+    'city', 'night sky', 'cat', 'fearsome monster', 'bowl of fruit',
     'lake', 'collage of abstract shapes', 'dog', 'dragon'];
   return randoArray(paintings);
 }
@@ -485,7 +486,8 @@ let junk = ['bandages', 'basket', 'empty wine bottle', 'paintbrush', 'candle',
   'lump of cheese', 'horseshoe', 'empty scroll case', 'half-empty ink bottle',
   'sealing wax', 'waterskin', 'bedroll', 'block of incense', 'censer',
   'bag of sand', 'letter opener', "riding crop", "clay jug", "iron pot",
-  "abacus", "blanket", "block and tackle", 'bucket', 'chalk', 'mess kit', 'old robes',
+  "abacus", "blanket", "block and tackle", 'bucket', 'chalk', 'mess kit',
+  'old robes', 'ceramic idol', 'quilt', 'cushion', 'alembic', 'bellows',
   'old vestments', 'tunic', 'belt', 'boot', 'glove', 'wimple', 'cloth hat',
   'empty sack', "merchant's scale", 'whistle', 'signet ring', 'bit and bridle',
   'bag of horse feed', 'sled', 'holly berries', 'hot pepper',
@@ -500,19 +502,25 @@ let junk = ['bandages', 'basket', 'empty wine bottle', 'paintbrush', 'candle',
   'scrap of cured leather',
   'bottle of distilled spirits', 'divining runes', 'pouch of dried carrot',
   'pouch of eggshells', 'eyeball', 'gum arabic', 'tiny fan', 'feather',
-  'firefly in a jar', "piece o' fleece", 'forked twig', 'pouch of fur', 'piece of gauze',
+  'firefly in a jar', "piece o' fleece", 'forked twig', 'pouch of fur',
+  'piece of gauze',
   "vial o' bile", 'golden wire', 'vial of guano', 'flask of unholy water',
-  'piece of honeycomb', 'sheet of lead', 'leather loop', 'licorice root', 'lodestone',
+  'piece of honeycomb', 'sheet of lead', 'leather loop', 'licorice root',
+  'lodestone',
   'petrified eye of newt', 'phosphorescent moss', 'pickled octopus tentacle',
   'mandrake root', 'runed bones', 'vial of mercury', 'miniature clay hand',
   'sprig of mistletoe', 'vial of molasses', 'moonseeds', 'eye ointment',
   'prayer wheel', 'quill', 'vial of sweet oil', 'pouch of talcum',
   'pouch of tallow', 'vial of umber hulk blood', 'burnt twig',
-  'wychwood branch', 'yew leaf',
+  'wychwood branch', 'yew leaf', 'woad leaf', 'lion pelt', 'yarn ball',
   "red dragon scale", 'pouch of powdered rhubarb leaf', 'pouch of rose petals',
   'pouch of sesame seeds', 'shamrock', 'silver pins', 'silver whistle',
   'pouch of skunk cabbage leaves', 'snake tongue encased in a glass bead',
-  'piece of sponge',
+  'piece of sponge', 'spinning wheel', 'cask of water', 'throw pillows',
+  'funerary urn', 'candlestick', 'brazier', 'skull', 'stuffed monstrosity',
+  'fake coin', 'sketchbook', 'dice', 'kneeling bench', 'footstool',
+    'wind chimes', 'preserved tadpole in a jar', 'gong', 'miniature orrery',
+    'silver spoon', 'silver fork', 'carafe', 'clay bowl', 'clay mug',
 
 ];
 
@@ -531,7 +539,7 @@ let tools = [
   "poisoner's kit", "climber's kit",
   'glass beaker', "metal alchemist's frame", 'mortar and pestle', 'glass jug',
   'siphon', 'tubing', 'saw', 'hammer', roll(1, 'd6') + 1 + 'nails', 'hatchet',
-  "carpenter's square",
+  "carpenter's square", 'hoe', 'oar',
   'ruler', 'adze', 'plane', 'chisel', "charter's compass", 'calipers', 'awl',
   'cutter', 'thread', 'fork', 'spoon', 'ladle', 'hair dye', 'wig',
   'sealing wax', 'gold leaf', 'blowpipe', 'marver', 'block', 'tweezers',
@@ -702,7 +710,8 @@ let components = [
   'jewel-encrusted dagger', 'jeweled horn',
   'ornate stone and metal lockbox', 'magnifying glass',
   'miniature platinum sword', 'platinum-inlaid vial', 'sunburst pendant',
-  'ruby vial', 'gem', 'gem-encased eyeball'
+  'ruby vial', 'gem', 'gem-encased eyeball', 'dragon statuette',
+    'platinum-plated dragon scale', 'dragon engraving'
 ];
 
 let componentDescriptions = [
@@ -714,7 +723,8 @@ let componentDescriptions = [
   '(25 gp)', '(5 gp)', '(5 gp)', '(5 gp)',
   'made of platinum, copper, and zinc. Worth 250 gp.',
   'worth 250 gp. Attuned to ' + randomPlaneOfExistence(),
-  '(5 gp)', 'worth 5,000 gp. Composed of powdered diamond, emerald, ruby, and sapphire.',
+  '(5 gp)',
+  'worth 5,000 gp. Composed of powdered diamond, emerald, ruby, and sapphire.',
   'worth 1,000 gp. Composed of mercury, phosphorus, and powdered diamond and opal.',
   '(1,000 gp)', '(100 gp)', '(1,500 gp)', '(500 gp)', '(500 gp)', '(1,000 gp)',
   '(1,000 gp)', '(200 gp)', '(300 gp)', '(300 gp)', '(400 gp)',
@@ -723,7 +733,7 @@ let componentDescriptions = [
   'the grip and pommel are made of copper and zinc. Worth 250 gp.', '(400 gp)',
   '(100 gp)', 'appears to contain blood. Worth 600 gp.',
   'appears to contain liquid. Worth 300 gp.',
-  '(150 gp)'
+  '(150 gp)', '(500 gp)', '(500 gp)', '(500 gp)'
 ];
 
 let trinkets = [

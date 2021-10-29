@@ -127,7 +127,7 @@ let magicTableD = [ //Very Rare consumables
 
 let magicTableE = [ //Very Rare and Legendary potions
     "spell scroll 8", "potion of storm giant strength", "potion of supreme healing", "spell scroll 9",
-    "universal solvent", "arrow of slaying", "sovereign glue"
+    "universal solvent", "arrow of slaying", "sovereign glue", "potion of dragon's majesty"
 ];
 
 let magicTableF = [ //Uncommon Permanent Items
@@ -147,7 +147,7 @@ let magicTableF = [ //Uncommon Permanent Items
     "stone of good luck", "wind fan", "winged boots", "arcane grimoire +1", "living gloves", "amulet of the devout +1",
     "brooch of living essence", "barrier tattoo (light)", "eldritch claw tattoo", "spellwrought tattoo 2",
     "spellwrought tattoo 3", "moon sickle +1", "all-purpose tool +1", "bloodwell vial +1", "feywild shard",
-    "goggles of object reading", "guardian emblem"
+    "goggles of object reading", "guardian emblem", "dragonhide belt +1", "emerald pen"
 ];
 
 let magicTableG = [ //Rare Permanent Items
@@ -178,7 +178,9 @@ let magicTableG = [ //Rare Permanent Items
     "staff of the ivory claw", "barrier tattoo (medium)", "shadowfell brand tattoo", "spellwrought tattoo 4",
     "spellwrought tattoo 5", "all-purpose tool +2", "astral shard", "atlas of endless horizons", "bell branch",
     "devotee's censer", "elemental essence shard", "far realm shard", "needle of mending", "outer essence shard",
-    "shadowfell shard", "helm of the gods", "molten bronze skin", "two-birds sling"
+    "shadowfell shard", "helm of the gods", "molten bronze skin", "two-birds sling", "crystal blade",
+    "dragonhide belt +2", "dragonwing bow", "dragon's wrath weapon", "dragon-touched focus", "dragon vessel",
+    "scaled ornament"
 ];
 
 let magicTableH = [ //Very Rare Permanent Items
@@ -199,7 +201,8 @@ let magicTableH = [ //Very Rare Permanent Items
     "arcane grimoire +3", "crystalline chronicle", "dispelling stone",
     "rhythm-maker's drum +3", "amulet of the devout +3", "absorbing tattoo of resistance", "barrier tattoo (heavy)",
     "ghost step tattoo", "lifewell tattoo", "arcane cannon", "moon sickle +3", "all-purpose tool +3",
-    "bloodwell vial +3", "cauldron of rebirth", "orb of the veil"
+    "bloodwell vial +3", "cauldron of rebirth", "orb of the veil", "amethyst lodestone",
+    "dragonhide belt +3", 'sapphire buckler'
 ];
 
 let magicTableI = [ //Legendary Items
@@ -214,7 +217,9 @@ let magicTableI = [ //Legendary Items
     "ring of air elemental command", "ring of fire elemental command", "ring of earth elemental command",
     "ring of water elemental command", "ring of three wishes", "sphere of annihilation", "talisman of pure good",
     "talisman of the sphere", "talisman of ultimate evil", "tome of the stilled tongue",
-    "obsidian flint dragon plate", "blood fury tattoo", "nightfall pearl", "pyxis of pandemonium"
+    "obsidian flint dragon plate", "blood fury tattoo", "nightfall pearl", "pyxis of pandemonium",
+    "dragonlance", "flail of Tiamat", "gold canary figurine of wondrous power", 'platinum scarf',
+    'ruby weave gem', 'topaz annihilator'
 ];
 
 //-------------PROPERTIES

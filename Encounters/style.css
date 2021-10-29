@@ -1,6 +1,12 @@
 body {
-    color: #89cb27;
+    color: black;
+    background: #917856;
 }
+
+#lebel, .bold {
+    font-weight: bold;
+}
+
 h1 {
     text-align: center;
     font-family: serif;
@@ -14,16 +20,21 @@ h1 {
 }
 
 button, a {
-    background: #89cb27;
-}
-
-button:hover, a:hover {
+    background: #404040;
     color: white;
 }
 
+a {
+    border: black 1px solid;
+}
+
+button:hover, a:hover {
+    background: #808080;
+}
+
 .generate {
-    color: #89cb27;
-    border: 1px gray solid;
+    color: black;
+    border: 1px #e8bf87 solid;
     width: 70%;
     text-align: center;
     margin: auto;
