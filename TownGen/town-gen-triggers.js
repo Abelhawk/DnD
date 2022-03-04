@@ -135,7 +135,8 @@ function generate() {
 }
 
 function notALocationDefiner(radio) {
-    return (radio.value !== "" && radio.value !== "compounds" && radio.value !== "descriptive" && radio.value !== "XofX")
+    //todo: What is this crap?
+    return (radio.value !== "" && radio.value !== "compounds" && radio.value !== "descriptive" && radio.value !== "XofX" && radio.value !== "possess")
 }
 
 //---------------------
@@ -176,7 +177,8 @@ function plural(str) {
 function isDuplicate(first, biome) {
     let second = randoArray(biome);
     if (first === undefined) {
-        alert("Undefined error! I mean, the variable's undefined, not the error itself.")
+        alert('ERROR CODE: Tourmaline')
+        return;
     }
     if (first === second || second === undefined) {
         isDuplicate(first, biome)

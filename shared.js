@@ -5,7 +5,7 @@ function rando(probability) {
 
 function randoArray(array) {
     if (!array) {
-        console.log('An array was undefined.');
+        alert('ERROR CODE: Garnet')
         return;
     }
     return array[rando(array.length)];
