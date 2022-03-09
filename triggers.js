@@ -568,7 +568,7 @@ function pickRace() {
 
 //-------Utility functions
 
-function plural(race){
+function pluralRace(race){
     let pluralForm;
     switch(race){
         case "dwarf":

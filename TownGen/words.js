@@ -26,7 +26,7 @@ let scary = [
     "pale", "terror", "curse", "lone", "night", "wither",
     "barren", "web", "rot", "vice", "cower", "frigid",
     "strangle", "cowl", "cloak", "hood", "grease", "spider",
-    "shroud", "harrow"
+    "shroud", "harrow", "gallow"
 ];
 
 let danger = [
@@ -126,7 +126,7 @@ let swamp = [
     "mud", "wallow", "slime", "bog", "mire", "moor", "marsh",
     "quag", "holme", "flood", "water", "dark", "shade", "swarm",
     "wood", "vine", "moss", "sink", "drown", "stench", "hive",
-    "murk", "fog", "churn", "burble", "damp", "shadow", "moss",
+    "murk", "fog", "churn", "burble", "damp", "shadow",
     "ooze", "creek", "sludge", "muck", "pond", "slough", "sweat",
     "crane", "log", "snake", "puddle", "seep", "sump", "sluice",
     "pore", "lake", "pit"

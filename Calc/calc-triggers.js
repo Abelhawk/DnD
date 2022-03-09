@@ -22,23 +22,20 @@ function checkResult() {
 
 function calculate() {
     let creatureType = document.getElementById("creatureType").value;
-    console.log(creatureType)
     let numberOfMobs = document.getElementById("numberOfCreatures").value;
     let bonus = document.getElementById("bonus").value;
     bonus = parseInt(bonus) + advantageBonus;
-    console.log(bonus)
     let diffClass = document.getElementById("DC").value;
     let result = document.getElementById("endSentence");
     let damage = document.getElementById("damage").value;
     let attackers = percentageThatHit(diffClass - bonus);
-    console.log(attackers)
     let endResult = Math.floor(attackers * numberOfMobs);
     if (endResult === 0) {
         endResult = 1;
     }
     let text1 = endResult;
     let text2 = 0;
-    if (text1 == numberOfMobs) { // leave it. Type coercion is good
+    if (text1 == numberOfMobs) { // <== leave it. Type coercion is good in this case
         text1 = 'All'
     } else {
         text2 = numberOfMobs - text1;

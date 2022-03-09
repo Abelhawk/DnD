@@ -833,7 +833,7 @@ function aAn(str) {
     return ("a " + str);
 }
 
-function plural(race) {
+function pluralRace(race) {
     let pluralForm = race;
     switch (race) {
         case "dwarf":
