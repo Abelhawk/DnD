@@ -538,7 +538,7 @@ let tools = [
   "horn (instrument)", "pan flute", "shawm", "viol", "navigator's tools",
   "poisoner's kit", "climber's kit",
   'glass beaker', "metal alchemist's frame", 'mortar and pestle', 'glass jug',
-  'siphon', 'tubing', 'saw', 'hammer', roll(1, 'd6') + 1 + 'nails', 'hatchet',
+  'siphon', 'tubing', 'saw', 'hammer', roll(1, 'd6') + 1 + ' nails', 'hatchet',
   "carpenter's square", 'hoe', 'oar',
   'ruler', 'adze', 'plane', 'chisel', "charter's compass", 'calipers', 'awl',
   'cutter', 'thread', 'fork', 'spoon', 'ladle', 'hair dye', 'wig',
