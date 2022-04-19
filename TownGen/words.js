@@ -86,7 +86,7 @@ let grassland = [
     "song", "smar", "haven", "set", "wall", "ton", "brink",
     "bird", "rill", "caster", "staff", "flower", "swan", "bow",
     "cross", "berry", "scarf", "nest", "road", "heather", "wick",
-    "point"
+    "point", "garde", "heim"
 ];
 
 let hills = [
@@ -99,7 +99,7 @@ let hills = [
     "sborough", "warren", "canyon", "summit", "smar", "shire", "set",
     "wall", "ton", "bluff", "horn", "rill", "creek", "caster",
     "ditch", "lichen", "valley", "ram", "banner", "bow", "hold",
-    "cross", "mount", "scalp", "hole", "wick", "castle"
+    "cross", "mount", "scalp", "hole", "wick", "castle", "garde", "heim"
 ];
 
 
@@ -109,7 +109,8 @@ let coastal = [
     "cove", "holme", "sedge", "combe", "fin", "pool", "reef",
     "pebble", "front", "side", "line", "sea", "coast", "drink",
     "sink", "flow", "smar", "wake", "rift", "whale", "gulf",
-    "anchor", "breach", "fog", "mist", "scalp", "cusp"
+    "anchor", "breach", "fog", "mist", "scalp", "cusp", "garde",
+    "heim", "fish"
 ];
 
 let forest = [
@@ -119,7 +120,7 @@ let forest = [
     "cone", "jade", "moss", "web", "meadow", "bark", "branch",
     "wind", "hill", "stump", "wild", "stump", "root", "haven",
     "wall", "ton", "willow", "brink", "taiga", "nettle", "frond",
-    "creeper", "log", "bow", "mantle"
+    "creeper", "log", "bow", "mantle", "garde", "heim", "jungle"
 ];
 
 let swamp = [
@@ -129,7 +130,7 @@ let swamp = [
     "murk", "fog", "churn", "burble", "damp", "shadow",
     "ooze", "creek", "sludge", "muck", "pond", "slough", "sweat",
     "crane", "log", "snake", "puddle", "seep", "sump", "sluice",
-    "pore", "lake", "pit"
+    "pore", "lake", "pit", "garde", "heim"
 ];
 
 let arctic = [
@@ -138,7 +139,7 @@ let arctic = [
     "glacier", "sleet", "snap", "cut", "shiver", "thaw", "flake",
     "tundra", "grasp", "glass", "cap", "bear", "cold", "frore",
     "hoof", "way", "drift", "bone", "shroud", "mist", "fathom",
-    "fork", "rime"
+    "fork", "rime", "garde", "heim"
 ];
 
 let desert = [
@@ -148,7 +149,7 @@ let desert = [
     "burn", "grit", "chalk", "salt", "cavern", "quartz", "gravel",
     "powder", "ditch", "rock", "wither", "cactus", "melt", "claw",
     "drought", "spit", "sweat", "burn", "lurch", "locust", "fossil",
-    "cloud", "swarm", "lichen", "lizard", "spice"
+    "cloud", "swarm", "lichen", "lizard", "spice", "garde", "heim"
 ];
 
 //-------------------------------------------------------------------------------------------------
@@ -160,11 +161,12 @@ let compound = [
     "river", "mill", "thicket", "point", "pass",
     "quarry", "crossing", "landing", "monastery",
     "hill", "keep", "fields", "grotto", "cove",
-    "hollow", "fort", "acres", "den", "woods",
+    "hollow", "acres", "den", "woods",
     "wastes", "depths", "tower", "tunnels",
     "alley", "bog", "crossroads", "pits", "arch",
     "estate", "dam", "canal", "crater", "steppes",
-    "road", "warren", "tillage", "greenway", "way"
+    "road", "warren", "tillage", "greenway", "way",
+    "point", "expanse"
 ];
 
 let landmarks = [
@@ -176,14 +178,14 @@ let landmarks = [
     "jungle", "prairie", "caldera", "hinterlands", "plains", "vineyards",
     "basin", "plateau", "gully", "gorge", "bluff", "ravine", "knoll",
     "trench", "geyser", "foothills", "creek", "trail", "tree", "oak", "orchards",
-    "stables", "meadows", "vineyards"
+    "stables", "meadows", "vineyards", "crown", "lands"
 ];
 
 let coastalMarks = [
     "island", "shore", "beach", "strand", "bay", "lagoon", "coast",
     "reef", "docks", "port", "cay", "cliffs", "front", "bank",
     "archipelago", "peninsula", "sandbar", "cove", "gulf", "isle",
-    "isthmus", "shoal", "strait", "cape", "lighthouse", "waterfront"
+    "isthmus", "shoal", "strait", "cape", "lighthouse", "waterfront",
 ];
 
 let swampMarks = [
@@ -223,5 +225,8 @@ let numbers = [
 ];
 
 let possessives = [
-    "old man's", "dead man's", "lover's",
+    "old man's", "dead man's", "lover's", "sage's", "charlatan's", "criminal's", "soldier's", "priest's",
+    "druid's", "hero's", "noble's", "outlander's,", "sailor's", "urchin's", "wayfarer's", "traveler's",
+    "journeyman's", "gambler's", "merchant's", "tradesman's", "hermit's", "veteran's", "pirate's",
+    "smuggler's", "hag's",
 ]
