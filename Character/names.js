@@ -38,7 +38,7 @@ let maleHuman = [
     "Adam", "Adelard", "Aldous", "Anselm", "Arnold", "Archibald", "August",
     "Bernard", "Bertram", "Charles", "Clerebold", "Conrad", "Alaric",
     "Diggory", "Drogo", "Everard", "Frederick", "Geoffrey", "Alban",
-    "Gerald", "Gilbert", "Godfrey", "Gunter", "Guy", "Baldwin",
+    "Gerald", "Ilbert", "Godfrey", "Gunter", "Guy", "Baldwin",
     "Henry", "Heward", "Hubert", "Hugh", "Jocelyn", "Barnaby",
     "John", "Lance", "Manfred", "Miles", "Nicholas", "Bartholomew",
     "Norman", "Odo", "Percival", "Peter", "Ralf", "Randal", "Godric",

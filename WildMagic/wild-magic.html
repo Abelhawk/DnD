@@ -1,78 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Town and Place Generator</title>
-    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"
-            integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ"
-            crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="../general.css">
-    <link rel="icon" href="../goblin.ico">
-    <script src="words.js" defer></script>
-    <script src="town-gen-triggers.js" defer></script>
-    <script src="../shared.js" defer></script>
-    <script src="../Character/names.js" defer></script>
-    <script src="../Character/character-triggers.js" defer></script>
+  <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wild Magic Surge Checker</title>
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"
+          integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ"
+          crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="../general.css">
+  <link rel="icon" href="../goblin.ico">
+  <script src="wild-magic-triggers.js" defer></script>
+  <script src="../shared.js" defer></script>
 
 </head>
 <body onload="refreshPage()">
-<h1>Town and Place Generator</h1>
+<h1>Wild Magic Surge Checker</h1>
 <div class="container">
-    <div class="two-columns">
-        <div class="left">
-            <form>
-                <div class="choices">
-                    <label for="grassland">Grassland</label>
-                    <input type="radio" id="grassland" name="biome" value="grassland" checked><br>
-                    <label for="hills">Hills</label>
-                    <input type="radio" id="hills" name="biome" value="hills"><br>
-                    <label for="forest">Forest</label>
-                    <input type="radio" id="forest" name="biome" value="forest"><br>
-                    <label for="desert">Desert</label>
-                    <input type="radio" id="desert" name="biome" value="desert"><br>
-                    <label for="arctic">Arctic</label>
-                    <input type="radio" id="arctic" name="biome" value="arctic"><br>
-                    <label for="coastal">Coastal</label>
-                    <input type="radio" id="coastal" name="biome" value="coastal"><br>
-                    <label for="swamp">Swamp</label>
-                    <input type="radio" id="swamp" name="biome" value="swamp"><br>
-                    <label for="urban">Urban</label>
-                    <input type="radio" id="urban" name="biome" value="urban"><br>
-                </div>
-            </form>
-        </div>
-        <form>
-            <div class="right">
-                <label for="peaceful">Peaceful: </label>
-                <input type="checkbox" id="peaceful" value="peaceful" checked><br>
-                <label for="dangerous">Dangerous: </label>
-                <input type="checkbox" id="dangerous" value="dangerous"><br>
-                <label for="scary">Scary: </label>
-                <input type="checkbox" id="scary" value="scary"><br>
-                <label for="natural">Natural: </label>
-                <input type="checkbox" id="natural" value="natural"><br><br>
-                <form>
-                    <label for="vanilla">Location: </label>
-                    <input type="radio" id="vanilla" name="nameType" value="" checked><br>
-                    <label for="compounds">Landmark: </label>
-                    <input type="radio" id="compounds" name="nameType" value="compounds"><br>
-                    <label for="descriptive">Descriptive: </label>
-                    <input type="radio" id="descriptive" name="nameType" value="descriptive"><br>
-                    <label for="XofX">Mystical: </label>
-                    <input type="radio" id="XofX" name="nameType" value="XofX"><br>
-                    <label for="XofX">Possessive: </label>
-                    <input type="radio" id="possess" name="nameType" value="possess">
-                </form>
-            </div>
-        </form>
-    </div>
-    <img id="loading" src="../DistractingGoblin.gif" title="Loading...">
-    <button id="buttonbutton" type="submit" style="display:none" onclick="activate()">Generate!</button>
+  <p>Once per turn, immediately after a wild magic sorcerer casts a spell of 1st level or higher,
+    you can click the button below to check for a Wild Magic Surge. If that effect is a spell, it is
+    too wild to be affected by the sorcerer's Metamagic, and if it
+    normally requires concentration, it doesn’t require concentration in this case; the spell lasts
+    for its full duration.</p>
+  <img id="loading" alt="Distracting!" src="../DistractingGoblin.gif" title="Loading...">
+  <button id="buttonbutton" type="submit" style="display:none" onclick="activate()">Check!
+  </button>
+  <div id="generate"></div>
 </div>
-
-<div class="generate"></div>
 <div class="container"><a class="back-button" href="../index.html">Back</a></div>
 </body>
 </html>

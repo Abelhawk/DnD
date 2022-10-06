@@ -568,9 +568,9 @@ let supplies = [
   'holy amulet symbol of ' + randomGod(), 'arcane orb',
   'arcane rod', 'wooden staff', 'metal staff', 'wand', 'sprig of mistletoe',
   'totem', 'yew wand', 'holy emblem of ' + randomGod(),
-  'reliquary of ' + randomGod(),
-  'key', 'saddle', 'griffin saddle', 'pegasus saddle', 'dire wolf saddle',
-  'gold bar', 'silver bar', 'copper bar'
+  'reliquary of ' + randomGod(), 'military saddle', 'riding saddle',
+  'key', 'pack saddle', 'griffin saddle', 'pegasus saddle', 'dire wolf saddle',
+  'gold bar', 'silver bar', 'copper bar', 'saddlebags'
 ];
 
 let mundaneGear = [

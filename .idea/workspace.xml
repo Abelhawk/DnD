@@ -6,10 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="495252ce-6aee-4675-83fc-feddd9e07b22" name="Default" comment="Fixed some wording and made it clear how many creatures fail their saving throw.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Encounters/biomes/arctic.js" beforeDir="false" afterPath="$PROJECT_DIR$/Encounters/biomes/arctic.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Encounters/encounter-tables.js" beforeDir="false" afterPath="$PROJECT_DIR$/Encounters/encounter-tables.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Encounters/encounter-triggers.js" beforeDir="false" afterPath="$PROJECT_DIR$/Encounters/encounter-triggers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WildMagic/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/WildMagic/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WildMagic/wild-magic-triggers.js" beforeDir="false" afterPath="$PROJECT_DIR$/WildMagic/wild-magic-triggers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WildMagic/wild-magic.html" beforeDir="false" afterPath="$PROJECT_DIR$/WildMagic/wild-magic.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/treasure/filler.js" beforeDir="false" afterPath="$PROJECT_DIR$/treasure/filler.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/treasure/treasure-generator.html" beforeDir="false" afterPath="$PROJECT_DIR$/treasure/treasure-generator.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/treasure/treasure-triggers.js" beforeDir="false" afterPath="$PROJECT_DIR$/treasure/treasure-triggers.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/treasure/treasure-types.js" beforeDir="false" afterPath="$PROJECT_DIR$/treasure/treasure-types.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,7 +63,7 @@
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552511004634" />
     <property name="javascript.nodejs.core.library.configured.version" value="14.17.1" />
     <property name="javascript.nodejs.core.library.typings.version" value="14.17.1" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Encounters" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/WildMagic" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.prettier" value="true" />
@@ -81,6 +84,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Development\DnD\WildMagic" />
       <recent name="C:\Users\sg0311929\IdeaProjects\DnD\Encounters" />
       <recent name="C:\Users\sg0311929\IdeaProjects\DnD" />
       <recent name="C:\Users\i25286\IdeaProjects\DnD" />
@@ -204,7 +208,19 @@
       <workItem from="1632936259478" duration="2234000" />
       <workItem from="1633017846715" duration="721000" />
       <workItem from="1633034265151" duration="706000" />
-      <workItem from="1635446738049" duration="5700000" />
+      <workItem from="1635446738049" duration="5932000" />
+      <workItem from="1639431306412" duration="447000" />
+      <workItem from="1639431806030" duration="856000" />
+      <workItem from="1639432764292" duration="502000" />
+      <workItem from="1641224164652" duration="202000" />
+      <workItem from="1644873281915" duration="1727000" />
+      <workItem from="1644876352800" duration="529000" />
+      <workItem from="1646406416465" duration="2011000" />
+      <workItem from="1646836474929" duration="5294000" />
+      <workItem from="1649438579567" duration="703000" />
+      <workItem from="1650294325956" duration="1299000" />
+      <workItem from="1650379786027" duration="2216000" />
+      <workItem from="1654183987453" duration="698000" />
     </task>
     <task id="LOCAL-00001" summary="Fixed some wording and made it clear how many creatures fail their saving throw.">
       <created>1627398829756</created>

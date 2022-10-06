@@ -97,9 +97,9 @@ let hills = [
     "spear", "shield", "dale", "cleft", "notch", "forge",
     "tower", "guard", "garde", "burg", "grad", "sbrad", "ville",
     "sborough", "warren", "canyon", "summit", "smar", "shire", "set",
-    "wall", "ton", "bluff", "horn", "rill", "creek", "caster",
+    "wall", "ton", "bluff", "horn", "rill", "creek", "caster", "cott",
     "ditch", "lichen", "valley", "ram", "banner", "bow", "hold",
-    "cross", "mount", "scalp", "hole", "wick", "castle", "garde", "heim"
+    "cross", "mount", "scalp", "hole", "wick", "castle", "garde", "heim",
 ];
 
 
