@@ -228,5 +228,5 @@ let possessives = [
     "old man's", "dead man's", "lover's", "sage's", "charlatan's", "criminal's", "soldier's", "priest's",
     "druid's", "hero's", "noble's", "outlander's,", "sailor's", "urchin's", "wayfarer's", "traveler's",
     "journeyman's", "gambler's", "merchant's", "tradesman's", "hermit's", "veteran's", "pirate's",
-    "smuggler's", "hag's",
+    "smuggler's", "hag's", "coward's", "pilgrim's"
 ]
