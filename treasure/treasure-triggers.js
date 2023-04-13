@@ -354,7 +354,6 @@ function generateWares(check) {
                 magicItem = magicItem.replace('armor', metalArmor[rando(metalArmor.length)]);
             } else {
                 if (magicItem.includes('+')) {
-                    alert(magicItem)
                     magicItem = magicItem.replace('armor', highArmors[rando(metalArmor.length)]);
                 }
                 else {

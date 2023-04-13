@@ -7,7 +7,8 @@
 let aarakocraNames = [
     "Aera", "Aial", "Aur", "Deekek", "Errk",
     "Heehk", "Ikki", "Kleeck", "Oorr", "Ouss",
-    "Quaf", "Quierk", "Salleek", "Urreek", "Zeed"
+    "Quaf", "Quierk", "Salleek", "Urreek", "Zeed",
+    "Jarnathan"
 ];
 
 //------------Goliaths---------------
@@ -293,7 +294,8 @@ let maleHalfling = [
     "Callen", "Corey", "Desmond", "Donovan", "Finnegan",
     "Galvin", "Farrell", "Grady", "Kellan", "Finn",
     "Cody", "Noland", "Quinn", "Rory", "Seamus", "Ryan",
-    "Curtis", "Wallace", "Otto", "Quentin"
+    "Curtis", "Wallace", "Otto", "Quentin", "Chance",
+    "Yarrow", "Dewis", "Strap", "Blovo"
 ];
 
 let femaleHalfling = [
@@ -312,7 +314,8 @@ let femaleHalfling = [
     "Briley", "Caitlyn", "Corentine", "Bridgit", "Dierdre",
     "Faylinn", "Kathleen", "Keitha", "Kelsey", "Mab",
     "Morrigan", "Kiley", "Muriel", "Riona", "Una", "Gisela",
-    "Mirabel", "Petra", "Savia"
+    "Mirabel", "Petra", "Savia", "Linseed", "Daffodil",
+    "Nori"
 ];
 
 let halflingFamily = [
@@ -326,7 +329,8 @@ let halflingFamily = [
     "Stonebridge", "Stoutbridge", "Stoutman", "Strongbones", "Sunmeadow",
     "Swiftwhistle", "Tallfellow", "Tealeaf", "Tennpenny", "Thistletop",
     "Thorngage", "Tosscobble", "Underbough", "Underfoot",
-    "Warmwater", "Whispermouse", "Wildcloak", "Wildheart", "Wiseacre"
+    "Warmwater", "Whispermouse", "Wildcloak", "Wildheart", "Wiseacre",
+    "Brightapple", "Proudfellow", "Burrows"
 
 ];
 

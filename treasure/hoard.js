@@ -5,10 +5,9 @@ function generateHoard(lvl) {
   let randMag;
   switch (true) {
     case (lvl <= 4):
-      treasure.push(numberWithCommas((roll(6, "d6") * 100) + " copper pieces"));
-      treasure.push(numberWithCommas((roll(3, "d6") * 100) + " silver pieces"));
-      treasure.push(numberWithCommas((roll(2, "d6") * 100) + " gold pieces"));
-
+      treasure.push(rollTreasure(6, "d6", 100) + " copper pieces");
+      treasure.push(rollTreasure(3, "d6", 100) + " silver pieces");
+      treasure.push(rollTreasure(2, "d6", 100) + " gold pieces");
       switch (true) {
         case (randomNumber <= 6):
           //You get NOTHING! You LOSE! Good DAY, sir!
@@ -126,10 +125,10 @@ function generateHoard(lvl) {
       }
       break;
     case (lvl <= 10):
-      treasure.push(numberWithCommas((roll(2, "d6") * 100) + " copper pieces"));
-      treasure.push(numberWithCommas((roll(2, "d6") * 1000) + " silver pieces"));
-      treasure.push(numberWithCommas((roll(6, "d6") * 100) + " gold pieces"));
-      treasure.push(numberWithCommas((roll(3, "d6") * 10) + " platinum pieces"));
+      treasure.push(rollTreasure(2, "d6", 100) + " copper pieces");
+      treasure.push(rollTreasure(2, "d6", 1000) + " silver pieces");
+      treasure.push(rollTreasure(6, "d6", 100) + " gold pieces");
+      treasure.push(rollTreasure(3, "d6", 10) + " platinum pieces");
       switch (true) {
         case (randomNumber <= 4):
           //You get NOTHING! You LOSE! Good DAY, sir!
@@ -327,8 +326,8 @@ function generateHoard(lvl) {
       }
       break;
     case (lvl <= 16):
-      treasure.push(numberWithCommas((roll(4, "d6") * 1000) + " gold pieces"));
-      treasure.push(numberWithCommas((roll(5, "d6") * 100) + " platinum pieces"));
+      treasure.push(rollTreasure(4, "d6", 1000) + " gold pieces");
+      treasure.push(rollTreasure(5, "d6", 100) + " platinum pieces");
       switch (true) {
         case (randomNumber <= 3):
           //You get NOTHING! You LOSE! Good DAY, sir!
@@ -573,8 +572,8 @@ function generateHoard(lvl) {
       }
       break;
     case (lvl >= 17):
-      treasure.push(numberWithCommas(roll((12, "d6") * 1000) + " gold pieces"));
-      treasure.push(numberWithCommas(roll((8, "d6") * 1000) + " platinum pieces"));
+      treasure.push(rollTreasure(12, "d6", 1000) + " gold pieces");
+      treasure.push(rollTreasure(8, "d6", 1000) + " platinum pieces");
       switch (true) {
         case (randomNumber <= 2):
           //You get NOTHING! You LOSE! Good DAY, sir!

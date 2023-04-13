@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abelhawk's NPC Generator</title>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"
+            integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ"
+            crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Cinzel:700|Roboto+Condensed" rel="stylesheet">
+    <link rel="stylesheet" href="../general.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="../goblin.ico">
+    <script src="../Character/npc-triggers.js" defer></script>
+    <script src="../Character/names.js" defer></script>
+    <script src="../shared.js" defer></script>
+</head>
+<body onload="loadPage()">
+<h1>NPC Creator</h1>
+<div class="container">
+    <p id="welcome">Choose any of the options below to begin NPC
+        creation.
+        <div class="form" id="characterForm">
+            <div class="field">
+                <span class="label">Name: </span>
+                <input id="name">
+            </div>
+            <div class="field">
+                <span class="label">Gender: </span>
+                <select id="gender">
+                    <option value="randomGender">(random)</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                </select>
+            </div>
+
+            <div class="field">
+                <label for="race" class="label">Race: </label>
+                <select id="race">
+                    <option value="randomRace">(random)</option>
+                </select>
+            </div>
+
+            <div class="field" id="subRaceField">
+                <label for="subRace" class="label">Subrace: </label>
+                <select id="subRace">
+                    <!-- HIDDEN -->
+                    <option value="randomSubRace">(random)</option>
+                </select>
+            </div>
+        </div>
+    <img id="loading" src="../DistractingGoblin.gif" title="Loading...">
+    <button id="characterButton" style="display:none" onclick="proceed()">Generate NPC</button>
+    <div class="generate" id="nameGenerate">
+        <span class="character-name" id="charName"></span><br>
+        <span class="character-sub-info" id="charClass"></span>
+    </div>
+</div>
+<a class="back-button" href="../index.html">Back</a>
+</body>
+</html>
