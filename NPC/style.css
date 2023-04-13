@@ -1,0 +1,101 @@
+body {
+    color: #41dff4;
+}
+
+button, a {
+    background-color: #41dff4;
+}
+
+select,
+input {
+    border: 1px black solid;
+    font-size: 10pt;
+}
+
+select {
+    margin: 5px 0;
+}
+
+.character-name {
+    font-size: 40px;
+    font-weight: lighter;
+    font-family: 'Cinzel', serif;
+}
+
+.character-sub-info {
+    font-style: italic;
+    color: #41dff4;
+}
+
+.generate {
+    color: white;
+}
+
+.label {
+    color: #DDB783;
+}
+
+.field {
+    width: 100%;
+}
+
+#subRaceField,
+#domainField,
+#patronField,
+#originField,
+#backstoryButton,
+#familyButton,
+#appearanceButton,
+#familyGenerate {
+    display: none;
+}
+
+#welcome,
+.guide {
+    text-align: center;
+    font-style: italic;
+    font-size: 11pt;
+    user-select: none;
+}
+
+.proceed {
+    visibility: hidden;
+}
+
+.information {
+    width: 50%;
+    margin: auto auto 40px auto;
+}
+
+#loading {
+    width: 200px;
+    margin: auto;
+}
+
+#loader {
+    border-bottom: 11px solid #41dff4;
+    border-top: 11px solid #f3f3f3;
+    border-radius: 50%;
+    width: 45px;
+    height: 50px;
+    animation: spin .6s linear infinite;
+    margin: auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Mobile */
+@media only screen and (max-width: 700px) {
+    #welcome {
+        display: none;
+    }
+    .character-name {
+        font-size: 25px;
+    }
+    .character-sub-info {
+        font-size: 13px;
+    }
+}

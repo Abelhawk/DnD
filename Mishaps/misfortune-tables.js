@@ -1,5 +1,5 @@
 let wildMagicTable = [
-    "Press this button at the start of each of your turns for the next minute, ignoring this result on subsequent occurrences.",
+    "Press the Wild Surge button at the start of each of your turns for the next minute, ignoring this result on subsequent occurrences.",
     `You lose concentration on any spells you are concentrating on, and an <span class="italic">antimagic field</span> occupies your space for the next minute.`,
     "For the next minute, you can see any invisible creature if you have line of sight to it.",
     "All of your teeth fall out of your mouth, and slowly regrow over 10 minutes",
@@ -86,7 +86,7 @@ let wildMagicTable = [
     `You cast <span class="italic">mirror image</span>.`,
     "You become petrified into a gold statue for XX8 rounds.",
     `You cast <span class="italic">fly</span> on a random creature within 60 feet of you.`,
-    "You change sex and your appearance changes to reflect the corresponding gender of a typical member of your race. At the end of each long rest, you can choose to make a DC 15 Charisma saving throw. On a success, your sex reverts back, along with your appearance.",
+    "You change sex and your appearance changes to reflect the corresponding gender of a typical member of your race. After you complete a long rest, your sex reverts back, along with your appearance.",
     "You become invisible for the next minute. During that time, other creatures can’t hear you. The invisibility ends if you attack or cast a spell.",
     "A coil of 50 feet of hempen rope immediately appears and ties you up. You are restrained. A creature can break the ropes by dealing 5 slashing or fire damage to them or by succeeding on a DC 11 (Strength) Athletics check. You can also escape with a successful DC 11 Dexterity (Acrobatics) check. The ropes disappears after 24 hours.",
     `If you die within the next hour, you immediately come back to life as if by the <span class="italic">reincarnate</span> spell.`,
