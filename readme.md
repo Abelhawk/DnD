@@ -90,14 +90,15 @@ they use a cursed item, touch a trap, or mess with a sibriex.
 * Lingering injuries are customizable by damage type
 * Or you can just generate a completely random misfortune!
 
-## Known Bugs
+## Planned Features
 
-* Character Creator doesn't really work at all beyond generating a name, and even then the interface
-  is clunky
+* Replace the Character Creator with an "NPC Creator" that generates quirks and appearance in addition to name.
+* Improve Loot Generator to group duplicates together. You know, like "2 x potion of longevity"
+* Make an Encounter Generator, complete with a random theater-of-the-mind map, creatures, maybe even a description to introduce it and everything. Gonna take a whole lotta work though.
 
 ## Versioning
 
-Version 0.8
+Version 0.9
 
 ## Authors
 
@@ -105,7 +106,7 @@ Version 0.8
 
 ## Acknowledgments
 
-* Thanks to Blizzard Entertainment for inspiration on the naming technique
+* Thanks to Blizzard Entertainment for inspiration on the place naming technique
 * Obviously thanks to Wizards of the Coast for D&D in general
 * *Xanathar's Guide to Everything* was a huge help in randomizing and generating the character
   tables

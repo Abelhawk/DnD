@@ -407,10 +407,12 @@ function randomBookTitle() {
 function randomTrade() {
   let trades = [
     'armor making', 'astrology', 'exotic flora', 'exotic fauna', 'herbalism',
-    'mathematics', 'masonry', 'medicine',
+    'mathematics', 'masonry', 'medicine', 'pottery', 'jewelcrafting',
     'carpentry', 'theology', 'brewing', 'cartography', 'leatherworking',
-    'painting', 'blacksmithing', 'weapon repair',
-    'pottery', 'woodcarving', 'dragon chess', 'philosophy'
+    'painting', 'blacksmithing', 'weapon repair', 'tailoring', 'thatching',
+    'cookery', 'woodcarving', 'dragon chess', 'philosophy', 'farming',
+    'shoe-making', 'butchery', 'skinning', 'beekeeping', 'weaving',
+    'cookery', 
   ];
   return randoArray(trades);
 }
@@ -423,8 +425,7 @@ function randomCreatureType() {
     'storm giants', 'cloud giants', 'fire giants', 'stone giants', 'dwarves',
     'aarakocra', 'elves', 'gnolls', 'yuan-ti', 'xvarts', 'kobolds', 'humans',
     'troglodytes', 'tortles', 'thri-kreen', 'drow', 'sahuagins', 'quaggoths',
-    'orcs',
-    'goblins', 'hobgoblins', 'bugbears', 'nagpas', 'merfolk', 'tritons',
+    'orcs', 'goblins', 'hobgoblins', 'bugbears', 'nagpas', 'merfolk', 'tritons',
     'meazels', 'lizardfolk', 'kuo-toa', 'kenku', 'grung', 'grimlocks', 'gith',
     'firenewts', 'duergar', 'svirfneblin', 'gnomes', 'tieflings', 'aasimar',
     'dragonborn', 'derro', 'bullywugs', 'myconids', 'vampires', 'lycanthropes',
@@ -491,15 +492,15 @@ let junk = ['bandages', 'basket', 'empty wine bottle', 'paintbrush', 'candle',
   'old vestments', 'tunic', 'belt', 'boot', 'glove', 'wimple', 'cloth hat',
   'empty sack', "merchant's scale", 'whistle', 'signet ring', 'bit and bridle',
   'bag of horse feed', 'sled', 'holly berries', 'hot pepper',
-  'vial of iron filings',
+  'vial of iron filings', 'candle snuffer', 'potted plant',
   "adder's stomach", 'glass rod', 'amber rod', 'crystal rod',
   'square of black silk', 'vial of blood', 'glass eye', 'glowworm', 'sunstone',
   'pouch of sulfur', 'lump of butter', 'caterpillar cocoon',
   'chrysolite powder', 'clay ball', 'clay ziggurat model', 'clay pot of dirt',
-  'white strip of cloth',
+  'white strip of cloth', 'kettle',
   'lump of coal', 'pouch of colored sand', 'copper wire', 'cork',
   'pouch of powdered corn', 'dead cricket', 'crystal bead', 'glass cone',
-  'scrap of cured leather',
+  'scrap of cured leather', 'prism', 'pouch of glass beads',
   'bottle of distilled spirits', 'divining runes', 'pouch of dried carrot',
   'pouch of eggshells', 'eyeball', 'gum arabic', 'tiny fan', 'feather',
   'firefly in a jar', "piece o' fleece", 'forked twig', 'pouch of fur',
@@ -520,7 +521,8 @@ let junk = ['bandages', 'basket', 'empty wine bottle', 'paintbrush', 'candle',
   'funerary urn', 'candlestick', 'brazier', 'skull', 'stuffed monstrosity',
   'fake coin', 'sketchbook', 'dice', 'kneeling bench', 'footstool',
     'wind chimes', 'preserved tadpole in a jar', 'gong', 'miniature orrery',
-    'silver spoon', 'silver fork', 'carafe', 'clay bowl', 'clay mug',
+    'silver spoon', 'silver fork', 'carafe', 'clay bowl', 'clay mug', 'shaving-knife',
+    "rabbit's ear", "rabbit's foot", 'talisman', 
 
 ];
 
