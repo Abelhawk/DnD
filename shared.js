@@ -13,7 +13,7 @@ function randoArray(array) {
 
 function capitalize(str) {
     if (!str) {
-        alert ('ERROR CODE: Ruby')
+        alert('ERROR CODE: Ruby')
     }
     return str.replace(/\w\S*/g, function (txt) {
         return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
@@ -34,31 +34,47 @@ function aAn(str) {
 }
 
 function roll(number, dice) {
+    let diceType = 1;
     switch (dice) {
+        case "d2":
+            diceType = 2;
+            break;
         case "d3":
-            return ((rando(3) + 1) * number);
+            diceType = 3;
+            break;
         case "d4":
-            return ((rando(4) + 1) * number);
+            diceType = 4;
+            break;
         case "d6":
-            return ((rando(6) + 1) * number);
+            diceType = 6;
+            break;
         case "d8":
-            return ((rando(8) + 1) * number);
+            diceType = 8;
+            break;
         case "d10":
-            return ((rando(10) + 1) * number);
+            diceType = 10;
+            break;
         case "d12":
-            return ((rando(12) + 1) * number);
+            diceType = 12;
+            break;
         case "d20":
-            return ((rando(20) + 1) * number);
+            diceType = 20;
+            break;
         case "d100":
-            return ((rando(100) + 1));
+            diceType = 100;
     }
+    let totalRoll = 0;
+    for (let i = 0; i < number; i++) {
+        totalRoll += ((rando(diceType) + 1));
+    }
+    return totalRoll;
 }
 
 function plural(str) {
     if (!str) {
         alert('ERROR CODE: Sapphire')
     }
-    let secondToLast = str.charAt(str.length-2);
+    let secondToLast = str.charAt(str.length - 2);
     switch (str.substr(-1)) {
         case 's':
             if (secondToLast !== 's') {

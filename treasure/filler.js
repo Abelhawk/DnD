@@ -846,22 +846,40 @@ let trinkets = [
 //DUPLICATE BECAUSE SCREW GOOD CODING PRACTICES
 
 function roll(number, dice) {
+  let diceType = 1;
   switch (dice) {
-    case "d4":
-      return ((rando(4) + 1) * number);
-    case "d6":
-      return ((rando(6) + 1) * number);
-    case "d8":
-      return ((rando(8) + 1) * number);
-    case "d10":
-      return ((rando(10) + 1) * number);
-    case "d12":
-      return ((rando(12) + 1) * number);
-    case "d20":
-      return ((rando(20) + 1) * number);
-    case "d100":
-      return ((rando(100) + 1));
+      case "d2":
+          diceType = 2;
+          break;
+      case "d3":
+          diceType = 3;
+          break;
+      case "d4":
+          diceType = 4;
+          break;
+      case "d6":
+          diceType = 6;
+          break;
+      case "d8":
+          diceType = 8;
+          break;
+      case "d10":
+          diceType = 10;
+          break;
+      case "d12":
+          diceType = 12;
+          break;
+      case "d20":
+          diceType = 20;
+          break;
+      case "d100":
+          diceType = 100;
   }
+  let totalRoll = 0;
+  for (let i = 0; i < number; i++) {
+      totalRoll += ((rando(diceType) + 1));
+  }
+  return totalRoll;
 }
 
 function rando(probability) {

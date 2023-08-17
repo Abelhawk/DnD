@@ -458,28 +458,41 @@ function generateWares(check) {
     }
 
     function rollTreasure(number, dice, multiplier) {
-        let result;
+        let diceType = 1;
         if (!multiplier) multiplier = 1;
         switch (dice) {
+            case "d2":
+                diceType = 2;
+                break;
+            case "d3":
+                diceType = 3;
+                break;
             case "d4":
-                result = (rando(4) * number) + 1;
+                diceType = 4;
                 break;
             case "d6":
-                result = (rando(6) * number) + 1;
+                diceType = 6;
                 break;
             case "d8":
-                result = (rando(8) * number) + 1;
+                diceType = 8;
                 break;
             case "d10":
-                result = (rando(10) * number) + 1;
+                diceType = 10;
                 break;
             case "d12":
-                result = (rando(12) * number) + 1;
+                diceType = 12;
+                break;
+            case "d20":
+                diceType = 20;
                 break;
             case "d100":
-                result = (rando(100)) + 1;
+                diceType = 100;
         }
-        return numberWithCommas(result * multiplier)
+        let totalRoll = 0;
+        for (let i = 0; i < number; i++) {
+            totalRoll += ((rando(diceType) + 1));
+        }
+        return numberWithCommas(totalRoll * multiplier)
     }
 
     function numberWithCommas(x) {
