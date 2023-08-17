@@ -141,8 +141,6 @@ function lingeringInjury(dmg) {
     let injuryCure;
     let num = roll(1, 'd20');
     let injury = num;
-    console.log(num)
-    console.log(injury)
     switch (damageType) {
         case 'acid':
             injury = findObject(num, LIAcid);

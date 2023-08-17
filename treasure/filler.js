@@ -527,7 +527,6 @@ let junk = ['bandages', 'basket', 'empty wine bottle', 'paintbrush', 'candle',
 ];
 
 let tools = [
-  //Change to specific tools in Xanathar's Guide? Or just add, maybe. Yeah.
   "alchemist's supplies", "brewer's supplies", "calligrapher's supplies",
   "carpenter's supplies", "cartographer's supplies", "cobbler's tools",
   "cook's utensils", "glassblower's tools", "jeweler's tools",
@@ -686,8 +685,7 @@ function isConsumable(item) {
     return false;
   }
   let consumables = ['potion', 'scroll', 'beans', 'dust', 'philter', 'bead',
-    'manual',
-    'solvent', 'sovereign', 'tome', 'oil', 'elixir'
+    'manual', 'solvent', 'sovereign', 'tome', 'oil', 'elixir', 'arrow', 'bullet'
   ];
   for (let i = 0; i < consumables.length; i++) {
     if (item.includes(consumables[i])) {

@@ -237,270 +237,272 @@ function generateWares(check) {
     let treasure = [];
     let duplicates = [];
     let rollTimes = roll(1, 'd4');
+    let cost = 100;
     if (check <= 5) {
         rollTimes = roll(1, 'd6');
         for (let i = 0; i < rollTimes; i++) {
-            let costA = (roll(1, 'd6') + 1) * 10;
-            let treasureA = getMagicItem("table A");
+            cost = (roll(1, 'd6') + 1) * 10;
+            let treasureA = getMagicItem("table A"); // Common items
             if (isConsumable(treasureA)) {
-                i--;
-                continue;
+                cost = cost / 2;
             }
-            costA = numberWithCommas(costA);
+            cost = numberWithCommas(cost);
             if (!duplicates.includes(treasureA)) {
                 duplicates.push(treasureA);
-                treasure.push(treasureA + ' - ' + costA + " gp");
+                treasure.push(treasureA + ' - ' + cost + " gp");
             }
         }
     }
     else
         if (check <= 10) {
             for (let i = 0; i < rollTimes; i++) {
-                let costB = roll(1, 'd6') * 100;
-                let treasureB = getMagicItem('table B');
+                cost = roll(1, 'd6') * 100;
+                let treasureB = getMagicItem('table B'); //Uncommon consumables
                 if (isConsumable(treasureB)) {
-                    i--;
-                    continue;
+                    cost = cost / 2;
                 }
-                costB = numberWithCommas(costB);
-                treasure.push(treasureB + ' - ' + costB + " gp");
+                cost = numberWithCommas(cost);
+                treasure.push(treasureB + ' - ' + cost + " gp");
             }
         } else if (check <= 15) {
             for (let i = 0; i < rollTimes; i++) {
-                let costC = roll(1, 'd6') * 100;
-                let treasureC = getMagicItem('table C');
+                cost = roll(1, 'd6') * 100;
+                let treasureC = getMagicItem('table C'); //Rare potions and Uncommon Items
                 if (isConsumable(treasureC)) {
-                    i--;
-                    continue;
+                    cost = cost / 2;
                 }
-                costC = numberWithCommas(costC);
-                treasure.push(treasureC + ' - ' + costC + " gp");
+                cost = numberWithCommas(cost);
+                treasure.push(treasureC + ' - ' + cost + " gp");
             }
         } else if (check <= 20) {
             for (let i = 0; i < rollTimes; i++) {
-                let costD = roll(1, 'd10') * 500;
-                let treasureD = getMagicItem('table D');
+                cost = roll(1, 'd10') * 500;
+                let treasureD = getMagicItem('table D'); //Very Rare consumables
                 if (isConsumable(treasureD)) {
-                    i--;
-                    continue;
+                    cost = cost / 2;
                 }
-                costD = numberWithCommas(costD);
-                treasure.push(treasureD + ' - ' + costD + " gp");
+                cost = numberWithCommas(cost);
+                treasure.push(treasureD + ' - ' + cost + " gp");
             }
         } else if (check <= 25) {
             for (let i = 0; i < rollTimes; i++) {
-                let costE = roll(1, 'd6') * 25000;
-                let treasureE = getMagicItem('table E');
+                cost = roll(1, 'd6') * 25000;
+                let treasureE = getMagicItem('table E'); //Very Rare and Legendary consumables
                 if (isConsumable(treasureE)) {
-                    i--;
-                    continue;
+                    cost = cost / 4;
                 }
-                costE = numberWithCommas(costE);
-                treasure.push(treasureE + ' - ' + costE + " gp");
+                cost = numberWithCommas(cost);
+                treasure.push(treasureE + ' - ' + cost + " gp");
             }
         } else if (check <= 30) {
             for (let i = 0; i < rollTimes; i++) {
-                let costF = roll(1, 'd6') * 100;
+                cost = roll(1, 'd6') * 100;
                 let treasureF = getMagicItem('table F');
                 if (isConsumable(treasureF)) {
-                    i--;
-                    continue;
+                    cost = cost / 2;
                 }
-                costF = numberWithCommas(costF);
-                treasure.push(treasureF + ' - ' + costF + " gp");
+                cost = numberWithCommas(cost);
+                treasure.push(treasureF + ' - ' + cost + " gp");
             }
         } else if (check <= 35) {
             for (let i = 0; i < rollTimes; i++) {
-                let costG = roll(1, 'd10') * 500;
+                let cost = roll(1, 'd10') * 500;
                 let treasureG = getMagicItem('table G');
                 if (isConsumable(treasureG)) {
-                    i--;
-                    continue;
+                    cost = cost / 2;
                 }
-                costG = numberWithCommas(costG);
-                treasure.push(treasureG + ' - ' + costG + " gp");
+                cost = numberWithCommas(cost);
+                treasure.push(treasureG + ' - ' + cost + " gp");
             }
         } else if (check <= 40) {
             for (let i = 0; i < rollTimes; i++) {
-                let costH = roll(1, 'd10') * 5000;
+                let cost = roll(1, 'd10') * 5000;
                 let treasureH = getMagicItem('table H');
                 if (isConsumable(treasureH)) {
-                    i--;
-                    continue;
+                    cost = cost / 2;
                 }
-                costH = numberWithCommas(costH);
-                treasure.push(treasureH + ' - ' + costH + " gp");
+                cost = numberWithCommas(cost);
+                treasure.push(treasureH + ' - ' + cost + " gp");
             }
         } else if (check >= 41) {
             for (let i = 0; i < rollTimes; i++) {
-                let costI = roll(1, 'd10') * 25000;
+                let cost = roll(1, 'd10') * 25000;
                 let treasureI = getMagicItem('table I');
                 if (isConsumable(treasureI)) {
-                    i--;
-                    continue;
+                    cost = cost / 2;
                 }
-                costI = numberWithCommas(costI);
-                treasure.push(treasureI + ' - ' + costI + " gp");
+                cost = numberWithCommas(cost);
+                treasure.push(treasureI + ' - ' + cost + " gp");
             }
         }
-        return treasure;
-    }
+    return treasure;
+}
 
-    function processMagicItem(magicTable, magicItem) {
+function processMagicItem(magicTable, magicItem) {
     // Assigns a specific type of weapon, armor, ammunition, resistance, or spell
-        let randomNumber = rando(magicTable.length);
-        if (magicItem.includes('armor')) {
-                        if (magicItem.includes('mithril') || magicItem.includes('adamantine')) {
-                magicItem = magicItem.replace('armor', metalArmor[rando(metalArmor.length)]);
-            } else {
-                if (magicItem.includes('+')) {
-                    magicItem = magicItem.replace('armor', highArmors[rando(metalArmor.length)]);
-                }
-                else {
-                    magicItem = magicItem.replace('armor', armor[rando(armor.length)]);
-                }
+    let randomNumber = rando(magicTable.length);
+    if (magicItem.includes('armor')
+    && !magicItem.includes('demon armor')
+    && !magicItem.includes('armor of invulnerability')
+    && !magicItem.includes('plate armor of etherealness')
+    ) {
+        if (magicItem.includes('mithril') || magicItem.includes('adamantine')) {
+            magicItem = magicItem.replace('armor', randoArray(metalArmor));
+        } else {
+            if (magicItem.includes('+')) {
+                magicItem = magicItem.replace('armor', randoArray(highArmors));
             }
-        }
-        if (magicItem.includes('resistance') && !magicItem.includes('cloak')) {
-            magicItem = magicItem.replace('resistance', resistances[rando(resistances.length)] + ' resistance');
-        }
-        if (magicItem.includes('weapon')) {
-            magicItem = magicItem.replace('weapon', weapons[rando(weapons.length)])
-        }
-        if (magicItem.includes('ammunition')) {
-            magicItem = magicItem.replace('ammunition', ammunition[rando(ammunition.length)])
-        }
-        if (magicItem.includes('spell scroll')) {
-            magicItem = "spell scroll of " + getRandomSpell(magicTable[randomNumber].substr(-1));
-        }
-        if (magicItem.includes('spellwrought tattoo')) {
-            magicItem = "spellwrought tattoo (" + getRandomSpell(magicTable[randomNumber].substr(-1)) + ")";
-        }
-        return magicItem;
-    }
-
-    function generatePatches() {
-        let numberOfPatches = roll(4, 'd4')
-        let patches = ['2 x daggers', '2 x bullseye lanterns (filled and lit)', '2 x steel mirrors', '2 x 10-foot poles',
-            '2 x 50-foot coils of hempen rope', '2 x sacks'
-        ];
-        for (let i = 0; i < numberOfPatches; i++) {
-            let randomRoll = roll(1, 'd100');
-            if (randomRoll <= 8) patches.push('bag of 100 gp')
-            else if (randomRoll <= 15) patches.push('silver coffer (500 gp)')
-            else if (randomRoll <= 22) patches.push('iron door (up to 10x10 feet)')
-            else if (randomRoll <= 30) patches.push('bag of 10 gems worth 100 gp each')
-            else if (randomRoll <= 44) patches.push('24-foot wooden ladder')
-            else if (randomRoll <= 51) patches.push('riding horse with saddlebags')
-            else if (randomRoll <= 59) patches.push('pit (10x10 feet)')
-            else if (randomRoll <= 68) patches.push('4-pack of potions of healing')
-            else if (randomRoll <= 75) patches.push('rowboat')
-            else if (randomRoll <= 83) {
-                let randomNumber = rando(3) + 1;
-                patches.push(`spell scroll of ` + `<span class="italic">` + getRandomSpell(randomNumber) + `</span>`);
-            } else if (randomRoll <= 90) patches.push('pair of mastiffs')
-            else if (randomRoll <= 96) patches.push('window (2x4x2 feet)')
-            else if (randomRoll <= 100) patches.push('portable ram')
-        }
-        // Count duplicates
-        // Screw it
-        return patches;
-    }
-
-    function getRandomSpell(level) {
-        let spellTable = spells1st;
-        switch (level) {
-            case "0":
-                spellTable = cantrips;
-                break;
-            case "1":
-                spellTable = spells1st;
-                break;
-            case "2":
-                spellTable = spells2nd;
-                break;
-            case "3":
-                spellTable = spells3rd;
-                break;
-            case "4":
-                spellTable = spells4th;
-                break;
-            case "5":
-                spellTable = spells5th;
-                break;
-            case "6":
-                spellTable = spells6th;
-                break;
-            case "7":
-                spellTable = spells7th;
-                break;
-            case "8":
-                spellTable = spells8th;
-                break;
-            case "9":
-                spellTable = spells9th;
-        }
-        return randoArray(spellTable);
-    }
-
-    function organize(object, array) {
-        for (let item in object) {
-            if (object.hasOwnProperty(item)) {
-                array.push(object[item] + " " + item)
+            else {
+                magicItem = magicItem.replace('armor', randoArray(armor));
             }
         }
     }
+    if (magicItem.includes('resistance') && !magicItem.includes('cloak')) {
+        magicItem = magicItem.replace('resistance', randoArray(resistances) + ' resistance');
+    }
+    if (magicItem.includes('weapon')) {
+        magicItem = magicItem.replace('weapon', randoArray(weapons))
+    }
+    if (magicItem.includes('ammunition')) {
+        magicItem = magicItem.replace('ammunition', randoArray(ammunition))
+    }
+    if (magicItem.includes('of slaying')) {
+        magicItem = magicItem.replace('slaying', randoArray(slaying) + ' slaying')
+    }
+    if (magicItem.includes('spell scroll')) {
+        magicItem = "spell scroll of " + getRandomSpell(magicTable[randomNumber].substr(-1));
+    }
+    if (magicItem.includes('spellwrought tattoo')) {
+        magicItem = "spellwrought tattoo (" + getRandomSpell(magicTable[randomNumber].substr(-1)) + ")";
+    }
+    if (magicItem.includes('undefined')) {
+        alert('ERROR CODE: Emerald')
+    }
+    return magicItem;
+}
 
-    function mergeArray(returnedArray, array) {
-        for (let i = 0; i < returnedArray.length; i++) {
-            array.push(returnedArray[i])
+function generatePatches() {
+    let numberOfPatches = roll(4, 'd4')
+    let patches = ['2 x daggers', '2 x bullseye lanterns (filled and lit)', '2 x steel mirrors', '2 x 10-foot poles',
+        '2 x 50-foot coils of hempen rope', '2 x sacks'
+    ];
+    for (let i = 0; i < numberOfPatches; i++) {
+        let randomRoll = roll(1, 'd100');
+        if (randomRoll <= 8) patches.push('bag of 100 gp')
+        else if (randomRoll <= 15) patches.push('silver coffer (500 gp)')
+        else if (randomRoll <= 22) patches.push('iron door (up to 10x10 feet)')
+        else if (randomRoll <= 30) patches.push('bag of 10 gems worth 100 gp each')
+        else if (randomRoll <= 44) patches.push('24-foot wooden ladder')
+        else if (randomRoll <= 51) patches.push('riding horse with saddlebags')
+        else if (randomRoll <= 59) patches.push('pit (10x10 feet)')
+        else if (randomRoll <= 68) patches.push('4-pack of potions of healing')
+        else if (randomRoll <= 75) patches.push('rowboat')
+        else if (randomRoll <= 83) {
+            let randomNumber = rando(3) + 1;
+            patches.push(`spell scroll of ` + `<span class="italic">` + getRandomSpell(randomNumber) + `</span>`);
+        } else if (randomRoll <= 90) patches.push('pair of mastiffs')
+        else if (randomRoll <= 96) patches.push('window (2x4x2 feet)')
+        else if (randomRoll <= 100) patches.push('portable ram')
+    }
+    // Count duplicates
+    // Screw it
+    return patches;
+}
+
+function getRandomSpell(level) {
+    let spellTable = spells1st;
+    switch (level) {
+        case "0":
+            spellTable = cantrips;
+            break;
+        case "1":
+            spellTable = spells1st;
+            break;
+        case "2":
+            spellTable = spells2nd;
+            break;
+        case "3":
+            spellTable = spells3rd;
+            break;
+        case "4":
+            spellTable = spells4th;
+            break;
+        case "5":
+            spellTable = spells5th;
+            break;
+        case "6":
+            spellTable = spells6th;
+            break;
+        case "7":
+            spellTable = spells7th;
+            break;
+        case "8":
+            spellTable = spells8th;
+            break;
+        case "9":
+            spellTable = spells9th;
+    }
+    return randoArray(spellTable);
+}
+
+function organize(object, array) {
+    for (let item in object) {
+        if (object.hasOwnProperty(item)) {
+            array.push(object[item] + " " + item)
         }
     }
+}
 
-    function rollTreasure(number, dice, multiplier) {
-        let diceType = 1;
-        if (!multiplier) multiplier = 1;
-        switch (dice) {
-            case "d2":
-                diceType = 2;
-                break;
-            case "d3":
-                diceType = 3;
-                break;
-            case "d4":
-                diceType = 4;
-                break;
-            case "d6":
-                diceType = 6;
-                break;
-            case "d8":
-                diceType = 8;
-                break;
-            case "d10":
-                diceType = 10;
-                break;
-            case "d12":
-                diceType = 12;
-                break;
-            case "d20":
-                diceType = 20;
-                break;
-            case "d100":
-                diceType = 100;
-        }
-        let totalRoll = 0;
-        for (let i = 0; i < number; i++) {
-            totalRoll += ((rando(diceType) + 1));
-        }
-        return numberWithCommas(totalRoll * multiplier)
+function mergeArray(returnedArray, array) {
+    for (let i = 0; i < returnedArray.length; i++) {
+        array.push(returnedArray[i])
     }
+}
 
-    function numberWithCommas(x) {
-        return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+function rollTreasure(number, dice, multiplier) {
+    let diceType = 1;
+    if (!multiplier) multiplier = 1;
+    switch (dice) {
+        case "d2":
+            diceType = 2;
+            break;
+        case "d3":
+            diceType = 3;
+            break;
+        case "d4":
+            diceType = 4;
+            break;
+        case "d6":
+            diceType = 6;
+            break;
+        case "d8":
+            diceType = 8;
+            break;
+        case "d10":
+            diceType = 10;
+            break;
+        case "d12":
+            diceType = 12;
+            break;
+        case "d20":
+            diceType = 20;
+            break;
+        case "d100":
+            diceType = 100;
     }
+    let totalRoll = 0;
+    for (let i = 0; i < number; i++) {
+        totalRoll += ((rando(diceType) + 1));
+    }
+    return numberWithCommas(totalRoll * multiplier)
+}
 
-    function arrayRemove(arr, value) {
-        return arr.filter(function (ele) {
-            return ele !== value;
-        });
-    }
+function numberWithCommas(x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
+
+function arrayRemove(arr, value) {
+    return arr.filter(function (ele) {
+        return ele !== value;
+    });
+}

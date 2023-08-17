@@ -1,9 +1,9 @@
 //----------GEMSTONES
 
 let gems10 = [
-   "azurite", "banded agate", "blue quartz", "eye agate",
-   "hematite", "lapiz lazuli", "malachite", "moss agate",
-   "obsidian", "rhodochrosite", "tiger eye", "turquoise"
+    "azurite", "banded agate", "blue quartz", "eye agate",
+    "hematite", "lapiz lazuli", "malachite", "moss agate",
+    "obsidian", "rhodochrosite", "tiger eye", "turquoise"
 ];
 
 let gems50 = [
@@ -79,7 +79,7 @@ let art7500 = [
 
 let magicTableA = [ //Common Items
     "potion of healing", "spell scroll 0", "potion of climbing", "spell scroll 1",
-    "spell scroll 2", "potion of greater healing", "bag of holding", "driftglobe", "armor of gleaming",
+    "spell scroll 2", "potion of greater healing", "bag of holding", "bag of holding (devouring)", "driftglobe", "armor of gleaming",
     "bead of nourishment", "bead of refreshment", "boots of false tracks", "candle of the deep",
     "cast-off armor", "charlatan's die", "cloak of billowing", "cloak of many fashions", "clockwork amulet",
     "clothes of mending", "dark shard amulet", "dread helm", "ear horn of hearing", "enduring spellbook",
@@ -88,16 +88,16 @@ let magicTableA = [ //Common Items
     "mystery key", "orb of direction", "orb of time", "perfume of bewitching", "pipe of smoke monsters",
     "pole of angling", "pole of collapsing", "pot of awakening", "rope of mending", "ruby of the war mage",
     "shield of expression", "smoldering armor", "staff of adornment", "staff of birdcalls", "staff of flowers",
-    "talking doll", "tankard of sobriety", "unbreakable arrow", "veteran's cane", "walloping ammunition",
+    "talking doll", "tankard of sobriety", "unbreakable arrow", "veteran's cane", (roll(1, 'd20') + 1) + " x walloping ammunition",
     "wand of conducting", "wand of pyrotechnics", "wand of scowls", "wand of smiles", "spellwrought tattoo 0",
     "spellwrought tattoo 1", "illuminator's tattoo", "masquerade tattoo"
 ];
 
 let magicTableB = [ //Uncommon Consumables
     "potion of greater healing", "potion of fire breath", "potion of resistance",
-    "ammunition +1", "potion of animal friendship", "potion of hill giant strength",
+    (roll(1, 'd20') + 1) + " x ammunition +1", "potion of animal friendship", "potion of hill giant strength",
     "potion of growth", "potion of water breathing", "spell scroll 2", "spell scroll 3",
-    "bag of holding", "Keoghtom's ointment", "oil of slipperiness", "dust of disappearance",
+    "bag of holding", "bag of holding (devouring)", "Keoghtom's ointment", "oil of slipperiness", "dust of disappearance",
     "dust of dryness", "dust of sneezing and choking", "water elemental emerald", "fire elemental corundum",
     "air elemental sapphire", "earth elemental diamond", "philter of love", "alchemy jug",
     "cap of water breathing", "cloak of the manta ray", "driftglobe", "goggles of night",
@@ -107,7 +107,7 @@ let magicTableB = [ //Uncommon Consumables
 ];
 
 let magicTableC = [ //Rare potions and Uncommon Items
-    "potion of superior healing", "spell scroll 4", "ammunition +2", "potion of clairvoyance",
+    "potion of superior healing", "spell scroll 4", (roll(1, 'd20') + 1) + " x ammunition +2", "potion of clairvoyance",
     "potion of diminution", "potion of gaseous form", "potion of frost giant strength",
     "potion of stone giant strength", "potion of heroism", "potion of invulnerability",
     "potion of mind reading", "spell scroll 5", "elixir of health", "oil of etherealness",
@@ -119,15 +119,15 @@ let magicTableC = [ //Rare potions and Uncommon Items
 
 let magicTableD = [ //Very Rare consumables
     "potion of supreme healing", "potion of invisibility", "potion of speed", "spell scroll 6",
-    "spell scroll 7", "ammunition +3", "oil of sharpness", "potion of flying", "potion of cloud giant strength",
+    "spell scroll 7", (roll(1, 'd20') + 1) + " x ammunition +3", "oil of sharpness", "potion of flying", "potion of cloud giant strength",
     "potion of longevity", "potion of vitality", "spell scroll 8", "horseshoes of a zephyr",
-    "Nolzur's marvelous pigments", "bag of holding (devouring)", "portable hole",
-    "reincarnation dust", roll(1, 'd20') + " sling bullets of Althemone",
+    "Nolzur's marvelous pigments", "portable hole",
+    "reincarnation dust", (roll(1, 'd20') + 1) + " x sling bullets of Althemone",
 ];
 
 let magicTableE = [ //Very Rare and Legendary potions
     "spell scroll 8", "potion of storm giant strength", "potion of supreme healing", "spell scroll 9",
-    "universal solvent", "arrow of slaying", "sovereign glue", "potion of dragon's majesty"
+    "universal solvent", (roll(1, 'd4') + 1) + " x ammunition of slaying", "sovereign glue", "potion of dragon's majesty"
 ];
 
 let magicTableF = [ //Uncommon Permanent Items
@@ -225,7 +225,9 @@ let magicTableI = [ //Legendary Items
 //-------------PROPERTIES
 
 let ammunition = [
-    "quiver of arrows", "case of crossbow bolts", "sling bullet", "pouch of blowgun needles", "pouch of darts"
+    "arrows", "arrows", "arrows", "arrows", "arrows", "crossbow bolts",
+    "crossbow bolts", "crossbow bolts", "crossbow bolts",
+    "sling bullets", "blowgun needles", "darts"
 ];
 
 let armor = [
@@ -254,6 +256,11 @@ let weapons = [
 let resistances = [
     "acid", "cold", "fire", "force", "lightning", "necrotic", "poison", "psychic",
     "radiant", "thunder"
+];
+
+let slaying = [
+    "dragon", "dragon", "dragon", "giant", "giant", "aberration", "elemental", "fey", "fiend",
+    "beast", "construct", "undead"
 ];
 
 //-------------SPELLS

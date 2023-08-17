@@ -4,7 +4,7 @@ These apps can be used to quickly create content for Dungeon Masters or players.
 
 ## Getting Started
 
-Nothing needs to be downloaded. Simply open and use the tools as needed.
+Nothing needs to be downloaded. Simply open the site and use the tools as needed.
 
 ## Features
 
@@ -95,6 +95,8 @@ they use a cursed item, touch a trap, or mess with a sibriex.
 * Replace the Character Creator with an "NPC Creator" that generates quirks and appearance in addition to name.
 * Improve Loot Generator to group duplicates together. You know, like "2 x potion of longevity"
 * Make an Encounter Generator, complete with a random theater-of-the-mind map, creatures, maybe even a description to introduce it and everything. Gonna take a whole lotta work though.
+* Revamp the magic item distribution. The "Magic Item Tables" in the DMG are actually really stupid.
+* Jazz up the realism of the settlement populator's larger cities just a little bit. Perhaps generating a few factions within the city that might be there. 
 
 ## Versioning
 
@@ -110,3 +112,4 @@ Version 0.9
 * Obviously thanks to Wizards of the Coast for D&D in general
 * *Xanathar's Guide to Everything* was a huge help in randomizing and generating the character
   tables
+* Thanks to PuffBalls United, because I stole Henry Stickman's dance for the loading graphic

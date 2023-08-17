@@ -308,7 +308,6 @@ function determineCommunity(race) {
             let gen = "genasi";
             while (gen === "genasi" || gen === "dragonborn" || gen === "orc" || gen === "aarakocra" || gen === "demon"){
                 gen = determineCommunity(pickRace());
-                console.log(gen);
             }
             return gen;
         case "half-orc":
