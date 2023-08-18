@@ -6,6 +6,18 @@
 */
 
 
+
+
+
+/**
+ * 
+ * HEY WAIT! 
+ * THIS IS NOT THE CHARACTER CREATOR! This is the old one that you'll be revamping later!
+ * You're probably looking for the NPC Creator. Go there instead.
+ * 
+ */
+
+
 //-----Global Variables
 function Character() {
 }

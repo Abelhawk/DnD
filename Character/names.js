@@ -1,7 +1,9 @@
-//  There are 13 races:
+//  These are the races covered so far:
 //      HUMAN   DWARF   ELF     HALFLING    GNOME
 //      DRAGONBORN  TIEFLING    AASIMAR     GENASI
 //      AARAKOCRA   GOLIATH     HALF-ORC    HALF-ELF
+//      DEVIL   WARFORGED   TRITON  LEONIN  TORTLE
+//      YUAN-TI   GIANT
 
 //------------Aaracokra---------------(discontinued cuz they're too obscure)
 let aarakocraNames = [
@@ -558,3 +560,32 @@ let lizardfolkNames = [
     "Kosj", "Kothar", "Litrix", "Mirik", "Othokent", "Sauriv", "Throden", "Thurkear", "Usk", "Valignat",
     "Vargach", "Verthica", "Vutha", "Vyth"
 ];
+
+//--------------Dragons----------------- Three parts
+
+let dragonNameElements = [
+    'Aeros', 'Agha', 'Akkan', 'Alae', 'Andra', 'Andusk', 'Angkar', 'Aradace',
+    'Arauth', 'Arveia', 'Aryz', 'Atar', 'Auntyr', 'Auth', 'Bahr', 'Bala',
+    'Calaun', 'Ciym', 'Claug', 'Daerev', 'Dalagh', 'Durg', 'Eir', 'Elden',
+    'Endar', 'Ethar', 'Fel', 'Galad', 'Gaul', 'Golos', 'Guth', 'Ingeir',
+    'Ix', 'Iyliam', 'Jhar', 'Kerin', 'Lham', 'Lothtor', 'Malae', 'Marun',
+    'Mere', 'Miir', 'Morn', 'Nabal', 'Nur', 'Nym', 'Oloth', 'Ontor', 'Othim',
+    'Palar', 'Raali', 'Ragoth', 'Rith', 'Rysear', 'Saryx', 'Ser', 'Skad',
+    'Surr', 'Thal', 'Thanach', 'Thoth', 'Thrax', 'Thriin', 'Tostyn', 'Tratain',
+    'Treori', 'Turace', 'Ualin', 'Umer', 'Uryte', 'Uxin', 'Vaer', 'Vala',
+    'Valos', 'Vinc', 'Voar', 'Vureem', 'Waur', 'Zundae', 'Zyreph'
+]
+
+//-------------Giants------------------
+
+let giantNames = [
+    'Adj', 'Bor', 'Cug', 'Dop', 'Gug', 'Kru', 'Moog', 'Noad', 'Paff', 'Tig',
+    'Brunnar', 'Delveni', 'Frasta', 'Kragsten', 'Maddag', 'Olhuud', 'Pashka',
+    'Ralden', 'Steyras', 'Thonna', 'Estia', 'Flakkar', 'Grugnur', 'Gurdrim',
+    'Jokalla', 'Kallen', 'Luskig', 'Rimna', 'Storvald', 'Thryggid', 'Ashvalk',
+    'Askavar', 'Brasalag', 'Brimskarda', 'Glodden', 'Osaglod', 'Snurre',
+    'Svavehild', 'Tartha', 'Zaltasker', 'Alastrah', 'Cressaro', 'Eigeron', 'Kaaltar',
+    'Lissia', 'Messet', 'Mollen', 'Nedimma', 'Santar', 'Thullen', 'Adana',
+    'Bullrak', 'Eblixten', 'Mirran', 'Nym', 'Orlekto', 'Serissa', 'Shaldoor',
+    'Uthor', 'Vaasha'
+]

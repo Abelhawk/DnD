@@ -19,7 +19,7 @@ let raceOptions = [
     "Human", "Dwarf", "Elf", "Halfling",
     "Half-elf", "Gnome", "Tiefling", "Aasimar",
     "Half-orc", "Dragonborn", "Goliath", "Genasi",
-    "Devil", "Aarakocra", "Warforged", "Triton",
+    "Devil", "Aarakocra", "Giant", "Warforged", "Triton",
     "Leonin", "Tortle", "Yuan-ti", "Lizardfolk",
     "Dragon"
 ];
@@ -356,10 +356,19 @@ function pickFirstName(race, gender) {
             }
         case "tortle":
             return tortleNames[rando(tortleNames.length)]
-        case "Yuan-ti":
+        case "yuan-ti":
             return yuanTiNames[rando(yuanTiNames.length)]
-        case "Lizardfolk":
+        case "lizardfolk":
             return lizardfolkNames[rando(lizardfolkNames.length)]
+        case "giant":
+            return giantNames[rando(giantNames.length)]
+        case "dragon":
+            let numberOfMorphemes = roll(1, 'd3') + 1;
+            let dragonName = '';
+            for (let i = 0; i < numberOfMorphemes; i++) {
+                dragonName += dragonNameElements[rando(dragonNameElements.length)];
+                }
+            return capitalize2(dragonName);            
         default:
             return "???";
     }
