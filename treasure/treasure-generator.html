@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Loot Generator</title>
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"
-            integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ"
-            crossorigin="anonymous"></script>
+        integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ"
+        crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="../general.css">
     <link rel="icon" href="../goblin.ico">
@@ -18,44 +19,47 @@
     <script src="../Character/names.js" defer></script>
     <script src="../TownGen/words.js" defer></script>
 </head>
+
 <body onload="loadPage()">
-<h1>Loot Generator</h1>
-<div class="container">
-    <div class="two-columns">
-        <div class="left2">
+    <h1>Loot Generator</h1>
+    <div class="container">
+        <div class="two-columns">
+            <div class="left2">
+                <form>
+                    <div class="choices">
+                        <label onchange="checkResult()" for="individualType">Individual Treasure</label>
+                        <input onchange="checkResult()" id="individualType" type="radio" name="type" value="individual"
+                            checked><br>
+                        <label onchange="checkResult()" for="hoardType">Treasure Hoard</label>
+                        <input onchange="checkResult()" id="hoardType" type="radio" name="type" value="hoard"><br>
+                        <label onchange="checkResult()" for="fillerType">Pickings</label>
+                        <input onchange="checkResult()" id="fillerType" type="radio" name="type" value="filler"><br>
+                        <label onchange="checkResult()" for="uniqueType">Unique Magic Item</label>
+                        <input onchange="checkResult()" id="uniqueType" type="radio" name="type" value="unique"><br>
+                        <label onchange="checkResult()" for="auctionHouse">Up for Purchase</label>
+                        <input onchange="checkResult()" id="auctionHouse" type="radio" name="type" value="auction"><br>
+                    </div>
+                </form>
+            </div>
             <form>
-                <div class="choices">
-                    <label onchange="checkResult()" for="individualType">Individual Treasure</label>
-                    <input onchange="checkResult()" id="individualType" type="radio" name="type" value="individual"
-                           checked><br>
-                    <label onchange="checkResult()" for="hoardType">Treasure Hoard</label>
-                    <input onchange="checkResult()" id="hoardType" type="radio" name="type" value="hoard"><br>
-                    <label onchange="checkResult()" for="fillerType">Pickings</label>
-                    <input onchange="checkResult()" id="fillerType" type="radio" name="type" value="filler"><br>
-                    <label onchange="checkResult()" for="uniqueType">Unique Magic Item</label>
-                    <input onchange="checkResult()" id="uniqueType" type="radio" name="type" value="unique"><br>
-                    <label onchange="checkResult()" for="auctionHouse">Up for Purchase</label>
-                    <input onchange="checkResult()" id="auctionHouse" type="radio" name="type" value="auction"><br>
+                <div class="right2" id="right-sidebar">
+                    <label id="lebel" for="playerLevel">Challenge Level:</label>
+                    <br>
+                    <div>
+                        <input id="playerLevel" type="number" style="width: 30px" value="4" min="1">
+                        <input id="waresValue" type="number" style="width: 30px; display: none" value="5" min="1">
+                    </div>
+                    <div id="disclaimer" style="color: tan; font-style: italic; font-size: 10pt; max-width: 170px;">(Or
+                        just put player level)</div>
                 </div>
             </form>
         </div>
-        <form>
-            <div class="right2">
-                <label id="lebel" for="playerLevel">Challenge Level:</label>
-                <br>
-                <div>
-                    <input id="playerLevel" type="number" style="width: 30px" value="5" min="1">
-                    <input id="waresValue" type="number" style="width: 30px; display: none" value="5" min="1">
-                </div>
-                <div id="disclaimer" style="color: tan; font-style: italic; font-size: 10pt; max-width: 170px;">(Or just put in a number between 1 and 50)</div>
-            </div>
-        </form>
+        <img alt="Distracting!" id="loading" src="../DistractingGoblin.gif" title="Loading...">
+        <button id="yesButton" type="submit" onclick="activate()" style="display:none">Generate!</button>
     </div>
-    <img alt="Distracting!" id="loading" src="../DistractingGoblin.gif" title="Loading...">
-    <button id="yesButton" type="submit" onclick="activate()" style="display:none">Generate!</button>
-</div>
 
-<div id="generate"></div>
-<div class="container"><a class="back-button" href="../index.html">Back</a></div>
+    <div id="generate"></div>
+    <div class="container"><a class="back-button" href="../index.html">Back</a></div>
 </body>
+
 </html>

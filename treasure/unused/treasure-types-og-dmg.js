@@ -1,5 +1,17 @@
-//----------GEMSTONES
 
+
+
+
+
+
+//  
+//  The Magic Tables in the DMG are terrible! But for the sake of preservation, they're kept here.
+//  
+
+
+
+//----------GEMSTONES
+/*
 let gems10 = [
     "azurite", "banded agate", "blue quartz", "eye agate",
     "hematite", "lapiz lazuli", "malachite", "moss agate",
@@ -77,29 +89,60 @@ let art7500 = [
 
 //------------MAGIC ITEMS
 
-let commonItems = [
-    "clockwork amulet", "armor of gleaming", "bead of nourishment", "bead of refreshment",
-    "bookmark of memory", "boots of false tracks", "candle of the deep",
-    "cast-off armor", "charlatan's die", "cloak of billowing", "cloak of many fashions",
+let magicTableA = [ //Common Items
+    "potion of healing", "spell scroll 0", "potion of climbing", "spell scroll 1",
+    "spell scroll 2", "potion of greater healing", "bag of holding", "bag of holding (devouring)", "driftglobe", "armor of gleaming",
+    "bead of nourishment", "bead of refreshment", "boots of false tracks", "candle of the deep",
+    "cast-off armor", "charlatan's die", "cloak of billowing", "cloak of many fashions", "clockwork amulet",
     "clothes of mending", "dark shard amulet", "dread helm", "ear horn of hearing", "enduring spellbook",
-    "ersatz eye", "fold-up friend", "giant's gloves",
-    "hat of vermin", "hat of wizardry", "Heward's handy spice pouch", "horn of silent alarm",
+    "ersatz eye", "hat of vermin", "hat of wizardry", "Heward's handy spice pouch", "horn of silent alarm",
     "instrument of illusions", "instrument of scribing", "lock of trickery", "moon-touched sword",
     "mystery key", "orb of direction", "orb of time", "perfume of bewitching", "pipe of smoke monsters",
     "pole of angling", "pole of collapsing", "pot of awakening", "rope of mending", "ruby of the war mage",
     "shield of expression", "smoldering armor", "staff of adornment", "staff of birdcalls", "staff of flowers",
     "talking doll", "tankard of sobriety", "unbreakable arrow", "veteran's cane", (roll(2, 'd10')) + " x walloping ammunition",
     "wand of conducting", "wand of pyrotechnics", "wand of scowls", "wand of smiles", "spellwrought tattoo 0",
-    "spellwrought tattoo 1", "illuminator's tattoo", "masquerade tattoo", "potion of healing", "spell scroll 0",
-    "potion of climbing", "spell scroll 1", "spell scroll 2",
+    "spellwrought tattoo 1", "illuminator's tattoo", "masquerade tattoo"
 ];
 
-let uncommonMajorItems = [
-    "bag of holding", "bag of holding (devouring)", "periapt of health", "sending stones", "driftglobe",
-    "alchemy jug", "cap of water breathing", "cloak of the manta ray", "driftglobe", "goggles of night",
+let magicTableB = [ //Uncommon Consumables
+    "potion of greater healing", "potion of fire breath", "potion of resistance",
+    (roll(2, 'd10')) + " x ammunition +1", "potion of animal friendship", "potion of hill giant strength",
+    "potion of growth", "potion of water breathing", "spell scroll 2", "spell scroll 3",
+    "bag of holding", "bag of holding (devouring)", "Keoghtom's ointment", "oil of slipperiness", "dust of disappearance",
+    "dust of dryness", "dust of sneezing and choking", "water elemental emerald", "fire elemental corundum",
+    "air elemental sapphire", "earth elemental diamond", "philter of love", "alchemy jug",
+    "cap of water breathing", "cloak of the manta ray", "driftglobe", "goggles of night",
     "helm of comprehending languages", "immovable rod", "lantern of revealing",
-    "mariner's armor", "mithril armor", "ring of swimming", "robe of useful items",
-    "rope of climbing", "saddle of the cavalier", "wand of magic detection", "wand of secrets",
+    "mariner's armor", "mithril armor", "potion of poison", "ring of swimming", "robe of useful items",
+    "rope of climbing", "saddle of the cavalier", "wand of magic detection", "wand of secrets"
+];
+
+let magicTableC = [ //Rare potions and Uncommon Items
+    "potion of superior healing", "spell scroll 4", (roll(2, 'd10')) + " x ammunition +2", "potion of clairvoyance",
+    "potion of diminution", "potion of gaseous form", "potion of frost giant strength",
+    "potion of stone giant strength", "potion of heroism", "potion of invulnerability",
+    "potion of mind reading", "spell scroll 5", "elixir of health", "oil of etherealness",
+    "potion of fire giant strength", "Quaal's feather token", "scroll of protection",
+    "bag of beans", "bead of force", "chime of opening", "decanter of endless water",
+    "eyes of minute seeing", "folding boat", "Heward's handy haversack", "horseshoes of speed",
+    "necklace of fireballs", "periapt of health", "sending stones", "potion of aqueous form"
+];
+
+let magicTableD = [ //Very Rare consumables
+    "potion of supreme healing", "potion of invisibility", "potion of speed", "spell scroll 6",
+    "spell scroll 7", (roll(2, 'd10')) + " x ammunition +3", "oil of sharpness", "potion of flying", "potion of cloud giant strength",
+    "potion of longevity", "potion of vitality", "spell scroll 8", "horseshoes of a zephyr",
+    "Nolzur's marvelous pigments", "portable hole",
+    "reincarnation dust", (roll(2, 'd10')) + " x sling bullets of Althemone",
+];
+
+let magicTableE = [ //Very Rare and Legendary potions
+    "spell scroll 8", "potion of storm giant strength", "potion of supreme healing", "spell scroll 9",
+    "universal solvent", (roll(1, 'd4') + 1) + " x ammunition of slaying", "sovereign glue", "potion of dragon's majesty"
+];
+
+let magicTableF = [ //Uncommon Permanent Items
     "weapon +1", "shield +1", "sentinel shield", "amulet of proof against detection and location",
     "boots of elvenkind", "boots of striding and springing", "bracers of archery", "brooch of shielding",
     "broom of flying", "cloak of elvenkind", "cloak of protection", "gauntlets of ogre power",
@@ -118,19 +161,10 @@ let uncommonMajorItems = [
     "spellwrought tattoo 3", "moon sickle +1", "all-purpose tool +1", "bloodwell vial +1", "feywild shard",
     "goggles of object reading", "guardian emblem", "dragonhide belt +1", "emerald pen"
 ];
-let uncommonMinorItems = [
-    "potion of greater healing", "potion of fire breath", "potion of resistance", "potion of healing (poison)",
-    (roll(2, 'd10')) + " x ammunition +1", "potion of animal friendship", "potion of hill giant strength",
-    "potion of growth", "potion of water breathing", "spell scroll 2", "spell scroll 3",
-    "Keoghtom's ointment", "oil of slipperiness", "dust of disappearance",
-    "dust of dryness", "dust of sneezing and choking", "water elemental emerald", "fire elemental corundum",
-    "air elemental sapphire", "earth elemental diamond", "philter of love",
-];
-let rareMajorItems = [
-    "bag of beans", (roll(1,'d4')+1) + " x beads of force", "chime of opening", "decanter of endless water",
-    "eyes of minute seeing", "folding boat", "Heward's handy haversack", "horseshoes of speed",
-    "necklace of fireballs", "weapon +2", "bronze griffin of wondrous power", "ebony fly of wondrous power",
-    "golden lions of wondrous power", "ivory goats of wondrous power", "marble elephant of wondrous power",
+
+let magicTableG = [ //Rare Permanent Items
+    "weapon +2", "bronze griffin of wondrous power", "ebony fly of wondrous power", "golden lions of wondrous power",
+    "ivory goats of wondrous power", "marble elephant of wondrous power", "onyx dog of wondrous power",
     "serpentine owl of wondrous power", "adamantine armor", "amulet of health", "armor of vulnerability",
     "arrow-catching shield", "belt of dwarvenkind", "belt of hill giant strength", "berserker axe",
     "boots of levitation", "boots of speed", "bowl of commanding water elementals", "bracers of defense",
@@ -140,7 +174,7 @@ let rareMajorItems = [
     "flame tongue", "gem of seeing", "giant slayer", "glamoured studded leather", "helm of teleportation",
     "horn of blasting", "silver horn of Valhalla", "brass horn of Valhalla", "Canaith mandolin", "Cli lyre",
     "Ioun stone of awareness", "ioun stone of protection", "ioun stone of reserve", "ioun stone of sustenance",
-    "iron bands of Bilarro", "armor +1", "mace of disruption", "mace of smiting", "onyx dog of wondrous power",
+    "iron bands of Bilarro", "armor +1", "mace of disruption", "mace of smiting",
     "mace of terror", "mantle of spell resistance", "necklace of prayer beads", "periapt of proof against poison",
     "ring of animal influence", "ring of evasion", "ring of feather falling", "ring of free action",
     "ring of protection", "ring of resistance", "ring of spell storing", "ring of the ram", "ring of X-ray vision",
@@ -157,22 +191,12 @@ let rareMajorItems = [
     "spellwrought tattoo 5", "all-purpose tool +2", "astral shard", "atlas of endless horizons", "bell branch",
     "devotee's censer", "elemental essence shard", "far realm shard", "needle of mending", "outer essence shard",
     "shadowfell shard", "helm of the gods", "molten bronze skin", "two-birds sling", "crystal blade",
-    "dragonhide belt +2", "dragonwing bow", "weapon of certain death", "woodcutter's axe", "ventilating lungs",
-    "shield of far sight", "bonecounter", "corpse slayer", "dagger of blindsight", "crown of the wrath bringer",
-    "delver's claws", "lash of immolation", "zephyr armor", "wayfarer's boots", "war horn of valor",
-    "staff of the rooted hills", "kyanite pteranodon figurine of wondrous power"
+    "dragonhide belt +2", "dragonwing bow", "dragon's wrath weapon", "dragon-touched focus", "dragon vessel",
+    "scaled ornament"
 ];
-let rareMinorItems = [
-    "potion of superior healing", "spell scroll 4", (roll(2, 'd10')) + " x ammunition +2", "potion of clairvoyance",
-    "potion of diminution", "potion of gaseous form", "potion of frost giant strength",
-    "potion of stone giant strength", "potion of heroism", "potion of invulnerability",
-    "potion of mind reading", "spell scroll 5", "elixir of health", "oil of etherealness",
-    "potion of fire giant strength", "Quaal's feather token", "scroll of protection",
-    "potion of aqueous form", (roll(1, "d4") + 2) + " x glowrune pigments",
-];
-let epicMajorItems = [
-    "horseshoes of a zephyr", "Nolzur's marvelous pigments", "portable hole", 
-    "weapon +3", "amulet of the planes", "carpet of flying", "crystal ball", "ring of regeneration",
+
+let magicTableH = [ //Very Rare Permanent Items
+    "weapon +3", "amulet of the planes", "carpet of flying", "crystal ball of scrying", "ring of regeneration",
     "ring of shooting stars", "ring of telekinesis", "robe of scintillating colors", "robe of stars",
     "rod of absorption", "rod of alertness", "rod of security", "rod of the pact keeper +3", "scimitar of speed",
     "shield +3", "staff of fire", "staff of frost", "staff of power", "staff of striking", "staff of thunder and lightning",
@@ -186,44 +210,28 @@ let epicMajorItems = [
     "manual of gainful exercise", "manual of golems", "manual of quickness of action", "mirror of life trapping",
     "nine lives stealer", "oathbow", "armor +2", "spellguard shield", "tome of clear thought",
     "tome of leadership and influence", "tome of understanding", "last stand armor", "living armor",
-    "arcane grimoire +3", "crystalline chronicle", "dispelling stone", "arcane cannon",
+    "arcane grimoire +3", "crystalline chronicle", "dispelling stone",
     "rhythm-maker's drum +3", "amulet of the devout +3", "absorbing tattoo of resistance", "barrier tattoo (heavy)",
     "ghost step tattoo", "lifewell tattoo", "arcane cannon", "moon sickle +3", "all-purpose tool +3",
     "bloodwell vial +3", "cauldron of rebirth", "orb of the veil", "amethyst lodestone",
-    "dragonhide belt +3", 'sapphire buckler', "voodoo doll", "staff of dunamancy", "abracadabrus",
-    "bobbing lily pad", "duskcrusher", "Dyrrn's tentacle whip", "hunter's coat", "Kyrzin's ooze",
-    "ornithopter of flying", "armor of safeguarding", "lucent destroyer", "mistral mantle", "nimbus coronet",
-    "carnelian triceratops figurine of wondrous power", "ring of amity", "sanctum amulet", "thunderbuss",
-    "wyrmreaver gauntlets", "bloodshed blade"
+    "dragonhide belt +3", 'sapphire buckler'
 ];
-let epicMinorItems = [
-    "potion of supreme healing", "potion of invisibility", "potion of speed", "spell scroll 6",
-    "spell scroll 7", (roll(2, 'd10')) + " x ammunition +3", "oil of sharpness", "potion of flying", "potion of cloud giant strength",
-    "potion of longevity", "potion of vitality", "spell scroll 8", "reincarnation dust", "potion of possibility",
-    (roll(1, 'd4') + 4) + " x sling bullets of Althemone", "<color> chromatic rose"
-];
-let legendaryMajorItems = [
-    "defender", "hammer of thunderbolts", "luck blade", "sword of answering", "holy avenger", "ring of djinni summoning",
-    "ring of invisibility", "ring of spell turning", "rod of lordly might", "staff of the magi", "vorpal sword",
-    "belt of cloud giant strength", "armor +2", "armor +3", "armor +3", "cloak of invisibility", 
-    "crystal ball of telepathy", "crystal ball of truesight", "crystal ball of mind reading",
-    "armor +3", "robe of archmagi", "rod of resurrection", "scarab of protection", "armor +2", "armor +2", "well of many worlds",
-    "armor +3", "apparatus of Kwalish", "armor of invulnerability", "belt of storm giant strength", "cubic gate",
-    "deck of many things", "efreeti chain", "armor of resistance", "iron horn of valhalla", "Ollamh harp",
-    "ioun stone of greater absorption", "ioun stone of mastery", "ioun stone of regeneration", "armor of etherealness",
-    "armor of resistance", "ring of air elemental command", "ring of water elemental command", "ring of earth elemental command", 
-    "ring of fire elemental command", "ring of three wishes", "sphere of annihilation", "talisman of pure good",
-    "talisman of the sphere", "talisman of ultimate evil", "tome of the stilled tongue", "Belashyrra's beholder crown",
-    "iron flask", "gith silver sword", "moonblade", "ring of spell turning", "blood fury tattoo", "dragonlance",
-    "flail of Tiamat", "gold canary figurine of wondrous power", "nightfall pearl", "obsidian flint dragon plate",
-    "platinum scarf", "pyxis of pandemonium", "ruby weave gem", "spell bottle", "topaz annihilator", "harp of gilded plenty",
-    "longbow of the healing hearth", "orb of Skoraeus", "jasper tyrannosaurus rex figurine of wondrous power", 
-    "shield of the blazing dreadnought", "stonebreaker's breastplate", "reaper's scream",
-];
-let legendaryMinorItems = [
-    "spell scroll 8", "potion of storm giant strength", "potion of supreme healing", "spell scroll 9",
-    "universal solvent", (roll(1, 'd4') + 1) + " x ammunition of slaying", "sovereign glue", "potion of dragon's majesty",
-    "potion of giant size"
+
+let magicTableI = [ //Legendary Items
+    "defender", "hammer of thunderbolts", "luck blade", "sword of answering", "holy avenger",
+    "ring of djinni summoning", "ring of invisibility", "ring of spell turning", "rod of lordly might",
+    "staff of the magi", "vorpal sword", "belt of cloud giant strength", "armor +2", "armor +3",
+    "cloak of invisibility", "crystal ball of mind reading", "iron flask", "robe of the archmagi",
+    "rod of resurrection", "scarab of protection", "well of many worlds", "apparatus of Kwalish",
+    "armor of invulnerability", "belt of storm giant strength", "cubic gate", "deck of many things",
+    "efreeti chain", "iron horn of Valhalla", "Ollamh harp", "ioun stone of greater absorption",
+    "ioun stone of mastery", "ioun stone of regeneration", "plate armor of etherealness",
+    "ring of air elemental command", "ring of fire elemental command", "ring of earth elemental command",
+    "ring of water elemental command", "ring of three wishes", "sphere of annihilation", "talisman of pure good",
+    "talisman of the sphere", "talisman of ultimate evil", "tome of the stilled tongue",
+    "obsidian flint dragon plate", "blood fury tattoo", "nightfall pearl", "pyxis of pandemonium",
+    "dragonlance", "flail of Tiamat", "gold canary figurine of wondrous power", 'platinum scarf',
+    'ruby weave gem', 'topaz annihilator'
 ];
 
 //-------------PROPERTIES
@@ -266,10 +274,6 @@ let slaying = [
     "dragon", "dragon", "dragon", "giant", "giant", "aberration", "elemental", "fey", "fiend",
     "beast", "construct", "undead"
 ];
-
-let chromaticColors = [
-    "black", "blue", "green", "red", "white"
-]
 
 //-------------SPELLS
 
@@ -425,3 +429,4 @@ function rando(probability) {
     //If you want a binary one, do rando(2), which returns a 0 or a 1.
     return Math.floor(Math.random() * probability);
 }
+*/

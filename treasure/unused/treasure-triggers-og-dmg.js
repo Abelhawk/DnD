@@ -1,10 +1,20 @@
+
+
+
+
+
+
+// These are wired to the original Magic Tables from the DMG, in case anything breaks.
+
+
+
+/*
 let textField = document.getElementById("generate");
 
 function loadPage() {
     document.getElementById("disclaimer").style.display = 'none';
     document.getElementById('loading').style.display = "none";
     document.getElementById('yesButton').style.display = "block";
-    document.getElementById("right-sidebar").style.display = 'block';
 }
 
 function activate() {
@@ -34,25 +44,21 @@ function generate() {
         return generateUnique(level);
     }
     if (document.getElementById("auctionHouse").checked) {
-        //"Up for Purchase"
         return generateWares(level);
     }
 }
 
 function checkResult() {
     if (document.getElementById("auctionHouse").checked) {
-        document.getElementById("right-sidebar").style.display = 'block';
         document.getElementById("lebel").textContent = 'Persuasion Check Result:';
         document.getElementById("disclaimer").style.display = 'block';
     } else {
-        document.getElementById("right-sidebar").style.display = 'block';
         document.getElementById("lebel").textContent = 'Challenge Level:';
         document.getElementById("disclaimer").style.display = 'none';
     }
 }
 
-function generateIndividualTreasure(lvl) { // Just generates coins.
-    // todo: Simplify this like the other ones by setting variables for the dice and stuff
+function generateIndividualTreasure(lvl) {
     let randomNumber = rollTreasure(1, 'd100');
     let treasure = [];
     switch (true) {
@@ -125,7 +131,6 @@ function generateIndividualTreasure(lvl) { // Just generates coins.
 }
 
 function getGems(number, value) { //Gems can be added together
-    if (number === 0) return [];
     let gemTable;
     let bagOGems = [];
     switch (value) {
@@ -146,9 +151,6 @@ function getGems(number, value) { //Gems can be added together
             break;
         case 5000:
             gemTable = gems5000;
-            break;
-        default:
-            alert('ERROR CODE: Topaz')
     }
     for (let i = 0; i < number; i++) {
         let randomNumber = rando(gemTable.length);
@@ -161,101 +163,7 @@ function getGems(number, value) { //Gems can be added together
     return counts;
 }
 
-function getTreasures(level) { // HOARD TRIGGER - works fine.
-    let treasures = [];
-    let numberOfTreasures = roll(2, 'd4');
-    let numberOfMinorMagicItems = roll(1, 'd6') - 1;
-    let numberOfMajorMagicItems = roll(1, 'd4') - 1;
-    let minorRarities = [];
-    let majorRarities = [];
-    let r = 3; // 0 = low gem, 1 = hi gem, 2 = low art, 3 = hi art
-    let numberOfLowArtObjects = 0;
-    let numberOfHighArtObjects = 0;
-    let numberOfLowGems = 0;
-    let numberOfHighGems = 0;
-    let lowGemValue = 10;
-    let highGemValue = 50;
-    let lowArtValue = 25;
-    let highArtValue = 75;
-    for (let i = 0; i < numberOfTreasures; i++) {
-        r = rando(4);
-        while (numberOfLowArtObjects + numberOfHighArtObjects > 7 && r > 1) {
-            r--; //No more than 8 art objects are allowed in a hoard
-        }
-        switch (r) {
-            case 0:
-                numberOfLowGems++;
-                break;
-            case 1:
-                numberOfHighGems++;
-                break;
-            case 2:
-                numberOfLowArtObjects++;
-                break;
-            case 3:
-                numberOfHighArtObjects++;
-        }
-    }
-    switch (level) {
-        case 1: // Level 0-4
-            lowGemValue = 10;
-            highGemValue = 50;
-            lowArtValue = highArtValue = 25;
-            minorRarities = ['UncommonMinorItem', 'RareMinorItem']
-            majorRarities = ['UncommonMajorItem', 'CommonItem']
-            break;
-        case 2: // Level 5-10
-            lowGemValue = 50;
-            highGemValue = 100;
-            lowArtValue = 25;
-            highArtValue = 250;
-            minorRarities = ['UncommonMinorItem', 'RareMinorItem', 'EpicMinorItem']
-            majorRarities = ['UncommonMajorItem', 'RareMajorItem']
-            break;
-        case 3: // Level 11-16
-            lowGemValue = 500;
-            highGemValue = 1000;
-            lowArtValue = 250;
-            highArtValue = 750;
-            minorRarities = ['RareMinorItem', 'EpicMinorItem', 'LegendaryMinorItem']
-            majorRarities = ['RareMajorItem', 'EpicMajorItem']
-            break;
-        case 4: // Level 17+
-            lowGemValue = 1000;
-            highGemValue = 5000;
-            lowArtValue = 2500;
-            highArtValue = 7500;
-            minorRarities = ['RareMinorItem', 'EpicMinorItem', 'LegendaryMinorItem']
-            majorRarities = ['EpicMajorItem', 'LegendaryMajorItem']
-            break;
-    }
-    organize(getGems(numberOfLowGems, lowGemValue), treasures);
-    organize(getGems(numberOfHighGems, highGemValue), treasures);
-    mergeArray(getArtObjects(numberOfLowArtObjects, lowArtValue), treasures);
-    mergeArray(getArtObjects(numberOfHighArtObjects, highArtValue), treasures);
-    if (numberOfMinorMagicItems + numberOfMajorMagicItems > 6) {
-        numberOfMinorMagicItems--;
-    }
-    if (numberOfMinorMagicItems + numberOfMajorMagicItems === 0) {
-        numberOfMajorMagicItems = 1;
-    }
-    for (let i = 0; i < numberOfMinorMagicItems; i++) {
-        let randomIndex = rando(minorRarities.length);
-        treasures.push(getMagicItem(minorRarities[randomIndex]))
-    }
-    for (let i = 0; i < numberOfMajorMagicItems; i++) {
-
-        let randomIndex = rando(majorRarities.length);
-        treasures.push(getMagicItem(majorRarities[randomIndex]))
-    }
-    if (level === 4) {
-
-    }
-    return treasures;
-}
-
-function getArtObjects(number, value) { //Art objects must be unique
-    if (number === 0) return [];
+function getArtObjects(number, value) {//Art objects must be unique
     let artTable;
     let artCollection = [];
     switch (value) {
@@ -289,61 +197,38 @@ function getArtObjects(number, value) { //Art objects must be unique
     return artCollection;
 }
 
-/*
-
-    Okay, here's the distribution for future reference and balancing:
-
-    TABLE       RARITY
-    A           Common Items
-    B           Uncommon Minor Items
-    C           Uncommon Minor + Rare Consumables
-    D           Very Rare Consumables
-    E           Very Rare Consumables + Legendary Consumables
-    F           Uncommon Items
-    G           Rare Items
-    H           Very Rare Items
-    I           Legendary Items
-
-    LVL         DMG TABLES          Translation                         Distribution                                     
-    0-4         AAABBBCCCFFGG       20% Com, 60% Unc, 20% Rar           - 66% minor, 33% major?
-    5-10        AABBCCDFFGH         15% Com, 45% Unc, 30% Rar, 10% VRa  - Consumables can come from the
-    11-16       BCDEFHI             30% Unc, 30% Rar, 30% VRa, 10% Leg  rarity below it.
-    17+         CDEGHI              20% Rar, 30% VRa, 30% Leg  
-
-*/
-
-function getMagicItem(itemRarity) { //Gets a random magic item based on rarity and makes it italic
+function getMagicItem(table) {
     let magicTable;
-    switch (itemRarity) {
-        case "CommonItem":
-            magicTable = commonItems;
+    switch (table) {
+        case "table A":
+            magicTable = magicTableA;
             break;
-        case "UncommonMajorItem":
-            magicTable = uncommonMajorItems;
+        case "table B":
+            magicTable = magicTableB;
             break;
-        case "UncommonMinorItem":
-            magicTable = uncommonMinorItems;
+        case "table C":
+            magicTable = magicTableC;
             break;
-        case "RareMajorItem":
-            magicTable = rareMajorItems;
+        case "table D":
+            magicTable = magicTableD;
             break;
-        case "RareMinorItem":
-            magicTable = rareMinorItems;
+        case "table E":
+            magicTable = magicTableE;
             break;
-        case "EpicMajorItem":
-            magicTable = epicMajorItems;
+        case "table F":
+            magicTable = magicTableF;
             break;
-        case "EpicMinorItem":
-            magicTable = epicMinorItems;
+        case "table G":
+            magicTable = magicTableG;
             break;
-        case "LegendaryMajorItem":
-            magicTable = legendaryMajorItems;
+        case "table H":
+            magicTable = magicTableH;
             break;
-        case "LegendaryMinorItem":
-            magicTable = legendaryMinorItems;
+        case "table I":
+            magicTable = magicTableI;
     }
-    let magicItem = randoArray(magicTable);
-    console.log('magicItem: ', magicItem)
+    let randomNumber = rando(magicTable.length);
+    let magicItem = magicTable[randomNumber];
     if (magicItem === 'robe of useful items') {
         let patches = generatePatches();
         let patchList = ``;
@@ -353,36 +238,124 @@ function getMagicItem(itemRarity) { //Gets a random magic item based on rarity a
         }
         return `<span class='italic robe-of-useful-items'>robe of useful items</span><span class="robe-patches">${patchList}</span>`
     } else {
-        magicItem = processMagicItem(magicItem);
+        magicItem = processMagicItem(magicTable, magicItem);
         return `<span class='italic'>` + magicItem + `</span>`;
     }
 
 }
 
-function generateWares(check) { //AUCTION HOUSE \ SHOP - Not working
+function generateWares(check) {
     let treasure = [];
     let duplicates = [];
     let rollTimes = roll(1, 'd4');
     let cost = 100;
-    itemPool = determineMagicItems(check);
-    rollTimes = roll(1, 'd6');
-    for (let i = 0; i < rollTimes; i++) {
-        let rarity = randoArray(itemPool);
-        let treasureA = getMagicItem(rarity);
-        cost = numberWithCommas(determineCostByRarity(rarity, isConsumable(treasureA)));
-        if (!duplicates.includes(treasureA)) {
-            duplicates.push(treasureA);
-            treasure.push(treasureA + ' - ' + cost + " gp");
+    if (check <= 5) {
+        rollTimes = roll(1, 'd6');
+        for (let i = 0; i < rollTimes; i++) {
+            cost = (roll(1, 'd6') + 1) * 10;
+            let treasureA = getMagicItem("table A"); // Common items
+            if (isConsumable(treasureA)) {
+                cost = cost / 2;
+            }
+            cost = numberWithCommas(cost);
+            if (!duplicates.includes(treasureA)) {
+                duplicates.push(treasureA);
+                treasure.push(treasureA + ' - ' + cost + " gp");
+            }
         }
     }
+    else
+        if (check <= 10) {
+            for (let i = 0; i < rollTimes; i++) {
+                cost = roll(1, 'd6') * 100;
+                let treasureB = getMagicItem('table B'); //Uncommon consumables
+                if (isConsumable(treasureB)) {
+                    cost = cost / 2;
+                }
+                cost = numberWithCommas(cost);
+                treasure.push(treasureB + ' - ' + cost + " gp");
+            }
+        } else if (check <= 15) {
+            for (let i = 0; i < rollTimes; i++) {
+                cost = roll(1, 'd6') * 100;
+                let treasureC = getMagicItem('table C'); //Rare potions and Uncommon Items
+                if (isConsumable(treasureC)) {
+                    cost = cost / 2;
+                }
+                cost = numberWithCommas(cost);
+                treasure.push(treasureC + ' - ' + cost + " gp");
+            }
+        } else if (check <= 20) {
+            for (let i = 0; i < rollTimes; i++) {
+                cost = roll(1, 'd10') * 500;
+                let treasureD = getMagicItem('table D'); //Very Rare consumables
+                if (isConsumable(treasureD)) {
+                    cost = cost / 2;
+                }
+                cost = numberWithCommas(cost);
+                treasure.push(treasureD + ' - ' + cost + " gp");
+            }
+        } else if (check <= 25) {
+            for (let i = 0; i < rollTimes; i++) {
+                cost = roll(1, 'd6') * 25000;
+                let treasureE = getMagicItem('table E'); //Very Rare and Legendary consumables
+                if (isConsumable(treasureE)) {
+                    cost = cost / 4;
+                }
+                cost = numberWithCommas(cost);
+                treasure.push(treasureE + ' - ' + cost + " gp");
+            }
+        } else if (check <= 30) {
+            for (let i = 0; i < rollTimes; i++) {
+                cost = roll(1, 'd6') * 100;
+                let treasureF = getMagicItem('table F');
+                if (isConsumable(treasureF)) {
+                    cost = cost / 2;
+                }
+                cost = numberWithCommas(cost);
+                treasure.push(treasureF + ' - ' + cost + " gp");
+            }
+        } else if (check <= 35) {
+            for (let i = 0; i < rollTimes; i++) {
+                let cost = roll(1, 'd10') * 500;
+                let treasureG = getMagicItem('table G');
+                if (isConsumable(treasureG)) {
+                    cost = cost / 2;
+                }
+                cost = numberWithCommas(cost);
+                treasure.push(treasureG + ' - ' + cost + " gp");
+            }
+        } else if (check <= 40) {
+            for (let i = 0; i < rollTimes; i++) {
+                let cost = roll(1, 'd10') * 5000;
+                let treasureH = getMagicItem('table H');
+                if (isConsumable(treasureH)) {
+                    cost = cost / 2;
+                }
+                cost = numberWithCommas(cost);
+                treasure.push(treasureH + ' - ' + cost + " gp");
+            }
+        } else if (check >= 41) {
+            for (let i = 0; i < rollTimes; i++) {
+                let cost = roll(1, 'd10') * 25000;
+                let treasureI = getMagicItem('table I');
+                if (isConsumable(treasureI)) {
+                    cost = cost / 2;
+                }
+                cost = numberWithCommas(cost);
+                treasure.push(treasureI + ' - ' + cost + " gp");
+            }
+        }
     return treasure;
 }
 
-function processMagicItem(magicItem) { // Assigns a specific type of weapon, armor, ammunition, resistance, or spell
+function processMagicItem(magicTable, magicItem) {
+    // Assigns a specific type of weapon, armor, ammunition, resistance, or spell
+    let randomNumber = rando(magicTable.length);
     if (magicItem.includes('armor')
-        && !magicItem.includes('demon armor')
-        && !magicItem.includes('armor of invulnerability')
-        && !magicItem.includes('plate armor of etherealness')
+    && !magicItem.includes('demon armor')
+    && !magicItem.includes('armor of invulnerability')
+    && !magicItem.includes('plate armor of etherealness')
     ) {
         if (magicItem.includes('mithril') || magicItem.includes('adamantine')) {
             magicItem = magicItem.replace('armor', randoArray(metalArmor));
@@ -401,9 +374,6 @@ function processMagicItem(magicItem) { // Assigns a specific type of weapon, arm
     if (magicItem.includes('weapon')) {
         magicItem = magicItem.replace('weapon', randoArray(weapons))
     }
-    if (magicItem.includes('<color>')) {
-        magicItem = magicItem.replace('<color>', randoArray(chromaticColors))
-    }
     if (magicItem.includes('ammunition')) {
         magicItem = magicItem.replace('ammunition', randoArray(ammunition))
     }
@@ -411,13 +381,10 @@ function processMagicItem(magicItem) { // Assigns a specific type of weapon, arm
         magicItem = magicItem.replace('slaying', randoArray(slaying) + ' slaying')
     }
     if (magicItem.includes('spell scroll')) {
-        let scrollSpellLevel = magicItem.substr(-1);
-        console.log('Scroll level is ' + scrollSpellLevel)
-        magicItem = "spell scroll of " + getRandomSpell(scrollSpellLevel);
+        magicItem = "spell scroll of " + getRandomSpell(magicTable[randomNumber].substr(-1));
     }
     if (magicItem.includes('spellwrought tattoo')) {
-        let scrollSpellLevel = magicItem.substr(-1);
-        magicItem = "spellwrought tattoo (" + getRandomSpell(scrollSpellLevel) + ")";
+        magicItem = "spellwrought tattoo (" + getRandomSpell(magicTable[randomNumber].substr(-1)) + ")";
     }
     if (magicItem.includes('undefined')) {
         alert('ERROR CODE: Emerald')
@@ -425,7 +392,7 @@ function processMagicItem(magicItem) { // Assigns a specific type of weapon, arm
     return magicItem;
 }
 
-function generatePatches() { //Generates patches for a robe of useful items
+function generatePatches() {
     let numberOfPatches = roll(4, 'd4')
     let patches = ['2 x daggers', '2 x bullseye lanterns (filled and lit)', '2 x steel mirrors', '2 x 10-foot poles',
         '2 x 50-foot coils of hempen rope', '2 x sacks'
@@ -492,7 +459,7 @@ function getRandomSpell(level) {
 function organize(object, array) {
     for (let item in object) {
         if (object.hasOwnProperty(item)) {
-            array.push(object[item] + " x " + item)
+            array.push(object[item] + " " + item)
         }
     }
 }
@@ -541,46 +508,6 @@ function rollTreasure(number, dice, multiplier) {
     return numberWithCommas(totalRoll * multiplier)
 }
 
-function determineCostByRarity(table, consumable) {
-    console.log(table);
-    let itemCost = 20;
-    if (table === 'CommonItem') {
-        // 20-70 gp
-        itemCost = (roll(1, 'd6') + 1) * 10
-    }
-    else if (table === 'UncommonMajorItems' || table ==='UncommonMinorItem') {
-        // 100-600 gp
-        itemCost = roll(1, 'd6') * 100
-    }
-    else if (table === 'RareMajorItem' || table ==='RareMinorItem') {
-        // 500-5000 gp
-        itemCost = roll(1, 'd10') * 500
-    }
-    else if (table === 'EpicMajorItem' || table ==='EpicMinorItem') {
-        // 5000-50,000 gp
-        itemCost = roll(1, 'd10') * 5000
-    }
-    else if (table === 'LegendaryMajorItem' || table ==='LegendaryMinorItem') {
-        // 5000-50,000 gp
-        itemCost = roll(1, 'd10') * 5000
-    }
-    //Mark down minor items price...
-    console.log('Base: ' + itemCost)
-    console.log('Rarity: ' + table)
-    if (table === 'UncommonMinorItem' ||
-        table === 'RareMinorItem' ||
-        table === 'EpicMinorItem' ||
-        table === 'LegendaryMinorItem') {
-            itemCost = itemCost / 2;
-    }
-    if (consumable) {
-        itemCost = itemCost / 2;
-    }
-    return Math.round(itemCost);
-}
-
-// Functions
-
 function numberWithCommas(x) {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
@@ -590,3 +517,4 @@ function arrayRemove(arr, value) {
         return ele !== value;
     });
 }
+*/

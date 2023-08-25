@@ -6,6 +6,7 @@ function rando(probability) {
 function randoArray(array) {
     if (!array) {
         alert('ERROR CODE: Garnet')
+        //It's not passing a valid array.
         return;
     }
     return array[rando(array.length)];
