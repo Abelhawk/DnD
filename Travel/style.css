@@ -1,0 +1,137 @@
+body {
+    color: #ACB0FF;
+}
+
+button,
+a {
+    background-color: #ACB0FF;
+}
+
+button:hover,
+a:hover {
+    background-color: #7c7fb8;
+}
+
+.generate {
+    color: white;
+}
+
+.travel-sentence {
+    color: white;
+    font-size: 24px;
+}
+
+.speed-bar {
+    width: 27%;
+}
+
+.left2 {
+    margin-right: 2%;
+    text-align: right;
+    width: 32%
+}
+
+.right2 {
+    text-align: right;
+    align-content: center;
+    margin-right: 8%
+}
+
+.subnotes {
+    font-size: 18px;
+    color: #b0b4bd
+}
+
+.unnecessary {
+    background: gray;
+}
+
+#endSentence {
+    color: white;
+    font-size: 24px;
+    margin: 25px 0 25px 0;
+}
+
+.field {
+    width: 45px;
+    height: 30px;
+    font-size: 24px;
+    text-align: center;
+}
+
+.wider {
+    width: 55px;
+}
+
+.label {
+    color: #DDB783;
+}
+
+.proceed {
+    visibility: hidden;
+}
+
+.box {
+    border: 1px #d2adad solid;
+    margin-top: 10px;
+}
+
+#loading {
+    width: 200px;
+    margin: auto;
+}
+
+#loader {
+    border-bottom: 11px solid #e60000;
+    border-top: 11px solid #f3f3f3;
+    border-radius: 50%;
+    width: 45px;
+    height: 50px;
+    animation: spin .6s linear infinite;
+    margin: auto;
+}
+
+p {
+    margin: 10px auto;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+#advantage {
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+    padding: 1px 4px;
+    background: limegreen;
+}
+
+#disadvantage {
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+    padding: 1px 4px;
+    background: red;
+}
+
+/* Mobile */
+@media only screen and (max-width: 700px) {
+    #welcome {
+        display: none;
+    }
+
+    .character-name {
+        font-size: 25px;
+    }
+
+    .character-sub-info {
+        font-size: 13px;
+    }
+}

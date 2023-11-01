@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D&D Travel Calculator</title>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"
+            integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ"
+            crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Cinzel:700|Roboto+Condensed" rel="stylesheet">
+    <link rel="stylesheet" href="../general.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="../goblin.ico">
+    <script src="travel-triggers.js" defer></script>
+    <script src="../shared.js" defer></script>
+</head>
+<body onload="loadPage()">
+<h1>Travel Calculator</h1>
+<div class="container">
+    <div class="two-columns">
+        <div class="left2">
+            <form>
+                <label for="fast">Fast Pace</label>
+                <input type="radio" name="pace" id="fast" value="fastPace"><br>
+                <label for="normal">Normal Pace</label>
+                <input type="radio" name="pace" id="normal" value="normalPace" checked><br>
+                <label for="slow">Careful Pace</label>
+                <input type="radio" name="pace" id="slow" value="slowPace"><br>
+                <hr>
+                <label for="speed">Speed: </label>
+                <input class="speed-bar" type="number" id="speed" value="30">
+                <span id="measure"> feet</span>
+                <br>
+            </form>
+        </div>
+        <div class="right2">
+            <form>
+                <label for="difficult">Difficult Terrain</label>
+                <input type="checkbox" id="difficult" value="difficult"><br>
+                <hr>
+                <label for="onFoot">On Foot</label>
+                <input onchange="checkSailing()" type="radio" name="movementType" id="onFoot" value="onFoot" checked><br>
+                <label for="sailing">Sailing</label>
+                <input onchange="checkSailing()" type="radio" name="movementType" id="sailing" value="sailing"><br>
+                
+            </form>
+        </div>
+    </div>
+    <div class="box">
+        <p class="travel-sentence" id="travelText">The party can travel up to 40 miles per day.</p>
+        <p class="travel-sentence" id="notes">Remember...</p>
+        <p class="subnotes" id="subnotes">With a forced march, you can travel an additional 5 miles per hour.</p>
+    </div>
+    <div id="endSentence"></div>
+    <img id="loading" src="../DistractingGoblin.gif" title="Loading...">
+    <button id="characterButton" style="display:none" onclick="calculate()">Calculate!</button>
+</div>
+<a class="back-button" href="../index.html">Back</a>
+</div>
+</body>
+</html>
