@@ -36,23 +36,26 @@ Here is a description of the place options you can choose to generate:
   adds "of" in between the words.
 * **Possessive.** Adds a random name or title in front of a landmark to give it a possessive feel.
 
-### Character Creator
+### NPC Creator
 
-This is primarily used to come up with NPC names on the spot, but it can also be used to generate
-backstories and inspiration for player characters.
+This is primarily used to come up with NPC names on the spot. It has the infrastructure to generate backstories and stuff too, straight from *Xanathar's Guide,* but the code was really shoddy, so I'll have to re-add those features later.
 
 * Generates a name for a new D&D character depending on the gender and race chosen, based on
-  Xanathar's Guide to Everything's randomization
-* Half-breeds like half-elves, half-orcs and tieflings have randomly generated backgrounds and
-  heritages
-* Uses a complex algorithm to generate a background, siblings, origin story, and more.
+  Xanathar's Guide to Everything's randomization.
+* Also contains names for devils, giants, dragons, and other races.
+
+### Travel Distance Calculator
+
+This is used to quickly calculate travel distance.
+
+* Takes into account speed, pace, and whether the creature is sailing or on difficult terrain.
 
 ### Treasure Generator
 
 This is used to easily create loot for players to find, whether that be valuable treasure,
 interesting garbage, or more unique individual items.
 
-* Uses the treasure tables in the *DMG* to generate money, gems, art objects, and magic items in a
+* Uses an algorithm to generate money, gems, art objects, and magic items in a
   hoard or individually.
 * Can generate random "pickings," or less valuable but more interesting items for characters to
   find, such as trade goods, tools, trinkets, spell components, or straight-up garbage.
@@ -95,7 +98,6 @@ they use a cursed item, touch a trap, or mess with a sibriex.
 * Replace the Character Creator with an "NPC Creator" that generates quirks and appearance in addition to name.
 * Improve Loot Generator to group duplicates together. You know, like "2 x potion of longevity"
 * Make an Encounter Generator, complete with a random theater-of-the-mind map, creatures, maybe even a description to introduce it and everything. Gonna take a whole lotta work though.
-* Revamp the magic item distribution. The "Magic Item Tables" in the DMG are actually really stupid.
 * Jazz up the realism of the settlement populator's larger cities just a little bit. Perhaps generating a few factions within the city that might be there. 
 
 ## Versioning

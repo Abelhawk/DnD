@@ -297,8 +297,6 @@ function generateFiller(level) {
           : magicalModifierDescriptions[randNumb];
         let item = 'potion';
         while (isConsumable(item)) {
-          console.log(magicItemPossibilities);
-          console.log(randoArray(magicItemPossibilities));
           item = getMagicItem(randoArray(magicItemPossibilities));
         }
         treasure.push(

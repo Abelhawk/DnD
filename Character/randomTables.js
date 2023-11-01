@@ -188,7 +188,6 @@ function setBirthplace(race){
 
 function setHome(){
     let family = rando(100);
-    console.log("You rolled a " + family + ". If the number is less than 35, both of your parents should be gone");
     let fatherGone = false;
     let motherGone = false;
     if (family <= 35){fatherGone = true; motherGone = true}

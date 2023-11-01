@@ -1,7 +1,6 @@
 let textField = document.getElementById("generate");
 
 function loadPage() {
-    document.getElementById("disclaimer").style.display = 'none';
     document.getElementById('loading').style.display = "none";
     document.getElementById('yesButton').style.display = "block";
     document.getElementById("right-sidebar").style.display = 'block';
@@ -42,12 +41,13 @@ function generate() {
 function checkResult() {
     if (document.getElementById("auctionHouse").checked) {
         document.getElementById("right-sidebar").style.display = 'block';
-        document.getElementById("lebel").textContent = 'Persuasion Check Result:';
-        document.getElementById("disclaimer").style.display = 'block';
+        document.getElementById("lebel").textContent = 'Player Level:';
+        if (document.getElementById("playerLevel").value > 20) {
+            document.getElementById("playerLevel").value = 20;
+        }
     } else {
         document.getElementById("right-sidebar").style.display = 'block';
         document.getElementById("lebel").textContent = 'Challenge Level:';
-        document.getElementById("disclaimer").style.display = 'none';
     }
 }
 
@@ -85,7 +85,6 @@ function generateIndividualTreasure(lvl) { // Just generates coins.
                     treasure.push((rollTreasure(4, "d6", 10)) + " gold pieces");
                     break;
                 case (randomNumber <= 100):
-                    console.log("Jackpot!");
                     treasure.push((rollTreasure(2, "d6", 10)) + " gold pieces");
                     treasure.push(rollTreasure(3, "d6") + " platinum pieces");
             }
@@ -101,7 +100,6 @@ function generateIndividualTreasure(lvl) { // Just generates coins.
                     treasure.push((rollTreasure(1, "d6", 10)) + " platinum pieces");
                     break;
                 case (randomNumber <= 100):
-                    console.log("Jackpot!");
                     treasure.push((rollTreasure(2, "d6", 100)) + " gold pieces");
                     treasure.push((rollTreasure(2, "d6", 10)) + " platinum pieces");
             }
@@ -116,7 +114,6 @@ function generateIndividualTreasure(lvl) { // Just generates coins.
                     treasure.push((rollTreasure(1, "d6", 100)) + " platinum pieces");
                     break;
                 case (randomNumber <= 100):
-                    console.log("Jackpot!");
                     treasure.push((rollTreasure(1, "d6", 1000)) + " gold pieces");
                     treasure.push((rollTreasure(2, "d6", 100)) + " platinum pieces");
             }
@@ -343,7 +340,6 @@ function getMagicItem(itemRarity) { //Gets a random magic item based on rarity a
             magicTable = legendaryMinorItems;
     }
     let magicItem = randoArray(magicTable);
-    console.log('magicItem: ', magicItem)
     if (magicItem === 'robe of useful items') {
         let patches = generatePatches();
         let patchList = ``;
@@ -542,7 +538,6 @@ function rollTreasure(number, dice, multiplier) {
 }
 
 function determineCostByRarity(table, consumable) {
-    console.log(table);
     let itemCost = 20;
     if (table === 'CommonItem') {
         // 20-70 gp
@@ -565,8 +560,6 @@ function determineCostByRarity(table, consumable) {
         itemCost = roll(1, 'd10') * 5000
     }
     //Mark down minor items price...
-    console.log('Base: ' + itemCost)
-    console.log('Rarity: ' + table)
     if (table === 'UncommonMinorItem' ||
         table === 'RareMinorItem' ||
         table === 'EpicMinorItem' ||
