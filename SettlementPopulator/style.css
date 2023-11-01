@@ -5,6 +5,9 @@ body {
 button, a {
     background-color: #ffd11a;
 }
+button:hover, a:hover {
+    background-color: #c4a115;
+}
 
 .generate {
     color: white;

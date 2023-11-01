@@ -1,5 +1,5 @@
 body {
-    color: #af6bff;
+    color: #36c4a5;
 }
 
 button, a {
@@ -12,6 +12,59 @@ button:hover, a:hover {
 
 input, text {
     width: 25px;
+}
+
+.btn-town-place {
+    background: #89cb27;
+}
+.btn-town-place:hover {
+    background: #65941d;
+}
+
+.btn-npc {
+    background-color: #41dff4;
+}
+.btn-npc:hover {
+    background-color: #32aebe;
+}
+
+.btn-travel {
+    background-color: #ACB0FF;
+}
+.btn-travel:hover {
+    background-color: #7c7fb8;
+}
+
+.btn-loot {
+    background: #66ffcc;
+}
+.btn-loot:hover {
+    background: #53cfa6;
+}
+
+.btn-combatCalc {
+    background-color: #e60000;
+    color: white;
+}
+
+.btn-combatCalc:hover {
+    background: #a50000;
+}
+
+.btn-settlement {
+    background-color: #ffd11a;
+}
+
+.btn-settlement:hover {
+    background-color: #c4a115;
+}
+
+.btn-misfortune {
+    background: #bbb7bd;
+}
+
+.btn-misfortune:hover {
+    background: #929094;
 }
 
 /* Mobile */

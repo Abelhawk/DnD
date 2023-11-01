@@ -6,6 +6,11 @@ button, a {
     background-color: #bbb7bd;
 }
 
+button:hover,
+a:hover {
+    background-color: #929094;
+}
+
 select,
 input {
     border: 1px black solid;

@@ -2,8 +2,14 @@ body {
     color: #41dff4;
 }
 
-button, a {
+button,
+a {
     background-color: #41dff4;
+}
+
+button:hover,
+a:hover {
+    background-color: #32aebe;
 }
 
 select,
@@ -83,8 +89,13 @@ select {
 }
 
 @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 /* Mobile */
@@ -92,9 +103,11 @@ select {
     #welcome {
         display: none;
     }
+
     .character-name {
         font-size: 25px;
     }
+
     .character-sub-info {
         font-size: 13px;
     }
