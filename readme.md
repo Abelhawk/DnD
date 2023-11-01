@@ -60,7 +60,7 @@ interesting garbage, or more unique individual items.
 * Can generate random "pickings," or less valuable but more interesting items for characters to
   find, such as trade goods, tools, trinkets, spell components, or straight-up garbage.
 * Can create unique magic items using the Special Features section of the *DMG.*
-* Can generate a collection of items based on a Persuasion check, along with the proposed prices.
+* Can generate a collection of items for sale based on player level, with reasonable yet randomized prices.
 
 ### Combat Calculator
 
