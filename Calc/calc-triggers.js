@@ -15,7 +15,7 @@ function checkResult() {
     } else {
         document.getElementById("2").innerHTML = `The save DC is <input min=1 type="number" class="field" id="DC" value="10">.`;
         document.getElementById("3").hidden = true;
-        document.getElementById("4").innerHTML = `Their saving throw bonus is +<input min=0 type="number" class="field" id="bonus" value="0">.`;
+        document.getElementById("4").innerHTML = `Their saving throw bonus is +<input type="number" class="field" id="bonus" value="0">.`;
 
     }
 }
