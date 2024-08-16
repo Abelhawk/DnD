@@ -1,0 +1,310 @@
+/*
+function generateFiller(level) {
+  let treasure = [];
+  let magicItemPossibilities = determineMagicItems(level);
+  for (let i = 0; i < 6; i++) {
+    let randomFillerGroup = rando(19);
+    // BOOKS AND SCROLLS
+    switch (randomFillerGroup) {
+      case 0:
+      case 1:
+      case 2:
+        let randomNumber = rando(40) + 1;
+        switch (randomNumber) {
+          case 1:
+            treasure.push('ledger - ' + `<span class="value">`
+              + "A boring book of facts and figures." + `</span>`);
+            break;
+          case 2:
+            treasure.push("alchemist's notebook - " + `<span class="value">`
+              + "A booklet full of sketches of alchemical formulae."
+              + `</span>`);
+            break;
+          case 3:
+            treasure.push("almanac - " + `<span class="value">`
+              + "A book recording lunar phases and notable events from a few years ago."
+              + `</span>`);
+            break;
+          case 4:
+            treasure.push("bestiary - " + `<span class="value">`
+              + "A book depicting sketches and descs of local monsters."
+              + `</span>`);
+            break;
+          case 5:
+            treasure.push("biography - " + `<span class="value">`
+              + "A biography of someone named " + randomName() + "."
+              + `</span>`);
+            break;
+          case 6:
+            treasure.push("book of heraldry - " + `<span class="value">`
+              + "A book depicting famous family crests and coats-of-arms."
+              + `</span>`);
+            break;
+          case 7:
+            treasure.push("storybook - " + `<span class="value">`
+              + "A book of children's cautionary tales." + `</span>`);
+            break;
+          case 8:
+            treasure.push("book of pressed flowers - " + `<span class="value">`
+              + "A booklet with blank pages of pressed flowers." + `</span>`);
+            break;
+          case 9:
+            treasure.push("calendar - " + `<span class="value">`
+              + "A calendar from a few years ago with some dates circled."
+              + `</span>`);
+            break;
+          case 10:
+            treasure.push("catalog - " + `<span class="value">`
+              + "A merchant's pamphlet listing available wares for order."
+              + `</span>`);
+            break;
+          case 11:
+            let randomContract = rando(3);
+            switch (randomContract) {
+              case 1:
+                treasure.push("contract - " + `<span class="value">`
+                  + "A contract between a merchant and a shopkeeper."
+                  + `</span>`);
+                break;
+              case 2:
+                treasure.push("contract - " + `<span class="value">`
+                  + "An employment contract for a city guard." + `</span>`);
+                break;
+              case 3:
+                treasure.push("contract - " + `<span class="value">`
+                  + "A debt contract from a moneylender." + `</span>`);
+            }
+            break;
+          case 12:
+            treasure.push("diary - " + `<span class="value">`
+              + "A smudged diary of an unnamed person written in "
+              + randomLanguage() + '.' + `</span>`);
+            break;
+          case 13:
+            treasure.push("dictionary - " + `<span class="value">`
+              + "A collection of words translated from common into "
+              + randomForeignLanguage() + '.' + `</span>`);
+            break;
+          case 14:
+            let m0 = coinFlip(1, 2);
+            let doodleOrSketch;
+            (m0 === 1) ? doodleOrSketch = "sketchbook - "
+              + `<span class="value">`
+              + "A book of decently drawn animals and faces." + `</span>`
+              : doodleOrSketch = "doodles - " + `<span class="value">`
+              + "A parchment covered in doodles of random objects and people."
+              + `</span>`;
+            treasure.push(doodleOrSketch);
+            break;
+          case 15:
+            treasure.push("forged document - " + `<span class="value">`
+              + "A crumpled shoddily-forged document." + `</span>`);
+            break;
+          case 16:
+            treasure.push("grammar workbook - " + `<span class="value">`
+              + "A noble's workbook of Common grammar." + `</span>`);
+            break;
+          case 17:
+            treasure.push("heretical text - " + `<span class="value">`
+              + "A partially-burned book with writing against the local religion."
+              + `</span>`);
+            break;
+          case 18:
+            treasure.push("historical text - " + `<span class="value">`
+              + "A book detailing the rulership and notable events of the local area."
+              + `</span>`);
+            break;
+          case 19:
+            treasure.push("will - " + `<span class="value">`
+              + "The last will and testament of someone named "
+              + randomLastName() + `</span>`);
+            break;
+          case 20:
+            treasure.push("legal code - " + `<span class="value">`
+              + "A paper listing crimes and their associated punishments."
+              + `</span>`);
+            break;
+          case 21:
+            treasure.push("letter - " + `<span class="value">`
+              + "A letter from someone named " + randomFirstName() + " to a "
+              + randomFirstName() + "." + `</span>`);
+            break;
+          case 22:
+            treasure.push("lunatic's ravings - " + `<span class="value">`
+              + "A disturbing collection of nonsensical ravings and drawings."
+              + `</span>`);
+            break;
+          case 23:
+            treasure.push("magic tricks - " + `<span class="value">`
+              + "A booklet of so-called 'magic tricks' that use no actual magic."
+              + `</span>`);
+            break;
+          case 24:
+            treasure.push("magic scroll - " + `<span class="value">`
+              + "A used spell scroll with no more power." + `</span>`);
+            break;
+          case 25:
+            let m = coinFlip(1, 2);
+            let map;
+            (m === 1) ? map = "map - " + `<span class="value">`
+              + "A hand-drawn map of the surrounding area." + `</span>`
+              : map = "Treasure Map - " + `<span class="value">`
+              + "A hand-drawn treasure map." + `</span>`;
+            treasure.push(map);
+            break;
+          case 26:
+            let m2 = coinFlip(1, 2);
+            let atlas;
+            (m2 === 1) ? atlas = "atlas - " + `<span class="value">`
+              + "A hand-drawn map of the world." + `</span>`
+              : atlas = "Dungeon Map - " + `<span class="value">`
+              + "A hand-drawn depiction of the inside of a dungeon of some sort."
+              + `</span>`;
+            treasure.push(atlas);
+            break;
+          case 27:
+            let m3 = coinFlip(1, 2);
+            let chart;
+            (m3 === 1) ? chart = "navigational chart - "
+              + `<span class="value">`
+              + "A chart showing the navigation route by sea to a distant island."
+              + `</span>`
+              : chart = "star chart - " + `<span class="value">`
+              + "A painstakingly hand-drawn start chart." + `</span>`;
+            treasure.push(chart);
+            break;
+          case 28:
+            treasure.push(
+              "novel - " + `<span class="value">` + "An old book called "
+              + `<span class="italic">` + randomBookTitle() + "."
+              + `</span></span>`);
+            break;
+          case 29:
+            treasure.push("painting - " + `<span class="value">`
+              + "A small painting of a " + randomPainting() + "."
+              + `</span>`);
+            break;
+          case 30:
+            treasure.push("poetry - " + `<span class="value">`
+              + "A page of handwritten poetry." + `</span>`);
+            break;
+          case 31:
+            treasure.push("prayer book - " + `<span class="value">`
+              + "A booklet of prayers to " + randomGod() + "." + `</span>`);
+            break;
+          case 32:
+            treasure.push("property deed - " + `<span class="value">`
+              + 'A property deed to a place called "' + capitalize(
+                randoArray(natural) + randoArray(grassland)) + ' Estate."'
+              + `</span>`);
+            break;
+          case 33:
+            treasure.push("recipe book - " + `<span class="value">`
+              + "A handwritten book of " + randomCulture() + " recipes."
+              + `</span>`);
+            break;
+          case 34:
+            treasure.push("criminal trial record - " + `<span class="value">`
+              + "A record of the proceedings of a criminal named "
+              + randomName() + "." + `</span>`);
+            break;
+          case 35:
+            treasure.push("royal proclamation - " + `<span class="value">`
+              + "An old royal proclamation paper." + `</span>`);
+            break;
+          case 36:
+            treasure.push("wanted poster - " + `<span class="value">`
+              + "A wanted poster of someone named " + randomName()
+              + " and a reward of 20 gp for capture." + `</span>`);
+            break;
+          case 37:
+            treasure.push("sheet music - " + `<span class="value">`
+              + "An untitled sheet of music notation." + `</span>`);
+            break;
+          case 38:
+            treasure.push("spellbook - " + `<span class="value">`
+              + "A tattered spellbook containing these spells: " + `</span>`
+              + `<span class='italic'> ${getRandomSpell(
+                '1')}, ${getRandomSpell('1')}, ${getRandomSpell(
+                  '2')} </span>`);
+            break;
+          case 39:
+            treasure.push("artisan's text - " + `<span class="value">`
+              + "An artisan's treatise on " + randomTrade() + "."
+              + `</span>`);
+            break;
+          case 40:
+            treasure.push("travelogue - " + `<span class="value">`
+              + "A wizard's travelogue of the planes." + `</span>`);
+        }
+        break;
+      case 3:
+      case 4:
+      case 5:
+        treasure.push(randoArray(junk));
+        break;
+      case 6:
+      case 7:
+        treasure.push(randoArray(tools));
+        break;
+      case 8:
+      case 9:
+        treasure.push(randoArray(supplies));
+        break;
+      case 10:
+      case 11:
+        treasure.push(randoArray(mundaneGear));
+        break;
+      case 12:
+        treasure.push(randoArray(goods));
+        break;
+      case 13:
+      case 14:
+        treasure.push(randoArray(trinkets));
+        break;
+      case 15:
+        let modNum = rando(modifiers.length);
+        let mod = modifiers[modNum];
+        let gear = randoArray(mundaneGear);
+        let desc = modifierDescriptions[modNum];
+        treasure.push(mod + " " + gear + " - " + `<span class="value">` + desc
+          + `</span>`);
+        break;
+      case 16:
+        let modNum1 = rando(magicalModifiers.length);
+        let mod1 = magicalModifiers[modNum1];
+        let gear1 = randoArray(mundaneGear);
+        let desc1 = magicalModifierDescriptions[modNum1];
+        treasure.push(
+          mod1 + " " + gear1 + " - " + `<span class="value">` + desc1
+          + `</span>`);
+        break;
+      case 17:
+        let coinflipped;
+        let what = coinFlip(1, 2);
+        if (what === 1) {
+          coinflipped = modifiers;
+        } else {
+          coinflipped = magicalModifiers;
+        }
+        let randNumb = rando(coinflipped.length);
+        let desc2 = coinflipped === modifiers ? modifierDescriptions[randNumb]
+          : magicalModifierDescriptions[randNumb];
+        let item = 'potion';
+        while (isConsumable(item)) {
+          item = getMagicItem(randoArray(magicItemPossibilities));
+        }
+        treasure.push(
+          coinflipped[randNumb] + ' ' + `<span class="italic">` + item
+          + `</span>` + " - " + `<span class="value">` + desc2 + `</span>`);
+        break;
+      case 18:
+        let ranDub = rando(components.length);
+        treasure.push(components[ranDub] + ' - ' + `<span class="value">`
+          + componentDescriptions[ranDub] + `</span>`);
+        break;
+    }
+  }
+  return treasure;
+}
+*/

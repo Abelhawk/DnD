@@ -4,12 +4,11 @@ function rando(probability) {
 }
 
 function randoArray(array) {
-    if (!array) {
-        alert('ERROR CODE: Garnet')
-        //It's not passing a valid array.
-        return;
-    }
     return array[rando(array.length)];
+}
+
+function coinFlip(heads, tails) {
+    return rando(2) === 0 ? heads : tails;
 }
 
 function capitalize(str) {
@@ -35,78 +34,43 @@ function aAn(str) {
 }
 
 function roll(number, dice) {
-    let diceType = 1;
-    switch (dice) {
-        case "d2":
-            diceType = 2;
-            break;
-        case "d3":
-            diceType = 3;
-            break;
-        case "d4":
-            diceType = 4;
-            break;
-        case "d6":
-            diceType = 6;
-            break;
-        case "d8":
-            diceType = 8;
-            break;
-        case "d10":
-            diceType = 10;
-            break;
-        case "d12":
-            diceType = 12;
-            break;
-        case "d20":
-            diceType = 20;
-            break;
-        case "d100":
-            diceType = 100;
-    }
+    const diceType = parseInt(dice.slice(1)); // Can be any "d" number (d1, d1000, etc.)
     let totalRoll = 0;
     for (let i = 0; i < number; i++) {
-        totalRoll += ((rando(diceType) + 1));
+        totalRoll += (rando(diceType) + 1); // +1 because rando() returns 0 to diceType-1
     }
     return totalRoll;
 }
 
 function plural(str) {
-    if (!str) {
-        alert('ERROR CODE: Sapphire')
+    //special cases
+    if (str === 'staff') {
+        return 'staves';
     }
-    let secondToLast = str.charAt(str.length - 2);
-    switch (str.substr(-1)) {
+    //typical
+    const lastChar = str.charAt(str.length - 1);
+    const secondToLastChar = str.charAt(str.length - 2);
+    switch (lastChar) {
         case 's':
-            if (secondToLast !== 's') {
-                return str;
-            }
         case 'x':
         case 'o':
             return str + 'es';
         case 'h':
-            if (secondToLast === 'c' || secondToLast === 's') {
+            if (secondToLastChar === 'c' || secondToLastChar === 's') {
                 return str + 'es';
             }
+            break;
         case 'y':
-            if (secondToLast === 'a' ||
-                secondToLast === 'e' ||
-                secondToLast === 'i' ||
-                secondToLast === 'o'
-            ) {
+            if ('aeiou'.includes(secondToLastChar)) {
                 return str + 's';
             } else {
-                return str.substring(0, str.length - 1) + 'ies';
+                return str.slice(0, -1) + 'ies';
             }
         case 'f':
-            if (secondToLast === 'f') {
-                return str + 's';
+            if (secondToLastChar === 'f') {
+                return str.slice(0, -1) + 'ves';
             } else {
-                return str.substring(0, str.length - 1) + 'ves';
-            }
-        case 'e':
-            if (secondToLast === 'f') {
-                return str.substring(0, str.length - 1) + 'ves';
+                return str + 'ves';
             }
         default:
             return str + 's';

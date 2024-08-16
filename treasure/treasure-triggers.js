@@ -53,7 +53,7 @@ function checkResult() {
 
 function generateIndividualTreasure(lvl) { // Just generates coins.
     // todo: Simplify this like the other ones by setting variables for the dice and stuff
-    let randomNumber = rollTreasure(1, 'd100');
+    let randomNumber = roll(1, 'd100');
     let treasure = [];
     switch (true) {
         case (lvl <= 4):
@@ -301,11 +301,11 @@ function getArtObjects(number, value) { //Art objects must be unique
     H           Very Rare Items
     I           Legendary Items
 
-    LVL         DMG TABLES          Translation                         Distribution                                     
+    LVL         DMG TABLES          Translation                         Distribution
     0-4         AAABBBCCCFFGG       20% Com, 60% Unc, 20% Rar           - 66% minor, 33% major?
     5-10        AABBCCDFFGH         15% Com, 45% Unc, 30% Rar, 10% VRa  - Consumables can come from the
     11-16       BCDEFHI             30% Unc, 30% Rar, 30% VRa, 10% Leg  rarity below it.
-    17+         CDEGHI              20% Rar, 30% VRa, 30% Leg  
+    17+         CDEGHI              20% Rar, 30% VRa, 30% Leg
 
 */
 
@@ -358,10 +358,9 @@ function getMagicItem(itemRarity) { //Gets a random magic item based on rarity a
 function generateWares(check) { //AUCTION HOUSE \ SHOP - Not working
     let treasure = [];
     let duplicates = [];
-    let rollTimes = roll(1, 'd4');
     let cost = 100;
-    itemPool = determineMagicItems(check);
-    rollTimes = roll(1, 'd6');
+    let itemPool = determineMagicItems(check);
+    let rollTimes = roll(1, 'd6');
     for (let i = 0; i < rollTimes; i++) {
         let rarity = randoArray(itemPool);
         let treasureA = getMagicItem(rarity);
@@ -374,49 +373,66 @@ function generateWares(check) { //AUCTION HOUSE \ SHOP - Not working
     return treasure;
 }
 
-function processMagicItem(magicItem) { // Assigns a specific type of weapon, armor, ammunition, resistance, or spell
-    if (magicItem.includes('armor')
-        && !magicItem.includes('demon armor')
-        && !magicItem.includes('armor of invulnerability')
-        && !magicItem.includes('plate armor of etherealness')
-    ) {
-        if (magicItem.includes('mithril') || magicItem.includes('adamantine')) {
-            magicItem = magicItem.replace('armor', randoArray(metalArmor));
-        } else {
-            if (magicItem.includes('+')) {
-                magicItem = magicItem.replace('armor', randoArray(highArmors));
+function processMagicItem(magicItem) {
+    let containsASpell = false;
+    const replacements = {
+        'armor': {
+            check: () => magicItem.includes('armor') &&
+                !magicItem.includes('demon armor') &&
+                !magicItem.includes('armor of invulnerability') &&
+                !magicItem.includes('plate armor of etherealness'),
+            value: () => magicItem.includes('mithril') || magicItem.includes('adamantine')
+                ? randoArray(metalArmor)
+                : (magicItem.includes('+')
+                    ? randoArray(highArmors)
+                    : randoArray(armor))
+        },
+        'resistance': {
+            check: () => magicItem.includes('resistance') && !magicItem.includes('cloak'),
+            value: () => randoArray(resistances) + ' resistance'
+        },
+        'weapon': {
+            check: () => magicItem.includes('weapon'),
+            value: () => randoArray(weapons)
+        },
+        '<color>': {
+            check: () => magicItem.includes('<color>'),
+            value: () => randoArray(chromaticColors)
+        },
+        'ammunition': {
+            check: () => magicItem.includes('ammunition'),
+            value: () => randoArray(ammunition)
+        },
+        'slaying': {
+            check: () => magicItem.includes('of slaying'),
+            value: () => randoArray(slaying) + ' slaying'
+        },
+        'spell scroll': {
+            check: () => magicItem.includes('spell scroll'),
+            value: () => {
+                const scrollSpellLevel = magicItem.slice(-1);
+                containsASpell = true;
+                return "spell scroll of " + getRandomSpell(scrollSpellLevel);
             }
-            else {
-                magicItem = magicItem.replace('armor', randoArray(armor));
+        },
+        'spellwrought tattoo': {
+            check: () => magicItem.includes('spellwrought tattoo'),
+            value: () => {
+                const scrollSpellLevel = magicItem.slice(-1);
+                containsASpell = true;
+                return "spellwrought tattoo (" + getRandomSpell(scrollSpellLevel) + ")";
             }
         }
+    };
+
+    for (const [key, { check, value }] of Object.entries(replacements)) {
+        if (check()) {
+            magicItem = magicItem.replace(key, value());
+        }
     }
-    if (magicItem.includes('resistance') && !magicItem.includes('cloak')) {
-        magicItem = magicItem.replace('resistance', randoArray(resistances) + ' resistance');
-    }
-    if (magicItem.includes('weapon')) {
-        magicItem = magicItem.replace('weapon', randoArray(weapons))
-    }
-    if (magicItem.includes('<color>')) {
-        magicItem = magicItem.replace('<color>', randoArray(chromaticColors))
-    }
-    if (magicItem.includes('ammunition')) {
-        magicItem = magicItem.replace('ammunition', randoArray(ammunition))
-    }
-    if (magicItem.includes('of slaying')) {
-        magicItem = magicItem.replace('slaying', randoArray(slaying) + ' slaying')
-    }
-    if (magicItem.includes('spell scroll')) {
-        let scrollSpellLevel = magicItem.substr(-1);
-        console.log('Scroll level is ' + scrollSpellLevel)
-        magicItem = "spell scroll of " + getRandomSpell(scrollSpellLevel);
-    }
-    if (magicItem.includes('spellwrought tattoo')) {
-        let scrollSpellLevel = magicItem.substr(-1);
-        magicItem = "spellwrought tattoo (" + getRandomSpell(scrollSpellLevel) + ")";
-    }
-    if (magicItem.includes('undefined')) {
-        alert('ERROR CODE: Emerald')
+    if (containsASpell) {
+        // This clips the ending off of a spell scroll or spellwrought tattoo
+        magicItem = magicItem.slice(0, -2);
     }
     return magicItem;
 }
@@ -499,41 +515,9 @@ function mergeArray(returnedArray, array) {
     }
 }
 
-function rollTreasure(number, dice, multiplier) {
-    let diceType = 1;
-    if (!multiplier) multiplier = 1;
-    switch (dice) {
-        case "d2":
-            diceType = 2;
-            break;
-        case "d3":
-            diceType = 3;
-            break;
-        case "d4":
-            diceType = 4;
-            break;
-        case "d6":
-            diceType = 6;
-            break;
-        case "d8":
-            diceType = 8;
-            break;
-        case "d10":
-            diceType = 10;
-            break;
-        case "d12":
-            diceType = 12;
-            break;
-        case "d20":
-            diceType = 20;
-            break;
-        case "d100":
-            diceType = 100;
-    }
-    let totalRoll = 0;
-    for (let i = 0; i < number; i++) {
-        totalRoll += ((rando(diceType) + 1));
-    }
+function rollTreasure(number, dice, multiplier = 1) {
+    //Returns a rolled number multiplied and then numbered with commas
+    let totalRoll = roll(number, dice);
     return numberWithCommas(totalRoll * multiplier)
 }
 
@@ -576,10 +560,4 @@ function determineCostByRarity(table, consumable) {
 
 function numberWithCommas(x) {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-}
-
-function arrayRemove(arr, value) {
-    return arr.filter(function (ele) {
-        return ele !== value;
-    });
 }
