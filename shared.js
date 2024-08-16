@@ -41,7 +41,7 @@ function roll(number, dice) {
     }
     return totalRoll;
 }
-
+/*
 function plural(str) {
     //special cases
     if (str === 'staff') {
@@ -75,6 +75,62 @@ function plural(str) {
         default:
             return str + 's';
     }
+}
+*/
+
+function plural(phrase) {
+    // List of irregular plural forms
+    const irregularPlurals = {
+        "man": "men",
+        "woman": "women",
+        "child": "children",
+        "foot": "feet",
+        "tooth": "teeth",
+        "mouse": "mice",
+        "goose": "geese",
+        "person": "people",
+        "ox": "oxen",
+        // Add more irregulars here
+    };
+
+    // Pluralization rules for simple words
+    function pluralizeWord(word) {
+        if (irregularPlurals[word.toLowerCase()]) {
+            return irregularPlurals[word.toLowerCase()];
+        } else if (word.endsWith("y") && !word.endsWith("ay") && !word.endsWith("ey") && !word.endsWith("oy") && !word.endsWith("uy")) {
+            return word.slice(0, -1) + "ies";
+        } else if (word.endsWith("s") || word.endsWith("sh") || word.endsWith("ch") || word.endsWith("x") || word.endsWith("z")) {
+            return word + "es";
+        } else if (word.endsWith("f") || word.endsWith("ff")) {
+            return word.slice(0, -1) + "ves";
+        } else if (word.endsWith("fe")) {
+            return word.slice(0, -2) + "ves";
+        } else {
+            return word + "s";
+        }
+    }
+
+    // Handle "of" phrases
+    if (phrase.includes(" of ")) {
+        let parts = phrase.split(" of ");
+        parts[0] = pluralizeWord(parts[0]); // Pluralize the first part
+        return parts.join(" of ");
+    }
+
+    // Handle phrases with parentheses
+    if (phrase.includes("(")) {
+        let parts = phrase.split(" (");
+        parts[0] = pluralizeWord(parts[0]); // Pluralize the first part
+        return parts.join(" (");
+    }
+
+    // Handle cases like "pair of X"
+    if (phrase.startsWith("pair of ")) {
+        return `pairs of ${phrase.slice(8)}`;
+    }
+
+    // Pluralize the whole word
+    return pluralizeWord(phrase);
 }
 
 function bold(text) {

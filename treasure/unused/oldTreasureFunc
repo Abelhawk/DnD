@@ -1,4 +1,3 @@
-/*
 function generateFiller(level) {
   let treasure = [];
   let magicItemPossibilities = determineMagicItems(level);
@@ -307,4 +306,73 @@ function generateFiller(level) {
   }
   return treasure;
 }
-*/
+
+
+function generateIndividualTreasure(lvl) { // Just generates coins.
+    let randomNumber = roll(1, 'd100');
+    let treasure = [];
+    switch (true) {
+        case (lvl <= 4):
+            switch (true) {
+                case (randomNumber <= 30):
+                    treasure.push(rollTreasure(5, "d6") + " copper pieces");
+                    break;
+                case (randomNumber <= 60):
+                    treasure.push(rollTreasure(4, "d6") + " silver pieces");
+                    break;
+                case (randomNumber <= 95):
+                    treasure.push(rollTreasure(3, "d6") + " gold pieces");
+                    break;
+                case (randomNumber <= 100):
+                    treasure.push(rollTreasure(1, "d6") + " platinum pieces");
+            }
+            break;
+        case (lvl <= 10):
+            switch (true) {
+                case (randomNumber <= 30):
+                    treasure.push((rollTreasure(4, "d6", 100)) + " copper pieces");
+                    treasure.push((rollTreasure(1, "d6", 5)) + " gold pieces");
+                    break;
+                case (randomNumber <= 60):
+                    treasure.push((rollTreasure(6, "d6", 10)) + " silver pieces");
+                    treasure.push((rollTreasure(2, "d6", 10)) + " gold pieces");
+                    break;
+                case (randomNumber <= 95):
+                    treasure.push((rollTreasure(4, "d6", 10)) + " gold pieces");
+                    break;
+                case (randomNumber <= 100):
+                    treasure.push((rollTreasure(2, "d6", 10)) + " gold pieces");
+                    treasure.push(rollTreasure(3, "d6") + " platinum pieces");
+            }
+            break;
+        case (lvl <= 16):
+            switch (true) {
+                case (randomNumber <= 20):
+                    treasure.push((rollTreasure(4, "d6", 100)) + " silver pieces");
+                    treasure.push((rollTreasure(1, "d6", 100)) + " gold pieces");
+                    break;
+                case (randomNumber <= 75):
+                    treasure.push((rollTreasure(2, "d6", 100)) + " gold pieces");
+                    treasure.push((rollTreasure(1, "d6", 10)) + " platinum pieces");
+                    break;
+                case (randomNumber <= 100):
+                    treasure.push((rollTreasure(2, "d6", 100)) + " gold pieces");
+                    treasure.push((rollTreasure(2, "d6", 10)) + " platinum pieces");
+            }
+            break;
+        case (lvl >= 17):
+            switch (true) {
+                case (randomNumber <= 15):
+                    treasure.push((rollTreasure(9, "d6", 100)) + " gold pieces");
+                    break;
+                case (randomNumber <= 55):
+                    treasure.push((rollTreasure(1, "d6", 1000)) + " gold pieces");
+                    treasure.push((rollTreasure(1, "d6", 100)) + " platinum pieces");
+                    break;
+                case (randomNumber <= 100):
+                    treasure.push((rollTreasure(1, "d6", 1000)) + " gold pieces");
+                    treasure.push((rollTreasure(2, "d6", 100)) + " platinum pieces");
+            }
+    }
+    return treasure;
+}

@@ -51,75 +51,93 @@ function checkResult() {
     }
 }
 
-function generateIndividualTreasure(lvl) { // Just generates coins.
-    // todo: Simplify this like the other ones by setting variables for the dice and stuff
-    let randomNumber = roll(1, 'd100');
+function generateIndividualTreasure(lvl) {
+    const rollTreasureValues = {
+        1: [5, "d6"],
+        2: [4, "d6"],
+        3: [3, "d6"],
+        4: [1, "d6"],
+        5: [4, "d6", 100],
+        6: [1, "d6", 5],
+        7: [6, "d6", 10],
+        8: [2, "d6", 10],
+        9: [4, "d6", 10],
+        10: [2, "d6", 10],
+        11: [4, "d6", 100],
+        12: [1, "d6", 100],
+        13: [2, "d6", 100],
+        14: [1, "d6", 10],
+        15: [2, "d6", 100],
+        16: [2, "d6", 10],
+        17: [9, "d6", 100],
+        18: [1, "d6", 1000],
+        19: [1, "d6", 100],
+        20: [2, "d6", 100],
+        21: [1, "d6", 1000]
+    };
+
+    const levelRanges = [
+        { max: 4, probabilities: [30, 60, 95, 100] },
+        { max: 10, probabilities: [30, 60, 95, 100] },
+        { max: 16, probabilities: [20, 75, 100] },
+        { max: 100, probabilities: [15, 55, 100] }
+    ];
+
+    const randomNumber = roll(1, 'd100');
+    const range = levelRanges.find(r => lvl <= r.max);
+    const { probabilities } = range;
+
     let treasure = [];
-    switch (true) {
-        case (lvl <= 4):
-            switch (true) {
-                case (randomNumber <= 30):
-                    treasure.push(rollTreasure(5, "d6") + " copper pieces");
-                    break;
-                case (randomNumber <= 60):
-                    treasure.push(rollTreasure(4, "d6") + " silver pieces");
-                    break;
-                case (randomNumber <= 95):
-                    treasure.push(rollTreasure(3, "d6") + " gold pieces");
-                    break;
-                case (randomNumber <= 100):
-                    treasure.push(rollTreasure(1, "d6") + " platinum pieces");
-            }
-            break;
-        case (lvl <= 10):
-            switch (true) {
-                case (randomNumber <= 30):
-                    treasure.push((rollTreasure(4, "d6", 100)) + " copper pieces");
-                    treasure.push((rollTreasure(1, "d6", 5)) + " gold pieces");
-                    break;
-                case (randomNumber <= 60):
-                    treasure.push((rollTreasure(6, "d6", 10)) + " silver pieces");
-                    treasure.push((rollTreasure(2, "d6", 10)) + " gold pieces");
-                    break;
-                case (randomNumber <= 95):
-                    treasure.push((rollTreasure(4, "d6", 10)) + " gold pieces");
-                    break;
-                case (randomNumber <= 100):
-                    treasure.push((rollTreasure(2, "d6", 10)) + " gold pieces");
-                    treasure.push(rollTreasure(3, "d6") + " platinum pieces");
-            }
-            break;
-        case (lvl <= 16):
-            switch (true) {
-                case (randomNumber <= 20):
-                    treasure.push((rollTreasure(4, "d6", 100)) + " silver pieces");
-                    treasure.push((rollTreasure(1, "d6", 100)) + " gold pieces");
-                    break;
-                case (randomNumber <= 75):
-                    treasure.push((rollTreasure(2, "d6", 100)) + " gold pieces");
-                    treasure.push((rollTreasure(1, "d6", 10)) + " platinum pieces");
-                    break;
-                case (randomNumber <= 100):
-                    treasure.push((rollTreasure(2, "d6", 100)) + " gold pieces");
-                    treasure.push((rollTreasure(2, "d6", 10)) + " platinum pieces");
-            }
-            break;
-        case (lvl >= 17):
-            switch (true) {
-                case (randomNumber <= 15):
-                    treasure.push((rollTreasure(9, "d6", 100)) + " gold pieces");
-                    break;
-                case (randomNumber <= 55):
-                    treasure.push((rollTreasure(1, "d6", 1000)) + " gold pieces");
-                    treasure.push((rollTreasure(1, "d6", 100)) + " platinum pieces");
-                    break;
-                case (randomNumber <= 100):
-                    treasure.push((rollTreasure(1, "d6", 1000)) + " gold pieces");
-                    treasure.push((rollTreasure(2, "d6", 100)) + " platinum pieces");
-            }
+
+    if (lvl <= 4) {
+        if (randomNumber <= probabilities[0]) {
+            treasure.push(rollTreasure(...rollTreasureValues[1]) + " copper pieces");
+        } else if (randomNumber <= probabilities[1]) {
+            treasure.push(rollTreasure(...rollTreasureValues[2]) + " silver pieces");
+        } else if (randomNumber <= probabilities[2]) {
+            treasure.push(rollTreasure(...rollTreasureValues[3]) + " gold pieces");
+        } else {
+            treasure.push(rollTreasure(...rollTreasureValues[4]) + " platinum pieces");
+        }
+    } else if (lvl <= 10) {
+        if (randomNumber <= probabilities[0]) {
+            treasure.push(rollTreasure(...rollTreasureValues[5]) + " copper pieces");
+            treasure.push(rollTreasure(...rollTreasureValues[6]) + " gold pieces");
+        } else if (randomNumber <= probabilities[1]) {
+            treasure.push(rollTreasure(...rollTreasureValues[7]) + " silver pieces");
+            treasure.push(rollTreasure(...rollTreasureValues[8]) + " gold pieces");
+        } else if (randomNumber <= probabilities[2]) {
+            treasure.push(rollTreasure(...rollTreasureValues[9]) + " gold pieces");
+        } else {
+            treasure.push(rollTreasure(...rollTreasureValues[10]) + " gold pieces");
+            treasure.push(rollTreasure(...rollTreasureValues[11]) + " platinum pieces");
+        }
+    } else if (lvl <= 16) {
+        if (randomNumber <= probabilities[0]) {
+            treasure.push(rollTreasure(...rollTreasureValues[12]) + " silver pieces");
+            treasure.push(rollTreasure(...rollTreasureValues[13]) + " gold pieces");
+        } else if (randomNumber <= probabilities[1]) {
+            treasure.push(rollTreasure(...rollTreasureValues[14]) + " gold pieces");
+            treasure.push(rollTreasure(...rollTreasureValues[15]) + " platinum pieces");
+        } else {
+            treasure.push(rollTreasure(...rollTreasureValues[16]) + " gold pieces");
+            treasure.push(rollTreasure(...rollTreasureValues[17]) + " platinum pieces");
+        }
+    } else {
+        if (randomNumber <= probabilities[0]) {
+            treasure.push(rollTreasure(...rollTreasureValues[18]) + " gold pieces");
+        } else if (randomNumber <= probabilities[1]) {
+            treasure.push(rollTreasure(...rollTreasureValues[19]) + " gold pieces");
+            treasure.push(rollTreasure(...rollTreasureValues[20]) + " platinum pieces");
+        } else {
+            treasure.push(rollTreasure(...rollTreasureValues[21]) + " gold pieces");
+            treasure.push(rollTreasure(...rollTreasureValues[22]) + " platinum pieces");
+        }
     }
+
     return treasure;
 }
+
 
 function getGems(number, value) { //Gems can be added together
     if (number === 0) return [];
@@ -425,7 +443,7 @@ function processMagicItem(magicItem) {
         }
     };
 
-    for (const [key, { check, value }] of Object.entries(replacements)) {
+    for (const [key, {check, value}] of Object.entries(replacements)) {
         if (check()) {
             magicItem = magicItem.replace(key, value());
         }
@@ -437,33 +455,51 @@ function processMagicItem(magicItem) {
     return magicItem;
 }
 
-function generatePatches() { //Generates patches for a robe of useful items
-    let numberOfPatches = roll(4, 'd4')
-    let patches = ['2 x daggers', '2 x bullseye lanterns (filled and lit)', '2 x steel mirrors', '2 x 10-foot poles',
-        '2 x 50-foot coils of hempen rope', '2 x sacks'
+function generatePatches() {
+    let numberOfPatches = roll(4, 'd4');
+    let patches = ['2 x daggers', '2 x bullseye lanterns (filled and lit)', '2 x steel mirrors',
+        '2 x 10-foot poles', '2 x 50-foot coils of hempen rope', '2 x sacks'];
+    let patchCounts = {};
+    const patchOptions = [
+        {maxRoll: 8, patch: 'bag of 100 gp'},
+        {maxRoll: 15, patch: 'silver coffer (500 gp)'},
+        {maxRoll: 22, patch: 'iron door (up to 10x10 feet)'},
+        {maxRoll: 30, patch: 'bag of 10 gems worth 100 gp each'},
+        {maxRoll: 44, patch: '24-foot wooden ladder'},
+        {maxRoll: 51, patch: 'riding horse with saddlebags'},
+        {maxRoll: 59, patch: 'pit (10x10 feet)'},
+        {maxRoll: 68, patch: '4-pack of potions of healing'},
+        {maxRoll: 75, patch: 'rowboat'},
+        {maxRoll: 83, patch: `spell scroll of <span class="italic">${getRandomSpell(rando(3) + 1)}</span>`},
+        {maxRoll: 90, patch: 'pair of mastiffs'},
+        {maxRoll: 96, patch: 'window (2x4x2 feet)'},
+        {maxRoll: 100, patch: 'portable ram'}
     ];
+    // Generate patches and track their counts
     for (let i = 0; i < numberOfPatches; i++) {
         let randomRoll = roll(1, 'd100');
-        if (randomRoll <= 8) patches.push('bag of 100 gp')
-        else if (randomRoll <= 15) patches.push('silver coffer (500 gp)')
-        else if (randomRoll <= 22) patches.push('iron door (up to 10x10 feet)')
-        else if (randomRoll <= 30) patches.push('bag of 10 gems worth 100 gp each')
-        else if (randomRoll <= 44) patches.push('24-foot wooden ladder')
-        else if (randomRoll <= 51) patches.push('riding horse with saddlebags')
-        else if (randomRoll <= 59) patches.push('pit (10x10 feet)')
-        else if (randomRoll <= 68) patches.push('4-pack of potions of healing')
-        else if (randomRoll <= 75) patches.push('rowboat')
-        else if (randomRoll <= 83) {
-            let randomNumber = rando(3) + 1;
-            patches.push(`spell scroll of ` + `<span class="italic">` + getRandomSpell(randomNumber) + `</span>`);
-        } else if (randomRoll <= 90) patches.push('pair of mastiffs')
-        else if (randomRoll <= 96) patches.push('window (2x4x2 feet)')
-        else if (randomRoll <= 100) patches.push('portable ram')
+        const foundPatch = patchOptions.find(option => randomRoll <= option.maxRoll);
+        if (foundPatch) {
+            let patchName = foundPatch.patch;
+            if (patchCounts[patchName]) {
+                patchCounts[patchName]++;
+            } else {
+                patchCounts[patchName] = 1;
+            }
+        }
     }
-    // Count duplicates
-    // Screw it
+    // Consolidate and format patches
+    for (let [patchName, count] of Object.entries(patchCounts)) {
+        if (count > 1) {
+            patches.push(`${count} x ${plural(patchName)}`);
+        } else {
+            patches.push(patchName);
+        }
+    }
     return patches;
 }
+
+
 
 function getRandomSpell(level) {
     let spellTable = spells1st;
@@ -526,20 +562,16 @@ function determineCostByRarity(table, consumable) {
     if (table === 'CommonItem') {
         // 20-70 gp
         itemCost = (roll(1, 'd6') + 1) * 10
-    }
-    else if (table === 'UncommonMajorItems' || table ==='UncommonMinorItem') {
+    } else if (table === 'UncommonMajorItems' || table === 'UncommonMinorItem') {
         // 100-600 gp
         itemCost = roll(1, 'd6') * 100
-    }
-    else if (table === 'RareMajorItem' || table ==='RareMinorItem') {
+    } else if (table === 'RareMajorItem' || table === 'RareMinorItem') {
         // 500-5000 gp
         itemCost = roll(1, 'd10') * 500
-    }
-    else if (table === 'EpicMajorItem' || table ==='EpicMinorItem') {
+    } else if (table === 'EpicMajorItem' || table === 'EpicMinorItem') {
         // 5000-50,000 gp
         itemCost = roll(1, 'd10') * 5000
-    }
-    else if (table === 'LegendaryMajorItem' || table ==='LegendaryMinorItem') {
+    } else if (table === 'LegendaryMajorItem' || table === 'LegendaryMinorItem') {
         // 5000-50,000 gp
         itemCost = roll(1, 'd10') * 5000
     }
@@ -548,7 +580,7 @@ function determineCostByRarity(table, consumable) {
         table === 'RareMinorItem' ||
         table === 'EpicMinorItem' ||
         table === 'LegendaryMinorItem') {
-            itemCost = itemCost / 2;
+        itemCost = itemCost / 2;
     }
     if (consumable) {
         itemCost = itemCost / 2;

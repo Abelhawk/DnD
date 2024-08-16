@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="495252ce-6aee-4675-83fc-feddd9e07b22" name="Default" comment="Streamlined all the code thanks to ChatGPT!">
-      <change beforePath="$PROJECT_DIR$/Calc/calc.html" beforeDir="false" afterPath="$PROJECT_DIR$/Calc/calc.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Character/npc-creator.html" beforeDir="false" afterPath="$PROJECT_DIR$/Character/npc-creator.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SettlementPopulator/settlement.html" beforeDir="false" afterPath="$PROJECT_DIR$/SettlementPopulator/settlement.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TownGen/town-gen.html" beforeDir="false" afterPath="$PROJECT_DIR$/TownGen/town-gen.html" afterDir="false" />
+    <list default="true" id="495252ce-6aee-4675-83fc-feddd9e07b22" name="Default" comment="Moved the shared file so it doesn't get ignored">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shared.js" beforeDir="false" afterPath="$PROJECT_DIR$/shared.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/treasure/treasure-triggers.js" beforeDir="false" afterPath="$PROJECT_DIR$/treasure/treasure-triggers.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,6 +33,12 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "Abelhawk"
+  }
+}]]></component>
   <component name="GithubPullRequestsUISettings"><![CDATA[{
   "selectedUrlAndAccountId": {
     "url": "https://github.com/Abelhawk/DnD.git",
@@ -210,7 +215,7 @@
       <workItem from="1650379786027" duration="2216000" />
       <workItem from="1654183987453" duration="698000" />
       <workItem from="1723819949776" duration="27000" />
-      <workItem from="1723819986129" duration="15661000" />
+      <workItem from="1723819986129" duration="19849000" />
     </task>
     <task id="LOCAL-00001" summary="Fixed some wording and made it clear how many creatures fail their saving throw.">
       <created>1627398829756</created>
@@ -227,7 +232,15 @@
       <option name="project" value="LOCAL" />
       <updated>1723837588247</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Moved the shared file so it doesn't get ignored">
+      <option name="closed" value="true" />
+      <created>1723837749252</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1723837749252</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -247,14 +260,15 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Fixed some wording and made it clear how many creatures fail their saving throw." />
     <MESSAGE value="Streamlined all the code thanks to ChatGPT!" />
-    <option name="LAST_COMMIT_MESSAGE" value="Streamlined all the code thanks to ChatGPT!" />
+    <MESSAGE value="Moved the shared file so it doesn't get ignored" />
+    <option name="LAST_COMMIT_MESSAGE" value="Moved the shared file so it doesn't get ignored" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/treasure/treasure-triggers.js</url>
-          <line>504</line>
+          <line>522</line>
           <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="3" />
         </line-breakpoint>
