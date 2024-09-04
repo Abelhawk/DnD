@@ -663,7 +663,6 @@ function pickLastName(race) {
         case "aasimar":
             let last = humanSurname[rando(humanSurname.length)];
             if (last === 'FAMILIALNAME') {
-                alert('Familial name!');
                 return maleHuman[rando(maleHuman.length)] + 'son';
             }
             return last;
@@ -689,7 +688,6 @@ function pickLastName(race) {
             if (community === "human") {
                 let last2 = humanSurname[rando(humanSurname.length)];
                 if (last2 === 'FAMILIALNAME') {
-                    alert('Familial name!');
                     return maleHuman[rando(maleHuman.length)] + 'son';
                 }
                 return last2;
