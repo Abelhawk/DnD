@@ -5,6 +5,8 @@
 //      DEVIL   WARFORGED   TRITON  LEONIN  TORTLE
 //      YUAN-TI   GIANT
 
+// Note to future self: Still do Order, Death, Fire thieves, Water, Air, and Arthurians
+
 //------------Aaracokra---------------(discontinued cuz they're too obscure)
 let aarakocraNames = [
     "Aera", "Aial", "Aur", "Deekek", "Errk",
@@ -18,7 +20,13 @@ let goliathNames = [
     "Aukan", "Eglath", "Gae-Al", "Gauthak", "Illikan",
     "Keothi", "Kuori", "Lo-Kag", "Manneo", "Maveith",
     "Nalla", "Orilo", "Paavu", "Pethani", "Thalai",
-    "Thotham", "Uthal", "Vaunea", "Vimak"
+    "Thotham", "Uthal", "Vaunea", "Vimak", "Beorn",
+    "Berdar", "Borik", "Brak", "Dokar", "Gildar",
+    "Gorak", "Grignr", "Gunther", "Hagar", "Heldrik",
+    "Helsaf", "Juthar", "Kerrik", "Khamul", "Kokoran",
+    "Kor", "Marik", "Murdok", "Nador", "Olf", "Ren",
+    "Rothgar", "Tamtam", "Thrud", "Tybalt", "Ulfen",
+    "Uthag", "Vilcris", "Wolfstan", "Wulfgar", "Yorig"
 ];
 
 let nicknameGoliath = [
@@ -26,7 +34,10 @@ let nicknameGoliath = [
     "Horncarver", "Keeneye", "Lonehunter", "Longleaper",
     "Rootsmasher", "Skywatcher", "Steadyhand", "Threadtwister",
     "Twice-Orphaned", "Twistedlimb", "Wordpainter", "Climber",
-    "Earbender", "Leaper", "Shieldbiter"
+    "Earbender", "Leaper", "Shieldbiter", "Bloodspear", "Bonerender",
+    "Braincrusher", "Doomhammer", "Hammerfist", "Skullsplitter",
+    "Skyfire", "Slasher", "Toothbreaker", "Bloodsinger", "Bluefeather",
+    "Fireclaw", "Flamedawn", "Hawkwing", "Moonshadow", "Windcaller",
 ];
 
 let goliathClan = [
@@ -153,7 +164,11 @@ let maleDwarf = [
     "Lofi", "Dwalin", "Balin", "Bifur", "Bofur", "Bombur",
     "Oin", "Gloin", "Fili", "Kili", "Yofrithur", "Burspori",
     "Herningur", "Dunaldur", "Bifvari", "Arngrimur", "Thror",
-    "Thrain"
+    "Thrain", "Bombalon", "Denar", "Dignus", "Donus", "Durin",
+    "Fegan", "Fegnar", "Fifur", "Glefur", "Glurin", "Henar",
+    "Hoignus", "Kangus", "Kogan", "Koifur", "Lamli", "Lognar",
+    "Mognar", "Molin", "Mugan", "Nagnar", "Roigan", "Soignus",
+    "Tagan", "Teran", "Tibur", "Turan", "Veran"
 ];
 
 let femaleDwarf = [
@@ -245,8 +260,15 @@ let maleElf = [
     "Soveliss", "Sionedir", "Thamior", "Tharivol", "Theren",
     "Theriatis", "Thervan", "Uthemar", "Vanuath", "Varis",
     "Himo", "Ivor", "Ryland", "Aeris", "Alagar", "Elleshar",
-    "Moandor", "Galthran", "Vokial", "Thant", "Damacon",
-    "Malekith", "Gelare", "Inteus", "Andal", "Zilare", "Erutan"
+    "Moandor", "Galthran", "Vokial", "Thant", "Damacon", "Amaral",
+    "Malekith", "Gelare", "Inteus", "Andal", "Zilare", "Erutan",
+    "An'rion", "Anendir", "Anymir", "Belariand", "Belion", "Belyndir",
+    "Calilad", "Calind", "Cel'tunduil", "Cloriand", "Delondil", "El'wyn",
+    "Elendel", "Elrorfil", "Elrylad", "Elynduil", "Fararion", "Fil'garian",
+    "Galithrand", "Glonquyn", "Hadriewyn", "Handuil", "Isiondir", "L'madrien",
+    "L'miolas", "Legolan", "Legriand", "Llandon", "Madrierion", "Moriand",
+    "Norfiril", "Thremir", "Thriorion", "Tinebriand", "Tinithrand",
+    "Uriowyn", "Vilmalad", "Vithrariand"
 ];
 
 let femaleElf = [
@@ -261,7 +283,21 @@ let femaleElf = [
     "Thiala", "Domnalliel", "Traulam", "Vadania", "Valanthe",
     "Valna", "Xanaphia", "Jenova", "Mephala", "Melodia", "Aine",
     "Synca", "Sephinroth", "Labetha", "Casmetra", "Astra", "Lavinia",
-    "Melora"
+    "Melora", "Delilmala", "Anthea", "Halcera", "Celestra", "Glenstrae",
+    "Simaetha", "Ophiella", "Amndine", "Amilmarwen", "Amilyn", "Anama",
+    "Anarala", "Balafinda", "Belwen", "Callwen", "Calura", "Curila",
+    "Danna", "Darawen", "Deladrie", "Del'ril", "Duenna", "Eldawen",
+    "Elentari", "Elimma", "Eliorilwen", "Elrondie", "Elvlyn", "Elvara",
+    "Elvenwen", "Elvindie", "Elvondyn", "Eowebrilyn", "Filmandel", "Ganalyn",
+    "Gandylyn", "Kantari", "Kelentari", "Lavanna", "Lesandrie", "Mebril",
+    "Merwen", "Sari", "Silara", "Silmandil", "Tiara", "Tintalle", "Ursla",
+    "Vanawen", "Varla", "Wandawen", "Ysilwen", "Adrianna", "Anowiel", "Anzwen",
+    "Calywien", "Celaralith", "Del'wen", "Delelia", "Eldith", "Elilmania",
+    "Eliowen", "Elryniel", "Eludia", "Fadriedia", "Fandra", "Galadia", "Galia",
+    "Galunia", "Gandra", "Gawen", "Isiwen", "Isylith", "L'mowien", "Legilia",
+    "Leg'twen", "Mebriwen", "Milmarith", "Mina", "Mircilla", "Mithralwen",
+    "Mithrandiel", "Nawen", "Nodia", "Nydith", "Rhianna", "Riodith", "Sulia",
+    "Taradith", "Tathia", "Tebriwen", "Unlith", "Uruwen", "Vilmadd"
 ];
 
 let elfFamily = [
@@ -297,7 +333,10 @@ let maleHalfling = [
     "Galvin", "Farrell", "Grady", "Kellan", "Finn",
     "Cody", "Noland", "Quinn", "Rory", "Seamus", "Ryan",
     "Curtis", "Wallace", "Otto", "Quentin", "Chance",
-    "Yarrow", "Dewis", "Strap", "Blovo"
+    "Yarrow", "Dewis", "Strap", "Blovo", "Begim", "Begrin",
+    "Biadoc", "Bigo", "Bodo", "Boibo", "Bringo", "Bubo",
+    "Drado", "Dragrin", "Drugo", "Frigo", "Meriabo", "Perabo",
+    "Pinoga"
 ];
 
 let femaleHalfling = [
@@ -350,7 +389,7 @@ let maleGnome = [
     "Warryn", "Wiggens", "Wobbles", "Wrenn", "Zaffrab", "Zook",
     "Bingbo", "Razbank", "Stumbleduck", "Badger", "Fnipper",
     "Piquedram", "Bidley", "Mongo", "Mungo", "Jarvis",
-    "Nobblenot"
+    "Nobblenot", "Addrumyr", "Deobrin", "Glugwyn", "Nebrin"
 ];
 
 let femaleGnome = [
@@ -364,7 +403,10 @@ let femaleGnome = [
     "Shamil", "Siffress", "Symma", "Tana", "Tenana", "Tervaround",
     "Tippletoe", "Ulla", "Unvera", "Veloptima", "Virra",
     "Waywocket", "Yebe", "Zanna", "Pock", "Nim", "Casmetra",
-    "Leena", "Brissa", "Duffy"
+    "Leena", "Brissa", "Duffy", "Aine", "Alanna", "Ariel", "Artermis",
+    "Ayla", "Chamcham", "Foxtail", "Iria", "Katri", "Keri",
+    "Lilu", "Loraine", "Lucca", "Lupi", "Mare", "Nako", "Newt",
+    "Rilla", "Sheela", "Sukey", "Tarna", "Tiaga", "Trella", "Ubriella",
 ];
 
 let gnomeClan = [
@@ -378,7 +420,7 @@ let gnomeClan = [
     "Raulnor", "Reese", "Rofferton", "Scheppen", "Shadowcloak", "Silverthread",
     "Sympony", "Tarkelby", "Timbers", "Turen", "Umbodoben", "Waggletop",
     "Welber", "Wildwander", "Ashhearth", "Doublelock", "Filchbatter",
-    "Oneshoe", "Sparklegem"
+    "Oneshoe", "Sparklegem", "Foxtail"
 ];
 
 //------------Tieflings---------------
@@ -394,7 +436,13 @@ let maleTiefling = [
     "Skamos", "Tethren", "Thamuz", "Therai", "Valafar", "Vassago",
     "Xappan", "Zepar", "Zephan", "Akmenos", "Calh", "Ignatius",
     "Rashka", "Xeron", "Axsis", "Ayden", "Calid", "Olema", "Xyron",
-    "Xarfax", "Zydar", "Ajit", "Severin"
+    "Xarfax", "Zydar", "Ajit", "Severin", "Afardon", "Axtaal",
+    "Baeloth", "Bomboll", "Bylyg", "Cryral", "Edygor", "Eirad",
+    "Fieryd", "Garkvon", "Geagan", "Glymos", "Haarerin", "Heathym",
+    "Jeriacor", "Kekolth", "Keodr", "Koerysanth", "Kokan", "Kysean",
+    "Larelyth", "Latak", "Legeod", "Loryan", "Leonard", "Narireg",
+    "Qridal", "Riryn", "Ryukan", "Tradozan", "Triann", "Wyanith",
+    "Zaphr", "Zevidremos", "Zohadan", "Zolack", "Zywark"
 ];
 
 let femaleTiefling = [
@@ -408,7 +456,14 @@ let femaleTiefling = [
     "Semyaza", "Shava", "Shax", "Sorath", "Uzza", "Vapula",
     "Vepar", "Verin", "Fiona", "Nymus", "Octavia", "Pyre",
     "Ash", "Charna", "Tamika", "Isra", "Septienna", "Vidomina",
-    "Xsi"
+    "Xsi", "Arlsur", "Attormel", "Celziram", "Daegre", "Dongargon",
+    "Elcenerat", "Eraak", "Faonix", "Faranhyr", "Fekrvor", "Fikuur",
+    "Fisellan", "Galeanyn", "Hamokuzt", "Infanelyr", "Kapam",
+    "Kharre", "Kynaul", "Letharidon", "Maition", "Maltur", "Mirkuran",
+    "Molryn", "Noimoz", "Olirranyd", "Paarkh", "Pygane", "Qurigon",
+    "Sathanus", "Seeran", "Selsaus", "Skorkh", "Smauldd", "Soldan",
+    "Sparlrc", "Spiraden", "Sruldryn", "Syndr", "Tardoulus", "Theylyn",
+    "Thrulaz", "Thurgaos", "Varmor", "Yoman"
 ];
 
 //------------Half-Orcs---------------
@@ -423,7 +478,14 @@ let maleHalforc = [
     "Tarak", "Thar", "Thokk", "Trag", "Ugarth", "Varg", "Vilberg",
     "Yurk", "Zed", "Torog", "Krenk", "Tharek", "Jaegar", "Geon",
     "Gurnisson", "Jabarkas", "Krellion", "Kilgor", "Crag", "Boragus",
-    "Yog", "Terek", "Arlak", "Tark"
+    "Yog", "Terek", "Arlak", "Tark", "Or'thug", "Wilnut", "Oacktet",
+    "Gret", "Odgrit", "Gnorl", "Nzor", "Ramazzot", "Thro'tal",
+    "Nar", "Charnuk", "Azzoralk", "Mook", "Gorsh-slup", "Thog",
+    "Umshak", "Hashlik", "Kralsh", "Gish-molk", "Naggald",
+    "Garml", "Zarg", "Zark", "Thurdak", "Grosh", "Kudluck", "Maarg",
+    "Vurthark", "Trag", "Grogg", "Skab", "Grok", "Thrax", "Throx",
+    "Mugluck", "Ur'glak", "Ragdun", "Tuktuk", "Durbok", "Gordung",
+    "Mozak"
 ];
 
 let femaleHalforc = [
@@ -435,7 +497,11 @@ let femaleHalforc = [
     "Reeza", "Shautha", "Silgre", "Sutha", "Tagga", "Tawar", "Tomph",
     "Ubada", "Vanchu", "Vola", "Volen", "Vorka", "Yevelda", "Zagga",
     "Dessa", "Gird", "Gundula", "Oris", "Saurug", "Vey", "Zubin", "Tiva",
-    "Rosik"
+    "Rosik", "Unolhodok", "Bizzacth", "Blorzigar", "Chuklok", "Dok",
+    "Dolomitak", "Dorz", "Durizral", "Finarg", "Gankirtan", "Hodazak",
+    "Jomotorken", "Lathar", "Maltog", "Morik", "Murak", "Nakor", "Odoakir",
+    "Ragadash", "Shak", "Tamlantir", "Thradan", "Tlalok", "Tlieliaxu",
+    "Toktak", "Tomax", "Toraq", "Torzak", "Ukla", "Xamot", "Zalkor"
 ];
 
 //--------------Genasi chosen names-------------
@@ -522,7 +588,7 @@ let leoninPride1 = [
 ];
 
 let leoninPride2 = [
-    "eye", "claw", "field", "mane", "tooth", "paw", "grass", "heart"
+    "eye", "claw", "field", "mane", "tooth", "paw", "grass", "heart", "fang"
 ];
 
 //--------------Tortle-------------
